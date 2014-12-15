@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.useso.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+    <!-- Include the compiled Ratchet JS -->
+    <script src="bower_components/ratchet/dist/ratchet.min.js"></script>
+  </head>
+  <body>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- Make sure all your bars are the first things in your <body> -->
+<!--     <header class="bar bar-nav">
+  <h1 class="title">Ratchet</h1>
+</header>
+ -->
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+      <div class="search">
+        <form>
+          <div class="row">
+            <img src="images/icons/icon-09.png" alt="" class="ico">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <span class="icon icon-search"></span>
+                </div>
+                <input type="search" placeholder="搜索技能" class="icon icon-search">
+              </div>
+            </div>
+          </div>
+        </form>
 
-</head>
-<body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
       </div>
-    </div>
-  </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+      <div class="courses-list">
+        <div class="course card">
+          dfdfdf
+        </div>
+      </div>
+
+      <nav class="bar bar-tab">
+        <a class="tab-item" href="#">
+          <span class="icon icon-search"></span>
+          <span class="tab-label">发现</span>
+        </a>
+        <a class="tab-item" href="#">
+          <span class="icon icon-pages"></span>
+          <span class="tab-label">课程</span>
+        </a>
+        <a class="tab-item active" href="#">
+          <span class="icon icon-info"></span>
+          <span class="tab-label">消息</span>
+        </a>
+        <a class="tab-item" href="#">
+          <span class="icon icon-person"></span>
+          <span class="tab-label">个人</span>
+        </a>
+      </nav>
+
+    </div>
+
+  </body>
 </html>

@@ -1,0 +1,42 @@
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #ccc;
+  text-align: center;
+}
+.ico {
+  width: 50px;
+}
+
+.search {
+  background: #0f2e3e;
+}
+.search .row{
+  padding: 10px 15px;
+}
+.search img{
+  float: left;
+}
+.search .input-group{
+  margin-left: 70px;
+  display: flex;
+  background: #415561;
+  border-radius: 4px;
+  vertical-align: middle;
+  align-items: center;
+}
+.search .input-group .input-group-addon{
+  display: inline-block;
+  height: 42px;
+  height: 38px;
+  width: 42px;
+}
+.search .input-group input{
+  height: 42px;
+  margin: 0;
+  background: none;
+  /* background: #415561 url(../images/icons/icon-10.png) no-repeat;
+  background-size: 50%; */
+}

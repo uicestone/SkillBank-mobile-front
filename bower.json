@@ -1,0 +1,7 @@
+{
+  "name": "SkillBank-mobile",
+  "version": "0.0.1",
+  "dependencies": {
+    "ratchet": "~2.0.2"
+  }
+}
