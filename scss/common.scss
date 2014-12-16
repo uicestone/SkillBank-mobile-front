@@ -1,5 +1,14 @@
+body {
+  font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #666;
+}
+
 input[type="search"]:focus{
     border: none;
+}
+
+a {
+  color: #999;
 }
 
 .input-group-addon {
@@ -18,6 +27,22 @@ input[type="search"]:focus{
   }
 }
 
+.sk {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  &:before {
+    content: ' ';
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.sk-comment:before {background-image: url(../images/icons/icon-comment.png);}
+.sk-heart:before {background-image: url(../images/icons/icon-heart.png);}
 .search-bar {
   background: #0f2e3e;
   overflow: hidden;
@@ -50,6 +75,7 @@ input[type="search"]:focus{
       margin: 0;
       background: none;
       text-align: left;
+      color: #ccc;
     }
   }
 }
@@ -74,12 +100,44 @@ input[type="search"]:focus{
 .courses-list {
   overflow: hidden;
   .course {
-    height: 400px;
+    position: relative;
     background-size: 100%;
     background-repeat: no-repeat;
     .title-bar {
+      position: absolute;
       height: 100px;
-      background: rgba(16,46,62,.5);
+      background: rgba(16,46,62,.8);
+      padding: .5em 1em 0;
+      h3 {
+        color: #fff;
+        font-weight: normal;
+        line-height: 50px;
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        .num {
+          position: absolute;
+          top: 1em;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+    }
+    img.cover {
+      width: 100%;
+    }
+    .info {
+      text-align: center;
+      margin-top: -4em;
+      img.avatar {
+        border-radius: 50%;
+        border: 3px solid #fff;
+        width: 6em;
+        height: 6em;
+      }
     }
   }
 }

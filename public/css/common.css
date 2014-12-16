@@ -1,5 +1,12 @@
+body {
+  font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  color: #666; }
+
 input[type="search"]:focus {
   border: none; }
+
+a {
+  color: #999; }
 
 .input-group-addon {
   padding: 6px 12px;
@@ -14,6 +21,25 @@ input[type="search"]:focus {
   width: 50px; }
   .ico img {
     width: 100%; }
+
+.sk {
+  display: inline-block;
+  width: 50px;
+  height: 50px; }
+  .sk:before {
+    content: ' ';
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 100%;
+    height: 100%; }
+
+.sk-comment:before {
+  background-image: url(../images/icons/icon-comment.png); }
+
+.sk-heart:before {
+  background-image: url(../images/icons/icon-heart.png); }
 
 .search-bar {
   background: #0f2e3e;
@@ -47,7 +73,8 @@ input[type="search"]:focus {
       height: 42px;
       margin: 0;
       background: none;
-      text-align: left; }
+      text-align: left;
+      color: #ccc; }
 
 .search-cat.segmented-control {
   background: #ffd047;
@@ -68,9 +95,35 @@ input[type="search"]:focus {
 .courses-list {
   overflow: hidden; }
   .courses-list .course {
-    height: 400px;
+    position: relative;
     background-size: 100%;
     background-repeat: no-repeat; }
     .courses-list .course .title-bar {
+      position: absolute;
       height: 100px;
-      background: rgba(16, 46, 62, 0.5); }
+      background: rgba(16, 46, 62, 0.8);
+      padding: 0.5em 1em 0; }
+      .courses-list .course .title-bar h3 {
+        color: #fff;
+        font-weight: normal;
+        line-height: 50px; }
+      .courses-list .course .title-bar a {
+        position: relative;
+        display: inline-block; }
+        .courses-list .course .title-bar a .num {
+          position: absolute;
+          top: 1em;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 12px; }
+    .courses-list .course img.cover {
+      width: 100%; }
+    .courses-list .course .info {
+      text-align: center;
+      margin-top: -4em; }
+      .courses-list .course .info img.avatar {
+        border-radius: 50%;
+        border: 3px solid #fff;
+        width: 6em;
+        height: 6em; }
