@@ -1,3 +1,5 @@
+$title-bar-height : 45px;
+
 body {
   font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666;
@@ -29,8 +31,8 @@ a {
 
 .sk {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: $title-bar-height;
+  height: $title-bar-height;
   &:before {
     content: ' ';
     display: inline-block;
@@ -111,14 +113,14 @@ a {
       h3 {
         color: #fff;
         font-weight: normal;
-        line-height: 50px;
+        line-height: $title-bar-height;
       }
       a {
         position: relative;
         display: inline-block;
         .num {
           position: absolute;
-          top: 1em;
+          top: .8em;
           left: 0;
           width: 100%;
           text-align: center;

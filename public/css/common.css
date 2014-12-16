@@ -24,8 +24,8 @@ a {
 
 .sk {
   display: inline-block;
-  width: 50px;
-  height: 50px; }
+  width: 45px;
+  height: 45px; }
   .sk:before {
     content: ' ';
     display: inline-block;
@@ -106,13 +106,13 @@ a {
       .courses-list .course .title-bar h3 {
         color: #fff;
         font-weight: normal;
-        line-height: 50px; }
+        line-height: 45px; }
       .courses-list .course .title-bar a {
         position: relative;
         display: inline-block; }
         .courses-list .course .title-bar a .num {
           position: absolute;
-          top: 1em;
+          top: 0.8em;
           left: 0;
           width: 100%;
           text-align: center;
