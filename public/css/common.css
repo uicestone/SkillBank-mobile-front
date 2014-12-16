@@ -24,8 +24,8 @@ a {
 
 .sk {
   display: inline-block;
-  width: 45px;
-  height: 45px; }
+  width: 35px;
+  height: 35px; }
   .sk:before {
     content: ' ';
     display: inline-block;
@@ -110,17 +110,17 @@ a {
       .courses-list .course .title-bar h3 {
         color: #fff;
         font-weight: normal;
-        line-height: 45px; }
+        line-height: 35px; }
       .courses-list .course .title-bar a {
         position: relative;
         display: inline-block; }
         .courses-list .course .title-bar a .num {
           position: absolute;
-          top: 0.8em;
+          top: 0.6em;
           left: 0;
           width: 100%;
           text-align: center;
-          font-size: 12px; }
+          font-size: 10px; }
     .courses-list .course img.cover {
       width: 100%; }
     .courses-list .course .info {
