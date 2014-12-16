@@ -88,7 +88,7 @@ a {
   display: flex; }
   .search-cat.segmented-control a.control-item {
     color: #13404c;
-    padding: 1em 0.3em;
+    padding: 1.5em 0.3em 1.3em;
     height: 100%;
     margin: 0 1em;
     border: none; }
