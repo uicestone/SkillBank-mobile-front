@@ -80,11 +80,15 @@ a {
   background: #ffd047;
   font-size: 18px;
   border: none;
-  border-radius: none;
-  padding: 0 1em; }
+  border-radius: 0;
+  padding: 0 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
   .search-cat.segmented-control a.control-item {
     color: #13404c;
-    padding: 1em 0.5em;
+    padding: 1em 0.3em;
     height: 100%;
     margin: 0 1em;
     border: none; }
