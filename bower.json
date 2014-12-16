@@ -2,6 +2,7 @@
   "name": "SkillBank-mobile",
   "version": "0.0.1",
   "dependencies": {
-    "ratchet": "~2.0.2"
+    "ratchet": "~2.0.2",
+    "skeleton": "~2.0.2"
   }
 }

@@ -1,0 +1,44 @@
+input[type="search"]:focus{
+    border: none;
+}
+
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #ccc;
+  text-align: center;
+}
+.ico {
+  width: 50px;
+}
+
+.search {
+  background: #0f2e3e;
+  .row{
+    padding: 10px 15px;
+  }
+  img{
+    float: left;
+  }
+  .input-group{
+    margin-left: 70px;
+    display: flex;
+    background: #415561;
+    border-radius: 4px;
+    vertical-align: middle;
+    align-items: center;
+    .input-group-addon{
+      display: inline-block;
+      height: 42px;
+      height: 38px;
+      width: 42px;
+    }
+    input{
+      height: 42px;
+      margin: 0;
+      background: none;
+    }
+  }
+}
