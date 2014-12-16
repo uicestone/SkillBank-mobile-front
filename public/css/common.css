@@ -1,6 +1,5 @@
 input[type="search"]:focus {
-  border: none;
-}
+  border: none; }
 
 .input-group-addon {
   padding: 6px 12px;
@@ -8,42 +7,70 @@ input[type="search"]:focus {
   font-weight: 400;
   line-height: 1;
   color: #ccc;
-  text-align: center;
-}
+  text-align: center; }
 
 .ico {
-  width: 50px;
-}
-
-.search {
-  background: #0f2e3e;
-}
-.search .row {
-  padding: 10px 15px;
-}
-.search img {
-  float: left;
-}
-.search .input-group {
-  margin-left: 70px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background: #415561;
-  border-radius: 4px;
-  vertical-align: middle;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.search .input-group .input-group-addon {
   display: inline-block;
-  height: 42px;
-  height: 38px;
-  width: 42px;
-}
-.search .input-group input {
-  height: 42px;
-  margin: 0;
-  background: none;
-}
+  width: 50px; }
+  .ico img {
+    width: 100%; }
+
+.search-bar {
+  background: #0f2e3e;
+  overflow: hidden; }
+  .search-bar form {
+    margin: 0; }
+    .search-bar form .row {
+      padding: 10px 15px;
+      margin: 0; }
+  .search-bar img {
+    float: left; }
+  .search-bar .input-group {
+    margin-left: 70px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: #415561;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .search-bar .input-group .input-group-addon {
+      display: inline-block;
+      height: 42px;
+      height: 38px;
+      width: 42px; }
+    .search-bar .input-group input {
+      height: 42px;
+      margin: 0;
+      background: none;
+      text-align: left; }
+
+.search-cat.segmented-control {
+  background: #ffd047;
+  font-size: 18px;
+  border: none;
+  border-radius: none;
+  padding: 0 1em; }
+  .search-cat.segmented-control a.control-item {
+    color: #13404c;
+    padding: 1em 0.5em;
+    height: 100%;
+    margin: 0 1em;
+    border: none; }
+    .search-cat.segmented-control a.control-item.active {
+      border-bottom: 4px solid #10313a;
+      background: none; }
+
+.courses-list {
+  overflow: hidden; }
+  .courses-list .course {
+    height: 400px;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+    .courses-list .course .title-bar {
+      height: 100px;
+      background: rgba(16, 46, 62, 0.5); }

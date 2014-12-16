@@ -69,7 +69,7 @@ gulp.task('sass', function(done) {
 
 gulp.task('scss', function () {
   return gulp.src(paths.scss)
-    .pipe($.rubySass({
+    .pipe($.sass({
       style: 'expanded',
       precision: 10,
       loadPath: ['./scss/']
@@ -81,7 +81,7 @@ gulp.task('scss', function () {
 });
 
 // Watch Files For Changes & Reload
-gulp.task('serve', ['createServe', 'watch', 'scss']);
+gulp.task('serve', ['createServe', 'watch']);
 
 gulp.task('watch', function() {
     gulp.watch(['./public/*.html'], reload);

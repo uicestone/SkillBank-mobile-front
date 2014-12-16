@@ -11,14 +11,24 @@ input[type="search"]:focus{
   text-align: center;
 }
 .ico {
+  display: inline-block;
   width: 50px;
+  img {
+    width: 100%;
+  }
 }
 
-.search {
+.search-bar {
   background: #0f2e3e;
-  .row{
-    padding: 10px 15px;
+  overflow: hidden;
+  form {
+    margin: 0;
+    .row{
+      padding: 10px 15px;
+      margin: 0;
+    }
   }
+
   img{
     float: left;
   }
@@ -39,6 +49,37 @@ input[type="search"]:focus{
       height: 42px;
       margin: 0;
       background: none;
+      text-align: left;
+    }
+  }
+}
+.search-cat.segmented-control {
+  background: #ffd047;
+  font-size: 18px;
+  border: none;
+  border-radius: none;
+  padding: 0 1em;
+  a.control-item {
+    color: #13404c;
+    padding: 1em 0.5em;
+    height: 100%;
+    margin: 0 1em;
+    border: none;
+    &.active {
+      border-bottom: 4px solid #10313a;
+      background: none;
+    }
+  }
+}
+.courses-list {
+  overflow: hidden;
+  .course {
+    height: 400px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .title-bar {
+      height: 100px;
+      background: rgba(16,46,62,.5);
     }
   }
 }
