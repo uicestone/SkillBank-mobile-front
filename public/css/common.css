@@ -8,6 +8,9 @@ input[type="search"]:focus {
 a {
   color: #999; }
 
+.content {
+  padding-bottom: 5em; }
+
 .input-group-addon {
   padding: 6px 12px;
   font-size: 14px;
