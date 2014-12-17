@@ -1,4 +1,5 @@
 $title-bar-height : 35px;
+$dark : #13404c;
 
 body {
   font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
@@ -92,13 +93,13 @@ a {
   padding: 0 1em;
   display: flex;
   a.control-item {
-    color: #13404c;
+    color: $dark;
     padding: 1.5em 0.3em 1.3em;
     height: 100%;
     margin: 0 1em;
     border: none;
     &.active {
-      border-bottom: 4px solid #10313a;
+      border-bottom: 4px solid $dark;
       background: none;
     }
   }
@@ -146,4 +147,27 @@ a {
       }
     }
   }
+}
+
+nav.bar.bar-tab {
+  .tab-item {
+    .icon {
+      display: inline;
+      opacity: 0.5;
+      img {
+        width: 22px;
+      }
+    }
+    &.active {
+      .icon {
+        opacity: 1;
+      }
+    }
+    .tab-label {
+      font-size: 14px;
+    }
+  }
+}
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+  color: $dark;
 }

@@ -96,7 +96,7 @@ a {
     margin: 0 1em;
     border: none; }
     .search-cat.segmented-control a.control-item.active {
-      border-bottom: 4px solid #10313a;
+      border-bottom: 4px solid #13404c;
       background: none; }
 
 .courses-list {
@@ -134,3 +134,16 @@ a {
         border: 3px solid #fff;
         width: 6em;
         height: 6em; }
+
+nav.bar.bar-tab .tab-item .icon {
+  display: inline;
+  opacity: 0.5; }
+  nav.bar.bar-tab .tab-item .icon img {
+    width: 22px; }
+nav.bar.bar-tab .tab-item.active .icon {
+  opacity: 1; }
+nav.bar.bar-tab .tab-item .tab-label {
+  font-size: 14px; }
+
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+  color: #13404c; }
