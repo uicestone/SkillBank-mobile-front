@@ -81,10 +81,10 @@ a {
 
 .search-cat.segmented-control {
   background: #ffd047;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   border-radius: 0;
-  padding: 0 1em;
+  padding: 0 1vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -119,11 +119,11 @@ a {
         display: inline-block; }
         .courses-list .course .title-bar a .num {
           position: absolute;
-          top: 0.6em;
+          top: 0.7em;
           left: 0;
           width: 100%;
           text-align: center;
-          font-size: 10px; }
+          font-size: 8px; }
     .courses-list .course img.cover {
       width: 100%; }
     .courses-list .course .info {
@@ -147,3 +147,8 @@ nav.bar.bar-tab .tab-item .tab-label {
 
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #13404c; }
+
+@media (min-width: 400px) {
+  .search-cat.segmented-control {
+    font-size: 18px; }
+ }

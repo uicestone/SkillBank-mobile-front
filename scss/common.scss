@@ -87,10 +87,10 @@ a {
 }
 .search-cat.segmented-control {
   background: #ffd047;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   border-radius: 0;
-  padding: 0 1em;
+  padding: 0 1vw;
   display: flex;
   a.control-item {
     color: $dark;
@@ -125,11 +125,11 @@ a {
         display: inline-block;
         .num {
           position: absolute;
-          top: .6em;
+          top: .7em;
           left: 0;
           width: 100%;
           text-align: center;
-          font-size: 10px;
+          font-size: 8px;
         }
       }
     }
@@ -170,4 +170,10 @@ nav.bar.bar-tab {
 }
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: $dark;
+}
+
+@media (min-width: 400px) {
+  .search-cat.segmented-control {
+    font-size: 18px;
+  }
 }
