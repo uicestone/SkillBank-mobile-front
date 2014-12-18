@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Per-index</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="bower_components/skeleton/css/skeleton.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
+  </head>
+  <body>
+
+    <header class="bar bar-nav bag-color">
+        <a class="icon icon-left-nav pull-left"></a>
+        <a class="icon icon-compose pull-right"></a>
+        <!-- <h1 class="title  ">
+           Jason Wu
+           <br>
+           6km.上海
+        </h1> -->
+        <h4 class="title posi-rel">Jason Wu</h4>
+        <h4 class="title posi-rel">64km 上海</h4>
+        <div class="info">
+          <img src="images/avatar.png" alt="" class="avatar">
+          <h4> 2014.8&nbsp;加入 &nbsp;SkillBankwode s</h4>
+        </div>
+        <div class="head-btn">
+          <a href="#" class="a-inblo">
+            <button class="btn btn-white">私信 TA</button>
+          </a>
+          <a href="#" class="a-inblo">
+            <button class="btn btn-primary">关注</button>
+          </a>
+        </div>
+    </header>
+    <nav class="bar bar-tab">
+          <a class="tab-item" href="#">
+            <span class="icon">2</span>
+            <span class="tab-label">认证</span>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon">2</span>
+            <span class="tab-label">分享</span>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon">15</span>
+            <span class="tab-label">关注</span>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon">4</span>
+            <span class="tab-label">粉丝</span>
+          </a>
+    </nav>
+    <div class="content-padded">
+      <p class="padded-tex">
+        我是做视频剪辑的，目标是做一个电影剪辑师，无奈现实中剪辑各种类型的脑残片子，剪辑技能普遍被认可，包装的话就会些简单的AE，其实我Ian工作一个纯剪辑的剪辑师，如果你懂掉色方面的东西，我们一起交流交流吧
+      </p>
+      <h3>
+        TA的分享课程（2）
+      </h3>
+    </div>
+    
+    <div class="courses-list">
+        <div class="course card">
+          <div class="title-bar u-full-width">
+            <h3 class="u-pull-left">魔方进阶教程</h3>
+            <div class="u-pull-right">
+              <a href="">
+                <span class="sk sk-comment"></span>
+                <span class="num">14</span>
+              </a>
+              <a href="">
+                <span class="sk sk-heart"></span>
+                <span class="num">28</span>
+              </a>
+            </div>
+          </div>
+          <img src="images/e.jpeg" alt="" class="cover">
+        </div>
+    </div>
+
+    <div class="segmented-control">
+      <a class="control-item active" href="#item1mobile">
+        身份认证
+      </a>
+      <a class="control-item" href="#item2mobile">
+        学生评价
+      </a>
+      <a class="control-item" href="#item3mobile">
+        老师评价
+      </a>
+    </div>
+    <div class="card">
+      <span id="item1mobile" class="control-content active">
+        <ul class="table-view">
+          <li class="table-view-cell">新浪微博</li>
+          <li class="table-view-cell">手机认证</li>
+        </ul>
+      </span>
+      <span id="item2mobile" class="control-content">Item 2</span>
+      <span id="item3mobile" class="control-content">Item 3</span>
+    </div>
+
+  </body>
+</html>
