@@ -220,6 +220,7 @@ nav.bar.bar-tab {
 }
 .info {
   text-align: center;
+  clear:both;
 }
 .info img.avatar {
   border-radius: 50%;
@@ -227,16 +228,8 @@ nav.bar.bar-tab {
   width: 6em;
   height: 6em;
 }
-.register_form{
-  width:350px;
-  margin:0 auto;
-  margin-top:30px;
-}
-.btn-positive{
-  line-height: .5;
-  background-color: #126F8E;
-  border: 1px solid #126F8E;
-}
+
+
 .bag-color{
   background-color: #FECE4C;
   height:300px;
@@ -262,9 +255,6 @@ nav.bar.bar-tab {
 }
 .icon{
   color:#000;
-}
-body{
-  position: relative;
 }
 .padded-tex{
   margin-top:30px;
@@ -298,7 +288,7 @@ body{
 }
 .btn{
   font-size: 20px;
-  height:50px;
+  height:45px;
 }
 .liuyan-form{
   margin-bottom:0;
@@ -321,4 +311,75 @@ body{
 }
 .btn:hover{
   color:#bbb;
+}
+/*register.html*/
+.register_form > form >div input{
+  height:45px;
+  border-radius:6px;
+  font-size: 19px;
+}
+.register_form{
+  width:90%;
+  margin:0 auto;
+  margin-top:25px;
+}
+.info h4{
+  margin-top:10px;
+}
+.btn-positive{
+  line-height: .5;
+  background-color: #126F8E;
+  border: 1px solid #126F8E;
+  border-radius: 6px;
+  font-size: 22px;
+  letter-spacing: 6px;
+  margin-bottom:18px;
+}
+.register_form > form > .reg-name{
+  margin-bottom:7px;
+}
+.register_form >form > p{
+  color:#bbb;
+  font-size: 14px;
+}
+.register_form >form > p >a{
+  color:#bbb;
+  text-decoration: underline;
+  font-size: 14px;
+}
+.register_form >form >p input{
+  margin-right:10px;
+}
+.register_form >form > div{
+  position: relative;
+}
+.register_form >form > div > img{
+  position: absolute;
+  right:6px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  top: 6px;
+}
+.icon-left-nav:before {
+color: #fff;
+}
+.icon{
+   color:#fff;
+}
+
+
+/*//Per*/
+.title{
+  color: #666;
+  font-size: 28px;
+}
+.where{
+  color: #a1a1a1;
+  font-size: 15px; 
+}
+.avatarbig{
+  width: 7em;
+  height: 7em;
 }

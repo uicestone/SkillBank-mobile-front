@@ -16,12 +16,13 @@
     <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
+    <link href="../delete.css" rel="stylesheet">
+
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
   </head>
-  <body>
-   <div class="wrapper">
+  <body class="wrapper">
       <header class="bar bar-nav">
         <button class="btn btn-link btn-nav pull-left">
           <span class="icon icon-left-nav"></span>
@@ -35,21 +36,22 @@
 
       <div class="register_form">
         <form>
-          <input type="text" placeholder="姓名">
-          <!-- <span>
+          <div>
+            <input type="text" placeholder="姓名" class="reg-name">
             <img src="images/icons/icon-05.png">
-          </span> -->
-          <input type="email" placeholder="邮箱">
-          <!-- <span>
+          </div>
+          <div>
+            <input type="email" placeholder="邮箱">
             <img src="images/icons/icon-06.png">
-          </span> -->
-          <button class="btn btn-positive btn-block" type="submit">注册</button>
-          <p>
-            <input type="checkbox" checked="checked" class="pass-checkbox">我已经阅读并同意 使用条款和隐私政策
-          </p>
+          </div>
+          <div>
+            <button class="btn btn-positive btn-block" type="submit">注册</button>
+          </div>
+            <p>
+              <input type="checkbox" checked="checked" class="pass-checkbox">我已经阅读并同意 <a href="#">使用条款和隐私政策</a>
+            </p>
         </form>
       </div>
 
-  </div>
   </body>
 </html>
