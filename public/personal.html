@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Per-index</title>
+    <title>Person</title>
 
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -16,37 +16,32 @@
     <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
-    <link href="../delete.css" rel="stylesheet">
-
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
   </head>
-  <body>
+  <body class="personal">
 
     <header class="bar bar-nav bag-color">
         <a class="icon icon-left-nav pull-left"></a>
         <a class="icon icon-compose pull-right"></a>
-        <h1 class="title  ">
-           Jason Wu
-          <!--  <br>
-           <span>6km.上海</span> -->
-        </h1>
-        <!-- <h2 class="title posi-rel">Jason Wu</h2> -->
-        <!-- <h4 class="title posi-rel">64km 上海</h4> -->
         <div class="info">
+          <h2 class="title posi-rel">Jason Wu</h4>
           <h4 class="where">6km&nbsp;.&nbsp;上海</h4>
           <img src="images/avatar.png" alt="" class="avatar avatarbig">
-          <h4> 2014.8&nbsp;加入 &nbsp;SkillBankwode s</h4>
+          <h4 class="white"> 2014.8 加入 SkillBank</h4>
+          <div class="head-btn">
+            <a href="#" class="a-inblo mar">
+              <button class="btn btn-white">私信 TA</button>
+            </a>
+            <a href="#" class="a-inblo">
+              <button class="btn btn-primary">关注</button>
+            </a>
+          </div>
         </div>
-        <div class="head-btn">
-          <a href="#" class="a-inblo">
-            <button class="btn btn-white">私信 TA</button>
-          </a>
-          <a href="#" class="a-inblo">
-            <button class="btn btn-primary">关注</button>
-          </a>
-        </div>
+
     </header>
+
+
     <nav class="bar bar-tab">
           <a class="tab-item" href="#">
             <span class="icon">2</span>
@@ -73,7 +68,7 @@
         TA的分享课程（2）
       </h3>
     </div>
-    
+
     <div class="courses-list">
         <div class="course card">
           <div class="title-bar u-full-width">
@@ -90,25 +85,37 @@
             </div>
           </div>
           <img src="images/e.jpeg" alt="" class="cover">
+          <div id="iSlider-wrapper"></div>
         </div>
     </div>
 
     <div class="segmented-control">
       <a class="control-item active" href="#item1mobile">
-        身份认证
+        <span class="icon">2</span>
+        <span class="label">身份认证</span>
       </a>
       <a class="control-item" href="#item2mobile">
-        学生评价
+        <span class="icon">0</span>
+        <span class="label">学生评价</span>
+
       </a>
       <a class="control-item" href="#item3mobile">
-        老师评价
+        <span class="icon">0</span>
+        <span class="label">老师评价</span>
+
       </a>
     </div>
     <div class="card">
       <span id="item1mobile" class="control-content active">
         <ul class="table-view">
-          <li class="table-view-cell">新浪微博</li>
-          <li class="table-view-cell">手机认证</li>
+          <li class="table-view-cell">
+            <span>新浪微博</span>
+            <span class="cell-content">weibo.com/mooninzoo</span>
+            <img src="images/icons/icon-correct.png"></li>
+          <li class="table-view-cell">
+            <span>手机认证</span>
+            <span class="cell-content">13******601</span>
+            <img src="images/icons/icon-correct.png"></li>
         </ul>
       </span>
       <span id="item2mobile" class="control-content">Item 2</span>
