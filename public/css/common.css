@@ -491,7 +491,7 @@ nav.bar.bar-tab .tab-item .tab-label {
     .classes .content-padded p {
       width: 90%;
       margin: 0 auto;
-      margin-bottom: 20px;
+      margin-bottom: 3 0px;
       font-size: 14px;
       letter-spacing: 2px; }
     .classes .content-padded h4 {
@@ -500,12 +500,13 @@ nav.bar.bar-tab .tab-item .tab-label {
       color: #fff;
       position: relative; }
       .classes .content-padded h4 img {
-        width: 150px;
-        height: 45px; }
+        width: 86.5px;
+        height: 25px; }
       .classes .content-padded h4 span {
         position: absolute;
         left: 5px;
-        top: 12px; }
+        top: 6px;
+        font-size: 12px; }
   .classes .segmented-control {
     border-bottom: 0;
     margin-top: 40px;
@@ -543,7 +544,8 @@ nav.bar.bar-tab .tab-item .tab-label {
       .classes .card .table-view-cell .navigate-right .pull-left {
         width: 3em;
         height: 3em;
-        margin-right: 20px; }
+        margin-right: 20px;
+        border: 1px solid #fff; }
       .classes .card .table-view-cell .navigate-right .media-body {
         position: relative; }
         .classes .card .table-view-cell .navigate-right .media-body h4 {
@@ -555,11 +557,12 @@ nav.bar.bar-tab .tab-item .tab-label {
           color: #fff;
           position: absolute;
           right: 0px;
-          top: 0; }
+          top: -3px; }
     .classes .card .control-content .liuyan-form {
       margin-bottom: 0;
       padding: 10px 20px;
-      overflow: hidden; }
+      overflow: hidden;
+      background-color: #bbb; }
       .classes .card .control-content .liuyan-form input {
         margin-bottom: 0;
         width: 82%;
@@ -576,7 +579,7 @@ nav.bar.bar-tab .tab-item .tab-label {
           border: 3px solid #fff;
           width: 49%;
           border-radius: 10px;
-          color: #000;
+          color: #333;
           height: 50px;
           line-height: 1.5; }
   .classes .bar {
@@ -602,6 +605,7 @@ nav.bar.bar-tab .tab-item .tab-label {
       background-color: #dbdcde;
       border-radius: 15px;
       padding: 5px 10px;
+      font-size: 14px;
       width: 28%;
       margin: 4px; }
 
@@ -609,10 +613,12 @@ nav.bar.bar-tab .tab-item .tab-label {
   padding: 10px;
   position: relative;
   background-color: #eaeaea; }
-  .notice .segmented-control .control-item {
-    letter-spacing: 3px;
-    font-size: 18px;
-    padding: 10px 0; }
+  .notice .segmented-control {
+    border-radius: 5px; }
+    .notice .segmented-control .control-item {
+      letter-spacing: 3px;
+      font-size: 18px;
+      padding: 10px 0; }
   .notice .card {
     margin: 10px 0 50px; }
     .notice .card .table-view-cell {
@@ -624,9 +630,10 @@ nav.bar.bar-tab .tab-item .tab-label {
       background-color: #fff;
       padding-top: 18px; }
       .notice .card .table-view-cell .navigate-right .pull-left {
-        width: 3em;
-        height: 3em;
-        margin-right: 20px; }
+        width: 4em;
+        height: 4em;
+        margin-right: 20px;
+        border: 1px solid #fff; }
       .notice .card .table-view-cell .navigate-right .media-body {
         position: relative; }
         .notice .card .table-view-cell .navigate-right .media-body h4 {
@@ -640,136 +647,129 @@ nav.bar.bar-tab .tab-item .tab-label {
           position: absolute;
           right: 0px;
           top: 0; }
+    .notice .card #item2mobile .message-number {
+      left: 60px; }
     .notice .card .table-view {
       background-color: #eaeaea; }
 
-
-
-
-
-
-/*chat.css*/
-
-.chat-content{
-  width:90%;
-  margin:0 auto;
-}
-
-.chat{
-position:relative;
-background-color:#eaeaea;
-}
-.chat .icon-left-nav:before {
-color:#a6afb2;
-}
-.chat .bar{
-box-shadow:none;
-background-color:#eaeaea;
-position: relative;}
-.chat .title{
-color:#909090;
-font-size:25px; 
-}  
-.sender{      
-  overflow: hidden;
-  margin:20px 0; 
-}  
-.sender > div:nth-of-type(1){   
-  text-align: center; 
-  color:#bbb;
-} 
-.sender div:nth-of-type(2){   
-  float: left;    
-  margin-right:5px;
-}   
-.sender div:nth-of-type(3){   
-  background-color: #fff; 
-  max-width:65%;
-  float: left;      
-  font-size:14px;
-  color:#909090;
-  margin: 0 20px 10px 15px; 
-  padding: 10px 10px 10px 0px;  
-  border-radius:7px;  
-  position: relative;
-}   
-.receiver div:nth-of-type(2) img,  
-.sender div:nth-of-type(2) img{    
-  width:4em;     
-  height: 4em; 
-}   
-.receiver{    
-  clear:both;   
-  margin:20px 0;
-  overflow: hidden;
-}   
-.receiver > div:nth-of-type(1){   
-  text-align: center; 
-  color:#bbb;
-} 
-.receiver div:nth-child(2){   
-  float: right;   
-  margin-right:5px;
-}   
-.receiver div:nth-of-type(3){ 
-  float:right;     
-  max-width:65%; 
-  background-color: #fff;  
-  color:#909090;
-  font-size:14px; 
-  margin: 0 10px 10px 20px; 
-  padding: 10px 0px 10px 10px;    
-  border-radius:7px;    
-  position: relative;
-}   
-.left_triangle{ 
-  height:0px;   
-  width:0px;    
-  border-width:8px;   
-  border-style:solid;   
-  border-color:transparent #fff transparent transparent;    
-  position: relative; 
-  left:-16px;   
-  top:15px;    
+.message-number {
   position: absolute;
-} 
-.right_triangle{    
-  height:0px;   
-  width:0px;    
-  border-width:8px;   
-  border-style:solid; 
-  border-color:transparent transparent transparent #fff;      
-  position: relative;     
-  right:-16px;    
-  top:15px; 
-  position: absolute;   
-}
-.send{
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  background-color:#f7f7f8;
-  padding:10px 15px;
-}
-.send input[type=text]{
-  width: 88%;
-  height: auto;
-  margin-bottom:0;
-  border-radius: 5px;
-}
-.send form{
-  margin-bottom:0;  
-}
-.send .btn{
-  background-color: transparent;
-  color:#909090;
-  border:transparent;
-  width: 10%;
-  float: right;
-  letter-spacing: 1px;
-  font-size: 18px;
-  margin-bottom: 0;
-}
-.send .btn:hover{
-  color: #0a82a0;
-}
+  background-color: red;
+  top: 2px;
+  left: 90px;
+  padding: 5px 8px;
+  border-radius: 17px;
+  color: #fff; }
+
+.chat {
+  position: relative;
+  background-color: #eaeaea; }
+  .chat .send-time {
+    text-align: center;
+    color: #b5bdbf;
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .chat .receiver-time {
+    text-align: center;
+    color: #b5bdbf;
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .chat .bar {
+    box-shadow: none;
+    position: relative; }
+    .chat .bar .title {
+      color: #606060;
+      font-size: 22px; }
+  .chat .chat-content {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px; }
+    .chat .chat-content .sender {
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding-bottom: 2px; }
+      .chat .chat-content .sender .send-img {
+        float: left; }
+        .chat .chat-content .sender .send-img img {
+          width: 4em;
+          height: 4em; }
+      .chat .chat-content .sender .send-content {
+        position: relative;
+        background-color: #fff;
+        width: 70%;
+        float: left;
+        margin-left: 20px;
+        padding: 10px;
+        border-radius: 7px;
+        font-size: 14px;
+        color: #909090;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.85); }
+        .chat .chat-content .sender .send-content .left_triangle {
+          height: 0px;
+          width: 0px;
+          border-width: 8px;
+          border-style: solid;
+          border-color: transparent #fff transparent transparent;
+          position: absolute;
+          left: -16px;
+          top: 13px; }
+    .chat .chat-content .receiver {
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding-bottom: 2px; }
+      .chat .chat-content .receiver .receiver-img {
+        float: right; }
+        .chat .chat-content .receiver .receiver-img img {
+          width: 4em;
+          height: 4em; }
+      .chat .chat-content .receiver .receive-content {
+        position: relative;
+        width: 70%;
+        float: right;
+        background-color: #fff;
+        margin: 0 20px 10px 10px;
+        padding: 10px;
+        border-radius: 7px;
+        font-size: 14px;
+        color: #909090;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.85); }
+        .chat .chat-content .receiver .receive-content .right_triangle {
+          height: 0px;
+          width: 0px;
+          border-width: 8px;
+          border-style: solid;
+          border-color: transparent transparent transparent #fff;
+          position: absolute;
+          right: -16px;
+          top: 13px; }
+  .chat .write {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f7f7f8;
+    padding: 10px 0 10px 10px;
+    border-top: 1px solid #969696; }
+    .chat .write form {
+      overflow: hidden;
+      margin-bottom: 0; }
+      .chat .write form input[type=text] {
+        width: 82%;
+        float: left;
+        margin-bottom: 0;
+        border-radius: 5px;
+        color: #909090;
+        padding: 5px 10px;
+        border: 1px solid #a6afb1; }
+      .chat .write form button {
+        width: 18%;
+        height: 40px;
+        float: right;
+        margin-bottom: 0;
+        background-color: transparent;
+        border: 0;
+        color: #b5bdbf;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center; }
+      .chat .write form button:hover {
+        color: #0a82a0; }
