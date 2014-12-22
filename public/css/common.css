@@ -642,3 +642,134 @@ nav.bar.bar-tab .tab-item .tab-label {
           top: 0; }
     .notice .card .table-view {
       background-color: #eaeaea; }
+
+
+
+
+
+
+/*chat.css*/
+
+.chat-content{
+  width:90%;
+  margin:0 auto;
+}
+
+.chat{
+position:relative;
+background-color:#eaeaea;
+}
+.chat .icon-left-nav:before {
+color:#a6afb2;
+}
+.chat .bar{
+box-shadow:none;
+background-color:#eaeaea;
+position: relative;}
+.chat .title{
+color:#909090;
+font-size:25px; 
+}  
+.sender{      
+  overflow: hidden;
+  margin:20px 0; 
+}  
+.sender > div:nth-of-type(1){   
+  text-align: center; 
+  color:#bbb;
+} 
+.sender div:nth-of-type(2){   
+  float: left;    
+  margin-right:5px;
+}   
+.sender div:nth-of-type(3){   
+  background-color: #fff; 
+  max-width:65%;
+  float: left;      
+  font-size:14px;
+  color:#909090;
+  margin: 0 20px 10px 15px; 
+  padding: 10px 10px 10px 0px;  
+  border-radius:7px;  
+  position: relative;
+}   
+.receiver div:nth-of-type(2) img,  
+.sender div:nth-of-type(2) img{    
+  width:4em;     
+  height: 4em; 
+}   
+.receiver{    
+  clear:both;   
+  margin:20px 0;
+  overflow: hidden;
+}   
+.receiver > div:nth-of-type(1){   
+  text-align: center; 
+  color:#bbb;
+} 
+.receiver div:nth-child(2){   
+  float: right;   
+  margin-right:5px;
+}   
+.receiver div:nth-of-type(3){ 
+  float:right;     
+  max-width:65%; 
+  background-color: #fff;  
+  color:#909090;
+  font-size:14px; 
+  margin: 0 10px 10px 20px; 
+  padding: 10px 0px 10px 10px;    
+  border-radius:7px;    
+  position: relative;
+}   
+.left_triangle{ 
+  height:0px;   
+  width:0px;    
+  border-width:8px;   
+  border-style:solid;   
+  border-color:transparent #fff transparent transparent;    
+  position: relative; 
+  left:-16px;   
+  top:15px;    
+  position: absolute;
+} 
+.right_triangle{    
+  height:0px;   
+  width:0px;    
+  border-width:8px;   
+  border-style:solid; 
+  border-color:transparent transparent transparent #fff;      
+  position: relative;     
+  right:-16px;    
+  top:15px; 
+  position: absolute;   
+}
+.send{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color:#f7f7f8;
+  padding:10px 15px;
+}
+.send input[type=text]{
+  width: 88%;
+  height: auto;
+  margin-bottom:0;
+  border-radius: 5px;
+}
+.send form{
+  margin-bottom:0;  
+}
+.send .btn{
+  background-color: transparent;
+  color:#909090;
+  border:transparent;
+  width: 10%;
+  float: right;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.send .btn:hover{
+  color: #0a82a0;
+}
