@@ -137,7 +137,7 @@ a {
 
 nav.bar.bar-tab .tab-item .icon {
   display: inline;
-  opacity: 0.5; }
+  opacity: 0.6; }
   nav.bar.bar-tab .tab-item .icon img {
     width: 22px; }
 nav.bar.bar-tab .tab-item.active .icon {
@@ -204,7 +204,7 @@ nav.bar.bar-tab .tab-item .tab-label {
   content: ''; }
 
 .table-view-cell > a:not(.btn) {
-  margin: -11px -105px -11px -15px; }
+  margin: -11px -105px -11px -8px; }
 
 .table-view-cell {
   background-color: #DADADA;
@@ -283,14 +283,16 @@ nav.bar.bar-tab .tab-item .tab-label {
   top: 6px; }
 
 .icon-left-nav:before {
-  color: #fff; }
+  color: #fff;
+  font-family: Ratchicons; }
 
 .icon {
   color: #fff; }
 
 /*//Per*/
 .personal {
-  position: relative; }
+  position: relative;
+  background-color: #f7f7f8; }
   .personal .bar {
     position: relative; }
   .personal .info {
@@ -298,7 +300,9 @@ nav.bar.bar-tab .tab-item .tab-label {
   .personal .where {
     color: #909090;
     font-size: 15px;
-    margin-top: 0; }
+    margin-top: 0;
+    margin-top: -3px;
+    margin-bottom: 15px; }
   .personal .title {
     color: #666;
     font-size: 28px;
@@ -310,9 +314,10 @@ nav.bar.bar-tab .tab-item .tab-label {
     color: #fff;
     font-size: 15px;
     letter-spacing: 1px;
-    line-height: 2; }
+    line-height: 2;
+    margin-top: 5px; }
   .personal .head-btn {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 3px; }
   .personal .bag-color {
@@ -324,13 +329,15 @@ nav.bar.bar-tab .tab-item .tab-label {
     padding-bottom: 15px; }
   .personal .info img {
     width: 7em;
-    height: 7em; }
+    height: 7em;
+    border: 3px solid #fff;
+    border-radius: 60px; }
   .personal .posi-rel {
     position: relative;
     padding-top: 5px; }
   .personal .a-inblo {
     display: inline-block;
-    width: 45%;
+    width: 47%;
     margin: 0 auto;
     line-height: 1.5; }
   .personal .a-inblo button {
@@ -350,7 +357,6 @@ nav.bar.bar-tab .tab-item .tab-label {
     background-color: #116e8e;
     letter-spacing: 8px; }
   .personal .bar-tab {
-    border-bottom: 1px solid #a6afb1;
     padding-bottom: 5px;
     background-color: #fff; }
     .personal .bar-tab .icon {
@@ -367,13 +373,15 @@ nav.bar.bar-tab .tab-item .tab-label {
     margin: 0 auto;
     color: #909090; }
     .personal .content-padded .padded-tex {
-      margin: 35px 0;
+      margin: 35px 5px;
       text-align: left;
       font-size: 16px;
       line-height: 1.7;
       color: #909090; }
     .personal .content-padded h3 {
-      font-size: 20px; }
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #919090; }
   .personal .segmented-control {
     border-bottom: 0;
     margin-top: 40px;
@@ -386,7 +394,6 @@ nav.bar.bar-tab .tab-item .tab-label {
       .personal .segmented-control .control-item .label {
         display: block;
         font-size: 15px;
-        opacity: 0.5;
         line-height: 1.8; }
       .personal .segmented-control .control-item .icon {
         color: #b5bdbf;
@@ -419,21 +426,21 @@ nav.bar.bar-tab .tab-item .tab-label {
         font-size: 12px; }
 
 /* classes.css */
-.classes {
+.course {
   position: relative; }
-  .classes .info {
+  .course .info {
     text-align: center;
     clear: both;
     padding-top: 30px;
     background-color: #f7f7f8; }
-    .classes .info p {
+    .course .info p {
       font-size: 13px;
       color: #b5bdbf; }
-    .classes .info a {
+    .course .info a {
       font-size: 0; }
-    .classes .info .teach-evaluation {
+    .course .info .teach-evaluation {
       position: relative; }
-      .classes .info .teach-evaluation .evaluation {
+      .course .info .teach-evaluation .evaluation {
         position: absolute;
         z-index: 999;
         left: 50%;
@@ -444,96 +451,113 @@ nav.bar.bar-tab .tab-item .tab-label {
         width: 100px;
         font-size: 16px;
         color: #909090; }
-    .classes .info .bar {
+    .course .info .bar {
       position: relative;
       margin-top: 30px;
       box-shadow: none;
       border-top: 1px solid #a6afb1;
       border-bottom: 1px solid #a6afb1;
       padding: 5px 0; }
-      .classes .info .bar .border-right {
+      .course .info .bar .border-right {
         border-right: 1px solid #a6afb1; }
-      .classes .info .bar .tab-item {
+      .course .info .bar .tab-item {
         font-size: 0;
         padding: 20px 0; }
-        .classes .info .bar .tab-item .icon {
+        .course .info .bar .tab-item .icon {
           color: #b5bdbf;
           opacity: 1;
           font-size: 30px; }
-        .classes .info .bar .tab-item .tab-label {
+        .course .info .bar .tab-item .tab-label {
           color: #b5bdbf;
           font-size: 16px; }
-  .classes .info img.avatar {
+  .course .info img.avatar {
     border-radius: 50%;
     border: 3px solid #fff;
     width: 6em;
     height: 6em; }
-  .classes .btn-primary {
+  .course .btn-primary {
     background-color: #4f8da5;
     border: 1px solid #4f8da5;
     border-radius: 5px;
     width: 40%;
     height: 40px;
     letter-spacing: 4px; }
-  .classes .info h4 {
+  .course .info h4 {
     margin-top: 0;
     font-size: 20px;
     margin-bottom: 5px; }
-  .classes .content-padded {
+  .course .content-padded {
     text-align: left;
     width: 100%;
     margin: 0; }
-    .classes .content-padded h3 {
+    .course .content-padded h3 {
       text-align: center;
       padding: 20px 0;
       margin-bottom: 0;
       color: #909090; }
-    .classes .content-padded p {
+    .course .content-padded p {
       width: 90%;
       margin: 0 auto;
-      margin-bottom: 3 0px;
+      margin-bottom: 25px;
       font-size: 14px;
       letter-spacing: 2px; }
-    .classes .content-padded h4 {
+    .course .content-padded h4 {
       padding: 0;
       font-size: 16px;
       color: #fff;
       position: relative; }
-      .classes .content-padded h4 img {
+      .course .content-padded h4 img {
         width: 86.5px;
         height: 25px; }
-      .classes .content-padded h4 span {
+      .course .content-padded h4 span {
         position: absolute;
         left: 5px;
-        top: 6px;
+        top: 5px;
         font-size: 12px; }
-  .classes .segmented-control {
+  .course .segmented-control {
     border-bottom: 0;
     margin-top: 40px;
     border-radius: 0; }
-    .classes .segmented-control .control-item {
-      padding: 8px 0 18px 0; }
-      .classes .segmented-control .control-item span {
+    .course .segmented-control .gray {
+      background-color: #dbdbdb; }
+      .course .segmented-control .gray .icon {
+        color: #123e50; }
+      .course .segmented-control .gray .label {
+        color: #123e50; }
+    .course .segmented-control .control-item {
+      padding: 8px 0 10px 0; }
+      .course .segmented-control .control-item span {
         display: inline-block;
         line-height: 1.5; }
-      .classes .segmented-control .control-item .label {
+      .course .segmented-control .control-item .label {
         display: block;
         font-size: 15px;
-        opacity: 0.5;
-        line-height: 1.8; }
-      .classes .segmented-control .control-item .icon {
-        color: #b5bdbf;
+        opacity: 0.8;
+        line-height: 1.8;
+        color: #123e50; }
+      .course .segmented-control .control-item .icon {
         font-size: 27px; }
-    .classes .segmented-control .active {
+      .course .segmented-control .control-item table {
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        top: -5px; }
+        .course .segmented-control .control-item table tr {
+          border: 0 solid #fff;
+          line-height: 1.5; }
+          .course .segmented-control .control-item table tr td {
+            border: 1px solid #fff;
+            text-align: center; }
+    .course .segmented-control .active {
       color: #000;
       background-color: #dadada;
       border-top: 3px solid #116e8e; }
-      .classes .segmented-control .active .icon {
+      .course .segmented-control .active .icon {
         color: #123e50; }
-  .classes .card {
+  .course .card {
     margin: 0;
     border-radius: 0; }
-    .classes .card .table-view-cell {
+    .course .card .table-view-cell {
       margin-top: 0;
       margin-bottom: 1px;
       color: #909090;
@@ -541,87 +565,128 @@ nav.bar.bar-tab .tab-item .tab-label {
       line-height: 1;
       background-color: #dadada;
       padding-top: 18px; }
-      .classes .card .table-view-cell .navigate-right .pull-left {
+      .course .card .table-view-cell .navigate-right .pull-left {
         width: 3em;
         height: 3em;
         margin-right: 20px;
-        border: 1px solid #fff; }
-      .classes .card .table-view-cell .navigate-right .media-body {
+        border: 1px solid #fff;
+        border-radius: 25px; }
+      .course .card .table-view-cell .navigate-right .media-body {
         position: relative; }
-        .classes .card .table-view-cell .navigate-right .media-body h4 {
+        .course .card .table-view-cell .navigate-right .media-body h4 {
           color: #0a82a0; }
-        .classes .card .table-view-cell .navigate-right .media-body p {
+        .course .card .table-view-cell .navigate-right .media-body p {
           line-height: 1.5;
-          letter-spacing: 1px; }
-        .classes .card .table-view-cell .navigate-right .media-body .time {
+          letter-spacing: 1px;
+          font-size: 16px; }
+        .course .card .table-view-cell .navigate-right .media-body .time {
           color: #fff;
           position: absolute;
           right: 0px;
-          top: -3px; }
-    .classes .card .control-content .liuyan-form {
+          top: -3px;
+          font-size: 12px; }
+    .course .card .control-content .liuyan-form {
       margin-bottom: 0;
-      padding: 10px 20px;
+      padding: 10px 25px;
       overflow: hidden;
-      background-color: #bbb; }
-      .classes .card .control-content .liuyan-form input {
+      background-color: #f2f2f2;
+      /*img{
+          width:2em;
+          height:2em;
+          border-radius:25px;
+          border:1px solid #fff;
+        }*/ }
+      .course .card .control-content .liuyan-form input {
         margin-bottom: 0;
         width: 82%;
+        border-radius: 6px;
         float: right; }
-      .classes .card .control-content .liuyan-form img {
-        width: 2em;
-        height: 2em; }
-    .classes .card .footer-btn {
+      .course .card .control-content .liuyan-form .icon-heart {
+        border: 1px solid #a6afb2;
+        border-radius: 23px;
+        padding: 8px;
+        background-color: #fff; }
+      .course .card .control-content .liuyan-form .icon-heart:before {
+        color: #a6afb2; }
+    .course .card .footer-btn {
       text-align: center; }
-      .classes .card .footer-btn a {
+      .course .card .footer-btn a {
         font-size: 0; }
-        .classes .card .footer-btn a .btn-yellow {
+        .course .card .footer-btn a .btn-yellow {
           background-color: #FECF4C;
           border: 3px solid #fff;
           width: 49%;
           border-radius: 10px;
-          color: #333;
+          color: #424242;
           height: 50px;
-          line-height: 1.5; }
-  .classes .bar {
+          line-height: 1.5;
+          font-size: 16px; }
+  .course .bar {
     background: rgba(0, 0, 0, 0);
     box-shadow: none; }
-  .classes .courses-list .course .title-bar {
+  .course .courses-list .course .title-bar {
     height: 100%;
     background: rgba(16, 46, 62, 0.5); }
-    .classes .courses-list .course .title-bar .u-pull-left {
+    .course .courses-list .course .title-bar .u-pull-left {
       text-align: center;
       float: none;
       position: relative;
-      top: 30%;
+      top: 25%;
+      font-size: 28px;
       letter-spacing: 3px; }
-  .classes .courses-list .course .title-list {
+  .course .courses-list .course .title-list {
     position: absolute;
     margin-bottom: 0;
     text-align: center;
-    bottom: 80px;
+    top: 58%;
     width: 100%; }
-    .classes .courses-list .course .title-list li {
+    .course .courses-list .course .title-list a {
       display: inline-block;
-      background-color: #dbdcde;
+      background-color: #fff;
+      opacity: 0.8;
       border-radius: 15px;
-      padding: 5px 10px;
-      font-size: 14px;
+      /*padding:2px 0;*/
+      font-size: 16px;
       width: 28%;
-      margin: 4px; }
+      margin: 4px;
+      line-height: 2; }
+      .course .courses-list .course .title-list a .icon-redo2:before {
+        content: "\e968";
+        color: #116f8f;
+        font-size: 18px; }
+      .course .courses-list .course .title-list a .icon-heart:before {
+        content: "\e9da";
+        color: #7e7e7e;
+        font-size: 18px; }
+      .course .courses-list .course .title-list a .blue {
+        color: #116f8f; }
+      .course .courses-list .course .title-list a .icon-comment:before {
+        content: "\e600";
+        color: #7e7e7e; }
+      .course .courses-list .course .title-list a span {
+        margin: 0 2px;
+        /*position:relative;
+            margin-top:2px;
+            font-size: 16px;*/ }
+      .course .courses-list .course .title-list a .icon {
+        position: relative;
+        top: 3px;
+        font-size: 20px; }
 
-.notice {
+.message {
   padding: 10px;
   position: relative;
   background-color: #eaeaea; }
-  .notice .segmented-control {
+  .message .segmented-control {
     border-radius: 5px; }
-    .notice .segmented-control .control-item {
+    .message .segmented-control .control-item {
       letter-spacing: 3px;
       font-size: 18px;
       padding: 10px 0; }
-  .notice .card {
-    margin: 10px 0 50px; }
-    .notice .card .table-view-cell {
+  .message .card {
+    margin: 10px 0 50px;
+    border: 1px solid #bbb; }
+    .message .card .table-view-cell {
       margin-top: 0;
       margin-bottom: 10px;
       color: #909090;
@@ -629,27 +694,28 @@ nav.bar.bar-tab .tab-item .tab-label {
       line-height: 1;
       background-color: #fff;
       padding-top: 18px; }
-      .notice .card .table-view-cell .navigate-right .pull-left {
+      .message .card .table-view-cell .navigate-right .pull-left {
         width: 4em;
         height: 4em;
         margin-right: 20px;
         border: 1px solid #fff; }
-      .notice .card .table-view-cell .navigate-right .media-body {
+      .message .card .table-view-cell .navigate-right .media-body {
         position: relative; }
-        .notice .card .table-view-cell .navigate-right .media-body h4 {
-          color: #0a82a0; }
-        .notice .card .table-view-cell .navigate-right .media-body p {
+        .message .card .table-view-cell .navigate-right .media-body h4 {
+          color: #0a82a0;
+          letter-spacing: 1px; }
+        .message .card .table-view-cell .navigate-right .media-body p {
           line-height: 1.5;
           letter-spacing: 1px;
           color: #909090; }
-        .notice .card .table-view-cell .navigate-right .media-body .time {
+        .message .card .table-view-cell .navigate-right .media-body .time {
           color: #b5bdbf;
           position: absolute;
-          right: 0px;
-          top: 0; }
-    .notice .card #item2mobile .message-number {
+          right: -2px;
+          top: -4px; }
+    .message .card #item2mobile .message-number {
       left: 60px; }
-    .notice .card .table-view {
+    .message .card .table-view {
       background-color: #eaeaea; }
 
 .message-number {
@@ -657,13 +723,62 @@ nav.bar.bar-tab .tab-item .tab-label {
   background-color: red;
   top: 2px;
   left: 90px;
-  padding: 5px 8px;
+  font-size: 12px;
   border-radius: 17px;
-  color: #fff; }
+  color: #fff;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 1.8; }
 
 .chat {
   position: relative;
   background-color: #eaeaea; }
+  .chat .popover {
+    position: relative;
+    display: block;
+    float: left;
+    width: 260px;
+    margin: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    max-width: 276px;
+    padding: 1px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: left;
+    white-space: normal;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+    .chat .popover .arrow {
+      top: 50%;
+      left: -11px;
+      margin-top: -11px;
+      border-right-color: rgba(0, 0, 0, 0.25);
+      border-left-width: 0;
+      border-width: 11px; }
+    .chat .popover .arrow:after {
+      bottom: -10px;
+      left: 1px;
+      content: " ";
+      border-right-color: #fff;
+      border-left-width: 0;
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid; }
+    .chat .popover .popover-content {
+      padding: 9px 14px; }
+      .chat .popover .popover-content p {
+        margin: 0 0 10px; }
   .chat .send-time {
     text-align: center;
     color: #b5bdbf;
@@ -692,7 +807,9 @@ nav.bar.bar-tab .tab-item .tab-label {
         float: left; }
         .chat .chat-content .sender .send-img img {
           width: 4em;
-          height: 4em; }
+          height: 4em;
+          border: 1px solid #fff;
+          border-radius: 35px; }
       .chat .chat-content .sender .send-content {
         position: relative;
         background-color: #fff;
@@ -745,6 +862,7 @@ nav.bar.bar-tab .tab-item .tab-label {
   .chat .write {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #f7f7f8;
     padding: 10px 0 10px 10px;
@@ -752,7 +870,7 @@ nav.bar.bar-tab .tab-item .tab-label {
     .chat .write form {
       overflow: hidden;
       margin-bottom: 0; }
-      .chat .write form input[type=text] {
+      .chat .write form .write-box {
         width: 82%;
         float: left;
         margin-bottom: 0;
@@ -773,3 +891,5 @@ nav.bar.bar-tab .tab-item .tab-label {
         text-align: center; }
       .chat .write form button:hover {
         color: #0a82a0; }
+  .chat .icon-left-nav:before {
+    color: #a6afb1; }

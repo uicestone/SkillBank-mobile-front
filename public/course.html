@@ -16,11 +16,12 @@
     <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
+    <link href="icomoon/style.css" rel="stylesheet">
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
   </head>
-  <body class="classes">
+  <body class="course">
 
         <header class="bar bar-nav">
           <button class="btn btn-link btn-nav pull-left">
@@ -34,27 +35,23 @@
               <h3 class="u-pull-left">魔方进阶教程</h3>
             </div>
             <img src="images/e.jpeg" alt="" class="cover">
-            <ul class="title-list">
-              <li>
-                <a href="">
-                  <span><!-- <img src="images/icons/icon-comment.png"> --></span>
-                  <span>23</span>
-                  <span>留言</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <!-- <span><img src="images/icons/icon-heart.png"></span> -->
-                  <span>6</span>
-                  <span>赞</span>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <span>转发</span>
-                </a>
-              </li>
-            </ul>
+            <div class="title-list">
+              <a href="">
+                <span class="icon icon-comment"></span>
+                <span>23</span>
+                <span>留言</span>
+              </a>
+              <a href="">
+                <span class="icon icon-heart"></span>
+
+                <span>6</span>
+                <span>赞</span>
+              </a>
+              <a href="">
+                <span class="icon icon-redo2"></span>
+                <span class="blue">转发</span>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -127,20 +124,35 @@
         <span class="icon">23</span>
         <span class="label">用户留言</span>
       </a>
-      <a class="control-item" href="#item2mobile">
+      <a class="control-item gray" href="#item2mobile">
         <span class="icon">1</span>
         <span class="label">学生评价</span>
       </a>
       <a class="control-item" href="#item3mobile">
-        <span class="icon">0</span>
-        <span class="label">老师评价</span>
+        <!-- <span class="icon">0</span> -->
+        <!-- <span class="label">老师评价</span> -->
+        <table>
+          <tr>
+            <td>综合评价</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>开课次数</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>学生人数</td>
+            <td>1</td>
+          </tr>
+        </table>
       </a>
     </div>
 
     <div class="card">
       <span id="item1mobile" class="control-content active">
         <form class="liuyan-form">
-          <img class="media-object pull-left" src="images/icons/icon-heart.png">
+          <!-- <img class="media-object pull-left" src="images/icons/icon-heart.png"> -->
+          <span class="icon icon-heart"></span>
           <input type="text" placeholder="我要留言">
         </form>
 
@@ -169,7 +181,7 @@
               <img class="media-object pull-left" src="images/avatar.png">
               <div class="media-body">
                 <h4>Kevin</h4>
-              <p class="time">6小时 之前</p>   <p>这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市</p>
+              <p class="time">6小时 之前</p>   <p>这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的</p>
               </div>
             </a>
           </li>
