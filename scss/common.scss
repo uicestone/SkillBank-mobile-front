@@ -841,7 +841,8 @@ body.register {
   }
   .cover-box{
     background: $dark;
-    h2 {
+    overflow: hidden;
+    h3 {
       text-align:center;
       position:absolute;
       width: 100%;
@@ -858,7 +859,7 @@ body.register {
         background-color:#fff;
         opacity: .8;
         border-radius:15px;
-        font-size: 16px;
+        font-size: 12px;
         width:28%;
         margin:4px;
         line-height:2;
