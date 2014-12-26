@@ -14,6 +14,11 @@ body {
   color: #666;
 }
 
+time {
+  font-size: 12px;
+  color: $lightGrey;
+}
+
 input[type="search"]:focus{
     border: none;
 }
@@ -25,6 +30,13 @@ input[type="search"]:focus{
 a {
   color: #999;
 }
+.has-header {
+  padding-top: 44px!important;
+}
+.no-header {
+  padding-top: 0;
+}
+
 .badge {
   width: 20px;
   height: 20px;
@@ -39,6 +51,7 @@ a {
 }
 .flag-num {
   position: relative;
+  display: inline-block;
   .badge {
     position: absolute;
     top: -10px;
@@ -62,6 +75,69 @@ a {
   width: 50px;
   img {
     width: 100%;
+  }
+}
+.avatar-text {
+  list-style: none;
+  li.card {
+    padding: 1em;
+    .pull-left {
+      margin-right: 1em;
+      img {
+        width: 4em;
+        height: 4em;
+      }
+      .badge {
+        top: 0px;
+        right: 0px;
+      }
+    }
+    .msg-title {
+      time {
+        color: $lightGrey;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    .flag-num {
+      color: $olive;
+    }
+  }
+}
+.comment-text {
+  list-style: none;
+  background: #ddd;
+  li.card {
+    padding: 1em;
+    background: none;
+    border-bottom: 1px solid #fff;
+    margin: 0;
+    border-radius: 0;
+    .pull-left {
+      margin-right: 1em;
+      img {
+        width: 3em;
+        height: 3em;
+        border: 1px solid #fff;
+      }
+      .badge {
+        top: 0px;
+        right: 0px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    .flag-num {
+      color: $olive;
+    }
+    .msg-title {
+      .time {
+        color: #fff;
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -184,6 +260,7 @@ nav.bar.bar-tab {
     .icon {
       display: inline;
       opacity: .6;
+      font-size: 19px;
       img {
         width: 22px;
       }
@@ -192,9 +269,6 @@ nav.bar.bar-tab {
       .icon {
         opacity: 1;
       }
-    }
-    .tab-label {
-      font-size: 14px;
     }
   }
 }
@@ -208,17 +282,6 @@ nav.bar.bar-tab {
   }
 }
 
-
-.wrapper .bar {
-  position: relative;
-  box-shadow: none;
-}
-.wrapper{
-  height:100%;
-}
-.wrapper{
-  background-color: #E9E9E9;
-}
 .bar-nav{
   background: rgba(0,0,0,0);
   box-shadow: none;
@@ -235,8 +298,7 @@ nav.bar.bar-tab {
   font-size: 20px;
 }
 .padded-text{
-  width: 80%;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0 auto;
   margin-top:36px;
   margin-bottom:30px;
@@ -294,75 +356,80 @@ nav.bar.bar-tab {
   color:#bbb;
 }
 /*register.html*/
-.register_form > form >div input{
-  height:45px;
-  border-radius:6px;
-  font-size: 19px;
+body.register {
+  .bar-nav~.content {
+    padding-top: 44px;
+  }
+  .register_form > form >div input{
+    height:45px;
+    border-radius:6px;
+    font-size: 19px;
+  }
+  .register_form{
+    width:90%;
+    margin:0 auto;
+    margin-top:25px;
+  }
+  .info {
+    text-align: center;
+    clear:both;
+    img {
+      width: 5em;
+      height: 5em;
+    }
+    h4{
+      margin-top:10px;
+    }
+  }
+  .btn-positive{
+    line-height: .5;
+    background-color: #126F8E;
+    border: 1px solid #126F8E;
+    border-radius: 6px;
+    font-size: 22px;
+    letter-spacing: 6px;
+    margin-bottom:18px;
+  }
+  .register_form > form > .reg-name{
+    margin-bottom:7px;
+  }
+  .register_form >form > p{
+    color:#bbb;
+    font-size: 14px;
+  }
+  .register_form >form > p >a{
+    color:#bbb;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  .register_form >form >p input{
+    margin-right: 3px;
+  }
+  .register_form >form > div{
+    position: relative;
+  }
+  .register_form >form > div > img{
+    position: absolute;
+    right:6px;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    top: 6px;
+  }
 }
-.register_form{
-  width:90%;
-  margin:0 auto;
-  margin-top:25px;
-}
-.info {
-  text-align: center;
-  clear:both;
-}
-.info h4{
-  margin-top:10px;
-}
-.btn-positive{
-  line-height: .5;
-  background-color: #126F8E;
-  border: 1px solid #126F8E;
-  border-radius: 6px;
-  font-size: 22px;
-  letter-spacing: 6px;
-  margin-bottom:18px;
-}
-.register_form > form > .reg-name{
-  margin-bottom:7px;
-}
-.register_form >form > p{
-  color:#bbb;
-  font-size: 14px;
-}
-.register_form >form > p >a{
-  color:#bbb;
-  text-decoration: underline;
-  font-size: 14px;
-}
-.register_form >form >p input{
-  margin-right:10px;
-}
-.register_form >form > div{
-  position: relative;
-}
-.register_form >form > div > img{
-  position: absolute;
-  right:6px;
-  display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-  top: 6px;
-}
-.icon-left-nav:before {
-  color: #fff;
-  font-family: Ratchicons;
-}
-
 
 /*//Per*/
 
 .personal{
-  position:relative;
   background-color:#f7f7f8;
-  .bar{
-    position:relative;
+  header {
+    a {
+      color: #fff;
+    }
   }
-  .info{
-    clear:none;
+  .bar-tab {
+    border-bottom: 1px solid #999;
   }
   .where{
     color:#909090;
@@ -400,6 +467,7 @@ nav.bar.bar-tab {
   .info{
     background-color:#ffd047;
     padding-bottom:15px;
+    text-align: center;
   }
   .info img{
     width:7em;
@@ -443,7 +511,7 @@ nav.bar.bar-tab {
     padding-bottom:5px;
     background-color:#fff;
     .icon{
-      color:#000;
+      color:#333;
       font-size:20px;
     }
     .tab-item span{
@@ -473,7 +541,9 @@ nav.bar.bar-tab {
       color:#919090;
     }
   }
-  .segmented-control{
+  .comment {
+
+    .segmented-control{
     border-bottom:0;
     margin-top:40px;
     border-radius:0;
@@ -494,7 +564,7 @@ nav.bar.bar-tab {
       }
     }
     .active{
-      color:#000;
+      color:#333;
       background-color:#dadada;
       border-top:3px solid #116e8e;
       .icon{
@@ -502,7 +572,7 @@ nav.bar.bar-tab {
       }
     }
   }
-  .card{
+    .comment-content{
     margin:0;
     border-radius:0;
     .table-view-cell{
@@ -526,6 +596,7 @@ nav.bar.bar-tab {
         font-size:12px;
       }
     }
+  }
   }
 }
 
@@ -637,7 +708,8 @@ nav.bar.bar-tab {
       }
     }
   }
-  .segmented-control{
+  .comment {
+    .segmented-control{
     border-bottom:0;
     margin-top:40px;
     border-radius:0;
@@ -674,7 +746,7 @@ nav.bar.bar-tab {
       }
     }
     .active{
-      color:#000;
+      color:#333;
       background-color:#dadada;
       border-top:3px solid #116e8e;
       .icon{
@@ -682,7 +754,7 @@ nav.bar.bar-tab {
       }
     }
   }
-  .card{
+    .comment-content {
     position: relative;
     margin:0;
     border-radius:0;
@@ -747,6 +819,7 @@ nav.bar.bar-tab {
         }
       }
     }
+  }
   }
   .bar-footer {
     height: 60px;
@@ -820,47 +893,12 @@ nav.bar.bar-tab {
   .segmented-control{
     border-radius:5px;
     .control-item{
-      letter-spacing:3px;
-      font-size:18px;
-      padding:10px 0;
+      letter-spacing: 3px;
+      padding: 10px 0;
+      font-size: 18px;
     }
   }
-  .control-content {
-    ul {
-      list-style: none;
-      li.card {
-        padding: 15px;
-        h4 {
-          color: $olive;
-          display: inline-block;
-        }
-        .time {
-          font-size: 12px;
-          color: $lightGrey;
-        }
-      }
-    }
-    &.private-msg {
-      ul {
-        li.card {
-          .pull-left {
-            margin-right: 1em;
-            img {
-              width: 4em;
-              height: 4em;
-            }
-            .badge {
-              top: 0px;
-              right: 0px;
-            }
-          }
-          p {
-            margin: 0;
-          }
-        }
-      }
-    }
-  }
+
   .table-view {
     background: none;
     .table-view-cell{
@@ -912,7 +950,6 @@ nav.bar.bar-tab {
 
 
 .chat{
-  position:relative;
   background-color:#eaeaea;
   .popover {
     position: relative;
@@ -993,7 +1030,7 @@ nav.bar.bar-tab {
       margin-bottom:20px;
       padding-bottom:2px;
       .send-img{
-        float:left;
+        float: left;
         img{
           width:4em;
           height:4em;
@@ -1004,9 +1041,7 @@ nav.bar.bar-tab {
       .send-content{
         position:relative;
         background-color: #fff;
-        width:70%;
-        float: left;
-        margin-left:20px;
+        margin-left: 6em;
         padding:10px;
         border-radius:7px;
         font-size:14px;
@@ -1037,10 +1072,8 @@ nav.bar.bar-tab {
       }
       .receive-content{
         position:relative;
-        width:70%;
-        float:right;
         background-color: #fff;
-        margin: 0 20px 10px 10px;
+        margin-right: 6em;
         padding:10px;
         border-radius:7px;
         font-size:14px;
@@ -1064,6 +1097,7 @@ nav.bar.bar-tab {
     bottom:0;
     left:0;
     width:100%;
+    height: 60px;
     background-color:#f7f7f8;
     padding:10px 0 10px 10px;
     border-top:1px solid #969696;
@@ -1095,8 +1129,5 @@ nav.bar.bar-tab {
         color:#0a82a0;
       }
     }
-  }
-  .icon-left-nav:before{
-    color:#a6afb1;
   }
 }

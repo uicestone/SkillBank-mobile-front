@@ -15,6 +15,7 @@
     <link href="bower_components/skeleton/css/skeleton.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
+    <link href="icomoon/style.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
 
     <!-- Include the compiled Ratchet JS -->
@@ -31,12 +32,30 @@
         </a>
       </div>
     </header>
+    <nav class="bar bar-tab">
+      <a class="tab-item active"  href="index.html" data-transition="slide-in">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">发现</span>
+      </a>
+      <a class="tab-item " href="message.html" data-transition="slide-in">
+        <span class="icon icon-comment2"></span>
+        <span class="tab-label">消息</span>
+      </a>
+      <a class="tab-item" href="course.html" data-transition="slide-in">
+        <span class="icon icon-text"></span>
+        <span class="tab-label">课程</span>
+      </a>
+      <a class="tab-item" href="personal.html" data-transition="slide-in">
+        <span class="icon icon-user"></span>
+        <span class="tab-label">个人</span>
+      </a>
+    </nav>
     <div class="content">
       <div id="item1mobile" class="control-content active">
-        <ul>
+        <ul class="avatar-text">
           <li class="card">
             <div class="msg-title">
-              <span class="time pull-right">一天前</span>
+              <time class="pull-right">3小时 之前</time>
               <h4 class="flag-num">
                 通知标题
                 <span class="badge">1</span>
@@ -48,7 +67,7 @@
           </li>
           <li class="card">
             <div class="msg-title">
-              <span class="time pull-right">一天前</span>
+              <time class="pull-right">3小时 之前</time>
               <h4 class="flag-num">
                 通知标题
                 <span class="badge">1</span>
@@ -60,15 +79,15 @@
           </li>
         </ul>
       </div>
-      <div id="item2mobile" class="control-content private-msg">
-        <ul>
+      <div id="item2mobile" class="control-content">
+        <ul class="avatar-text">
           <li class="card">
             <div class="pull-left flag-num">
               <img class="avatar" src="images/avatar.png">
               <span class="badge">1</span>
             </div>
             <div class="msg-title">
-              <span class="time pull-right">3小时 之前</span>
+              <time class="pull-right">3小时 之前</time>
               <h4 class="flag-num">
                 Jason Wu
               </h4>
@@ -82,7 +101,7 @@
               <span class="badge">1</span>
             </div>
             <div class="msg-title">
-              <span class="time pull-right">3小时 之前</span>
+              <time class="pull-right">3小时 之前</time>
               <h4 class="flag-num">
                 Jason Wu
               </h4>
@@ -91,26 +110,8 @@
             </p>
           </li>
         </ul>
-    </div>
+      </div>
 
-      <nav class="bar bar-tab">
-        <a class="tab-item active"  href="/BE-FE-iSlider-ba8c93a/demo/picture/card.html">
-          <span class="icon"><img src="images/icons/icon-search.png" alt=""></span>
-          <span class="tab-label">发现</span>
-        </a>
-        <a class="tab-item " href="#">
-          <span class="icon"><img src="images/icons/icon-message.png" alt=""></span>
-          <span class="tab-label">消息</span>
-        </a>
-        <a class="tab-item" href="#">
-          <span class="icon"><img src="images/icons/icon-course.png" alt=""></span>
-          <span class="tab-label">课程</span>
-        </a>
-        <a class="tab-item" href="#">
-          <span class="icon"><img src="images/icons/icon-person.png" alt=""></span>
-          <span class="tab-label">个人</span>
-        </a>
-      </nav>
 
     </div>
 

@@ -14,6 +14,10 @@ body {
   font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666; }
 
+time {
+  font-size: 12px;
+  color: #ccc; }
+
 input[type="search"]:focus {
   border: none; }
 
@@ -23,6 +27,12 @@ input[type="search"]:focus {
 
 a {
   color: #999; }
+
+.has-header {
+  padding-top: 44px !important; }
+
+.no-header {
+  padding-top: 0; }
 
 .badge {
   width: 20px;
@@ -36,7 +46,8 @@ a {
     display: none; }
 
 .flag-num {
-  position: relative; }
+  position: relative;
+  display: inline-block; }
   .flag-num .badge {
     position: absolute;
     top: -10px;
@@ -58,6 +69,51 @@ a {
   width: 50px; }
   .ico img {
     width: 100%; }
+
+.avatar-text {
+  list-style: none; }
+  .avatar-text li.card {
+    padding: 1em; }
+    .avatar-text li.card .pull-left {
+      margin-right: 1em; }
+      .avatar-text li.card .pull-left img {
+        width: 4em;
+        height: 4em; }
+      .avatar-text li.card .pull-left .badge {
+        top: 0px;
+        right: 0px; }
+    .avatar-text li.card .msg-title time {
+      color: #ccc; }
+    .avatar-text li.card p {
+      margin: 0; }
+    .avatar-text li.card .flag-num {
+      color: #116f8f; }
+
+.comment-text {
+  list-style: none;
+  background: #ddd; }
+  .comment-text li.card {
+    padding: 1em;
+    background: none;
+    border-bottom: 1px solid #fff;
+    margin: 0;
+    border-radius: 0; }
+    .comment-text li.card .pull-left {
+      margin-right: 1em; }
+      .comment-text li.card .pull-left img {
+        width: 3em;
+        height: 3em;
+        border: 1px solid #fff; }
+      .comment-text li.card .pull-left .badge {
+        top: 0px;
+        right: 0px; }
+    .comment-text li.card p {
+      margin: 0; }
+    .comment-text li.card .flag-num {
+      color: #116f8f; }
+    .comment-text li.card .msg-title .time {
+      color: #fff;
+      font-size: 12px; }
 
 .sk {
   display: inline-block;
@@ -169,13 +225,12 @@ a {
 
 nav.bar.bar-tab .tab-item .icon {
   display: inline;
-  opacity: 0.6; }
+  opacity: 0.6;
+  font-size: 19px; }
   nav.bar.bar-tab .tab-item .icon img {
     width: 22px; }
 nav.bar.bar-tab .tab-item.active .icon {
   opacity: 1; }
-nav.bar.bar-tab .tab-item .tab-label {
-  font-size: 14px; }
 
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #13404c; }
@@ -184,16 +239,6 @@ nav.bar.bar-tab .tab-item .tab-label {
   .search-cat.segmented-control {
     font-size: 18px; }
  }
-
-.wrapper .bar {
-  position: relative;
-  box-shadow: none; }
-
-.wrapper {
-  height: 100%; }
-
-.wrapper {
-  background-color: #E9E9E9; }
 
 .bar-nav {
   background: rgba(0, 0, 0, 0);
@@ -211,8 +256,7 @@ nav.bar.bar-tab .tab-item .tab-label {
   font-size: 20px; }
 
 .padded-text {
-  width: 80%;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0 auto;
   margin-top: 36px;
   margin-bottom: 30px; }
@@ -259,24 +303,25 @@ nav.bar.bar-tab .tab-item .tab-label {
   color: #bbb; }
 
 /*register.html*/
-.register_form > form > div input {
+body.register .bar-nav ~ .content {
+  padding-top: 44px; }
+body.register .register_form > form > div input {
   height: 45px;
   border-radius: 6px;
   font-size: 19px; }
-
-.register_form {
+body.register .register_form {
   width: 90%;
   margin: 0 auto;
   margin-top: 25px; }
-
-.info {
+body.register .info {
   text-align: center;
   clear: both; }
-
-.info h4 {
-  margin-top: 10px; }
-
-.btn-positive {
+  body.register .info img {
+    width: 5em;
+    height: 5em; }
+  body.register .info h4 {
+    margin-top: 10px; }
+body.register .btn-positive {
   line-height: 0.5;
   background-color: #126F8E;
   border: 1px solid #126F8E;
@@ -284,26 +329,20 @@ nav.bar.bar-tab .tab-item .tab-label {
   font-size: 22px;
   letter-spacing: 6px;
   margin-bottom: 18px; }
-
-.register_form > form > .reg-name {
+body.register .register_form > form > .reg-name {
   margin-bottom: 7px; }
-
-.register_form > form > p {
+body.register .register_form > form > p {
   color: #bbb;
   font-size: 14px; }
-
-.register_form > form > p > a {
+body.register .register_form > form > p > a {
   color: #bbb;
   text-decoration: underline;
   font-size: 14px; }
-
-.register_form > form > p input {
-  margin-right: 10px; }
-
-.register_form > form > div {
+body.register .register_form > form > p input {
+  margin-right: 3px; }
+body.register .register_form > form > div {
   position: relative; }
-
-.register_form > form > div > img {
+body.register .register_form > form > div > img {
   position: absolute;
   right: 6px;
   display: block;
@@ -312,18 +351,13 @@ nav.bar.bar-tab .tab-item .tab-label {
   line-height: 34px;
   top: 6px; }
 
-.icon-left-nav:before {
-  color: #fff;
-  font-family: Ratchicons; }
-
 /*//Per*/
 .personal {
-  position: relative;
   background-color: #f7f7f8; }
-  .personal .bar {
-    position: relative; }
-  .personal .info {
-    clear: none; }
+  .personal header a {
+    color: #fff; }
+  .personal .bar-tab {
+    border-bottom: 1px solid #999; }
   .personal .where {
     color: #909090;
     font-size: 15px;
@@ -353,7 +387,8 @@ nav.bar.bar-tab .tab-item .tab-label {
     position: relative; }
   .personal .info {
     background-color: #ffd047;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    text-align: center; }
   .personal .info img {
     width: 7em;
     height: 7em;
@@ -387,7 +422,7 @@ nav.bar.bar-tab .tab-item .tab-label {
     padding-bottom: 5px;
     background-color: #fff; }
     .personal .bar-tab .icon {
-      color: #000;
+      color: #333;
       font-size: 20px; }
     .personal .bar-tab .tab-item span {
       line-height: 1.7; }
@@ -409,45 +444,45 @@ nav.bar.bar-tab .tab-item .tab-label {
       font-size: 20px;
       margin-bottom: 20px;
       color: #919090; }
-  .personal .segmented-control {
+  .personal .comment .segmented-control {
     border-bottom: 0;
     margin-top: 40px;
     border-radius: 0; }
-    .personal .segmented-control .control-item {
+    .personal .comment .segmented-control .control-item {
       padding: 8px 0 18px 0; }
-      .personal .segmented-control .control-item span {
+      .personal .comment .segmented-control .control-item span {
         display: inline-block;
         line-height: 1.5; }
-      .personal .segmented-control .control-item .label {
+      .personal .comment .segmented-control .control-item .label {
         display: block;
         font-size: 15px;
         line-height: 1.8; }
-      .personal .segmented-control .control-item .icon {
+      .personal .comment .segmented-control .control-item .icon {
         color: #b5bdbf;
         font-size: 27px; }
-    .personal .segmented-control .active {
-      color: #000;
+    .personal .comment .segmented-control .active {
+      color: #333;
       background-color: #dadada;
       border-top: 3px solid #116e8e; }
-      .personal .segmented-control .active .icon {
+      .personal .comment .segmented-control .active .icon {
         color: #123e50; }
-  .personal .card {
+  .personal .comment .comment-content {
     margin: 0;
     border-radius: 0; }
-    .personal .card .table-view-cell {
+    .personal .comment .comment-content .table-view-cell {
       margin-top: 0;
       margin-bottom: 1px;
       padding: 30px 30px 20px;
       color: #909090;
       overflow: hidden;
       line-height: 1; }
-      .personal .card .table-view-cell span {
+      .personal .comment .comment-content .table-view-cell span {
         line-height: 2; }
-      .personal .card .table-view-cell img {
+      .personal .comment .comment-content .table-view-cell img {
         width: 30px;
         height: 30px;
         float: right; }
-      .personal .card .table-view-cell .cell-content {
+      .personal .comment .comment-content .table-view-cell .cell-content {
         display: inline-block;
         margin-left: 20px;
         font-size: 12px; }
@@ -539,46 +574,46 @@ nav.bar.bar-tab .tab-item .tab-label {
       left: 5px;
       top: 5px;
       font-size: 12px; }
-.course-page .segmented-control {
+.course-page .comment .segmented-control {
   border-bottom: 0;
   margin-top: 40px;
   border-radius: 0; }
-  .course-page .segmented-control .control-item {
+  .course-page .comment .segmented-control .control-item {
     padding: 8px 0 10px 0; }
-    .course-page .segmented-control .control-item span {
+    .course-page .comment .segmented-control .control-item span {
       display: inline-block;
       color: #123e50;
       line-height: 1.5; }
-    .course-page .segmented-control .control-item .label {
+    .course-page .comment .segmented-control .control-item .label {
       display: block;
       font-size: 15px;
       opacity: 0.8;
       line-height: 1.8;
       color: #123e50; }
-    .course-page .segmented-control .control-item .icon {
+    .course-page .comment .segmented-control .control-item .icon {
       font-size: 27px; }
-    .course-page .segmented-control .control-item table {
+    .course-page .comment .segmented-control .control-item table {
       width: 95%;
       margin: 0 auto;
       position: relative;
       top: -5px; }
-      .course-page .segmented-control .control-item table tr {
+      .course-page .comment .segmented-control .control-item table tr {
         border: 0 solid #fff;
         line-height: 1.5; }
-        .course-page .segmented-control .control-item table tr td {
+        .course-page .comment .segmented-control .control-item table tr td {
           border: none;
           text-align: center; }
-  .course-page .segmented-control .active {
-    color: #000;
+  .course-page .comment .segmented-control .active {
+    color: #333;
     background-color: #dadada;
     border-top: 3px solid #116e8e; }
-    .course-page .segmented-control .active .icon {
+    .course-page .comment .segmented-control .active .icon {
       color: #123e50; }
-.course-page .card {
+.course-page .comment .comment-content {
   position: relative;
   margin: 0;
   border-radius: 0; }
-  .course-page .card .table-view-cell {
+  .course-page .comment .comment-content .table-view-cell {
     margin-top: 0;
     margin-bottom: 1px;
     color: #909090;
@@ -586,42 +621,42 @@ nav.bar.bar-tab .tab-item .tab-label {
     line-height: 1;
     background-color: #dadada;
     padding-top: 18px; }
-    .course-page .card .table-view-cell .navigate-right .pull-left {
+    .course-page .comment .comment-content .table-view-cell .navigate-right .pull-left {
       width: 3em;
       height: 3em;
       margin-right: 20px;
       border: 1px solid #fff;
       border-radius: 25px; }
-    .course-page .card .table-view-cell .navigate-right .media-body {
+    .course-page .comment .comment-content .table-view-cell .navigate-right .media-body {
       position: relative; }
-      .course-page .card .table-view-cell .navigate-right .media-body h4 {
+      .course-page .comment .comment-content .table-view-cell .navigate-right .media-body h4 {
         color: #0a82a0; }
-      .course-page .card .table-view-cell .navigate-right .media-body p {
+      .course-page .comment .comment-content .table-view-cell .navigate-right .media-body p {
         line-height: 1.5;
         letter-spacing: 1px;
         font-size: 16px; }
-      .course-page .card .table-view-cell .navigate-right .media-body .time {
+      .course-page .comment .comment-content .table-view-cell .navigate-right .media-body .time {
         color: #fff;
         position: absolute;
         right: 0px;
         top: -3px;
         font-size: 12px; }
-  .course-page .card .control-content .liuyan-form {
+  .course-page .comment .comment-content .control-content .liuyan-form {
     margin-bottom: 0;
     padding: 10px 25px;
     overflow: hidden;
     background-color: #f2f2f2; }
-    .course-page .card .control-content .liuyan-form input {
+    .course-page .comment .comment-content .control-content .liuyan-form input {
       margin-bottom: 0;
       width: 82%;
       border-radius: 6px;
       float: right; }
-    .course-page .card .control-content .liuyan-form .icon-heart {
+    .course-page .comment .comment-content .control-content .liuyan-form .icon-heart {
       border: 1px solid #a6afb2;
       border-radius: 23px;
       padding: 8px;
       background-color: #fff; }
-      .course-page .card .control-content .liuyan-form .icon-heart:before {
+      .course-page .comment .comment-content .control-content .liuyan-form .icon-heart:before {
         color: #a6afb2;
         position: relative;
         top: 2px; }
@@ -685,28 +720,8 @@ nav.bar.bar-tab .tab-item .tab-label {
     border-radius: 5px; }
     .message .segmented-control .control-item {
       letter-spacing: 3px;
-      font-size: 18px;
-      padding: 10px 0; }
-  .message .control-content ul {
-    list-style: none; }
-    .message .control-content ul li.card {
-      padding: 15px; }
-      .message .control-content ul li.card h4 {
-        color: #116f8f;
-        display: inline-block; }
-      .message .control-content ul li.card .time {
-        font-size: 12px;
-        color: #ccc; }
-  .message .control-content.private-msg ul li.card .pull-left {
-    margin-right: 1em; }
-    .message .control-content.private-msg ul li.card .pull-left img {
-      width: 4em;
-      height: 4em; }
-    .message .control-content.private-msg ul li.card .pull-left .badge {
-      top: 0px;
-      right: 0px; }
-  .message .control-content.private-msg ul li.card p {
-    margin: 0; }
+      padding: 10px 0;
+      font-size: 18px; }
   .message .table-view {
     background: none; }
     .message .table-view .table-view-cell {
@@ -742,7 +757,6 @@ nav.bar.bar-tab .tab-item .tab-label {
       background-color: #eaeaea; }
 
 .chat {
-  position: relative;
   background-color: #eaeaea; }
   .chat .popover {
     position: relative;
@@ -823,9 +837,7 @@ nav.bar.bar-tab .tab-item .tab-label {
       .chat .chat-content .sender .send-content {
         position: relative;
         background-color: #fff;
-        width: 70%;
-        float: left;
-        margin-left: 20px;
+        margin-left: 6em;
         padding: 10px;
         border-radius: 7px;
         font-size: 14px;
@@ -851,10 +863,8 @@ nav.bar.bar-tab .tab-item .tab-label {
           height: 4em; }
       .chat .chat-content .receiver .receive-content {
         position: relative;
-        width: 70%;
-        float: right;
         background-color: #fff;
-        margin: 0 20px 10px 10px;
+        margin-right: 6em;
         padding: 10px;
         border-radius: 7px;
         font-size: 14px;
@@ -874,6 +884,7 @@ nav.bar.bar-tab .tab-item .tab-label {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 60px;
     background-color: #f7f7f8;
     padding: 10px 0 10px 10px;
     border-top: 1px solid #969696; }
@@ -901,5 +912,3 @@ nav.bar.bar-tab .tab-item .tab-label {
         text-align: center; }
       .chat .write form button:hover {
         color: #0a82a0; }
-  .chat .icon-left-nav:before {
-    color: #a6afb1; }
