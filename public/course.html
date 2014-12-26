@@ -21,187 +21,178 @@
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
   </head>
-  <body class="course">
-
-        <header class="bar bar-nav">
-          <button class="btn btn-link btn-nav pull-left">
-            <span class="icon icon-left-nav"></span>
-          </button>
-        </header>
-
-        <div class="courses-list">
-          <div class="course card">
-            <div class="title-bar u-full-width">
-              <h3 class="u-pull-left">魔方进阶教程</h3>
-            </div>
-            <img src="images/e.jpeg" alt="" class="cover">
-            <div class="title-list">
-              <a href="">
-                <span class="icon icon-comment"></span>
-                <span>23</span>
-                <span>留言</span>
-              </a>
-              <a href="">
-                <span class="icon icon-heart"></span>
-
-                <span>6</span>
-                <span>赞</span>
-              </a>
-              <a href="">
-                <span class="icon icon-redo2"></span>
-                <span class="blue">转发</span>
-              </a>
-            </div>
+  <body class="course-page">
+    <div class="bar bar-standard bar-footer">
+            <a href="#">
+              <button class="btn btn-yellow">预定课程</button>
+            </a>
+            <a href="#">
+              <button class="btn btn-yellow">私信老师</button>
+            </a>
           </div>
+    <header class="bar bar-nav">
+      <button class="btn btn-link btn-nav pull-left">
+        <span class="icon icon-left-nav"></span>
+      </button>
+    </header>
+    <div class="content">
 
-        </div>
-
-
-        <div class="info">
-          <img src="images/avatar.png" alt="" class="avatar">
-          <h4>Jason Wu</h4>
-          <p>6km . 上海</p>
-          <a href="#" class="a-inblo">
-            <button class="btn btn-primary">关注</button>
+      <div class="cover-box card" >
+        <img src="images/e.jpeg" alt="" class="cover pull-left">
+        <h2 class="white">魔方进阶教程</h2>
+        <div class="title-list">
+          <a href="">
+            <span class="icon icon-comment"></span>
+            <span>23</span>
+            <span>留言</span>
           </a>
-          <div class="teach-evaluation">
-            <p class="evaluation">老师自评</p>
-            <nav class="bar bar-tab">
-                  <a class="tab-item border-right" href="#">
-                    <span class="icon">58</span>
-                    <span class="tab-label">技能水平</span>
-                  </a>
-                  <a class="tab-item" href="#">
-                    <span class="icon">76</span>
-                    <span class="tab-label">教学水平</span>
-                  </a>
-            </nav>
-          </div>
-        </div>
+          <a href="">
+            <span class="icon icon-heart"></span>
 
-        <div class="content-padded">
-          <h3>
-            课程介绍
-          </h3>
-          <p class="padded-tex">
-            找到运动的乐趣。实战演练，轻松快乐！教一个朋友，或一份快乐。具体分为三步：首先是  发球，一个好的发球能让你后续的打球得心应手。然后是接球，让你找到接球的感觉，不看着来球惊慌失措。最后是细节，常言道：细节决定成败，让你摆脱接不到球或者犯规的瞬间。come on , anybody !
-          </p>
-          <p class="padded-tex">
-            找到运动的乐趣。实战演练，轻松快乐！教一个朋友，或一份快乐。具体分为三步：首先是
-          </p>
-          <h4>
-            <img src="images/icons/icon-tag.png">
-            <span>一节课用时</span>
-          </h4>
-          <p>
-            一个小时或者更长都可以
-          </p>
-          <h4>
-            <img src="images/icons/icon-tag.png">
-            <span>上课地点</span>
-          </h4>
-          <p>
-            尽量在山西大学操场或者其它比较宽敞的地方都可以
-          </p>
-          <h4>
-            <img src="images/icons/icon-tag.png">
-            <span>能上课时间</span>
-          </h4>
-          <p>
-            不固定，具体情况私信协商。我是一个闲人，享受生活是我的乐趣。生活弹性较大
-          </p>
-          <h4>
-            <img src="images/icons/icon-tag.png">
-            <span>课前须知</span>
-          </h4>
-          <p>
-            尽量在山西大学操场，球和拍自带，最好穿宽松一点的衣服。重要是人来了就好
-          </p>
-        </div>
-
-    <div class="segmented-control">
-      <a class="control-item active" href="#item1mobile">
-        <span class="icon">23</span>
-        <span class="label">用户留言</span>
-      </a>
-      <a class="control-item gray" href="#item2mobile">
-        <span class="icon">1</span>
-        <span class="label">学生评价</span>
-      </a>
-      <a class="control-item" href="#item3mobile">
-        <!-- <span class="icon">0</span> -->
-        <!-- <span class="label">老师评价</span> -->
-        <table>
-          <tr>
-            <td>综合评价</td>
-            <td>100%</td>
-          </tr>
-          <tr>
-            <td>开课次数</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>学生人数</td>
-            <td>1</td>
-          </tr>
-        </table>
-      </a>
-    </div>
-
-    <div class="card">
-      <span id="item1mobile" class="control-content active">
-        <form class="liuyan-form">
-          <!-- <img class="media-object pull-left" src="images/icons/icon-heart.png"> -->
-          <span class="icon icon-heart"></span>
-          <input type="text" placeholder="我要留言">
-        </form>
-
-        <ul class="table-view">
-          <li class="table-view-cell media cell-nomar">
-            <a class="navigate-right">
-              <img class="media-object pull-left" src="images/avatar.png">
-              <div class="media-body">
-                <h4>小明</h4>
-                <p class="time">6小时 之前</p>
-                <p>这课蛮有意思的，可惜和我不在一个城市....</p>
-              </div>
-            </a>
-          </li>
-          <li class="table-view-cell media">
-            <a class="navigate-right">
-              <img class="media-object pull-left" src="images/avatar.png">
-              <div class="media-body">
-                <h4>花漱昊语</h4>
-                <p class="time">6小时 之前</p>  <p>这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市</p>
-              </div>
-            </a>
-          </li>
-          <li class="table-view-cell media">
-            <a class="navigate-right">
-              <img class="media-object pull-left" src="images/avatar.png">
-              <div class="media-body">
-                <h4>Kevin</h4>
-              <p class="time">6小时 之前</p>   <p>这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-
-        <div class="footer-btn">
-          <a href="#">
-            <button class="btn btn-yellow">预定课程</button>
+            <span>6</span>
+            <span>赞</span>
           </a>
-          <a href="#">
-            <button class="btn btn-yellow">私信老师</button>
+          <a href="" class="olive">
+            <span class="icon icon-redo2"></span>
+            <span>转发</span>
           </a>
         </div>
-      </span>
-      <span id="item2mobile" class="control-content">Item 2</span>
-      <span id="item3mobile" class="control-content">Item 3</span>
-    </div>
+      </div>
 
 
 
+      <div class="info">
+        <img src="images/avatar.png" alt="" class="avatar">
+        <h4>Jason Wu</h4>
+        <p>6km . 上海</p>
+        <a href="#" class="a-inblo">
+          <button class="btn btn-primary">关注</button>
+        </a>
+        <div class="teach-evaluation">
+          <p class="evaluation">老师自评</p>
+          <nav class="bar bar-tab">
+                <a class="tab-item border-right" href="#">
+                  <span class="icon">58</span>
+                  <span class="tab-label">技能水平</span>
+                </a>
+                <a class="tab-item" href="#">
+                  <span class="icon">76</span>
+                  <span class="tab-label">教学水平</span>
+                </a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="content-padded">
+        <h3>
+          课程介绍
+        </h3>
+        <p class="padded-tex">
+          找到运动的乐趣。实战演练，轻松快乐！教一个朋友，或一份快乐。具体分为三步：首先是  发球，一个好的发球能让你后续的打球得心应手。然后是接球，让你找到接球的感觉，不看着来球惊慌失措。最后是细节，常言道：细节决定成败，让你摆脱接不到球或者犯规的瞬间。come on , anybody !
+        </p>
+        <p class="padded-tex">
+          找到运动的乐趣。实战演练，轻松快乐！教一个朋友，或一份快乐。具体分为三步：首先是
+        </p>
+        <h4>
+          <img src="images/icons/icon-tag.png">
+          <span>一节课用时</span>
+        </h4>
+        <p>
+          一个小时或者更长都可以
+        </p>
+        <h4>
+          <img src="images/icons/icon-tag.png">
+          <span>上课地点</span>
+        </h4>
+        <p>
+          尽量在山西大学操场或者其它比较宽敞的地方都可以
+        </p>
+        <h4>
+          <img src="images/icons/icon-tag.png">
+          <span>能上课时间</span>
+        </h4>
+        <p>
+          不固定，具体情况私信协商。我是一个闲人，享受生活是我的乐趣。生活弹性较大
+        </p>
+        <h4>
+          <img src="images/icons/icon-tag.png">
+          <span>课前须知</span>
+        </h4>
+        <p>
+          尽量在山西大学操场，球和拍自带，最好穿宽松一点的衣服。重要是人来了就好
+        </p>
+      </div>
+
+      <div class="segmented-control">
+        <a class="control-item active" href="#item1mobile">
+          <span class="icon">23</span>
+          <span class="label">用户留言</span>
+        </a>
+        <a class="control-item" href="#item2mobile">
+          <span class="icon">1</span>
+          <span class="label">学生评价</span>
+        </a>
+        <a class="control-item" href="#item3mobile" class="disabled" disabled>
+          <table>
+            <tr>
+              <td>综合评价</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>开课次数</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>学生人数</td>
+              <td>1</td>
+            </tr>
+          </table>
+        </a>
+      </div>
+
+      <div class="card">
+        <span id="item1mobile" class="control-content active">
+          <form class="liuyan-form">
+            <!-- <img class="media-object pull-left" src="images/icons/icon-heart.png"> -->
+            <span class="icon icon-heart"></span>
+            <input type="text" placeholder="我要留言">
+          </form>
+
+          <ul class="table-view">
+            <li class="table-view-cell media cell-nomar">
+              <a class="navigate-right">
+                <img class="media-object pull-left" src="images/avatar.png">
+                <div class="media-body">
+                  <h4>小明</h4>
+                  <p class="time">6小时 之前</p>
+                  <p>这课蛮有意思的，可惜和我不在一个城市....</p>
+                </div>
+              </a>
+            </li>
+            <li class="table-view-cell media">
+              <a class="navigate-right">
+                <img class="media-object pull-left" src="images/avatar.png">
+                <div class="media-body">
+                  <h4>花漱昊语</h4>
+                  <p class="time">6小时 之前</p>  <p>这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市</p>
+                </div>
+              </a>
+            </li>
+            <li class="table-view-cell media">
+              <a class="navigate-right">
+                <img class="media-object pull-left" src="images/avatar.png">
+                <div class="media-body">
+                  <h4>Kevin</h4>
+                <p class="time">6小时 之前</p>   <p>这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的，可惜和我不在一个城市这课蛮有意思的</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+        </span>
+        <span id="item2mobile" class="control-content">Item 2</span>
+        <span id="item3mobile" class="control-content">Item 3</span>
+      </div>
 
     </div>
 
