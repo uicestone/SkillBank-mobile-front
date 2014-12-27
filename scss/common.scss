@@ -31,7 +31,7 @@ time {
 input[type="search"]:focus{
     border: none;
 }
-
+.title {color: $grey;}
 .avatar {
   border-radius: 50%;
   border: 3px solid #fff;
@@ -236,6 +236,8 @@ a {
       height: 100px;
       background: rgba(16,46,62,.8);
       padding: .5em 1em 0;
+      left: 0;
+      top: 0;
       h3 {
         color: #fff;
         font-weight: normal;
@@ -344,10 +346,6 @@ nav.bar.bar-tab {
   content: '';
 }
 
-.table-view-cell{
-  background-color: #DADADA;
-  margin-top:-8px;
-}
 .cell-nomar{
   margin-top:0;
 }
@@ -371,10 +369,7 @@ nav.bar.bar-tab {
   color:#bbb;
 }
 /*register.html*/
-body.register {
-  .bar-nav~.content {
-    padding-top: 44px;
-  }
+.register-page.content {
   .register_form > form >div input{
     height:45px;
     border-radius:6px;
@@ -427,9 +422,8 @@ body.register {
     position: absolute;
     right:6px;
     display: block;
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
+    width: 30px;
+    height: 30px;
     top: 6px;
   }
 }
@@ -494,6 +488,12 @@ body.register {
           color: $grey;
         }
       }
+    }
+  }
+  #slider {
+    img {
+      width: 100%;
+      float: left;
     }
   }
   .posi-rel{
@@ -690,8 +690,97 @@ body.register {
   }
 }
 
-.chat{
-  background-color:#eaeaea;
+header.chat-page{
+  h1 {
+
+  }
+}
+.chat-page.bar-footer{
+  height: auto;
+  form{
+    overflow:hidden;
+    margin-bottom:0;
+    .table-view {
+      background: none;
+      margin: 0;
+      .table-view-cell {
+        background: none;
+        margin: 0;
+        padding-left: 0;
+        .write-box{
+          margin-bottom:0;
+          border-radius:5px;
+        }
+        button{
+          color: $grey;
+        }
+      }
+    }
+  }
+}
+
+.popover-chat {
+  position:relative;
+  background-color: #fff;
+  padding:10px;
+  border-radius:7px;
+  font-size:14px;
+  color:#909090;
+  border: 1px solid $lightGrey;
+  .arrow {
+    position: absolute;
+    top: 13px;
+    height:0px;
+    width:0px;
+    border-width: 11px;
+    border-style:solid;
+    border-color:transparent transparent transparent transparent;
+    &:after {
+      border-width: 10px;
+    }
+  }
+  .arrow, .arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+  &.left{
+    margin-right: 6em;
+    .arrow{
+      right: -11px;
+      border-right-width: 0;
+      border-left-color: #999;
+      border-left-color: rgba(0,0,0,.25);
+      &:after {
+        right: 1px;
+        bottom: -10px;
+        content: " ";
+        border-right-width: 0;
+        border-left-color: #fff;
+      }
+    }
+  }
+  &.right{
+    margin-left: 6em;
+    .arrow{
+      left: -22px;
+      border-right-color: #999;
+      border-right-color: rgba(0,0,0,.25);
+      &:after {
+        bottom: -10px;
+        left: 1px;
+        content: " ";
+        border-right-color: #fff;
+        border-left-width: 0;
+      }
+    }
+  }
+}
+
+.chat-page.content{
   .popover {
     position: relative;
     display: block;
@@ -775,30 +864,9 @@ body.register {
         img{
           width:4em;
           height:4em;
-          border:1px solid #fff;
-          border-radius:35px;
         }
       }
-      .send-content{
-        position:relative;
-        background-color: #fff;
-        margin-left: 6em;
-        padding:10px;
-        border-radius:7px;
-        font-size:14px;
-        color:#909090;
-        box-shadow: 0 0 1px rgba(0,0,0,.85);
-        .left_triangle{
-          height:0px;
-          width:0px;
-          border-width:8px;
-          border-style:solid;
-          border-color:transparent #fff transparent transparent;
-          position: absolute;
-          left:-16px;
-          top:13px;
-        }
-      }
+
     }
     .receiver{
       overflow:hidden;
@@ -811,67 +879,12 @@ body.register {
           height:4em;
         }
       }
-      .receive-content{
-        position:relative;
-        background-color: #fff;
-        margin-right: 6em;
-        padding:10px;
-        border-radius:7px;
-        font-size:14px;
-        color:#909090;
-        box-shadow: 0 0 1px rgba(0,0,0,.85);
-        .right_triangle{
-          height:0px;
-          width:0px;
-          border-width:8px;
-          border-style:solid;
-          border-color:transparent transparent transparent #fff;
-          position: absolute;
-          right:-16px;
-          top:13px;
-        }
-      }
+
     }
   }
-  .write{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height: 60px;
-    background-color:#f7f7f8;
-    padding:10px 0 10px 10px;
-    border-top:1px solid #969696;
-    form{
-      overflow:hidden;
-      margin-bottom:0;
-      .write-box{
-        width:82%;
-        float:left;
-        margin-bottom:0;
-        border-radius:5px;
-        color:#909090;
-        padding:5px 10px;
-        border:1px solid #a6afb1;
-      }
-      button{
-        width:18%;
-        height:40px;
-        float:right;
-        margin-bottom:0;
-        background-color:transparent;
-        border:0;
-        color:#b5bdbf;
-        font-size:18px;
-        letter-spacing:1px;
-        text-align:center;
-      }
-      button:hover{
-        color:#0a82a0;
-      }
-    }
-  }
+
 }
+
 
 /* classes.css */
 .course-page.content {
@@ -880,38 +893,47 @@ body.register {
     clear:both;
     padding-top:30px;
     background-color:#f7f7f8;
-    .teach-evaluation{
+    .evaluation{
       position:relative;
-      .evaluation{
-        position:absolute;
+      h5 {
+        position:relative;
+        top: 2em;
         z-index:999;
-        left:50%;
-        background-color:#f7f7f8;
-        margin-left:-52px;
-        top:-10px;
-        height:25px;
-        width:100px;
-        font-size:16px;
+        background: #f7f7f8;
+        padding: 1em;
+        display: inline-block;
         color:#909090;
       }
     }
-    .bar{
+    .table{
       position:relative;
-      margin-top:30px;
       box-shadow:none;
       border-top:1px solid #a6afb1;
       border-bottom:1px solid #a6afb1;
       padding:5px 0;
+      display: table;
+      width: 100%;
+      height: 50px;
+      padding: 0;
+      table-layout: fixed;
       .border-right{
         border-right:1px solid #a6afb1;
       }
-      .tab-item{
+      .table-item{
+        display: table-cell;
+        width: 1%;
+        height: 50px;
+        color: #929292;
+        text-align: center;
+        vertical-align: middle;
+
         font-size:0;
         padding:20px 0;
-        .icon{
+        .h3 {
           color:#b5bdbf;
           opacity:1;
           font-size:30px;
+          width: auto;
         }
         .tab-label{
           color:#b5bdbf;
@@ -1031,7 +1053,7 @@ body.register {
   }
 }
 
-header.message-page {
+.message-page {
   height: 47px;
   background: #eee;
   .segmented-control{

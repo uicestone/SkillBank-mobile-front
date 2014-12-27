@@ -22,27 +22,31 @@
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
   </head>
-  <body class="chat">
-      <header class="bar bar-nav">
-        <a class="icon icon-arrow-left pull-left"></a>
+  <body>
+      <header class="chat-page bar bar-nav">
+        <a href="index.html" class="icon icon-arrow-left pull-left" data-transition="slide-out"></a>
         <h1 class="title">麻团儿</h1>
       </header>
-      <div class="bar bar-footer write">
+      <div class="chat-page bar bar-footer">
         <form>
-          <input type="text" class="write-box">
-          <button class="btn btn-positive btn-block">发送</button>
+          <ul class="table-view">
+            <li class="table-view-cell">
+              <input type="text" class="write-box">
+              <button class="btn btn-link">发送</button>
+            </li>
+          </ul>
         </form>
       </div>
-      <div class="content has-header">
+      <div class="chat-page content has-header">
         <div class="chat-content">
               <!-- Left -->
           <div class="sender">
             <div class="send-time">9月5日下午2:501</div>
             <div class="send-img">
-              <img src="images/avatar.png">
+              <img src="images/avatar.png" class="avatar">
             </div>
-            <div class="send-content">
-              <div class="left_triangle"></div>
+            <div class="popover-chat right">
+              <div class="arrow"></div>
               <span>TT我好不容易想到个~可以正常上课的Topic,TT我好不容易想到个~可以正常上课的Topic[英语口语练习课]</span>
             </div>
           </div>
@@ -50,21 +54,14 @@
           <div class="receiver">
             <div class="receiver-time">1分钟前</div>
             <div class="receiver-img">
-              <img src="images/favicon.png">
+              <img src="images/favicon.png"  class="avatar">
             </div>
-            <div class="receive-content">
-              <div class="right_triangle"></div>
+            <div class="popover-chat left">
+              <div class="arrow"></div>
               <span> TT我好不容易想到个~可以正常上课的Topic,TT我好不容易想到个~可以正常上课的Topic[英语口语练习课] </span>
             </div>
           </div>
-
-
-          <div class="popover right">
-            <div class="arrow"></div>
-            <div class="popover-content">
-              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-            </div>
-          </div>
+        </div>
 
       </div>
   </body>

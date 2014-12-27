@@ -28,6 +28,9 @@ time {
 input[type="search"]:focus {
   border: none; }
 
+.title {
+  color: #999; }
+
 .avatar {
   border-radius: 50%;
   border: 3px solid #fff; }
@@ -212,7 +215,9 @@ a {
       position: absolute;
       height: 100px;
       background: rgba(16, 46, 62, 0.8);
-      padding: 0.5em 1em 0; }
+      padding: 0.5em 1em 0;
+      left: 0;
+      top: 0; }
       .courses-list .course .title-bar h3 {
         color: #fff;
         font-weight: normal;
@@ -295,10 +300,6 @@ nav.bar.bar-tab .tab-item.active .icon {
   right: 15px;
   content: ''; }
 
-.table-view-cell {
-  background-color: #DADADA;
-  margin-top: -8px; }
-
 .cell-nomar {
   margin-top: 0; }
 
@@ -318,25 +319,23 @@ nav.bar.bar-tab .tab-item.active .icon {
   color: #bbb; }
 
 /*register.html*/
-body.register .bar-nav ~ .content {
-  padding-top: 44px; }
-body.register .register_form > form > div input {
+.register-page.content .register_form > form > div input {
   height: 45px;
   border-radius: 6px;
   font-size: 19px; }
-body.register .register_form {
+.register-page.content .register_form {
   width: 90%;
   margin: 0 auto;
   margin-top: 25px; }
-body.register .info {
+.register-page.content .info {
   text-align: center;
   clear: both; }
-  body.register .info img {
+  .register-page.content .info img {
     width: 5em;
     height: 5em; }
-  body.register .info h4 {
+  .register-page.content .info h4 {
     margin-top: 10px; }
-body.register .btn-positive {
+.register-page.content .btn-positive {
   line-height: 0.5;
   background-color: #126F8E;
   border: 1px solid #126F8E;
@@ -344,26 +343,25 @@ body.register .btn-positive {
   font-size: 22px;
   letter-spacing: 6px;
   margin-bottom: 18px; }
-body.register .register_form > form > .reg-name {
+.register-page.content .register_form > form > .reg-name {
   margin-bottom: 7px; }
-body.register .register_form > form > p {
+.register-page.content .register_form > form > p {
   color: #bbb;
   font-size: 14px; }
-body.register .register_form > form > p > a {
+.register-page.content .register_form > form > p > a {
   color: #bbb;
   text-decoration: underline;
   font-size: 14px; }
-body.register .register_form > form > p input {
+.register-page.content .register_form > form > p input {
   margin-right: 3px; }
-body.register .register_form > form > div {
+.register-page.content .register_form > form > div {
   position: relative; }
-body.register .register_form > form > div > img {
+.register-page.content .register_form > form > div > img {
   position: absolute;
   right: 6px;
   display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 30px;
+  height: 30px;
   top: 6px; }
 
 /*//Per*/
@@ -413,6 +411,9 @@ body.register .register_form > form > div > img {
       .personal-page.content .info .nums table td {
         font-size: 12px;
         color: #999; }
+.personal-page.content #slider img {
+  width: 100%;
+  float: left; }
 .personal-page.content .posi-rel {
   position: relative;
   padding-top: 5px; }
@@ -559,162 +560,158 @@ body.register .register_form > form > div > img {
         position: relative;
         top: 2px; }
 
-.chat {
-  background-color: #eaeaea; }
-  .chat .popover {
-    position: relative;
+.chat-page.bar-footer {
+  height: auto; }
+  .chat-page.bar-footer form {
+    overflow: hidden;
+    margin-bottom: 0; }
+    .chat-page.bar-footer form .table-view {
+      background: none;
+      margin: 0; }
+      .chat-page.bar-footer form .table-view .table-view-cell {
+        background: none;
+        margin: 0;
+        padding-left: 0; }
+        .chat-page.bar-footer form .table-view .table-view-cell .write-box {
+          margin-bottom: 0;
+          border-radius: 5px; }
+        .chat-page.bar-footer form .table-view .table-view-cell button {
+          color: #999; }
+
+.popover-chat {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 14px;
+  color: #909090;
+  border: 1px solid #ccc; }
+  .popover-chat .arrow {
+    position: absolute;
+    top: 13px;
+    height: 0px;
+    width: 0px;
+    border-width: 11px;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent; }
+    .popover-chat .arrow:after {
+      border-width: 10px; }
+  .popover-chat .arrow, .popover-chat .arrow:after {
+    position: absolute;
     display: block;
-    float: left;
-    width: 260px;
-    margin: 20px;
-    top: 0;
-    left: 0;
-    z-index: 1060;
-    max-width: 276px;
-    padding: 1px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: left;
-    white-space: normal;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-    .chat .popover .arrow {
-      top: 50%;
-      left: -11px;
-      margin-top: -11px;
-      border-right-color: rgba(0, 0, 0, 0.25);
-      border-left-width: 0;
-      border-width: 11px; }
-    .chat .popover .arrow:after {
-      bottom: -10px;
-      left: 1px;
-      content: " ";
-      border-right-color: #fff;
-      border-left-width: 0;
-      position: absolute;
-      display: block;
-      width: 0;
-      height: 0;
-      border-color: transparent;
-      border-style: solid; }
-    .chat .popover .popover-content {
-      padding: 9px 14px; }
-      .chat .popover .popover-content p {
-        margin: 0 0 10px; }
-  .chat .send-time {
-    text-align: center;
-    color: #b5bdbf;
-    font-size: 14px;
-    margin-bottom: 10px; }
-  .chat .receiver-time {
-    text-align: center;
-    color: #b5bdbf;
-    font-size: 14px;
-    margin-bottom: 10px; }
-  .chat .bar {
-    box-shadow: none;
-    position: relative; }
-    .chat .bar .title {
-      color: #606060;
-      font-size: 22px; }
-  .chat .chat-content {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 10px; }
-    .chat .chat-content .sender {
-      overflow: hidden;
-      margin-bottom: 20px;
-      padding-bottom: 2px; }
-      .chat .chat-content .sender .send-img {
-        float: left; }
-        .chat .chat-content .sender .send-img img {
-          width: 4em;
-          height: 4em;
-          border: 1px solid #fff;
-          border-radius: 35px; }
-      .chat .chat-content .sender .send-content {
-        position: relative;
-        background-color: #fff;
-        margin-left: 6em;
-        padding: 10px;
-        border-radius: 7px;
-        font-size: 14px;
-        color: #909090;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.85); }
-        .chat .chat-content .sender .send-content .left_triangle {
-          height: 0px;
-          width: 0px;
-          border-width: 8px;
-          border-style: solid;
-          border-color: transparent #fff transparent transparent;
-          position: absolute;
-          left: -16px;
-          top: 13px; }
-    .chat .chat-content .receiver {
-      overflow: hidden;
-      margin-bottom: 20px;
-      padding-bottom: 2px; }
-      .chat .chat-content .receiver .receiver-img {
-        float: right; }
-        .chat .chat-content .receiver .receiver-img img {
-          width: 4em;
-          height: 4em; }
-      .chat .chat-content .receiver .receive-content {
-        position: relative;
-        background-color: #fff;
-        margin-right: 6em;
-        padding: 10px;
-        border-radius: 7px;
-        font-size: 14px;
-        color: #909090;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.85); }
-        .chat .chat-content .receiver .receive-content .right_triangle {
-          height: 0px;
-          width: 0px;
-          border-width: 8px;
-          border-style: solid;
-          border-color: transparent transparent transparent #fff;
-          position: absolute;
-          right: -16px;
-          top: 13px; }
-  .chat .write {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #f7f7f8;
-    padding: 10px 0 10px 10px;
-    border-top: 1px solid #969696; }
-    .chat .write form {
-      overflow: hidden;
-      margin-bottom: 0; }
-      .chat .write form .write-box {
-        width: 82%;
-        float: left;
-        margin-bottom: 0;
-        border-radius: 5px;
-        color: #909090;
-        padding: 5px 10px;
-        border: 1px solid #a6afb1; }
-      .chat .write form button {
-        width: 18%;
-        height: 40px;
-        float: right;
-        margin-bottom: 0;
-        background-color: transparent;
-        border: 0;
-        color: #b5bdbf;
-        font-size: 18px;
-        letter-spacing: 1px;
-        text-align: center; }
-      .chat .write form button:hover {
-        color: #0a82a0; }
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid; }
+  .popover-chat.left {
+    margin-right: 6em; }
+    .popover-chat.left .arrow {
+      right: -11px;
+      border-right-width: 0;
+      border-left-color: #999;
+      border-left-color: rgba(0, 0, 0, 0.25); }
+      .popover-chat.left .arrow:after {
+        right: 1px;
+        bottom: -10px;
+        content: " ";
+        border-right-width: 0;
+        border-left-color: #fff; }
+  .popover-chat.right {
+    margin-left: 6em; }
+    .popover-chat.right .arrow {
+      left: -22px;
+      border-right-color: #999;
+      border-right-color: rgba(0, 0, 0, 0.25); }
+      .popover-chat.right .arrow:after {
+        bottom: -10px;
+        left: 1px;
+        content: " ";
+        border-right-color: #fff;
+        border-left-width: 0; }
+
+.chat-page.content .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 260px;
+  margin: 20px;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  max-width: 276px;
+  padding: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: left;
+  white-space: normal;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .chat-page.content .popover .arrow {
+    top: 50%;
+    left: -11px;
+    margin-top: -11px;
+    border-right-color: rgba(0, 0, 0, 0.25);
+    border-left-width: 0;
+    border-width: 11px; }
+  .chat-page.content .popover .arrow:after {
+    bottom: -10px;
+    left: 1px;
+    content: " ";
+    border-right-color: #fff;
+    border-left-width: 0;
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid; }
+  .chat-page.content .popover .popover-content {
+    padding: 9px 14px; }
+    .chat-page.content .popover .popover-content p {
+      margin: 0 0 10px; }
+.chat-page.content .send-time {
+  text-align: center;
+  color: #b5bdbf;
+  font-size: 14px;
+  margin-bottom: 10px; }
+.chat-page.content .receiver-time {
+  text-align: center;
+  color: #b5bdbf;
+  font-size: 14px;
+  margin-bottom: 10px; }
+.chat-page.content .bar {
+  box-shadow: none;
+  position: relative; }
+  .chat-page.content .bar .title {
+    color: #606060;
+    font-size: 22px; }
+.chat-page.content .chat-content {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px; }
+  .chat-page.content .chat-content .sender {
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 2px; }
+    .chat-page.content .chat-content .sender .send-img {
+      float: left; }
+      .chat-page.content .chat-content .sender .send-img img {
+        width: 4em;
+        height: 4em; }
+  .chat-page.content .chat-content .receiver {
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 2px; }
+    .chat-page.content .chat-content .receiver .receiver-img {
+      float: right; }
+      .chat-page.content .chat-content .receiver .receiver-img img {
+        width: 4em;
+        height: 4em; }
 
 /* classes.css */
 .course-page.content .info {
@@ -722,36 +719,44 @@ body.register .register_form > form > div > img {
   clear: both;
   padding-top: 30px;
   background-color: #f7f7f8; }
-  .course-page.content .info .teach-evaluation {
+  .course-page.content .info .evaluation {
     position: relative; }
-    .course-page.content .info .teach-evaluation .evaluation {
-      position: absolute;
+    .course-page.content .info .evaluation h5 {
+      position: relative;
+      top: 2em;
       z-index: 999;
-      left: 50%;
-      background-color: #f7f7f8;
-      margin-left: -52px;
-      top: -10px;
-      height: 25px;
-      width: 100px;
-      font-size: 16px;
+      background: #f7f7f8;
+      padding: 1em;
+      display: inline-block;
       color: #909090; }
-  .course-page.content .info .bar {
+  .course-page.content .info .table {
     position: relative;
-    margin-top: 30px;
     box-shadow: none;
     border-top: 1px solid #a6afb1;
     border-bottom: 1px solid #a6afb1;
-    padding: 5px 0; }
-    .course-page.content .info .bar .border-right {
+    padding: 5px 0;
+    display: table;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    table-layout: fixed; }
+    .course-page.content .info .table .border-right {
       border-right: 1px solid #a6afb1; }
-    .course-page.content .info .bar .tab-item {
+    .course-page.content .info .table .table-item {
+      display: table-cell;
+      width: 1%;
+      height: 50px;
+      color: #929292;
+      text-align: center;
+      vertical-align: middle;
       font-size: 0;
       padding: 20px 0; }
-      .course-page.content .info .bar .tab-item .icon {
+      .course-page.content .info .table .table-item .h3 {
         color: #b5bdbf;
         opacity: 1;
-        font-size: 30px; }
-      .course-page.content .info .bar .tab-item .tab-label {
+        font-size: 30px;
+        width: auto; }
+      .course-page.content .info .table .table-item .tab-label {
         color: #b5bdbf;
         font-size: 16px; }
   .course-page.content .info img.avatar {
@@ -840,10 +845,10 @@ body.register .register_form > form > div > img {
       line-height: 1.5;
       font-size: 16px; }
 
-header.message-page {
+.message-page {
   height: 47px;
   background: #eee; }
-  header.message-page .segmented-control .control-item {
+  .message-page .segmented-control .control-item {
     letter-spacing: 3px;
     padding: 10px 0;
     font-size: 16px; }
