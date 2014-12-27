@@ -21,8 +21,8 @@
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
   </head>
-  <body class="course-page">
-    <div class="bar bar-standard bar-footer">
+  <body>
+    <div class="course-page bar bar-footer">
       <a href="#">
         <button class="btn btn-yellow">预定课程</button>
       </a>
@@ -31,9 +31,9 @@
       </a>
     </div>
     <header class="bar bar-nav">
-      <a class="icon icon-arrow-left"></a>
+      <a href="index.html" class="icon icon-arrow-left" data-transition="slide-out"></a>
     </header>
-    <div class="content">
+    <div class="course-page content">
 
       <div class="cover-box" >
         <img src="images/e.jpeg" alt="" class="cover pull-left">
@@ -61,22 +61,20 @@
 
       <div class="info">
         <img src="images/avatar.png" alt="" class="avatar">
-        <h4>Jason Wu</h4>
+        <h3>Jason Wu</h3>
         <p>6km . 上海</p>
-        <a href="#" class="a-inblo">
-          <button class="btn btn-primary">关注</button>
-        </a>
+        <a href="#"><button class="btn btn-olive">关注</button></a>
         <div class="teach-evaluation">
           <p class="evaluation">老师自评</p>
           <nav class="bar bar-tab">
-                <a class="tab-item border-right" href="#">
-                  <span class="icon">58</span>
-                  <span class="tab-label">技能水平</span>
-                </a>
-                <a class="tab-item" href="#">
-                  <span class="icon">76</span>
-                  <span class="tab-label">教学水平</span>
-                </a>
+            <a class="tab-item border-right" href="#">
+              <span class="icon">58</span>
+              <span class="tab-label">技能水平</span>
+            </a>
+            <a class="tab-item" href="#">
+              <span class="icon">76</span>
+              <span class="tab-label">教学水平</span>
+            </a>
           </nav>
         </div>
       </div>
