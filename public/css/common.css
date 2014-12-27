@@ -18,6 +18,9 @@ body {
   color: #666;
   background: #eee; }
 
+header a {
+  color: #fff; }
+
 time {
   font-size: 12px;
   color: #ccc; }
@@ -364,93 +367,99 @@ body.register .register_form > form > div > img {
   top: 6px; }
 
 /*//Per*/
-.personal header a {
-  color: #fff; }
-.personal .bar-tab {
+.personal-page.content .bar-tab {
   border-bottom: 1px solid #999; }
-.personal .where {
+.personal-page.content .where {
   color: #909090;
   font-size: 15px;
   margin-top: 0;
   margin-top: -3px;
   margin-bottom: 15px; }
-.personal .title {
+.personal-page.content .title {
   color: #666;
   font-size: 28px;
   margin: 0; }
-.personal .avatarbig {
+.personal-page.content .avatarbig {
   width: 7em;
   height: 7em; }
-.personal .white {
+.personal-page.content h6 {
   color: #fff;
-  font-size: 15px;
-  letter-spacing: 1px;
-  line-height: 2;
-  margin-top: 5px; }
-.personal .head-btn {
+  margin: 1em 0; }
+.personal-page.content .head-btn {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 3px; }
-.personal .bag-color {
+  margin-bottom: 1em; }
+.personal-page.content .bag-color {
   background-color: #ffd047;
   height: auto;
   position: relative; }
-.personal .info {
+.personal-page.content .info {
   background-color: #ffd047;
-  padding-bottom: 15px;
   text-align: center; }
-.personal .info img {
-  width: 7em;
-  height: 7em;
-  border: 3px solid #fff;
-  border-radius: 60px; }
-.personal .posi-rel {
+  .personal-page.content .info img {
+    width: 7em;
+    height: 7em;
+    border: 3px solid #fff;
+    border-radius: 60px; }
+  .personal-page.content .info .nums {
+    background: #fff;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #999; }
+    .personal-page.content .info .nums table {
+      margin: 0; }
+      .personal-page.content .info .nums table td, .personal-page.content .info .nums table th {
+        text-align: center;
+        border: none; }
+      .personal-page.content .info .nums table td {
+        font-size: 12px;
+        color: #999; }
+.personal-page.content .posi-rel {
   position: relative;
   padding-top: 5px; }
-.personal .a-inblo {
+.personal-page.content .a-inblo {
   display: inline-block;
   width: 47%;
   margin: 0 auto;
   line-height: 1.5; }
-.personal .a-inblo button {
+.personal-page.content .a-inblo button {
   width: 100%; }
-.personal .btn {
+.personal-page.content .btn {
   top: 0;
   height: 38px;
   border-radius: 5px;
   font-size: 17px;
   line-height: 1.8;
   border: 0; }
-.personal .btn-white {
+.personal-page.content .btn-white {
   color: #0a82a0; }
-.personal .mar {
+.personal-page.content .mar {
   margin-right: 10px; }
-.personal .btn-primary {
+.personal-page.content .btn-primary {
   background-color: #116e8e;
   letter-spacing: 8px; }
-.personal .bar-tab {
+.personal-page.content .bar-tab {
   padding-bottom: 5px;
   background-color: #fff; }
-  .personal .bar-tab .icon {
+  .personal-page.content .bar-tab .icon {
     color: #333;
     font-size: 20px; }
-  .personal .bar-tab .tab-item span {
+  .personal-page.content .bar-tab .tab-item span {
     line-height: 1.7; }
-  .personal .bar-tab .tab-label {
+  .personal-page.content .bar-tab .tab-label {
     color: #b5bdbf; }
-  .personal .bar-tab .content-padded {
+  .personal-page.content .bar-tab .content-padded {
     background-color: #f7f7f8; }
-.personal .content-padded {
+.personal-page.content .content-padded {
   width: 90%;
   margin: 0 auto;
   color: #909090; }
-  .personal .content-padded .padded-tex {
+  .personal-page.content .content-padded .padded-tex {
     margin: 35px 5px;
     text-align: left;
     font-size: 16px;
     line-height: 1.7;
     color: #909090; }
-  .personal .content-padded h3 {
+  .personal-page.content .content-padded h3 {
     font-size: 20px;
     margin-bottom: 20px;
     color: #919090; }

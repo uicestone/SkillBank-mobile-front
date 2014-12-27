@@ -3,6 +3,8 @@ $dark : #13404c;
 $olive : #116f8f;
 $lightOlive : #4f8da5;
 $grey : #999;
+$black : #333;
+$darkGrey : #666;
 $lightGrey : #ccc;
 
 .white {color: #fff;}
@@ -16,7 +18,11 @@ body {
   color: #666;
   background: #eee;
 }
-
+header {
+  a {
+    color: #fff;
+  }
+}
 time {
   font-size: 12px;
   color: $lightGrey;
@@ -430,12 +436,7 @@ body.register {
 
 /*//Per*/
 
-.personal{
-  header {
-    a {
-      color: #fff;
-    }
-  }
+.personal-page.content{
   .bar-tab {
     border-bottom: 1px solid #999;
   }
@@ -455,33 +456,45 @@ body.register {
     width: 7em;
     height: 7em;
   }
-  .white{
+  h6 {
     color:#fff;
-    font-size:15px;
-    letter-spacing:1px;
-    line-height:2;
-    margin-top:5px;
+    margin: 1em 0;
   }
   .head-btn{
     width: 90%;
     margin:0 auto;
-    margin-bottom:3px;
+    margin-bottom: 1em;
   }
   .bag-color{
     background-color: #ffd047;
     height:auto;
     position:relative;
   }
-  .info{
+  .info {
     background-color:#ffd047;
-    padding-bottom:15px;
     text-align: center;
-  }
-  .info img{
-    width:7em;
-    height:7em;
-    border: 3px solid #fff;
-    border-radius: 60px;
+    img{
+      width:7em;
+      height:7em;
+      border: 3px solid #fff;
+      border-radius: 60px;
+    }
+    .nums {
+      background: #fff;
+      padding: .5em 0;
+      border-bottom: 1px solid $grey;
+      table {
+        margin: 0;
+        td, th {
+          text-align: center;
+          border: none;
+        }
+        td {
+          font-size: 12px;
+          color: $grey;
+        }
+      }
+    }
   }
   .posi-rel{
     position: relative;
