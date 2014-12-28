@@ -133,6 +133,19 @@ a {
       color: #fff;
       font-size: 12px; }
 
+#bullets ul {
+  text-align: center; }
+  #bullets ul li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #999;
+    background: #fff;
+    border-radius: 50%; }
+    #bullets ul li.active {
+      border: none;
+      background: #116f8f; }
+
 .sk {
   display: inline-block;
   width: 35px;
@@ -365,102 +378,104 @@ nav.bar.bar-tab .tab-item.active .icon {
   top: 6px; }
 
 /*//Per*/
-.personal-page.content .bar-tab {
+#personal-page.content .bar-tab {
   border-bottom: 1px solid #999; }
-.personal-page.content .where {
+#personal-page.content .where {
   color: #909090;
   font-size: 15px;
   margin-top: 0;
   margin-top: -3px;
   margin-bottom: 15px; }
-.personal-page.content .title {
+#personal-page.content .title {
   color: #666;
   font-size: 28px;
   margin: 0; }
-.personal-page.content .avatarbig {
+#personal-page.content .avatarbig {
   width: 7em;
   height: 7em; }
-.personal-page.content h6 {
+#personal-page.content h6 {
   color: #fff;
   margin: 1em 0; }
-.personal-page.content .head-btn {
+#personal-page.content .head-btn {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 1em; }
-.personal-page.content .bag-color {
+#personal-page.content .bag-color {
   background-color: #ffd047;
   height: auto;
   position: relative; }
-.personal-page.content .info {
+#personal-page.content .info {
   background-color: #ffd047;
   text-align: center; }
-  .personal-page.content .info img {
+  #personal-page.content .info img {
     width: 7em;
     height: 7em;
     border: 3px solid #fff;
     border-radius: 60px; }
-  .personal-page.content .info .nums {
+  #personal-page.content .info .nums {
     background: #fff;
     padding: 0.5em 0;
     border-bottom: 1px solid #999; }
-    .personal-page.content .info .nums table {
+    #personal-page.content .info .nums table {
       margin: 0; }
-      .personal-page.content .info .nums table td, .personal-page.content .info .nums table th {
+      #personal-page.content .info .nums table td, #personal-page.content .info .nums table th {
         text-align: center;
         border: none; }
-      .personal-page.content .info .nums table td {
+      #personal-page.content .info .nums table td {
         font-size: 12px;
         color: #999; }
-.personal-page.content #slider img {
-  width: 100%;
-  float: left; }
-.personal-page.content .posi-rel {
+#personal-page.content #slider {
+  margin: 1em 1.5em; }
+  #personal-page.content #slider img {
+    width: 100%;
+    float: left; }
+#personal-page.content .posi-rel {
   position: relative;
   padding-top: 5px; }
-.personal-page.content .a-inblo {
+#personal-page.content .a-inblo {
   display: inline-block;
   width: 47%;
   margin: 0 auto;
   line-height: 1.5; }
-.personal-page.content .a-inblo button {
+#personal-page.content .a-inblo button {
   width: 100%; }
-.personal-page.content .btn {
+#personal-page.content .btn {
   top: 0;
   height: 38px;
   border-radius: 5px;
   font-size: 17px;
   line-height: 1.8;
   border: 0; }
-.personal-page.content .btn-white {
+#personal-page.content .btn-white {
   color: #0a82a0; }
-.personal-page.content .mar {
+#personal-page.content .mar {
   margin-right: 10px; }
-.personal-page.content .btn-primary {
+#personal-page.content .btn-primary {
   background-color: #116e8e;
   letter-spacing: 8px; }
-.personal-page.content .bar-tab {
+#personal-page.content .bar-tab {
   padding-bottom: 5px;
   background-color: #fff; }
-  .personal-page.content .bar-tab .icon {
+  #personal-page.content .bar-tab .icon {
     color: #333;
     font-size: 20px; }
-  .personal-page.content .bar-tab .tab-item span {
+  #personal-page.content .bar-tab .tab-item span {
     line-height: 1.7; }
-  .personal-page.content .bar-tab .tab-label {
+  #personal-page.content .bar-tab .tab-label {
     color: #b5bdbf; }
-  .personal-page.content .bar-tab .content-padded {
+  #personal-page.content .bar-tab .content-padded {
     background-color: #f7f7f8; }
-.personal-page.content .content-padded {
+#personal-page.content .content-padded {
   width: 90%;
   margin: 0 auto;
   color: #909090; }
-  .personal-page.content .content-padded .padded-tex {
+  #personal-page.content .content-padded .padded-tex {
     margin: 35px 5px;
     text-align: left;
     font-size: 16px;
     line-height: 1.7;
     color: #909090; }
-  .personal-page.content .content-padded h3 {
+  #personal-page.content .content-padded h3 {
     font-size: 20px;
     margin-bottom: 20px;
     color: #919090; }
@@ -468,7 +483,8 @@ nav.bar.bar-tab .tab-item.active .icon {
 .comment .segmented-control {
   border-bottom: 0;
   margin-top: 40px;
-  border-radius: 0; }
+  border-radius: 0;
+  border-bottom: 1px solid #ccc; }
   .comment .segmented-control .control-item {
     padding: 8px 0 10px 0; }
     .comment .segmented-control .control-item span {

@@ -20,6 +20,7 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
+    <script src="js/common.js"></script>
   </head>
   <body>
 
@@ -30,7 +31,7 @@
  -->
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <nav class="bar bar-tab">
-      <a class="tab-item active"  href="index.html" data-transition="slide-in">
+      <a class="tab-item active"  href="#" data-transition="slide-in">
         <span class="icon icon-search"></span>
         <span class="tab-label">发现</span>
       </a>
@@ -38,7 +39,7 @@
         <span class="icon icon-comment2"></span>
         <span class="tab-label">消息</span>
       </a>
-      <a class="tab-item" href="course.html" data-transition="slide-in">
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="push">
         <span class="icon icon-text"></span>
         <span class="tab-label">课程</span>
       </a>

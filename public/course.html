@@ -20,8 +20,20 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
+    <script src="js/common.js"></script>
   </head>
   <body>
+    <script>
+      var checkPage = function(){
+        //alert('come')
+        //Only run if twitter-widget exists on page
+        if(document.getElementById('twitter-widget')) {
+            loadTwitterFeed(document,"script","twitter-wjs");
+        }
+      };
+
+      window.addEventListener('push', checkPage);
+    </script>
     <div class="course-page bar bar-footer">
       <a href="#">
         <button class="btn btn-yellow">预定课程</button>
@@ -179,6 +191,71 @@
                 <p>TT我好不容易想到个~可以正常上课的Topic[英语口语练习课]
                 </p>
               </li>
+              <li class="card">
+                <div class="pull-left flag-num">
+                  <img class="avatar" src="images/avatar.png">
+                </div>
+                <div class="msg-title">
+                  <span class="time pull-right">3小时 之前</span>
+                  <h4 class="flag-num">
+                    Jason Wu
+                  </h4>
+                </div>
+                <p>TT我好不容易想到个~可以正常上课的Topic[英语口语练习课]
+                </p>
+              </li>
+              <li class="card">
+                <div class="pull-left flag-num">
+                  <img class="avatar" src="images/avatar.png">
+                </div>
+                <div class="msg-title">
+                  <span class="time pull-right">3小时 之前</span>
+                  <h4 class="flag-num">
+                    Jason Wu
+                  </h4>
+                </div>
+                <p>TT我好不容易想到个~可以正常上课的Topic[英语口语练习课]
+                </p>
+              </li>
+              <li class="card">
+                <div class="pull-left flag-num">
+                  <img class="avatar" src="images/avatar.png">
+                </div>
+                <div class="msg-title">
+                  <span class="time pull-right">3小时 之前</span>
+                  <h4 class="flag-num">
+                    Jason Wu
+                  </h4>
+                </div>
+                <p>TT我好不容易想到个~可以正常上课的Topic[英语口语练习课]
+                </p>
+              </li>
+              <li class="card">
+                <div class="pull-left flag-num">
+                  <img class="avatar" src="images/avatar.png">
+                </div>
+                <div class="msg-title">
+                  <span class="time pull-right">3小时 之前</span>
+                  <h4 class="flag-num">
+                    Jason Wu
+                  </h4>
+                </div>
+                <p>TT我好不容易想到个~可以正常上课的Topic[英语口语练习课]
+                </p>
+              </li>
+              <li class="card">
+                <div class="pull-left flag-num">
+                  <img class="avatar" src="images/avatar.png">
+                </div>
+                <div class="msg-title">
+                  <span class="time pull-right">3小时 之前</span>
+                  <h4 class="flag-num">
+                    Jason Wu
+                  </h4>
+                </div>
+                <p>TT我好不容易想到个~可以正常上课的Topic[英语口语练习课]
+                </p>
+              </li>
             </ul>
           </div>
           <div id="item2mobile" class="control-content">
@@ -214,7 +291,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
   </body>

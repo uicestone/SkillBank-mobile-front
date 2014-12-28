@@ -17,21 +17,18 @@
     <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
     <link href="icomoon/style.css" rel="stylesheet">
-    <link href="icomoon/www.css" rel="stylesheet">
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
-  </head>
-  <body class="">
 
+  </head>
+  <body>
     <header class="personal-page bar bar-nav bag-color">
-      <a href="index.html" class="icon icon-arrow-left" data-transition="slide-out"></a>
       <a class="icon icon-redo pull-right"></a>
+      <a href="index.html" class="icon icon-arrow-left" data-transition="slide-out"></a>
     </header>
 
-
-
-    <div class="personal-page content">
+    <div class="content" id="personal-page">
       <div class="info">
         <h2 class="title posi-rel">Jason Wu</h4>
         <h4 class="where">6km&nbsp;.&nbsp;上海</h4>
@@ -76,7 +73,7 @@
       </div>
 
       <div class="courses-list card" id="slider">
-          <div class="course">
+        <div class="course">
             <div class="slider" id="mySlider">
               <div class="slide-group">
                 <div class="slide">
@@ -101,6 +98,13 @@
               </div>
             </div>
           </div>
+      </div>
+      <div id="bullets">
+        <ul>
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
 
 
@@ -199,5 +203,6 @@
       </div>
       </div>
     </div>
+    <script src="js/common.js"></script>
   </body>
 </html>

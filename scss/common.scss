@@ -156,6 +156,24 @@ a {
   }
 }
 
+#bullets {
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid $grey;
+      background: #fff;
+      border-radius: 50%;
+      &.active {
+        border: none;
+        background: $olive;
+      }
+    }
+  }
+}
+
 .sk {
   display: inline-block;
   width: $title-bar-height;
@@ -430,7 +448,7 @@ nav.bar.bar-tab {
 
 /*//Per*/
 
-.personal-page.content{
+#personal-page.content{
   .bar-tab {
     border-bottom: 1px solid #999;
   }
@@ -491,6 +509,7 @@ nav.bar.bar-tab {
     }
   }
   #slider {
+    margin: 1em 1.5em;
     img {
       width: 100%;
       float: left;
@@ -569,6 +588,7 @@ nav.bar.bar-tab {
     border-bottom:0;
     margin-top:40px;
     border-radius:0;
+    border-bottom: 1px solid #ccc;
     .control-item{
       padding: 8px 0 10px 0;
       span{
