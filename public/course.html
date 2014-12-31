@@ -13,57 +13,50 @@
 
     <!-- Include the compiled Ratchet CSS -->
     <link href="bower_components/skeleton/css/skeleton.css" rel="stylesheet">
+    <link href="icomoon/style.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
-    <link href="icomoon/style.css" rel="stylesheet">
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
-    <script src="js/common.js"></script>
   </head>
   <body>
-    <script>
-      var checkPage = function(){
-        //alert('come')
-        //Only run if twitter-widget exists on page
-        if(document.getElementById('twitter-widget')) {
-            loadTwitterFeed(document,"script","twitter-wjs");
-        }
-      };
-
-      window.addEventListener('push', checkPage);
-    </script>
     <div class="course-page bar bar-footer">
-      <a href="#">
+      <a href="#reservation">
         <button class="btn btn-yellow">预定课程</button>
       </a>
-      <a href="#">
+      <a href="#privateMsg">
         <button class="btn btn-yellow">私信老师</button>
       </a>
     </div>
     <header class="bar bar-nav">
-      <a href="index.html" class="icon icon-arrow-left" data-transition="slide-out"></a>
+      <a href="index.html" class="icon icomoon icon-arrow-left" data-transition="slide-out"></a>
     </header>
     <div class="course-page content">
-
+      <a href="#getCoins" class="ico-coin">
+        <span>价格</span>
+        <hr>
+        <span>1课币</span>
+      </a>
       <div class="cover-box" >
         <img src="images/e.jpeg" alt="" class="cover pull-left">
+
         <h3 class="white">魔方进阶教程</h3>
         <div class="title-list">
           <a href="">
-            <span class="icon icon-comment"></span>
+            <span class="icon icomoon icon-comment"></span>
             <span>23</span>
             <span>留言</span>
           </a>
           <a href="">
-            <span class="icon icon-heart"></span>
+            <span class="icon icomoon icon-heart"></span>
 
             <span>6</span>
             <span>赞</span>
           </a>
           <a href="" class="olive">
-            <span class="icon icon-redo"></span>
+            <span class="icon icomoon icon-redo"></span>
             <span>转发</span>
           </a>
         </div>
@@ -91,7 +84,7 @@
         </div>
       </div>
 
-      <div class="content-padded">
+      <div class="course-detail">
         <h3>
           课程介绍
         </h3>
@@ -160,8 +153,7 @@
         <div class="comment-content">
           <div id="item1mobile" class="control-content active">
             <form class="liuyan-form">
-              <!-- <img class="media-object pull-left" src="images/icons/icon-heart.png"> -->
-              <span class="icon icon-heart"></span>
+              <span class="icon icomoon icon-heart"></span>
               <input type="text" placeholder="我要留言">
             </form>
             <ul class="comment-text">
@@ -291,7 +283,85 @@
           </div>
         </div>
       </div>
-    </div>
+      <div id="reservation" class="modal">
+        <header class="bar bar-nav">
+          <a class="icon icon-close pull-right" href="#reservation"></a>
+          <h1 class="title">订课申请</h1>
+        </header>
 
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <input type="text" placeholder="授课日期">
+              <textarea name="" id="" cols="30" rows="2" placeholder="留言"></textarea>
+              <h4>你的联系信息</h4>
+              <p>老师在确认之后才能看到你的联系信息</p>
+              <input type="text" placeholder="􏲄􏲄姓名">
+              <input type="text" placeholder="手机">
+              <p>请在提交订课申请之前先与老师私信沟通细节</p>
+              <button  class="btn btn-primary btn-block">确认订课</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="privateMsg" class="modal">
+        <header class="bar bar-nav">
+          <a class="icon icon-close pull-right" href="#privateMsg"></a>
+          <h1 class="title">私信老师</h1>
+        </header>
+
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <textarea name="" id="" cols="30" rows="6" placeholder="输入你的私信内容，向老师咨询关于课程的各种问题"></textarea>
+              <button  class="btn btn-primary btn-block">发送私信</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="getCoins" class="modal">
+        <header class="bar bar-nav">
+          <a class="icon icon-close pull-right" href="#getCoins"></a>
+          <h1 class="title">获得课币的方法</h1>
+        </header>
+
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <div id="mySlider">
+                <div class="slider">
+                  <div class="slide-group">
+                    <div class="slide">
+                      <div class="circle">
+                        <h3>注册</h3>
+                        <span>+ 1</span>
+                      </div>
+                      <p>
+                        成功注册后就可获一枚<br>
+                        有校期为一个月的课币
+                      </p>
+                      <button class="btn btn-olive">现在就去注册</button>
+                    </div>
+                    <div class="slide">
+                      <p>首次开课通过审核可<br>获一枚永久有效课币</p>
+                      <small>目前开课功能可在PC端上操作<br>请访问：www.skillbank.cn</small>
+                    </div>
+                  </div>
+                </div>
+                <div id="bullets">
+                  <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="js/common.js"></script>
   </body>
 </html>

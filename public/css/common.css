@@ -14,7 +14,7 @@
   color: red; }
 
 body {
-  font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'STHeitiSC-Light', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666;
   background: #eee; }
 
@@ -33,7 +33,9 @@ input[type="search"]:focus {
 
 .avatar {
   border-radius: 50%;
-  border: 3px solid #fff; }
+  border: 3px solid #fff;
+  width: 5em;
+  height: 5em; }
 
 a {
   color: #999; }
@@ -45,7 +47,8 @@ a {
   padding-top: 0; }
 
 .btn {
-  border-radius: 5px; }
+  border-radius: 5px;
+  height: auto; }
 
 .btn-olive {
   background: #4f8da5;
@@ -72,25 +75,21 @@ a {
     top: -10px;
     right: -22px; }
 
-.bar-nav ~ .content {
-  padding-top: 0; }
+.bar-nav {
+  box-shadow: none;
+  background: #eaeaea; }
+
+body > .bar-nav {
+  background: rgba(0, 0, 0, 0); }
+  body > .bar-nav ~ .content {
+    padding-top: 0; }
 
 .segmented-control {
   border-radius: 5px; }
 
-.input-group-addon {
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  color: #ccc;
-  text-align: center; }
-
-.ico {
+.logo {
   display: inline-block;
-  width: 50px; }
-  .ico img {
-    width: 100%; }
+  width: 34px; }
 
 .avatar-text {
   list-style: none; }
@@ -167,42 +166,94 @@ a {
 
 .search-bar {
   background: #0f2e3e;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 10px; }
   .search-bar form {
     margin: 0; }
     .search-bar form .row {
       padding: 10px 15px;
       margin: 0; }
   .search-bar img {
-    float: left; }
+    float: left;
+    margin: 2px 0 0; }
   .search-bar .input-group {
-    margin-left: 70px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    position: relative;
+    margin-left: 50px;
     background: #415561;
-    border-radius: 4px;
-    vertical-align: middle;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    border-radius: 4px; }
     .search-bar .input-group .input-group-addon {
+      position: absolute;
+      left: 0;
+      top: 0;
       display: inline-block;
-      height: 42px;
-      height: 38px;
-      width: 42px; }
-    .search-bar .input-group input {
-      height: 42px;
+      height: 28px;
+      width: 28px;
+      line-height: 28px;
+      color: #ccc;
+      text-align: center; }
+      .search-bar .input-group .input-group-addon .icon-search {
+        font-size: 13px; }
+    .search-bar .input-group input[type=search] {
+      height: 28px;
+      padding-left: 30px;
       margin: 0;
       background: none;
       text-align: left;
-      color: #ccc; }
+      color: #ccc;
+      font-size: 13px; }
+
+.icomoon {
+  font-family: 'icomoon'; }
+
+.modal header h1 {
+  font-size: 20px;
+  color: #666; }
+.modal .content {
+  background: rgba(0, 0, 0, 0.5); }
+  .modal .content .content-inner {
+    background: #eaeaea;
+    overflow: hidden; }
+    .modal .content .content-inner .content-padded {
+      margin: 0 15px; }
+
+.ico-coin {
+  position: absolute;
+  top: 1em;
+  right: 10px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #FFD048;
+  text-align: center;
+  z-index: 10; }
+  .ico-coin span:first-child {
+    color: #fff;
+    font-size: 10px; }
+  .ico-coin hr {
+    border: 0;
+    height: 1px;
+    background: #fff;
+    width: 80%;
+    margin: 0 auto 2px; }
+  .ico-coin span:last-child {
+    color: #333;
+    font-size: 13px; }
+
+.circle {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center; }
+
+.slide img {
+  max-width: 100%;
+  display: block; }
 
 .search-cat.segmented-control {
   background: #ffd047;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   border-radius: 0;
   padding: 0 1vw;
@@ -212,7 +263,7 @@ a {
   display: flex; }
   .search-cat.segmented-control a.control-item {
     color: #13404c;
-    padding: 1.5em 0.3em 1.3em;
+    padding: 1.2em 0.3em 1.1em;
     height: 100%;
     margin: 0 1em;
     border: none; }
@@ -233,8 +284,9 @@ a {
       top: 0; }
       .courses-list .course .title-bar h3 {
         color: #fff;
-        font-weight: normal;
-        line-height: 35px; }
+        line-height: 35px;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        font-size: 18px; }
       .courses-list .course .title-bar a {
         position: relative;
         display: inline-block; }
@@ -250,11 +302,6 @@ a {
     .courses-list .course .info {
       text-align: center;
       margin-top: -4em; }
-      .courses-list .course .info img.avatar {
-        border-radius: 50%;
-        border: 3px solid #fff;
-        width: 6em;
-        height: 6em; }
 
 nav.bar.bar-tab .tab-item .icon {
   display: inline;
@@ -273,20 +320,8 @@ nav.bar.bar-tab .tab-item.active .icon {
     font-size: 18px; }
  }
 
-.bar-nav {
-  background: rgba(0, 0, 0, 0);
-  box-shadow: none; }
-
-.content-icons, .content-padded, .content-btn {
+.content-icons, .content-btn {
   text-align: center; }
-
-.a-btn {
-  display: block;
-  margin-top: 17px; }
-
-.btn-negative, .btn-primary {
-  width: 90%;
-  font-size: 20px; }
 
 .padded-text {
   font-size: 12px;
@@ -294,17 +329,18 @@ nav.bar.bar-tab .tab-item.active .icon {
   margin-top: 36px;
   margin-bottom: 30px; }
 
-.icon-search {
-  font-size: 20px; }
-
 .content-btn {
-  margin-top: 38px; }
+  padding: 0 2em; }
 
 .icons-logo {
   width: 4.5em; }
 
 .padded-tit {
   font-size: 38px; }
+
+.btn-block {
+  padding: 9px 0;
+  font-size: 16px; }
 
 .btn-white {
   font-size: 20px; }
@@ -316,20 +352,8 @@ nav.bar.bar-tab .tab-item.active .icon {
 .cell-nomar {
   margin-top: 0; }
 
-.btn {
-  font-size: 20px;
-  height: 45px; }
-
 .content-icons {
   clear: both; }
-
-.btn-negative {
-  background-color: #eb282d;
-  border: 1px solid #eb282d;
-  border-radius: 5px; }
-
-.btn:hover {
-  color: #bbb; }
 
 /*register.html*/
 .register-page.content .register_form > form > div input {
@@ -426,9 +450,6 @@ nav.bar.bar-tab .tab-item.active .icon {
         color: #999; }
 #personal-page.content #slider {
   margin: 1em 1.5em; }
-  #personal-page.content #slider img {
-    width: 100%;
-    float: left; }
 #personal-page.content .posi-rel {
   position: relative;
   padding-top: 5px; }
@@ -465,20 +486,16 @@ nav.bar.bar-tab .tab-item.active .icon {
     color: #b5bdbf; }
   #personal-page.content .bar-tab .content-padded {
     background-color: #f7f7f8; }
-#personal-page.content .content-padded {
-  width: 90%;
-  margin: 0 auto;
+#personal-page.content .content-padded .padded-tex {
+  margin: 35px 5px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
   color: #909090; }
-  #personal-page.content .content-padded .padded-tex {
-    margin: 35px 5px;
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #909090; }
-  #personal-page.content .content-padded h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #919090; }
+#personal-page.content .content-padded h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #919090; }
 
 .comment .segmented-control {
   border-bottom: 0;
@@ -775,11 +792,6 @@ nav.bar.bar-tab .tab-item.active .icon {
       .course-page.content .info .table .table-item .tab-label {
         color: #b5bdbf;
         font-size: 16px; }
-  .course-page.content .info img.avatar {
-    border-radius: 50%;
-    border: 3px solid #fff;
-    width: 6em;
-    height: 6em; }
 .course-page.content .cover-box {
   background: #13404c;
   overflow: hidden; }
@@ -816,34 +828,35 @@ nav.bar.bar-tab .tab-item.active .icon {
     opacity: 0.7; }
 .course-page.content .btn-olive {
   width: 40%; }
-.course-page.content .content-padded {
-  text-align: left;
-  width: 100%;
-  margin: 0; }
-  .course-page.content .content-padded h3 {
+.course-page.content .course-detail {
+  text-align: left; }
+  .course-page.content .course-detail h3 {
     text-align: center;
     padding: 20px 0;
     margin-bottom: 0;
     color: #909090; }
-  .course-page.content .content-padded p {
+  .course-page.content .course-detail p {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 25px;
     font-size: 14px;
     letter-spacing: 2px; }
-  .course-page.content .content-padded h4 {
+  .course-page.content .course-detail h4 {
     padding: 0;
     font-size: 16px;
     color: #fff;
     position: relative; }
-    .course-page.content .content-padded h4 img {
+    .course-page.content .course-detail h4 img {
       width: 86.5px;
       height: 25px; }
-    .course-page.content .content-padded h4 span {
+    .course-page.content .course-detail h4 span {
       position: absolute;
       left: 5px;
       top: 5px;
       font-size: 12px; }
+.course-page.content #getCoins.modal .slider {
+  background: none;
+  text-align: center; }
 
 .course-page.bar-footer {
   height: 60px;

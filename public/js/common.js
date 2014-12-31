@@ -1,5 +1,4 @@
 function addBulletsWeget(){
-
   // make bullet live
   var len = document.querySelectorAll('#mySlider .slide').length;
   var bulletsStr = "";
@@ -23,16 +22,11 @@ function addBulletsWeget(){
     }
   }
   $bulletsContainer.innerHTML = bulletsStr;
-
-
-
 }
-
 var checkPage = function(){
   if(document.getElementById('mySlider')) {
     addBulletsWeget();
   }
 };
 checkPage();
-
 window.addEventListener('push', checkPage);
