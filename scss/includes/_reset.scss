@@ -21,6 +21,11 @@ time {
   color: $lightGrey;
 }
 
+input[type="text"], input[type="email"], textarea {
+  border-radius: 5px;
+  font-size: 15px;
+}
+
 input[type="search"]:focus{
     border: none;
 }
@@ -46,7 +51,12 @@ a {
 }
 .btn-olive {
   background: $lightOlive;
-  border: none;
+  border: 1px solid $lightOlive;
+  color: #fff;
+}
+.btn-grey {
+  background: $grey;
+  border: 1px solid $grey;
   color: #fff;
 }
 .badge {

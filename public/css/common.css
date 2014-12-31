@@ -25,6 +25,10 @@ time {
   font-size: 12px;
   color: #ccc; }
 
+input[type="text"], input[type="email"], textarea {
+  border-radius: 5px;
+  font-size: 15px; }
+
 input[type="search"]:focus {
   border: none; }
 
@@ -52,7 +56,12 @@ a {
 
 .btn-olive {
   background: #4f8da5;
-  border: none;
+  border: 1px solid #4f8da5;
+  color: #fff; }
+
+.btn-grey {
+  background: #999;
+  border: 1px solid #999;
   color: #fff; }
 
 .badge {
@@ -348,7 +357,7 @@ nav.bar.bar-tab .tab-item.active .icon {
   font-size: 38px; }
 
 .btn-block {
-  padding: 9px 0;
+  padding: 11px 0;
   font-size: 16px; }
 
 .btn-white {
@@ -365,14 +374,25 @@ nav.bar.bar-tab .tab-item.active .icon {
   clear: both; }
 
 /*register.html*/
-.register-page.content .register_form > form > div input {
-  height: 45px;
-  border-radius: 6px;
-  font-size: 19px; }
 .register-page.content .register_form {
   width: 90%;
   margin: 0 auto;
   margin-top: 25px; }
+  .register-page.content .register_form .group-input {
+    position: relative; }
+    .register-page.content .register_form .group-input #verifyCode {
+      padding-right: 110px; }
+    .register-page.content .register_form .group-input .btn-grey {
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      padding-left: 15px;
+      padding-right: 15px; }
+  .register-page.content .register_form p {
+    color: #bbb;
+    font-size: 14px; }
+  .register-page.content .register_form a {
+    text-decoration: underline; }
 .register-page.content .info {
   text-align: center;
   clear: both; }
@@ -381,34 +401,6 @@ nav.bar.bar-tab .tab-item.active .icon {
     height: 5em; }
   .register-page.content .info h4 {
     margin-top: 10px; }
-.register-page.content .btn-positive {
-  line-height: 0.5;
-  background-color: #126F8E;
-  border: 1px solid #126F8E;
-  border-radius: 6px;
-  font-size: 22px;
-  letter-spacing: 6px;
-  margin-bottom: 18px; }
-.register-page.content .register_form > form > .reg-name {
-  margin-bottom: 7px; }
-.register-page.content .register_form > form > p {
-  color: #bbb;
-  font-size: 14px; }
-.register-page.content .register_form > form > p > a {
-  color: #bbb;
-  text-decoration: underline;
-  font-size: 14px; }
-.register-page.content .register_form > form > p input {
-  margin-right: 3px; }
-.register-page.content .register_form > form > div {
-  position: relative; }
-.register-page.content .register_form > form > div > img {
-  position: absolute;
-  right: 6px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  top: 6px; }
 
 /*//Per*/
 #personal-page.content .bar-tab {
