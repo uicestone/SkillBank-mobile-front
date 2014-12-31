@@ -234,7 +234,8 @@ body > .bar-nav {
     position: relative;
     margin-left: 50px;
     background: #415561;
-    border-radius: 4px; }
+    border-radius: 4px;
+    padding: 0; }
     .search-bar .input-group .input-group-addon {
       position: absolute;
       left: 0;
@@ -498,7 +499,7 @@ nav.bar.bar-tab .tab-item.active .icon {
         font-size: 12px;
         color: #999; }
 #personal-page.content #slider {
-  margin: 1em 1.5em; }
+  margin: 0 1.5em; }
 #personal-page.content .posi-rel {
   position: relative;
   padding-top: 5px; }
@@ -541,10 +542,6 @@ nav.bar.bar-tab .tab-item.active .icon {
   font-size: 16px;
   line-height: 1.7;
   color: #909090; }
-#personal-page.content .content-padded h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #919090; }
 
 .comment .segmented-control {
   border-bottom: 0;
