@@ -15,6 +15,20 @@
       overflow: hidden;
       .content-padded {
         margin: 0 15px;
+        p {
+          font-size: 13px;
+        }
+        .slider {
+          .circle {
+            padding-top: 12px;
+            h3 {
+
+            }
+            span.golden {
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
   }
@@ -210,7 +224,7 @@ nav.bar.bar-tab {
     width:90%;
     margin:0 auto;
     margin-top:25px;
-    .group-input {
+    .input-group {
       position: relative;
       #verifyCode {
         padding-right: 110px;

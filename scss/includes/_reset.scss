@@ -4,13 +4,30 @@
 .olive {color: $olive;}
 .lightOlive {color: $lightOlive;}
 .grey {color: $grey;}
+.lightGrey {color: $lightGrey;}
 .red {color: red;}
+.alarm {color: $alarm;}
+.golden {color: $golden;}
 
 body {
   font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'STHeitiSC-Light', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666;
   background: #eee;
 }
+
+
+.mb-1 {margin-bottom: 1em;}
+.mb-2 {margin-bottom: 2em;}
+.mb-3 {margin-bottom: 3em;}
+.mb-4 {margin-bottom: 4em;}
+.mb-5 {margin-bottom: 5em;}
+.mb-6 {margin-bottom: 6em;}
+.mb-7 {margin-bottom: 7em;}
+.mb-8 {margin-bottom: 8em;}
+.mb-9 {margin-bottom: 9em;}
+.mb-10 {margin-bottom: 10em;}
+
+
 header {
   a {
     color: #fff;
@@ -23,7 +40,14 @@ time {
 
 input[type="text"], input[type="email"], textarea {
   border-radius: 5px;
-  font-size: 15px;
+}
+
+.input-group, input[type=color], input[type=date], input[type=datetime-local],
+input[type=datetime], input[type=email], input[type=month], input[type=number],
+input[type=password], input[type=search], input[type=tel], input[type=text],
+input[type=time], input[type=url], input[type=week], select, textarea {
+  font-size: 14px;
+  padding: 10px 10px;
 }
 
 input[type="search"]:focus{
