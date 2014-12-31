@@ -62,27 +62,38 @@
     display: block;
   }
 }
-.search-cat.segmented-control {
-  background: #ffd047;
+.search-cat {
   font-size: 15px;
   border: none;
   border-radius: 0;
-  padding: 0 1vw;
-  display: flex;
-  a.control-item {
-    color: $dark;
-    padding: 1.2em 0.3em 1.1em;
-    height: 100%;
-    margin: 0 1em;
-    border: none;
-    &.active {
-      border-bottom: 4px solid $dark;
-      background: none;
+  background: #ffd047;
+  width: 100%;
+  overflow: hidden;
+  .inner {
+    padding: 0 10px 1em;
+    overflow-x: scroll;
+    white-space: nowrap;
+    a {
+      display: table-cell;
+      color: $dark;
+      padding: 1.2em 0.7em 1.1em;
+      height: 100%;
+      margin: 0 1em;
+      border: none;
+      &.active {
+        border-bottom: 4px solid $dark;
+      }
+      &:first-child {
+        margin-left: 1em;
+      }
     }
   }
 }
 .courses-list {
   overflow: hidden;
+  position: relative;
+  top: -15px;
+  background: $lighterGrey;
   .course {
     position: relative;
     .title-bar {

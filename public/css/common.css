@@ -84,6 +84,9 @@ body > .bar-nav {
   body > .bar-nav ~ .content {
     padding-top: 0; }
 
+.content {
+  background: #eaeaea; }
+
 .segmented-control {
   border-radius: 5px; }
 
@@ -251,28 +254,34 @@ body > .bar-nav {
   max-width: 100%;
   display: block; }
 
-.search-cat.segmented-control {
-  background: #ffd047;
+.search-cat {
   font-size: 15px;
   border: none;
   border-radius: 0;
-  padding: 0 1vw;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  .search-cat.segmented-control a.control-item {
-    color: #13404c;
-    padding: 1.2em 0.3em 1.1em;
-    height: 100%;
-    margin: 0 1em;
-    border: none; }
-    .search-cat.segmented-control a.control-item.active {
-      border-bottom: 4px solid #13404c;
-      background: none; }
+  background: #ffd047;
+  width: 100%;
+  overflow: hidden; }
+  .search-cat .inner {
+    padding: 0 10px 1em;
+    overflow-x: scroll;
+    white-space: nowrap; }
+    .search-cat .inner a {
+      display: table-cell;
+      color: #13404c;
+      padding: 1.2em 0.7em 1.1em;
+      height: 100%;
+      margin: 0 1em;
+      border: none; }
+      .search-cat .inner a.active {
+        border-bottom: 4px solid #13404c; }
+      .search-cat .inner a:first-child {
+        margin-left: 1em; }
 
 .courses-list {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  top: -15px;
+  background: #eaeaea; }
   .courses-list .course {
     position: relative; }
     .courses-list .course .title-bar {
