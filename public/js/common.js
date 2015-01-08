@@ -37,11 +37,16 @@ function affix(){
 
 }
 
-var checkPage = function(){
-  if( document.getElementById('mySlider') ) {
-    addBulletsWeget();
-  }
+function hackForModals(){
+  // hack for: delete all modals that append to body
+  if( document.querySelector('body > .modal') ){
 
+    var $modals = document.querySelectorAll('body > .modal');
+    var modalsLen = $modals.length;
+    while(modalsLen--){
+      document.body.removeChild( $modals[modalsLen] );
+    }
+  }
   // hack for: all modals append to body
   if( document.querySelector('.content .modal') ){
 
@@ -51,6 +56,14 @@ var checkPage = function(){
       document.body.appendChild( $modals[modalsLen] );
     }
   }
+}
+
+var checkPage = function(){
+  if( document.getElementById('mySlider') ) {
+    addBulletsWeget();
+  }
+
+  hackForModals();
   
   // course search
   if( document.getElementById('course-search') ){
