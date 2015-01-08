@@ -34,6 +34,12 @@
       }
     }
   }
+  &#getCoins {
+    .slider {
+      background: none;
+      text-align: center;
+    }
+  }
 }
 
 
@@ -90,6 +96,9 @@
   }
   &.nav-right {
     right: 10px;
+  }
+  &.grey {
+    color: $grey;
   }
 }
 
@@ -229,11 +238,6 @@ nav.bar.bar-tab {
   font-size: 16px;
 }
 
-
-.btn-white{
-  font-size: 20px;
-}
-
 .navigate-right:after, .push-right:after {
   right: 15px;
   content: '';
@@ -245,9 +249,6 @@ nav.bar.bar-tab {
 
 /*register.html*/
 #register-page.content {
-  .nav-inner {
-    color: $lightGrey;
-  }
   .register_form{
     width:90%;
     margin:0 auto;
@@ -298,30 +299,9 @@ nav.bar.bar-tab {
   .bar-tab {
     border-bottom: 1px solid #999;
   }
-  .where{
-    color:#909090;
-    font-size:15px;
-    margin-top:0;
-    margin-top: -3px;
-    margin-bottom: 15px;
-  }
-  .title{
-    color: #666;
-    font-size: 28px;
-    margin:0;
-  }
-  .avatarbig{
-    width: 7em;
-    height: 7em;
-  }
   h6 {
     color:#fff;
     margin: 1em 0;
-  }
-  .head-btn{
-    width: 90%;
-    margin:0 auto;
-    margin-bottom: 1em;
   }
   .bag-color{
     background-color: #ffd047;
@@ -331,11 +311,12 @@ nav.bar.bar-tab {
   .info {
     background-color:#ffd047;
     text-align: center;
-    img{
-      width:7em;
-      height:7em;
-      border: 3px solid #fff;
-      border-radius: 60px;
+    padding-top: .5em;
+    .btn-set {
+      .btn {
+        width: 125px;
+        margin: 0 3px;
+      }
     }
     .nums {
       background: #fff;
@@ -356,39 +337,10 @@ nav.bar.bar-tab {
   }
   #slider {
     margin: 0 1.5em;
+    .slide {
+      position: relative;
+    }
   }
-  .posi-rel{
-    position: relative;
-    padding-top: 5px;
-  }
-  .a-inblo{
-    display:inline-block;
-    width:47%;
-    margin:0 auto;
-    line-height:1.5;
-  }
-  .a-inblo button{
-    width: 100%;
-  }
-  .btn{
-    top:0;
-    height:38px;
-    border-radius:5px;
-    font-size:17px;
-    line-height:1.8;
-    border:0;
-  }
-  .btn-white{
-    color:#0a82a0;
-  }
-  .mar{
-    margin-right:10px;
-  }
-  .btn-primary{
-    background-color:#116e8e;
-    letter-spacing:8px;
-  }
-
   .bar-tab{
     padding-bottom:5px;
     background-color:#fff;
@@ -544,11 +496,7 @@ nav.bar.bar-tab {
   }
 }
 
-header.chat-page{
-  h1 {
 
-  }
-}
 .chat-page.bar-footer{
   height: auto;
   form{
@@ -635,6 +583,7 @@ header.chat-page{
 }
 
 .chat-page.content{
+  padding-top: .5em;
   .popover {
     position: relative;
     display: block;
@@ -874,13 +823,6 @@ header.chat-page{
         top:5px;
         font-size:12px;
       }
-    }
-  }
-
-  #getCoins.modal {
-    .slider {
-      background: none;
-      text-align: center;
     }
   }
 

@@ -15,7 +15,6 @@
     <link href="bower_components/skeleton/css/skeleton.css" rel="stylesheet">
     <link href="icomoon/style.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
-    <link href="bower_components/ratchet/dist/css/ratchet-theme-ios.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
 
     <!-- Include the compiled Ratchet JS -->
@@ -23,23 +22,21 @@
 
   </head>
   <body>
+    <!-- bug hack -->
+    <header class="bar-nav"></header>
 
     <div class="content" id="personal-page">
       <a class="icon icomoon icon-redo pull-right nav-inner nav-right"></a>
       <a href="index.html" class="icon icomoon icon-arrow-left nav-inner nav-left" data-transition="slide-out"></a>
 
       <div class="info">
-        <h2 class="title posi-rel">Jason Wu</h4>
-        <h4 class="where">6km&nbsp;.&nbsp;上海</h4>
-        <img src="images/avatar.png" alt="" class="avatar avatarbig">
-        <h6 class="white"> 2014.8 加入 SkillBank</h6>
-        <div class="head-btn">
-          <a href="#" class="a-inblo mar">
-            <button class="btn btn-white">私信 TA</button>
-          </a>
-          <a href="#" class="a-inblo">
-            <button class="btn btn-primary">关注</button>
-          </a>
+        <h3>Jason Wu</h3>
+        <p><small>6km&nbsp;.&nbsp;上海</small></p>
+        <img src="images/avatar.png" alt="" class="avatar">
+        <p class="white"><small>2014.8 加入 SkillBank</small></p>
+        <div class="btn-set mb-1">
+          <a href="#privateMsg" class="btn btn-white">私信 TA</a>
+          <a href="#" class="btn btn-olive">关注</a>
         </div>
         <div class="nums">
           <table class="u-full-width">
@@ -69,29 +66,41 @@
         <h4 align="center" class="mb-2">TA的分享课程（2）</h4>
       </div>
 
-      <div class="course-list card" id="slider">
-        <div class="course">
+      <div class="course-list" id="slider">
+        <div class="course card">
             <div class="slider" id="mySlider">
               <div class="slide-group">
                 <div class="slide">
+                  <div class="title-bar u-full-width">
+                    <h3 class="u-pull-left">魔方进阶教程</h3>
+                    <div class="u-pull-right">
+                      <a href="#" class="icon icomoon icon-comment">
+                        <span class="num">14</span>
+                      </a>
+                      <a href="#" class="icon icomoon icon-heart">
+                        <span class="num">28</span>
+                      </a>
+                    </div>
+                  </div>
                   <img src="images/e.jpeg">
                 </div>
                 <div class="slide">
+                  <div class="title-bar u-full-width">
+                    <h3 class="u-pull-left">魔方进阶教程</h3>
+                    <div class="u-pull-right">
+                      <a href="#" class="icon icomoon icon-comment">
+                        <span class="num">14</span>
+                      </a>
+                      <a href="#" class="icon icomoon icon-heart">
+                        <span class="num">28</span>
+                      </a>
+                    </div>
+                  </div>
                   <img src="images/e.jpeg">
                 </div>
               </div>
             </div>
-            <div class="title-bar u-full-width">
-              <h3 class="u-pull-left">魔方进阶教程</h3>
-              <div class="u-pull-right">
-                <a href="#" class="icon icomoon icon-comment">
-                  <span class="num">14</span>
-                </a>
-                <a href="#" class="icon icomoon icon-heart">
-                  <span class="num">28</span>
-                </a>
-              </div>
-            </div>
+            
           </div>
       </div>
       <div id="bullets">
@@ -107,21 +116,21 @@
 
       <div id="comment">
         <div class="segmented-control">
-        <a class="control-item active" href="#item1mobile">
-          <span class="icon">2</span>
-          <span class="label">身份认证</span>
-        </a>
-        <a class="control-item" href="#item2mobile">
-          <span class="icon">0</span>
-          <span class="label">学生评价</span>
+          <a class="control-item active" href="#item1mobile">
+            <span class="icon">2</span>
+            <span class="label">身份认证</span>
+          </a>
+          <a class="control-item" href="#item2mobile">
+            <span class="icon">0</span>
+            <span class="label">学生评价</span>
 
-        </a>
-        <a class="control-item" href="#item3mobile">
-          <span class="icon">0</span>
-          <span class="label">老师评价</span>
+          </a>
+          <a class="control-item" href="#item3mobile">
+            <span class="icon">0</span>
+            <span class="label">老师评价</span>
 
-        </a>
-      </div>
+          </a>
+        </div>
         <div class="comment-content">
           <span id="item1mobile" class="control-content active">
             <ul class="comment-text verified">
@@ -195,8 +204,25 @@
               </li>
             </ul>
           </span>
+        </div>
       </div>
+
+      <div id="privateMsg" class="modal">
+        <header class="bar bar-nav">
+          <a class="icon icon-close pull-right" href="#privateMsg"></a>
+          <h1 class="title">私信老师</h1>
+        </header>
+
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <textarea name="" id="" cols="30" rows="6" placeholder="输入你的私信内容，向老师咨询关于课程的各种问题"></textarea>
+              <button  class="btn btn-primary btn-block">发送私信</button>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
     <script src="js/common.js"></script>
   </body>

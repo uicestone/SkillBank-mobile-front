@@ -69,15 +69,17 @@ a {
 .btn {
   border-radius: 5px;
   height: auto;
+  border: none;
+  font-size: 14px;
+  padding: 7px 8px 8px;
+  color: $olive;
 }
 .btn-olive {
   background: $lightOlive;
-  border: 1px solid $lightOlive;
   color: #fff;
 }
 .btn-grey {
   background: $grey;
-  border: 1px solid $grey;
   color: #fff;
 }
 .badge {

@@ -92,16 +92,18 @@ a {
 
 .btn {
   border-radius: 5px;
-  height: auto; }
+  height: auto;
+  border: none;
+  font-size: 14px;
+  padding: 7px 8px 8px;
+  color: #116f8f; }
 
 .btn-olive {
   background: #4f8da5;
-  border: 1px solid #4f8da5;
   color: #fff; }
 
 .btn-grey {
   background: #999;
-  border: 1px solid #999;
   color: #fff; }
 
 .badge {
@@ -255,6 +257,9 @@ body > .bar-nav {
           padding-top: 12px; }
           .modal .content .content-inner .content-padded .slider .circle span.golden {
             font-size: 14px; }
+  .modal#getCoins .slider {
+    background: none;
+    text-align: center; }
 
 .bar {
   box-shadow: none;
@@ -301,6 +306,8 @@ body > .bar-nav {
     left: 5px; }
   .nav-inner.nav-right {
     right: 10px; }
+  .nav-inner.grey {
+    color: #999; }
 
 .slide img {
   max-width: 100%;
@@ -407,9 +414,6 @@ nav.bar.bar-tab .tab-item.active .icon {
   padding: 11px 0;
   font-size: 16px; }
 
-.btn-white {
-  font-size: 20px; }
-
 .navigate-right:after, .push-right:after {
   right: 15px;
   content: ''; }
@@ -418,8 +422,6 @@ nav.bar.bar-tab .tab-item.active .icon {
   margin-top: 0; }
 
 /*register.html*/
-#register-page.content .nav-inner {
-  color: #ccc; }
 #register-page.content .register_form {
   width: 90%;
   margin: 0 auto;
@@ -456,38 +458,20 @@ nav.bar.bar-tab .tab-item.active .icon {
 /*//Per*/
 #personal-page.content .bar-tab {
   border-bottom: 1px solid #999; }
-#personal-page.content .where {
-  color: #909090;
-  font-size: 15px;
-  margin-top: 0;
-  margin-top: -3px;
-  margin-bottom: 15px; }
-#personal-page.content .title {
-  color: #666;
-  font-size: 28px;
-  margin: 0; }
-#personal-page.content .avatarbig {
-  width: 7em;
-  height: 7em; }
 #personal-page.content h6 {
   color: #fff;
   margin: 1em 0; }
-#personal-page.content .head-btn {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 1em; }
 #personal-page.content .bag-color {
   background-color: #ffd047;
   height: auto;
   position: relative; }
 #personal-page.content .info {
   background-color: #ffd047;
-  text-align: center; }
-  #personal-page.content .info img {
-    width: 7em;
-    height: 7em;
-    border: 3px solid #fff;
-    border-radius: 60px; }
+  text-align: center;
+  padding-top: 0.5em; }
+  #personal-page.content .info .btn-set .btn {
+    width: 125px;
+    margin: 0 3px; }
   #personal-page.content .info .nums {
     background: #fff;
     padding: 0.5em 0;
@@ -502,30 +486,8 @@ nav.bar.bar-tab .tab-item.active .icon {
         color: #999; }
 #personal-page.content #slider {
   margin: 0 1.5em; }
-#personal-page.content .posi-rel {
-  position: relative;
-  padding-top: 5px; }
-#personal-page.content .a-inblo {
-  display: inline-block;
-  width: 47%;
-  margin: 0 auto;
-  line-height: 1.5; }
-#personal-page.content .a-inblo button {
-  width: 100%; }
-#personal-page.content .btn {
-  top: 0;
-  height: 38px;
-  border-radius: 5px;
-  font-size: 17px;
-  line-height: 1.8;
-  border: 0; }
-#personal-page.content .btn-white {
-  color: #0a82a0; }
-#personal-page.content .mar {
-  margin-right: 10px; }
-#personal-page.content .btn-primary {
-  background-color: #116e8e;
-  letter-spacing: 8px; }
+  #personal-page.content #slider .slide {
+    position: relative; }
 #personal-page.content .bar-tab {
   padding-bottom: 5px;
   background-color: #fff; }
@@ -710,89 +672,91 @@ nav.bar.bar-tab .tab-item.active .icon {
         border-right-color: #fff;
         border-left-width: 0; }
 
-.chat-page.content .popover {
-  position: relative;
-  display: block;
-  float: left;
-  width: 260px;
-  margin: 20px;
-  top: 0;
-  left: 0;
-  z-index: 1060;
-  max-width: 276px;
-  padding: 1px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: left;
-  white-space: normal;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-  .chat-page.content .popover .arrow {
-    top: 50%;
-    left: -11px;
-    margin-top: -11px;
-    border-right-color: rgba(0, 0, 0, 0.25);
-    border-left-width: 0;
-    border-width: 11px; }
-  .chat-page.content .popover .arrow:after {
-    bottom: -10px;
-    left: 1px;
-    content: " ";
-    border-right-color: #fff;
-    border-left-width: 0;
-    position: absolute;
+.chat-page.content {
+  padding-top: 0.5em; }
+  .chat-page.content .popover {
+    position: relative;
     display: block;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid; }
-  .chat-page.content .popover .popover-content {
-    padding: 9px 14px; }
-    .chat-page.content .popover .popover-content p {
-      margin: 0 0 10px; }
-.chat-page.content .send-time {
-  text-align: center;
-  color: #b5bdbf;
-  font-size: 14px;
-  margin-bottom: 10px; }
-.chat-page.content .receiver-time {
-  text-align: center;
-  color: #b5bdbf;
-  font-size: 14px;
-  margin-bottom: 10px; }
-.chat-page.content .bar {
-  box-shadow: none;
-  position: relative; }
-  .chat-page.content .bar .title {
-    color: #606060;
-    font-size: 22px; }
-.chat-page.content .chat-content {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 10px; }
-  .chat-page.content .chat-content .sender {
-    overflow: hidden;
-    margin-bottom: 20px;
-    padding-bottom: 2px; }
-    .chat-page.content .chat-content .sender .send-img {
-      float: left; }
-      .chat-page.content .chat-content .sender .send-img img {
-        width: 4em;
-        height: 4em; }
-  .chat-page.content .chat-content .receiver {
-    overflow: hidden;
-    margin-bottom: 20px;
-    padding-bottom: 2px; }
-    .chat-page.content .chat-content .receiver .receiver-img {
-      float: right; }
-      .chat-page.content .chat-content .receiver .receiver-img img {
-        width: 4em;
-        height: 4em; }
+    float: left;
+    width: 260px;
+    margin: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    max-width: 276px;
+    padding: 1px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: left;
+    white-space: normal;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+    .chat-page.content .popover .arrow {
+      top: 50%;
+      left: -11px;
+      margin-top: -11px;
+      border-right-color: rgba(0, 0, 0, 0.25);
+      border-left-width: 0;
+      border-width: 11px; }
+    .chat-page.content .popover .arrow:after {
+      bottom: -10px;
+      left: 1px;
+      content: " ";
+      border-right-color: #fff;
+      border-left-width: 0;
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid; }
+    .chat-page.content .popover .popover-content {
+      padding: 9px 14px; }
+      .chat-page.content .popover .popover-content p {
+        margin: 0 0 10px; }
+  .chat-page.content .send-time {
+    text-align: center;
+    color: #b5bdbf;
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .chat-page.content .receiver-time {
+    text-align: center;
+    color: #b5bdbf;
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .chat-page.content .bar {
+    box-shadow: none;
+    position: relative; }
+    .chat-page.content .bar .title {
+      color: #606060;
+      font-size: 22px; }
+  .chat-page.content .chat-content {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px; }
+    .chat-page.content .chat-content .sender {
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding-bottom: 2px; }
+      .chat-page.content .chat-content .sender .send-img {
+        float: left; }
+        .chat-page.content .chat-content .sender .send-img img {
+          width: 4em;
+          height: 4em; }
+    .chat-page.content .chat-content .receiver {
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding-bottom: 2px; }
+      .chat-page.content .chat-content .receiver .receiver-img {
+        float: right; }
+        .chat-page.content .chat-content .receiver .receiver-img img {
+          width: 4em;
+          height: 4em; }
 
 /* classes.css */
 .course-page.content .info {
@@ -902,9 +866,6 @@ nav.bar.bar-tab .tab-item.active .icon {
       left: 5px;
       top: 5px;
       font-size: 12px; }
-.course-page.content #getCoins.modal .slider {
-  background: none;
-  text-align: center; }
 
 .course-page.bar-footer {
   height: 60px;

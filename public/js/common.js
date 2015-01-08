@@ -41,6 +41,16 @@ var checkPage = function(){
   if( document.getElementById('mySlider') ) {
     addBulletsWeget();
   }
+
+  // hack for: all modals append to body
+  if( document.querySelector('.content .modal') ){
+
+    var $modals = document.querySelectorAll('.content .modal');
+    var modalsLen = $modals.length;
+    while(modalsLen--){
+      document.body.appendChild( $modals[modalsLen] );
+    }
+  }
   
   // course search
   if( document.getElementById('course-search') ){
