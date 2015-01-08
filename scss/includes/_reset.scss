@@ -72,7 +72,9 @@ a {
   border: none;
   font-size: 14px;
   padding: 7px 8px 8px;
-  color: $olive;
+}
+.btn-default {
+  color: $lightOlive;
 }
 .btn-olive {
   background: $lightOlive;

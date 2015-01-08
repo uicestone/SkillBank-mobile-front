@@ -95,8 +95,10 @@ a {
   height: auto;
   border: none;
   font-size: 14px;
-  padding: 7px 8px 8px;
-  color: #116f8f; }
+  padding: 7px 8px 8px; }
+
+.btn-default {
+  color: #4f8da5; }
 
 .btn-olive {
   background: #4f8da5;
