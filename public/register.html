@@ -23,18 +23,18 @@
   </head>
   <body>
 
-    <div class="register-page content has-header">
+    <div class="content has-header" id="register-page">
       <a href="index.html" class="icon icomoon icon-arrow-left nav-inner nav-left" data-transition="slide-out"></a>
 
       <div class="info">
         <img src="images/avatar.png" alt="" class="avatar">
-        <h4> 欢迎&nbsp;Jason &nbsp;Wu</h4>
+        <p> 欢迎&nbsp;Jason &nbsp;Wu</p>
       </div>
 
       <div class="register_form">
         <form>
           <div class="input-group">
-            <input type="text" placeholder="手机号码">
+            <input type="number" placeholder="手机号码">
           </div>
           <div class="input-group">
             <input type="text" placeholder="验证码" id="verifyCode">
@@ -45,7 +45,8 @@
           </div>
           <div class="input-group">
             <p>
-              <input type="checkbox" checked="checked" class="pass-checkbox">我已经阅读并同意 <a href="#">使用条款和隐私政策</a>
+              <input type="checkbox" checked="checked" class="pass-checkbox">
+              <small>我已经阅读并同意 <a href="#">使用条款和隐私政策</a></small>
             </p>
           </div>
         </form>

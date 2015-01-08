@@ -64,12 +64,10 @@ time {
   font-size: 12px;
   color: #ccc; }
 
-input[type="text"], input[type="email"], textarea {
-  border-radius: 5px; }
-
 input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
-  padding: 10px 10px; }
+  padding: 10px 10px;
+  border-radius: 5px; }
 
 input[type="search"]:focus {
   border: none; }
@@ -125,10 +123,6 @@ a {
     position: absolute;
     top: -10px;
     right: -22px; }
-
-.bar-nav {
-  box-shadow: none;
-  background: #eaeaea; }
 
 body > .bar-nav {
   background: rgba(0, 0, 0, 0); }
@@ -243,9 +237,11 @@ body > .bar-nav {
 
 .modal {
   background-color: rgba(0, 0, 0, 0); }
-  .modal header h1 {
-    font-size: 20px;
-    color: #666; }
+  .modal header {
+    background: #eaeaea; }
+    .modal header h1 {
+      font-size: 20px;
+      color: #666; }
   .modal .content {
     background: rgba(0, 0, 0, 0.5); }
     .modal .content .content-inner {
@@ -261,7 +257,9 @@ body > .bar-nav {
             font-size: 14px; }
 
 .bar {
-  background: #fff; }
+  box-shadow: none;
+  background: #fff;
+  border-bottom: none; }
 
 .ico-coin {
   position: absolute;
@@ -420,37 +418,39 @@ nav.bar.bar-tab .tab-item.active .icon {
   margin-top: 0; }
 
 /*register.html*/
-.register-page.content .register_form {
+#register-page.content .nav-inner {
+  color: #ccc; }
+#register-page.content .register_form {
   width: 90%;
   margin: 0 auto;
   margin-top: 25px; }
-  .register-page.content .register_form .input-group {
+  #register-page.content .register_form .input-group {
     position: relative;
     background: none;
     margin-bottom: 10px; }
-    .register-page.content .register_form .input-group input {
+    #register-page.content .register_form .input-group input[type=number], #register-page.content .register_form .input-group input[type=text] {
       background-color: #fff;
-      padding: 20px 10px; }
-      .register-page.content .register_form .input-group input#verifyCode {
+      height: 40px; }
+      #register-page.content .register_form .input-group input[type=number]#verifyCode, #register-page.content .register_form .input-group input[type=text]#verifyCode {
         padding-right: 110px; }
-    .register-page.content .register_form .input-group .btn-grey {
+    #register-page.content .register_form .input-group .btn-grey {
       position: absolute;
       right: 7px;
       top: 7px;
       padding-left: 15px;
       padding-right: 15px; }
-  .register-page.content .register_form p {
+  #register-page.content .register_form p {
     color: #bbb;
     font-size: 14px; }
-  .register-page.content .register_form a {
+  #register-page.content .register_form a {
     text-decoration: underline; }
-.register-page.content .info {
+#register-page.content .info {
   text-align: center;
   clear: both; }
-  .register-page.content .info img {
+  #register-page.content .info img {
     width: 5em;
     height: 5em; }
-  .register-page.content .info h4 {
+  #register-page.content .info h4 {
     margin-top: 10px; }
 
 /*//Per*/

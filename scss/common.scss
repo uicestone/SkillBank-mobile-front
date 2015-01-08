@@ -4,6 +4,7 @@
 .modal {
   background-color: rgba(0,0,0,0);
   header {
+    background: $lighterGrey;
     h1 {
       font-size: 20px;
       color: $darkGrey;
@@ -35,9 +36,13 @@
   }
 }
 
+
 .bar {
+  box-shadow: none;
   background: $white;
+  border-bottom: none;
 }
+
 
 .ico-coin {
   position: absolute;
@@ -239,7 +244,10 @@ nav.bar.bar-tab {
 }
 
 /*register.html*/
-.register-page.content {
+#register-page.content {
+  .nav-inner {
+    color: $lightGrey;
+  }
   .register_form{
     width:90%;
     margin:0 auto;
@@ -248,9 +256,9 @@ nav.bar.bar-tab {
       position: relative;
       background: none;
       margin-bottom: 10px;
-      input {
+      input[type=number],input[type=text] {
         background-color: $white;
-        padding: 20px 10px;
+        height: 40px;
         &#verifyCode {
           padding-right: 110px;
         }

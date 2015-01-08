@@ -38,16 +38,13 @@ time {
   color: $lightGrey;
 }
 
-input[type="text"], input[type="email"], textarea {
-  border-radius: 5px;
-}
-
 input[type=color], input[type=date], input[type=datetime-local],
 input[type=datetime], input[type=email], input[type=month], input[type=number],
 input[type=password], input[type=search], input[type=tel], input[type=text],
 input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
   padding: 10px 10px;
+  border-radius: 5px;
 }
 
 input[type="search"]:focus{
@@ -104,10 +101,6 @@ a {
     top: -10px;
     right: -22px;
   }
-}
-.bar-nav {
-  box-shadow: none;
-  background: $lighterGrey;
 }
 body > .bar-nav {
   background: rgba(0,0,0,0);
