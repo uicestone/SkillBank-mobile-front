@@ -1,3 +1,12 @@
+Element.prototype.on = Element.prototype.addEventListener;
+NodeList.prototype.on = function (event, fn) {
+  []['forEach'].call(this, function (el) {
+    el.on(event, fn);
+  });
+  return this;
+};
+
+
 function addBulletsWeget(){
   // make bullet live
   var len = document.querySelectorAll('#mySlider .slide').length;
@@ -23,10 +32,47 @@ function addBulletsWeget(){
   }
   $bulletsContainer.innerHTML = bulletsStr;
 }
+
+function affix(){
+
+}
+
 var checkPage = function(){
-  if(document.getElementById('mySlider')) {
+  if( document.getElementById('mySlider') ) {
     addBulletsWeget();
   }
+  
+  // course search
+  if( document.getElementById('course-search') ){
+    var $serchCat = document.getElementById('search-cat');
+    var $courseList = document.querySelector('div.course-list');
+
+
+    // search cat
+    var $allATag = $serchCat.querySelectorAll('a');
+    $allATag.on('click', function(){
+      var allATag = 
+      this.classList.toggle('liked');
+    });
+
+    // affix($serchCat);
+    $courseList.querySelectorAll('.icon-heart').on('click', function(){
+      this.classList.toggle('liked');
+    });
+  }
+
+  // course page
+  if( document.querySelector('.course-page') ){
+
+    // go for comment
+    document.querySelectorAll('.goto').on('click', function(event){
+      event.preventDefault();
+      location.href = '#' + this.dataset.for;
+    });
+  }
+
+// end of checkPage 
 };
+
 checkPage();
 window.addEventListener('push', checkPage);

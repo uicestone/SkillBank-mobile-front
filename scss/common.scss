@@ -2,6 +2,7 @@
 @import "includes/reset";
 
 .modal {
+  background-color: rgba(0,0,0,0);
   header {
     h1 {
       font-size: 20px;
@@ -32,6 +33,10 @@
       }
     }
   }
+}
+
+.bar {
+  background: $white;
 }
 
 .ico-coin {
@@ -70,13 +75,26 @@
   text-align: center;
 }
 
+.nav-inner {
+  position: absolute;
+  top: 10px;
+  color: $white;
+  z-index: 1;
+  &.nav-left {
+    left: 5px;
+  }
+  &.nav-right {
+    right: 10px;
+  }
+}
+
 .slide {
   img {
     max-width: 100%;
     display: block;
   }
 }
-.search-cat {
+#search-cat {
   font-size: 15px;
   border: none;
   border-radius: 0;
@@ -103,7 +121,7 @@
     }
   }
 }
-.courses-list {
+.course-list {
   overflow: hidden;
   position: relative;
   top: -15px;
@@ -114,25 +132,35 @@
       position: absolute;
       height: 100px;
       background: rgba(16,46,62,.8);
-      padding: .5em 1em 0;
+      padding: 1em 1em 0;
       left: 0;
       top: 0;
-      h3 {
+      h3.u-pull-left {
         color: #fff;
-        line-height: $title-bar-height;
         text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
         font-size: 18px;
       }
-      a {
-        position: relative;
-        display: inline-block;
-        .num {
-          position: absolute;
-          top: .6em;
-          left: 0;
-          width: 100%;
-          text-align: center;
-          font-size: 9px;
+      .u-pull-right {
+        a {
+          position: relative;
+          display: inline-block;
+          color: #fff;
+          margin-left: .5em;
+          &.liked {
+            color: $orange;
+            .num {
+              color: $white;
+            }
+          }
+          .num {
+            position: absolute;
+            top: .6em;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 9px;
+            color: $grey;
+          }
         }
       }
     }
@@ -168,14 +196,9 @@ nav.bar.bar-tab {
 }
 
 @media (min-width: 400px) {
-  .search-cat.segmented-control {
+  #search-cat.segmented-control {
     font-size: 18px;
   }
-}
-
-
-.content-icons, .content-btn {
-  text-align: center;
 }
 
 .padded-text{
@@ -186,6 +209,7 @@ nav.bar.bar-tab {
 }
 .content-btn{
   padding: 0 2em;
+  text-align: center;
 }
 .icons-logo{
   width:4.5em;
@@ -214,10 +238,6 @@ nav.bar.bar-tab {
   margin-top:0;
 }
 
-.content-icons{
-  clear: both;
-}
-
 /*register.html*/
 .register-page.content {
   .register_form{
@@ -226,8 +246,14 @@ nav.bar.bar-tab {
     margin-top:25px;
     .input-group {
       position: relative;
-      #verifyCode {
-        padding-right: 110px;
+      background: none;
+      margin-bottom: 10px;
+      input {
+        background-color: $white;
+        padding: 20px 10px;
+        &#verifyCode {
+          padding-right: 110px;
+        }
       }
       .btn-grey {
         position: absolute;
@@ -383,7 +409,7 @@ nav.bar.bar-tab {
   }
 }
 
-.comment {
+#comment {
   .segmented-control{
     border-bottom:0;
     margin-top:40px;
@@ -855,7 +881,6 @@ header.chat-page{
 .course-page.bar-footer {
   height: 60px;
   text-align:center;
-  background: #fff;
   a{
     font-size:0;
     .btn-yellow{

@@ -67,7 +67,7 @@ time {
 input[type="text"], input[type="email"], textarea {
   border-radius: 5px; }
 
-.input-group, input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
   padding: 10px 10px; }
 
@@ -199,25 +199,6 @@ body > .bar-nav {
       border: none;
       background: #116f8f; }
 
-.sk {
-  display: inline-block;
-  width: 35px;
-  height: 35px; }
-  .sk:before {
-    content: ' ';
-    display: inline-block;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    width: 100%;
-    height: 100%; }
-
-.sk-comment:before {
-  background-image: url(../images/icons/icon-comment.png); }
-
-.sk-heart:before {
-  background-image: url(../images/icons/icon-heart.png); }
-
 .search-bar {
   background: #0f2e3e;
   overflow: hidden;
@@ -260,22 +241,27 @@ body > .bar-nav {
 .icomoon {
   font-family: 'icomoon'; }
 
-.modal header h1 {
-  font-size: 20px;
-  color: #666; }
-.modal .content {
-  background: rgba(0, 0, 0, 0.5); }
-  .modal .content .content-inner {
-    background: #eaeaea;
-    overflow: hidden; }
-    .modal .content .content-inner .content-padded {
-      margin: 0 15px; }
-      .modal .content .content-inner .content-padded p {
-        font-size: 13px; }
-      .modal .content .content-inner .content-padded .slider .circle {
-        padding-top: 12px; }
-        .modal .content .content-inner .content-padded .slider .circle span.golden {
-          font-size: 14px; }
+.modal {
+  background-color: rgba(0, 0, 0, 0); }
+  .modal header h1 {
+    font-size: 20px;
+    color: #666; }
+  .modal .content {
+    background: rgba(0, 0, 0, 0.5); }
+    .modal .content .content-inner {
+      background: #eaeaea;
+      overflow: hidden; }
+      .modal .content .content-inner .content-padded {
+        margin: 0 15px; }
+        .modal .content .content-inner .content-padded p {
+          font-size: 13px; }
+        .modal .content .content-inner .content-padded .slider .circle {
+          padding-top: 12px; }
+          .modal .content .content-inner .content-padded .slider .circle span.golden {
+            font-size: 14px; }
+
+.bar {
+  background: #fff; }
 
 .ico-coin {
   position: absolute;
@@ -308,65 +294,81 @@ body > .bar-nav {
   border-radius: 50%;
   text-align: center; }
 
+.nav-inner {
+  position: absolute;
+  top: 10px;
+  color: #fff;
+  z-index: 1; }
+  .nav-inner.nav-left {
+    left: 5px; }
+  .nav-inner.nav-right {
+    right: 10px; }
+
 .slide img {
   max-width: 100%;
   display: block; }
 
-.search-cat {
+#search-cat {
   font-size: 15px;
   border: none;
   border-radius: 0;
   background: #ffd047;
   width: 100%;
   overflow: hidden; }
-  .search-cat .inner {
+  #search-cat .inner {
     padding: 0 10px 1em;
     overflow-x: scroll;
     white-space: nowrap; }
-    .search-cat .inner a {
+    #search-cat .inner a {
       display: table-cell;
       color: #13404c;
       padding: 1.2em 0.7em 1.1em;
       height: 100%;
       margin: 0 1em;
       border: none; }
-      .search-cat .inner a.active {
+      #search-cat .inner a.active {
         border-bottom: 4px solid #13404c; }
-      .search-cat .inner a:first-child {
+      #search-cat .inner a:first-child {
         margin-left: 1em; }
 
-.courses-list {
+.course-list {
   overflow: hidden;
   position: relative;
   top: -15px;
   background: #eaeaea; }
-  .courses-list .course {
+  .course-list .course {
     position: relative; }
-    .courses-list .course .title-bar {
+    .course-list .course .title-bar {
       position: absolute;
       height: 100px;
       background: rgba(16, 46, 62, 0.8);
-      padding: 0.5em 1em 0;
+      padding: 1em 1em 0;
       left: 0;
       top: 0; }
-      .courses-list .course .title-bar h3 {
+      .course-list .course .title-bar h3.u-pull-left {
         color: #fff;
-        line-height: 35px;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
         font-size: 18px; }
-      .courses-list .course .title-bar a {
+      .course-list .course .title-bar .u-pull-right a {
         position: relative;
-        display: inline-block; }
-        .courses-list .course .title-bar a .num {
+        display: inline-block;
+        color: #fff;
+        margin-left: 0.5em; }
+        .course-list .course .title-bar .u-pull-right a.liked {
+          color: #F76033; }
+          .course-list .course .title-bar .u-pull-right a.liked .num {
+            color: #fff; }
+        .course-list .course .title-bar .u-pull-right a .num {
           position: absolute;
           top: 0.6em;
           left: 0;
           width: 100%;
           text-align: center;
-          font-size: 9px; }
-    .courses-list .course img.cover {
+          font-size: 9px;
+          color: #999; }
+    .course-list .course img.cover {
       width: 100%; }
-    .courses-list .course .info {
+    .course-list .course .info {
       text-align: center;
       margin-top: -4em; }
 
@@ -383,12 +385,9 @@ nav.bar.bar-tab .tab-item.active .icon {
   color: #13404c; }
 
 @media (min-width: 400px) {
-  .search-cat.segmented-control {
+  #search-cat.segmented-control {
     font-size: 18px; }
  }
-
-.content-icons, .content-btn {
-  text-align: center; }
 
 .padded-text {
   font-size: 12px;
@@ -397,7 +396,8 @@ nav.bar.bar-tab .tab-item.active .icon {
   margin-bottom: 30px; }
 
 .content-btn {
-  padding: 0 2em; }
+  padding: 0 2em;
+  text-align: center; }
 
 .icons-logo {
   width: 4.5em; }
@@ -419,18 +419,20 @@ nav.bar.bar-tab .tab-item.active .icon {
 .cell-nomar {
   margin-top: 0; }
 
-.content-icons {
-  clear: both; }
-
 /*register.html*/
 .register-page.content .register_form {
   width: 90%;
   margin: 0 auto;
   margin-top: 25px; }
   .register-page.content .register_form .input-group {
-    position: relative; }
-    .register-page.content .register_form .input-group #verifyCode {
-      padding-right: 110px; }
+    position: relative;
+    background: none;
+    margin-bottom: 10px; }
+    .register-page.content .register_form .input-group input {
+      background-color: #fff;
+      padding: 20px 10px; }
+      .register-page.content .register_form .input-group input#verifyCode {
+        padding-right: 110px; }
     .register-page.content .register_form .input-group .btn-grey {
       position: absolute;
       right: 7px;
@@ -543,98 +545,98 @@ nav.bar.bar-tab .tab-item.active .icon {
   line-height: 1.7;
   color: #909090; }
 
-.comment .segmented-control {
+#comment .segmented-control {
   border-bottom: 0;
   margin-top: 40px;
   border-radius: 0;
   border-bottom: 1px solid #ccc; }
-  .comment .segmented-control .control-item {
+  #comment .segmented-control .control-item {
     padding: 8px 0 10px 0; }
-    .comment .segmented-control .control-item span {
+    #comment .segmented-control .control-item span {
       display: inline-block;
       color: #123e50;
       line-height: 1.5; }
-    .comment .segmented-control .control-item .label {
+    #comment .segmented-control .control-item .label {
       display: block;
       font-size: 15px;
       opacity: 0.8;
       line-height: 1.8;
       color: #123e50; }
-    .comment .segmented-control .control-item .icon {
+    #comment .segmented-control .control-item .icon {
       font-size: 27px; }
-    .comment .segmented-control .control-item table {
+    #comment .segmented-control .control-item table {
       width: 95%;
       margin: 0 auto;
       position: relative;
       top: -5px; }
-      .comment .segmented-control .control-item table tr {
+      #comment .segmented-control .control-item table tr {
         border: 0 solid #fff;
         line-height: 1.5; }
-        .comment .segmented-control .control-item table tr td {
+        #comment .segmented-control .control-item table tr td {
           border: none;
           text-align: center; }
-  .comment .segmented-control .active {
+  #comment .segmented-control .active {
     color: #333;
     background-color: #dadada;
     border-top: 3px solid #116e8e; }
-    .comment .segmented-control .active .icon {
+    #comment .segmented-control .active .icon {
       color: #123e50; }
-.comment .comment-content {
+#comment .comment-content {
   position: relative;
   margin: 0;
   border-radius: 0; }
-  .comment .comment-content .control-content .verified li {
+  #comment .comment-content .control-content .verified li {
     position: relative;
     padding: 2em 1em; }
-    .comment .comment-content .control-content .verified li h5 {
+    #comment .comment-content .control-content .verified li h5 {
       display: inline; }
-    .comment .comment-content .control-content .verified li img {
+    #comment .comment-content .control-content .verified li img {
       width: 30px;
       float: right;
       position: relative;
       top: -3px; }
-  .comment .comment-content .control-content .table-view-cell {
+  #comment .comment-content .control-content .table-view-cell {
     margin: 0;
     background-image: none;
     border-bottom: 1px solid #fff; }
-    .comment .comment-content .control-content .table-view-cell .navigate-right {
+    #comment .comment-content .control-content .table-view-cell .navigate-right {
       display: inline; }
-      .comment .comment-content .control-content .table-view-cell .navigate-right .pull-left {
+      #comment .comment-content .control-content .table-view-cell .navigate-right .pull-left {
         width: 3em;
         height: 3em;
         margin-right: 20px;
         border: 1px solid #fff;
         border-radius: 25px; }
-      .comment .comment-content .control-content .table-view-cell .navigate-right .media-body {
+      #comment .comment-content .control-content .table-view-cell .navigate-right .media-body {
         position: relative; }
-        .comment .comment-content .control-content .table-view-cell .navigate-right .media-body h4 {
+        #comment .comment-content .control-content .table-view-cell .navigate-right .media-body h4 {
           color: #0a82a0; }
-        .comment .comment-content .control-content .table-view-cell .navigate-right .media-body p {
+        #comment .comment-content .control-content .table-view-cell .navigate-right .media-body p {
           line-height: 1.5;
           letter-spacing: 1px;
           font-size: 16px; }
-        .comment .comment-content .control-content .table-view-cell .navigate-right .media-body .time {
+        #comment .comment-content .control-content .table-view-cell .navigate-right .media-body .time {
           color: #fff;
           position: absolute;
           right: 0px;
           top: -3px;
           font-size: 12px; }
-  .comment .comment-content .control-content .liuyan-form {
+  #comment .comment-content .control-content .liuyan-form {
     margin-bottom: 0;
     padding: 10px 25px;
     overflow: hidden;
     background-color: #f2f2f2; }
-    .comment .comment-content .control-content .liuyan-form input {
+    #comment .comment-content .control-content .liuyan-form input {
       margin-bottom: 0;
       width: 82%;
       border-radius: 6px;
       float: right; }
-    .comment .comment-content .control-content .liuyan-form .icon-heart {
+    #comment .comment-content .control-content .liuyan-form .icon-heart {
       border: 1px solid #a6afb2;
       border-radius: 23px;
       padding: 8px;
       background-color: #fff; }
-      .comment .comment-content .control-content .liuyan-form .icon-heart:before {
+      #comment .comment-content .control-content .liuyan-form .icon-heart:before {
         color: #a6afb2;
         position: relative;
         top: 2px; }
@@ -906,8 +908,7 @@ nav.bar.bar-tab .tab-item.active .icon {
 
 .course-page.bar-footer {
   height: 60px;
-  text-align: center;
-  background: #fff; }
+  text-align: center; }
   .course-page.bar-footer a {
     font-size: 0; }
     .course-page.bar-footer a .btn-yellow {

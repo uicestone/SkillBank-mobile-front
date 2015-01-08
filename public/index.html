@@ -20,7 +20,7 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
-    <script src="js/common.js"></script>
+    
   </head>
   <body>
 
@@ -39,7 +39,7 @@
         <span class="icon icomoon icon-comment2"></span>
         <span class="tab-label">消息</span>
       </a>
-      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="push">
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="pushy">
         <span class="icon icomoon icon-text"></span>
         <span class="tab-label">课程</span>
       </a>
@@ -48,7 +48,7 @@
         <span class="tab-label">个人</span>
       </a>
     </nav>
-    <div class="content">
+    <div class="content" id="course-search">
       <div class="search-bar">
         <form>
           <img src="images/logo.png" alt="" class="logo">
@@ -62,7 +62,7 @@
           </div>
         </form>
       </div>
-      <div class="search-cat">
+      <div id="search-cat">
         <div class="inner">
           <a class="active" href="#"> 附近技能 </a>
           <a class="" href="#"> 达人技能 </a>
@@ -73,17 +73,15 @@
           <a class="" href="#"> 艺术设计 </a>
         </div>
       </div>
-      <div class="courses-list">
+      <div class="course-list">
         <div class="course card">
           <div class="title-bar u-full-width">
             <h3 class="u-pull-left">魔方进阶教程</h3>
             <div class="u-pull-right">
-              <a href="">
-                <span class="sk sk-comment"></span>
+              <a href="#" class="icon icomoon icon-comment">
                 <span class="num">14</span>
               </a>
-              <a href="">
-                <span class="sk sk-heart"></span>
+              <a href="#" class="icon icomoon icon-heart">
                 <span class="num">28</span>
               </a>
             </div>
@@ -99,12 +97,10 @@
           <div class="title-bar u-full-width">
             <h3 class="u-pull-left">魔方进阶教程</h3>
             <div class="u-pull-right">
-              <a href="">
-                <span class="sk sk-comment"></span>
+              <a href="" class="icon icomoon icon-comment">
                 <span class="num">14</span>
               </a>
-              <a href="">
-                <span class="sk sk-heart"></span>
+              <a href="" class="icon icomoon icon-heart">
                 <span class="num">28</span>
               </a>
             </div>
@@ -121,6 +117,6 @@
 
 
     </div>
-
+    <script src="js/common.js"></script>
   </body>
 </html>
