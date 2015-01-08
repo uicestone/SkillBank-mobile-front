@@ -67,7 +67,8 @@ time {
 input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
   padding: 10px 10px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border: none; }
 
 input[type="search"]:focus {
   border: none; }
@@ -440,7 +441,7 @@ nav.bar.bar-tab .tab-item.active .icon {
     #register-page.content .register_form .input-group .btn-grey {
       position: absolute;
       right: 7px;
-      top: 7px;
+      top: 6px;
       padding-left: 15px;
       padding-right: 15px; }
   #register-page.content .register_form p {
