@@ -1,3 +1,4 @@
+var $ = document.querySelectorAll.bind(document);
 Element.prototype.on = Element.prototype.addEventListener;
 NodeList.prototype.on = function (event, fn) {
   []['forEach'].call(this, function (el) {
@@ -19,34 +20,34 @@ var checkPage = function(){
     getCourses();
     affix();
 
-    var $heart = document.querySelectorAll('.icon-heart')
+    var $heart = $('.icon-heart')
     toggleLike( $heart );
   }
 
   // course page
-  if( document.querySelector('.course-page') ){
+  if( $('.course-page').length ){
 
     // go for comment
-    document.querySelectorAll('.goto').on('click', function(event){
+    $('.goto').on('click', function(event){
       event.preventDefault();
       location.href = '#' + this.dataset.for;
     });
 
-    var $sideItem = document.querySelector('.side-item')
+    var $sideItem = $('.side-item')[0]
     $sideItem.on('click', function(){
       console.log(' $sideItem')
       return false;
     })
 
-    var $heart = document.querySelectorAll('.icon-heart')
+    var $heart = $('.icon-heart')
     toggleLike( $heart );
 
 
   }
 
   // chat page
-  if( document.querySelector('.chat-page') ){
-    $('#write-box').textareaAutoSize();
+  if( $('.chat-page').length ){
+    jQuery('#write-box').textareaAutoSize();
   }
 
 };
@@ -57,7 +58,7 @@ window.addEventListener('push', checkPage);
 
 function getCourses(){
   // search cat
-  var $list = document.querySelectorAll('#search-cat a');
+  var $list = $('#search-cat a');
   $list.on('click', function(){
     [].forEach.call($list, function (el) {
       el.classList.remove('active');
@@ -75,9 +76,9 @@ function toggleLike( el ){
 
 function addBulletsWeget(){
   // make bullet live
-  var len = document.querySelectorAll('#mySlider .slide').length;
+  var len = $('#mySlider .slide').length;
   var bulletsStr = "";
-  var $bulletsContainer = document.querySelector('#bullets ul');
+  var $bulletsContainer = $('#bullets ul')[0];
   var slide = function(event){
     console.log(event.detail.slideNumber);
     var curr = event.detail.slideNumber;
@@ -86,7 +87,7 @@ function addBulletsWeget(){
     $active.classList.remove('active');
     $next.classList.add('active');
   }
-  document.querySelector('#mySlider').addEventListener('slide', slide);
+  $('#mySlider')[0].addEventListener('slide', slide);
 
   // add html
   for(var i=0;i<len;i++){
@@ -103,7 +104,7 @@ function affix(){
   var $searchCat = document.getElementById('search-cat');
   var $wrap = $searchCat.querySelector('.search-cat-wrap')
   var offTop = $searchCat.offsetTop
-  var $content = document.querySelector('.content')
+  var $content = $('.content')[0]
   $content.onscroll = function (event) {
     if( this.scrollTop >= offTop ){
       $wrap.classList.add('affix');
@@ -117,7 +118,7 @@ function affix(){
 }
 
 function removeTrashes(){
-  var $trashes = document.querySelectorAll('body > .toBeRemoved');
+  var $trashes = $('body > .toBeRemoved');
   var len = $trashes.length;
   if(!len) return;
   while(len--){
@@ -127,9 +128,9 @@ function removeTrashes(){
 
 function hackForModals(){
   // hack for: all modals append to body
-  if( document.querySelector('.content .modal') ){
+  if( $('.content .modal').length ){
 
-    var $modals = document.querySelectorAll('.content .modal');
+    var $modals = $('.content .modal');
     var modalsLen = $modals.length;
     while(modalsLen--){
       document.body.appendChild( $modals[modalsLen] );
