@@ -29,6 +29,13 @@ var checkPage = function(){
       event.preventDefault();
       location.href = '#' + this.dataset.for;
     });
+
+    var $sideItem = document.querySelector('.side-item')
+     $sideItem.on('click', function(){
+        console.log(' $sideItem')
+        return false;
+     })
+
   }
 
 };
@@ -86,12 +93,8 @@ function affix(){
   var $searchCat = document.getElementById('search-cat');
   var $wrap = $searchCat.querySelector('.search-cat-wrap')
   var offTop = $searchCat.offsetTop
-  console.log(offTop)
   var $content = document.querySelector('.content')
   $content.onscroll = function (event) {
-    // called when the window is scrolled.
-    event.preventDefault()
-    console.log(event)
     if( this.scrollTop >= offTop ){
       $wrap.classList.add('affix');
       document.body.appendChild( $wrap )

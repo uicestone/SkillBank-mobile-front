@@ -58,7 +58,7 @@ input[type="search"]:focus{
   width: 5em;
   height: 5em;
 }
-a {
+a, a:active, a:hover {
   color: #999;
 }
 .has-header {
@@ -151,10 +151,11 @@ body > .bar-nav {
 }
 .comment-text {
   list-style: none;
-  background: #ddd;
+  background: $greyBg;
   li.card {
     padding: 1em;
     background: none;
+    border: none;
     border-bottom: 1px solid #fff;
     margin: 0;
     border-radius: 0;

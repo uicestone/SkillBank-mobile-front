@@ -324,10 +324,6 @@ nav.bar.bar-tab {
   .bar-tab {
     border-bottom: 1px solid #999;
   }
-  h6 {
-    color:#fff;
-    margin: 1em 0;
-  }
   .bag-color{
     background-color: $yellow;
     height:auto;
@@ -400,23 +396,25 @@ nav.bar.bar-tab {
     margin-top:40px;
     border-radius:0;
     border-bottom: 1px solid #ccc;
+    width: 100%;
     .control-item{
-      padding: 8px 0 10px 0;
-      span{
-        display:inline-block;
-        color:#123e50;
-        line-height:1.5;
+      padding: 14px 0;
+      width: 33.33%;
+      color: $grey;
+      &.active{
+        color: $black;
+        background-color: $greyBg;
+        border-top:3px solid #116e8e;
       }
-      .label{
-        display:block;
-        font-size:15px;
-        opacity:.8;
-        line-height:1.8;
-        color:#123e50;
+      h6 {
+        margin: 0;
       }
-      .icon{
-        font-size:27px;
-      }
+    }
+    .side-item {
+      display: table-cell;
+      width: 33.33%;
+      font-size: 10px;
+      color: $lightGrey;
       table{
         width:95%;
         margin:0 auto;
@@ -430,14 +428,6 @@ nav.bar.bar-tab {
             text-align: center;
           }
         }
-      }
-    }
-    .active{
-      color:#333;
-      background-color:#dadada;
-      border-top:3px solid #116e8e;
-      .icon{
-        color:#123e50;
       }
     }
   }
@@ -503,7 +493,7 @@ nav.bar.bar-tab {
           margin-bottom:0;
           width:82%;
           border-radius: 6px;
-          height: 28px;
+          height: 32px;
         }
         .icon-heart{
           border: 1px solid #a6afb2;
@@ -852,7 +842,13 @@ nav.bar.bar-tab {
       }
     }
   }
-
+  #comment {
+    .segmented-control {
+      .control-item {
+        background: $greyBg;
+      }
+    }
+  }
 }
 
 .course-page.bar-footer {
@@ -873,14 +869,15 @@ nav.bar.bar-tab {
   }
 }
 
-.message-page {
-  height: 47px;
-  background: #eee;
+#message-page.content {
   .segmented-control{
     .control-item{
       letter-spacing: 3px;
       padding: 10px 0;
       font-size: 16px;
+      &.active {
+        color: $white;
+      }
     }
   }
 }

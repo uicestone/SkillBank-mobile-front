@@ -82,7 +82,7 @@ input[type="search"]:focus {
   width: 5em;
   height: 5em; }
 
-a {
+a, a:active, a:hover {
   color: #999; }
 
 .has-header {
@@ -163,10 +163,11 @@ body > .bar-nav {
 
 .comment-text {
   list-style: none;
-  background: #ddd; }
+  background: #DBDBDB; }
   .comment-text li.card {
     padding: 1em;
     background: none;
+    border: none;
     border-bottom: 1px solid #fff;
     margin: 0;
     border-radius: 0; }
@@ -480,9 +481,6 @@ nav.bar.bar-tab .tab-item.active .icon {
 /*//Per*/
 #personal-page.content .bar-tab {
   border-bottom: 1px solid #999; }
-#personal-page.content h6 {
-  color: #fff;
-  margin: 1em 0; }
 #personal-page.content .bag-color {
   background-color: #FFD048;
   height: auto;
@@ -533,38 +531,34 @@ nav.bar.bar-tab .tab-item.active .icon {
   border-bottom: 0;
   margin-top: 40px;
   border-radius: 0;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  width: 100%; }
   #comment .segmented-control .control-item {
-    padding: 8px 0 10px 0; }
-    #comment .segmented-control .control-item span {
-      display: inline-block;
-      color: #123e50;
-      line-height: 1.5; }
-    #comment .segmented-control .control-item .label {
-      display: block;
-      font-size: 15px;
-      opacity: 0.8;
-      line-height: 1.8;
-      color: #123e50; }
-    #comment .segmented-control .control-item .icon {
-      font-size: 27px; }
-    #comment .segmented-control .control-item table {
+    padding: 14px 0;
+    width: 33.33%;
+    color: #999; }
+    #comment .segmented-control .control-item.active {
+      color: #333;
+      background-color: #DBDBDB;
+      border-top: 3px solid #116e8e; }
+    #comment .segmented-control .control-item h6 {
+      margin: 0; }
+  #comment .segmented-control .side-item {
+    display: table-cell;
+    width: 33.33%;
+    font-size: 10px;
+    color: #ccc; }
+    #comment .segmented-control .side-item table {
       width: 95%;
       margin: 0 auto;
       position: relative;
       top: -5px; }
-      #comment .segmented-control .control-item table tr {
+      #comment .segmented-control .side-item table tr {
         border: 0 solid #fff;
         line-height: 1.5; }
-        #comment .segmented-control .control-item table tr td {
+        #comment .segmented-control .side-item table tr td {
           border: none;
           text-align: center; }
-  #comment .segmented-control .active {
-    color: #333;
-    background-color: #dadada;
-    border-top: 3px solid #116e8e; }
-    #comment .segmented-control .active .icon {
-      color: #123e50; }
 #comment .comment-content {
   position: relative;
   margin: 0;
@@ -614,7 +608,7 @@ nav.bar.bar-tab .tab-item.active .icon {
       margin-bottom: 0;
       width: 82%;
       border-radius: 6px;
-      height: 28px; }
+      height: 32px; }
     #comment .comment-content .control-content .liuyan-form .icon-heart {
       border: 1px solid #a6afb2;
       border-radius: 23px;
@@ -890,6 +884,8 @@ nav.bar.bar-tab .tab-item.active .icon {
       left: 5px;
       top: 5px;
       font-size: 12px; }
+.course-page.content #comment .segmented-control .control-item {
+  background: #DBDBDB; }
 
 .course-page.bar-footer {
   height: 60px;
@@ -906,10 +902,9 @@ nav.bar.bar-tab .tab-item.active .icon {
       line-height: 1.5;
       font-size: 16px; }
 
-.message-page {
-  height: 47px;
-  background: #eee; }
-  .message-page .segmented-control .control-item {
-    letter-spacing: 3px;
-    padding: 10px 0;
-    font-size: 16px; }
+#message-page.content .segmented-control .control-item {
+  letter-spacing: 3px;
+  padding: 10px 0;
+  font-size: 16px; }
+  #message-page.content .segmented-control .control-item.active {
+    color: #fff; }

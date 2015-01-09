@@ -25,12 +25,9 @@
   </head>
   <body>
 
-    <!-- Make sure all your bars are the first things in your <body> -->
-<!--     <header class="bar bar-nav">
-  <h1 class="title">Ratchet</h1>
-</header>
- -->
-    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <!-- bug hack -->
+    <header class="bar-nav"></header>
+
     <nav class="bar bar-tab">
       <a class="tab-item active"  href="#" data-transition="slide-in">
         <span class="icon icon-search"></span>
@@ -49,6 +46,7 @@
         <span class="tab-label">个人</span>
       </a>
     </nav>
+    
     <div class="content" id="course-search">
       <div class="search-bar">
         <form>
