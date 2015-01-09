@@ -18,7 +18,9 @@ var checkPage = function(){
   if( document.getElementById('course-search') ){
     getCourses();
     affix();
-    toggleLike();
+
+    var $heart = document.querySelectorAll('.icon-heart')
+    toggleLike( $heart );
   }
 
   // course page
@@ -31,10 +33,14 @@ var checkPage = function(){
     });
 
     var $sideItem = document.querySelector('.side-item')
-     $sideItem.on('click', function(){
-        console.log(' $sideItem')
-        return false;
-     })
+    $sideItem.on('click', function(){
+      console.log(' $sideItem')
+      return false;
+    })
+
+    var $heart = document.querySelectorAll('.icon-heart')
+    toggleLike( $heart );
+
 
   }
 
@@ -56,9 +62,8 @@ function getCourses(){
 
 }
 
-function toggleLike(){
-  var $courseList = document.querySelector('div.course-list');
-  $courseList.querySelectorAll('.icon-heart').on('click', function(){
+function toggleLike( el ){
+  el.on('click', function(){
     this.classList.toggle('liked');
   });
 }

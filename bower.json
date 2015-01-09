@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "dependencies": {
     "ratchet": "~2.0.2",
-    "skeleton": "~2.0.2",
     "bootstrap": "~3.3.1",
     "vue": "~0.11.4",
     "hammerjs": "~2.0.4"

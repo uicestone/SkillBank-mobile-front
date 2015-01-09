@@ -45,7 +45,6 @@ input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 5px;
-  border: none;
 }
 
 input[type="search"]:focus{
@@ -76,6 +75,13 @@ a, a:active, a:hover {
 }
 .btn-default {
   color: $lightOlive;
+}
+.u-full-width {
+  width: 100%;
+}
+ol, ul {
+  margin: 0;
+  padding: 0;
 }
 .btn-olive {
   background: $lightOlive;
@@ -234,7 +240,6 @@ body > .bar-nav {
       color: #ccc;
       text-align: center;
       .icon-search {
-
         font-size: 13px;
       }
     }
@@ -242,6 +247,7 @@ body > .bar-nav {
       height: 28px;
       padding-left: 30px;
       margin: 0;
+      border: none;
       background: none;
       text-align: left;
       color: #ccc;

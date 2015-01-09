@@ -49,6 +49,12 @@
   border-bottom: none;
 }
 
+.liked {
+  color: $orange;
+  .num {
+    color: $white;
+  }
+}
 
 .ico-coin {
   position: absolute;
@@ -174,23 +180,18 @@
       padding: 1em 1em 0;
       left: 0;
       top: 0;
-      h3.u-pull-left {
+      h3.pull-left {
         color: #fff;
         text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
         font-size: 18px;
+        line-height: 24px;
       }
-      .u-pull-right {
+      .pull-right {
         a {
           position: relative;
           display: inline-block;
           color: #fff;
           margin-left: .5em;
-          &.liked {
-            color: $orange;
-            .num {
-              color: $white;
-            }
-          }
           .num {
             position: absolute;
             top: .6em;
@@ -292,7 +293,7 @@ nav.bar.bar-tab {
       .btn-grey {
         position: absolute;
         right: 7px;
-        top: 6px;
+        top: 5px;
         padding-left: 15px;
         padding-right: 15px;
       }
