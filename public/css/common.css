@@ -631,22 +631,21 @@ nav.bar.bar-tab .tab-item.active .icon {
         top: 1px; }
 
 .chat-page.bar-footer {
-  height: auto; }
-  .chat-page.bar-footer form {
-    overflow: hidden;
-    margin-bottom: 0; }
-    .chat-page.bar-footer form .table-view {
-      background: none;
-      margin: 0; }
-      .chat-page.bar-footer form .table-view .table-view-cell {
-        background: none;
-        margin: 0;
-        padding-left: 0; }
-        .chat-page.bar-footer form .table-view .table-view-cell .write-box {
-          margin-bottom: 0;
-          border-radius: 5px; }
-        .chat-page.bar-footer form .table-view .table-view-cell button {
-          color: #999; }
+  height: auto;
+  padding: 10px 10px 6px; }
+  .chat-page.bar-footer #write-box {
+    width: 82%;
+    margin: 0;
+    padding: 3px;
+    max-height: 90px;
+    overflow-x: hidden; }
+  .chat-page.bar-footer .pull-right {
+    width: 17%;
+    text-align: center; }
+    .chat-page.bar-footer .pull-right button {
+      height: 28px;
+      line-height: 28px;
+      color: #999; }
 
 .popover-chat {
   position: relative;

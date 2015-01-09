@@ -18,17 +18,17 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
-    
+
   </head>
   <body>
     <div class="chat-page bar bar-footer">
       <form>
-        <ul class="table-view">
-          <li class="table-view-cell">
-            <input type="text" class="write-box">
-            <button class="btn btn-link">发送</button>
-          </li>
-        </ul>
+        <textarea id="write-box" rows="1"></textarea>
+        <div class="pull-right">
+          
+          <button class="btn btn-link">发送</button>
+        </div>
+
       </form>
     </div>
     <div class="chat-page content">
@@ -60,6 +60,8 @@
       </div>
 
     </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/textarea-autosize/dist/jquery.textarea_autosize.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

@@ -517,24 +517,21 @@ nav.bar.bar-tab {
 
 .chat-page.bar-footer{
   height: auto;
-  form{
-    overflow:hidden;
-    margin-bottom:0;
-    .table-view {
-      background: none;
-      margin: 0;
-      .table-view-cell {
-        background: none;
-        margin: 0;
-        padding-left: 0;
-        .write-box{
-          margin-bottom:0;
-          border-radius:5px;
-        }
-        button{
-          color: $grey;
-        }
-      }
+  padding: 10px 10px 6px;
+  #write-box{
+    width: 82%;
+    margin: 0;
+    padding: 3px;
+    max-height: 90px;
+    overflow-x: hidden; // for Firefox (issue #5)
+  }
+  .pull-right {
+    width: 17%;
+    text-align: center;
+    button{
+      height: 28px;
+      line-height: 28px;
+      color: $grey;
     }
   }
 }

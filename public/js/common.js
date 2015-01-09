@@ -44,6 +44,11 @@ var checkPage = function(){
 
   }
 
+  // chat page
+  if( document.querySelector('.chat-page') ){
+    $('#write-box').textareaAutoSize();
+  }
+
 };
 
 // start here
