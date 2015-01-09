@@ -96,7 +96,7 @@ a {
   height: auto;
   border: none;
   font-size: 14px;
-  padding: 7px 8px 8px; }
+  padding: 8px; }
 
 .btn-default {
   color: #4f8da5; }
@@ -317,32 +317,51 @@ body > .bar-nav {
   display: block; }
 
 #search-cat {
+  height: 55px; }
+
+.search-cat-wrap {
+  height: 55px;
   font-size: 15px;
   border: none;
   border-radius: 0;
-  background: #ffd047;
+  background: #FFD048;
   width: 100%;
   overflow: hidden; }
-  #search-cat .inner {
+  .search-cat-wrap.affix {
+    position: fixed; }
+  .search-cat-wrap:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 14px solid #FFD048; }
+  .search-cat-wrap .inner {
+    position: relative;
     padding: 0 10px 1em;
     overflow-x: scroll;
     white-space: nowrap; }
-    #search-cat .inner a {
+    .search-cat-wrap .inner a {
+      position: relative;
       display: table-cell;
       color: #13404c;
-      padding: 1.2em 0.7em 1.1em;
+      padding: 1.2em 0.7em 0.1em;
       height: 100%;
       margin: 0 1em;
       border: none; }
-      #search-cat .inner a.active {
-        border-bottom: 4px solid #13404c; }
-      #search-cat .inner a:first-child {
+      .search-cat-wrap .inner a:first-child {
         margin-left: 1em; }
+      .search-cat-wrap .inner a.active:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        z-index: 1;
+        width: 100%;
+        border-bottom: 4px solid #13404c; }
 
 .course-list {
   overflow: hidden;
-  position: relative;
-  top: -15px;
   background: #eaeaea; }
   .course-list .course {
     position: relative; }
@@ -465,11 +484,11 @@ nav.bar.bar-tab .tab-item.active .icon {
   color: #fff;
   margin: 1em 0; }
 #personal-page.content .bag-color {
-  background-color: #ffd047;
+  background-color: #FFD048;
   height: auto;
   position: relative; }
 #personal-page.content .info {
-  background-color: #ffd047;
+  background-color: #FFD048;
   text-align: center;
   padding-top: 0.5em; }
   #personal-page.content .info .btn-set .btn {
@@ -588,23 +607,25 @@ nav.bar.bar-tab .tab-item.active .icon {
           font-size: 12px; }
   #comment .comment-content .control-content .liuyan-form {
     margin-bottom: 0;
-    padding: 10px 25px;
+    padding: 10px;
     overflow: hidden;
     background-color: #f2f2f2; }
     #comment .comment-content .control-content .liuyan-form input {
       margin-bottom: 0;
       width: 82%;
       border-radius: 6px;
-      float: right; }
+      height: 28px; }
     #comment .comment-content .control-content .liuyan-form .icon-heart {
       border: 1px solid #a6afb2;
       border-radius: 23px;
-      padding: 8px;
-      background-color: #fff; }
+      padding: 7px;
+      background-color: #fff;
+      font-size: 16px;
+      margin-top: -2px; }
       #comment .comment-content .control-content .liuyan-form .icon-heart:before {
         color: #a6afb2;
         position: relative;
-        top: 2px; }
+        top: 1px; }
 
 .chat-page.bar-footer {
   height: auto; }

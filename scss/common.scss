@@ -108,37 +108,62 @@
     display: block;
   }
 }
+
 #search-cat {
+  height: $searchCatH;
+}
+.search-cat-wrap{
+  height: $searchCatH;
   font-size: 15px;
   border: none;
   border-radius: 0;
-  background: #ffd047;
+  background: $yellow;
   width: 100%;
   overflow: hidden;
+  &.affix {
+    position: fixed;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 14px solid $yellow;
+  }
   .inner {
+    position: relative;
     padding: 0 10px 1em;
     overflow-x: scroll;
     white-space: nowrap;
     a {
+      position: relative;
       display: table-cell;
       color: $dark;
-      padding: 1.2em 0.7em 1.1em;
+      padding: 1.2em 0.7em .1em;
       height: 100%;
       margin: 0 1em;
       border: none;
-      &.active {
-        border-bottom: 4px solid $dark;
-      }
       &:first-child {
         margin-left: 1em;
+      }
+      &.active:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        z-index: 1;
+        width: 100%;
+        border-bottom: 4px solid $dark;
       }
     }
   }
 }
+
+
+
 .course-list {
   overflow: hidden;
-  position: relative;
-  top: -15px;
   background: $lighterGrey;
   .course {
     position: relative;
@@ -304,12 +329,12 @@ nav.bar.bar-tab {
     margin: 1em 0;
   }
   .bag-color{
-    background-color: #ffd047;
+    background-color: $yellow;
     height:auto;
     position:relative;
   }
   .info {
-    background-color:#ffd047;
+    background-color: $yellow;
     text-align: center;
     padding-top: .5em;
     .btn-set {
@@ -471,24 +496,26 @@ nav.bar.bar-tab {
       }
       .liuyan-form{
         margin-bottom:0;
-        padding:10px 25px;
+        padding: 10px;
         overflow:hidden;
         background-color:#f2f2f2;
         input{
           margin-bottom:0;
           width:82%;
           border-radius: 6px;
-          float:right;
+          height: 28px;
         }
         .icon-heart{
           border: 1px solid #a6afb2;
           border-radius: 23px;
-          padding: 8px;
+          padding: 7px;
           background-color: #fff;
+          font-size: 16px;
+          margin-top: -2px;
           &:before{
             color:#a6afb2;
             position: relative;
-            top: 2px;
+            top: 1px;
           }
         }
       }

@@ -6,6 +6,55 @@ NodeList.prototype.on = function (event, fn) {
   return this;
 };
 
+var checkPage = function(){
+  if( document.getElementById('mySlider') ) {
+    addBulletsWeget();
+  }
+
+  removeTrashes();
+  hackForModals();
+  
+  // course search
+  if( document.getElementById('course-search') ){
+    getCourses();
+    affix();
+    toggleLike();
+  }
+
+  // course page
+  if( document.querySelector('.course-page') ){
+
+    // go for comment
+    document.querySelectorAll('.goto').on('click', function(event){
+      event.preventDefault();
+      location.href = '#' + this.dataset.for;
+    });
+  }
+
+};
+
+// start here
+checkPage();
+window.addEventListener('push', checkPage);
+
+function getCourses(){
+  // search cat
+  var $list = document.querySelectorAll('#search-cat a');
+  $list.on('click', function(){
+    [].forEach.call($list, function (el) {
+      el.classList.remove('active');
+    });
+    this.classList.add('active');
+  });
+
+}
+
+function toggleLike(){
+  var $courseList = document.querySelector('div.course-list');
+  $courseList.querySelectorAll('.icon-heart').on('click', function(){
+    this.classList.toggle('liked');
+  });
+}
 
 function addBulletsWeget(){
   // make bullet live
@@ -34,19 +83,36 @@ function addBulletsWeget(){
 }
 
 function affix(){
+  var $searchCat = document.getElementById('search-cat');
+  var $wrap = $searchCat.querySelector('.search-cat-wrap')
+  var offTop = $searchCat.offsetTop
+  console.log(offTop)
+  var $content = document.querySelector('.content')
+  $content.onscroll = function (event) {
+    // called when the window is scrolled.
+    event.preventDefault()
+    console.log(event)
+    if( this.scrollTop >= offTop ){
+      $wrap.classList.add('affix');
+      document.body.appendChild( $wrap )
+    } else{
+      $wrap.classList.remove('affix')
+      $searchCat.appendChild( $wrap )
+    }
+  }
+  
+}
 
+function removeTrashes(){
+  var $trashes = document.querySelectorAll('body > .toBeRemoved');
+  var len = $trashes.length;
+  if(!len) return;
+  while(len--){
+    document.body.removeChild( $trashes[len] );
+  }
 }
 
 function hackForModals(){
-  // hack for: delete all modals that append to body
-  if( document.querySelector('body > .modal') ){
-
-    var $modals = document.querySelectorAll('body > .modal');
-    var modalsLen = $modals.length;
-    while(modalsLen--){
-      document.body.removeChild( $modals[modalsLen] );
-    }
-  }
   // hack for: all modals append to body
   if( document.querySelector('.content .modal') ){
 
@@ -57,45 +123,3 @@ function hackForModals(){
     }
   }
 }
-
-var checkPage = function(){
-  if( document.getElementById('mySlider') ) {
-    addBulletsWeget();
-  }
-
-  hackForModals();
-  
-  // course search
-  if( document.getElementById('course-search') ){
-    var $serchCat = document.getElementById('search-cat');
-    var $courseList = document.querySelector('div.course-list');
-
-
-    // search cat
-    var $allATag = $serchCat.querySelectorAll('a');
-    $allATag.on('click', function(){
-      var allATag = 
-      this.classList.toggle('liked');
-    });
-
-    // affix($serchCat);
-    $courseList.querySelectorAll('.icon-heart').on('click', function(){
-      this.classList.toggle('liked');
-    });
-  }
-
-  // course page
-  if( document.querySelector('.course-page') ){
-
-    // go for comment
-    document.querySelectorAll('.goto').on('click', function(event){
-      event.preventDefault();
-      location.href = '#' + this.dataset.for;
-    });
-  }
-
-// end of checkPage 
-};
-
-checkPage();
-window.addEventListener('push', checkPage);
