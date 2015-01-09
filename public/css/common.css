@@ -278,9 +278,9 @@ body > .bar-nav {
   border-bottom: none; }
 
 .liked {
-  color: #F76033; }
+  color: #F76033 !important; }
   .liked .num {
-    color: #fff; }
+    color: #fff !important; }
 
 .ico-coin {
   position: absolute;
@@ -915,4 +915,5 @@ nav.bar.bar-tab .tab-item.active .icon {
   padding: 10px 0;
   font-size: 16px; }
   #message-page.content .segmented-control .control-item.active {
-    color: #fff; }
+    color: #fff;
+    background: #666; }

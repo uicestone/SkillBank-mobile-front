@@ -50,9 +50,9 @@
 }
 
 .liked {
-  color: $orange;
+  color: $orange!important;
   .num {
-    color: $white;
+    color: $white!important;
   }
 }
 
@@ -875,6 +875,7 @@ nav.bar.bar-tab {
       font-size: 16px;
       &.active {
         color: $white;
+        background: $darkGrey;
       }
     }
   }
