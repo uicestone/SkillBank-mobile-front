@@ -61,10 +61,10 @@
       <div id="search-cat">
         <div class="search-cat-wrap toBeRemoved">
           <div class="inner">
-            <a class="active" href="#"> 附近技能 </a>
-            <a class="" href="#"> 达人技能 </a>
-            <a class="" href="#"> 语言类 </a>
-            <a class="" href="#"> 艺术设计 </a>
+            <a class="active" href="#" data-by="0" data-type="1"> 附近技能 </a>
+            <a class="" href="#" data-by="1" data-type="1"> 达人技能 </a>
+            <a class="" href="#" data-by="2" data-type="1"> 语言类 </a>
+            <a class="" href="#" data-by="2" data-type="2"> 艺术设计 </a>
             <a class="" href="#"> 达人技能 </a>
             <a class="" href="#"> 语言类 </a>
             <a class="" href="#"> 艺术设计 </a>
@@ -72,6 +72,8 @@
         </div>
       </div>
       <div class="course-list">
+        
+
         <div class="course card">
           <div class="title-bar u-full-width">
             <h3 class="pull-left">魔方进阶教程</h3>
@@ -91,6 +93,7 @@
             <p>64km 上海</p>
           </div>
         </div>
+
         <div class="course card">
           <div class="title-bar u-full-width">
             <h3 class="pull-left">魔方进阶教程</h3>
@@ -113,8 +116,33 @@
 
       </div>
 
+      <script type="text/template" id="course-tpl">
+        <% _.forEach(courses, function(course) { %>
+          <div class="course card">
+            <div class="title-bar u-full-width">
+              <h3 class="pull-left"><%- course.Title %></h3>
+              <div class="pull-right">
+                <a href="#" class="icon icomoon icon-comment">
+                  <span class="num"><%- course.ReviewNum %></span>
+                </a>
+                <a href="#" class="icon icomoon icon-heart <%- course.IsLike ? 'liked' : '' %>">
+                  <span class="num"><%- course.LikeNum %></span>
+                </a>
+              </div>
+            </div>
+            <img src="<%- checkImgHost(imgHost, course.Cover) %>" alt="" class="cover">
+            <div class="info">
+              <img src="<%- checkImgHost(imgHost, course.Avatar) %>" alt="" class="avatar">
+              <h4><%- course.name %></h4>
+              <p>64km 上海</p>
+            </div>
+          </div>
+        <% }); %>
+      </script>
 
     </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

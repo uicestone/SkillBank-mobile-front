@@ -185,6 +185,7 @@
         text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
         font-size: 18px;
         line-height: 24px;
+        width: 70%;
       }
       .pull-right {
         a {
@@ -597,7 +598,7 @@ nav.bar.bar-tab {
   }
 }
 
-.chat-page.content{
+.chat-page.content {
   padding-top: .5em;
   .popover {
     position: relative;
@@ -649,13 +650,7 @@ nav.bar.bar-tab {
       }
     }
   }
-  .send-time{
-    text-align:center;
-    color:#b5bdbf;
-    font-size:14px;
-    margin-bottom:10px;
-  }
-  .receiver-time{
+  .time{
     text-align:center;
     color:#b5bdbf;
     font-size:14px;
@@ -669,38 +664,30 @@ nav.bar.bar-tab {
       font-size:22px;
     }
   }
-  .chat-content{
-    width:90%;
-    margin:0 auto;
-    margin-top:10px;
-    .sender{
-      overflow:hidden;
-      margin-bottom:20px;
-      padding-bottom:2px;
-      .send-img{
-        float: left;
-        img{
-          width:4em;
-          height:4em;
+  .chat-content {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    .box {
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding-bottom: 2px;
+      .avatar {
+        width: 4em;
+        height: 4em;
+      }
+      &.sender{
+        .avatar {
+          float: right;
         }
       }
-
-    }
-    .receiver{
-      overflow:hidden;
-      margin-bottom:20px;
-      padding-bottom:2px;
-      .receiver-img{
-        float:right;
-        img{
-          width:4em;
-          height:4em;
+      &.receiver{
+        .avatar {
+          float: left;
         }
       }
-
-    }
-  }
-
+    }      
+  }      
 }
 
 

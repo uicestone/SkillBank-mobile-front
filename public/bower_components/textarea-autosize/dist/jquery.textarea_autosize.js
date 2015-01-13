@@ -20,7 +20,7 @@
 
   Plugin.prototype = {
     init: function() {
-      var height = this.$element.outerHeight();
+      var height = this.$element.height();
       var diff = parseInt(this.$element.css('paddingBottom')) +
                   parseInt(this.$element.css('paddingTop'));
 
@@ -44,8 +44,8 @@
 
   $.fn[pluginName] = function (options) {
     this.each(function() {
-      if (!$.data(this, pluginDataName)) {
-        $.data(this, pluginDataName, new Plugin(this, options));
+      if (!$(this).data(pluginDataName)) {
+        $(this).data(pluginDataName, new Plugin(this, options));
       }
     });
     return this;

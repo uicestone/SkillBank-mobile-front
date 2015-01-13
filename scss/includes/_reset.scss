@@ -38,6 +38,10 @@ time {
   color: $lightGrey;
 }
 
+[v-cloak]{
+  display: none;
+}
+
 input[type=color], input[type=date], input[type=datetime-local],
 input[type=datetime], input[type=email], input[type=month], input[type=number],
 input[type=password], input[type=search], input[type=tel], input[type=text],

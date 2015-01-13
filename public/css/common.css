@@ -64,6 +64,9 @@ time {
   font-size: 12px;
   color: #ccc; }
 
+[v-cloak] {
+  display: none; }
+
 input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
   padding: 10px 10px;
@@ -389,7 +392,8 @@ body > .bar-nav {
         color: #fff;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
         font-size: 18px;
-        line-height: 24px; }
+        line-height: 24px;
+        width: 70%; }
       .course-list .course .title-bar .pull-right a {
         position: relative;
         display: inline-block;
@@ -745,12 +749,7 @@ nav.bar.bar-tab .tab-item.active .icon {
       padding: 9px 14px; }
       .chat-page.content .popover .popover-content p {
         margin: 0 0 10px; }
-  .chat-page.content .send-time {
-    text-align: center;
-    color: #b5bdbf;
-    font-size: 14px;
-    margin-bottom: 10px; }
-  .chat-page.content .receiver-time {
+  .chat-page.content .time {
     text-align: center;
     color: #b5bdbf;
     font-size: 14px;
@@ -765,24 +764,17 @@ nav.bar.bar-tab .tab-item.active .icon {
     width: 90%;
     margin: 0 auto;
     margin-top: 10px; }
-    .chat-page.content .chat-content .sender {
+    .chat-page.content .chat-content .box {
       overflow: hidden;
       margin-bottom: 20px;
       padding-bottom: 2px; }
-      .chat-page.content .chat-content .sender .send-img {
-        float: left; }
-        .chat-page.content .chat-content .sender .send-img img {
-          width: 4em;
-          height: 4em; }
-    .chat-page.content .chat-content .receiver {
-      overflow: hidden;
-      margin-bottom: 20px;
-      padding-bottom: 2px; }
-      .chat-page.content .chat-content .receiver .receiver-img {
+      .chat-page.content .chat-content .box .avatar {
+        width: 4em;
+        height: 4em; }
+      .chat-page.content .chat-content .box.sender .avatar {
         float: right; }
-        .chat-page.content .chat-content .receiver .receiver-img img {
-          width: 4em;
-          height: 4em; }
+      .chat-page.content .chat-content .box.receiver .avatar {
+        float: left; }
 
 /* classes.css */
 .course-page.content .info {
