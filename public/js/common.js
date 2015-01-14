@@ -208,11 +208,13 @@ function request(type, url, opts, callback) {
     opts = null;
   }
   xhr.open(type, url);
-  var fd = new FormData();
+  var fd = [];
   if (type === 'POST' && opts) {
     for (var key in opts) {
-      fd.append(key, JSON.stringify(opts[key]));
+      fd.push( key + '=' + opts[key] );
     }
+    fd = fd.join('&');
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   }
   xhr.onload = function () {
     callback(JSON.parse(xhr.response));
@@ -234,16 +236,24 @@ function getChatDetail(uid, fid){
 
 function msgForm(){
   var $form = $('#form-write');
+  var $container = $('.chat-content');
+  var tpl = $('#chat-detail-tpl')[0].innerHTML;
+  var $textarea =  $form[0].querySelector('textarea');
   $form[0].on('submit', function(event){
     event.preventDefault();
-    var url = ENV.host + '/api/ChatItem';
+    var url = ENV.host + '/api/chat';
     var data = {
       FromId: 1,
       ToId: 7,
-      MessageText: $form[0].querySelector('textarea').value
+      MessageText: $textarea.value
     };
     post(url, data, function(fb){
-      console.log(fb);
+      if( !_.isNumber(fb) ) return;
+      // $container[0].appendChild( _.template(tpl, {item: data}) );
+      $container[0].insertAdjacentHTML( 'beforeend', _.template(tpl, {item: data}) );
+      $textarea.value = '';
+      $textarea.focus();
     });
+
   });
 }
