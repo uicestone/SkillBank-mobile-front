@@ -25,7 +25,8 @@
 body {
   font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'STHeitiSC-Light', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666;
-  background: #eee; }
+  background: #eee;
+  -webkit-font-smoothing: antialiased !important; }
 
 .mb-1 {
   margin-bottom: 1em; }
@@ -388,7 +389,7 @@ body > .bar-nav {
       padding: 1em 1em 0;
       left: 0;
       top: 0; }
-      .course-list .course .title-bar h3.pull-left {
+      .course-list .course .title-bar p.pull-left {
         color: #fff;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
         font-size: 18px;
