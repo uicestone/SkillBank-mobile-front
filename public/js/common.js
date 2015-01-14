@@ -21,21 +21,19 @@ var post = request.bind(this, 'POST');
 
 
 var checkPage = function(){
-  if( document.getElementById('mySlider') ) {
-    addBulletsWeget();
-  }
 
+  addBulletsWeget();
+  toggleLike();
   removeTrashes();
   hackForModals();
-  
+
   // course search
   if( document.getElementById('course-search') ){
     getCourses();
     affix();
 
 
-    var $heart = $('.icon-heart')
-    toggleLike( $heart );
+
   }
 
   // course page
@@ -47,8 +45,6 @@ var checkPage = function(){
       location.href = '#' + this.dataset.for;
     });
 
-    var $heart = $('.icon-heart')
-    toggleLike( $heart );
 
 
   }
@@ -80,35 +76,35 @@ function getCourses(){
 
   var courses = [
     {
-      "ClassId": 736, 
-      "IsLike": false, 
-      "Member_Id": 1192, 
-      "Cover": "/0/class/c_736_141024060947.jpg", 
-      "Name": "Aki", 
-      "CityId": 1, 
-      "PosX": 121.480153, 
-      "PosY": 31.207886, 
-      "Title": "想脱单？首先认识你自己！", 
-      "LikeNum": 5, 
-      "Level": 2, 
-      "Avatar": "/0/profile/m_1192.jpg", 
-      "ReviewNum": 2, 
+      "ClassId": 736,
+      "IsLike": false,
+      "Member_Id": 1192,
+      "Cover": "/0/class/c_736_141024060947.jpg",
+      "Name": "Aki",
+      "CityId": 1,
+      "PosX": 121.480153,
+      "PosY": 31.207886,
+      "Title": "想脱单？首先认识你自己！",
+      "LikeNum": 5,
+      "Level": 2,
+      "Avatar": "/0/profile/m_1192.jpg",
+      "ReviewNum": 2,
       "ClassNum": 0
-    }, 
+    },
     {
-      "ClassId": 25, 
-      "IsLike": false, 
-      "Member_Id": 16, 
-      "Cover": "/0/class/c_25_141224062320.jpg", 
-      "Name": "邵杰", 
-      "CityId": 1, 
-      "PosX": 121.51369, 
-      "PosY": 31.306264, 
-      "Title": "零起点德语", 
-      "LikeNum": 3, 
-      "Level": 1, 
-      "Avatar": "/0/profile/m_16.jpg", 
-      "ReviewNum": 1, 
+      "ClassId": 25,
+      "IsLike": false,
+      "Member_Id": 16,
+      "Cover": "/0/class/c_25_141224062320.jpg",
+      "Name": "邵杰",
+      "CityId": 1,
+      "PosX": 121.51369,
+      "PosY": 31.306264,
+      "Title": "零起点德语",
+      "LikeNum": 3,
+      "Level": 1,
+      "Avatar": "/0/profile/m_16.jpg",
+      "ReviewNum": 1,
       "ClassNum": 0
     }
   ];
@@ -134,13 +130,22 @@ function getCourses(){
   });
 }
 
-function toggleLike( el ){
-  el.on('click', function(){
-    this.classList.toggle('liked');
+function toggleLike(){
+  if( !$('.toggle-like').length ) return;
+  document.body.addEventListener('touchend', function(e){
+    if( e.target.matches('.toggle-like, .toggle-like *') ) {
+      // e.stopPropagation();
+      var $heart = e.target;
+      while( !$heart.matches('.toggle-like') ){
+        $heart = $heart.parentNode;
+      }
+      $heart.classList.toggle('liked');
+    }
   });
 }
 
 function addBulletsWeget(){
+  if( !document.getElementById('mySlider') ) return;
   // make bullet live
   var len = $('#mySlider .slide').length;
   var bulletsStr = "";
