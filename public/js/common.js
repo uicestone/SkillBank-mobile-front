@@ -27,6 +27,7 @@ var checkPage = function(){
   removeTrashes();
   hackForModals();
   privateMsgForm();
+  reservationForm();
 
 
   // course search
@@ -292,6 +293,28 @@ function privateMsgForm(){
     };
     post(ENV.host + '/api/chat', data, function(fb){
       // if( !_.isNumber(fb) ) return;
+      $modal[0].style.display = 'none';
+    });
+
+  });
+}
+
+function reservationForm(){
+  var $modal = $('#reservation');
+  if( !$modal.length ) return;
+  var $form = $modal[0].querySelectorAll('form');
+  var $input = $form[0].querySelector('textarea');
+  $form[0].on('submit', function(event){
+    event.preventDefault();
+    var data = {
+      MemberId: 1,
+      ClassId: 7,
+      BookDate: this.date.value,
+      Remark: this.message.value,
+      Name: this.name.value,
+    };
+    post(ENV.host + '/api/Order', data, function(fb){
+      if( !fb ) return;
       $modal[0].style.display = 'none';
     });
 
