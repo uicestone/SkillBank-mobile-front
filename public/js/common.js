@@ -68,6 +68,23 @@ var checkPage = function(){
 
   }
 
+  // register page
+  if( $('#register-page').length ){
+    var $form = $('form')[0];
+    $form.on('submit', function(event){
+      event.preventDefault();
+
+    });
+
+    var $verifyBtn = $('.btn-grey');
+    $verifyBtn.on('click', function(){
+      var url = ENV.host + '/api/Validation?mobile=' + $form.phone.value;
+      post(url, function(fb){
+        console.log(fb);
+      })
+    })
+  }
+
 };
 
 // start here
