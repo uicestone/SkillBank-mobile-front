@@ -26,6 +26,8 @@ var checkPage = function(){
   toggleLike();
   removeTrashes();
   hackForModals();
+  privateMsgForm();
+
 
   // course search
   if( document.getElementById('course-search') ){
@@ -45,7 +47,7 @@ var checkPage = function(){
       location.href = '#' + this.dataset.for;
     });
 
-
+    commentForm();
 
   }
 
@@ -61,7 +63,7 @@ var checkPage = function(){
     jQuery('#write-box').textareaAutoSize();
 
     // bind add msg
-    msgForm();
+    chatForm();
 
   }
 
@@ -139,7 +141,23 @@ function toggleLike(){
       while( !$heart.matches('.toggle-like') ){
         $heart = $heart.parentNode;
       }
-      $heart.classList.toggle('liked');
+
+      // get card
+      var $card =  e.target;
+      while( !$card.matches('[data-member_id]') ){
+        $card = $card.parentNode;
+      }
+
+      var data = {
+        MemberId: $card.dataset.member_id,
+        ClassId: $card.dataset.classid,
+        IsLike: !$heart.matches('.liked')
+      }
+      post(ENV.host + '/api/likeclass', data, function(fb){
+        if(!fb)return;
+        $heart.classList.toggle('liked');
+      })
+
     }
   });
 }
@@ -239,25 +257,63 @@ function getChatDetail(uid, fid){
   });
 }
 
-function msgForm(){
+function chatForm(){
   var $form = $('#form-write');
-  var $container = $('.chat-content');
-  var tpl = $('#chat-detail-tpl')[0].innerHTML;
-  var $textarea =  $form[0].querySelector('textarea');
+  var $input =  $form[0].querySelector('textarea');
   $form[0].on('submit', function(event){
     event.preventDefault();
-    var url = ENV.host + '/api/chat';
     var data = {
       FromId: 1,
       ToId: 7,
-      MessageText: $textarea.value
+      MessageText: $input.value
     };
-    post(url, data, function(fb){
+    post(ENV.host + '/api/chat', data, function(fb){
       if( !_.isNumber(fb) ) return;
-      // $container[0].appendChild( _.template(tpl, {item: data}) );
-      $container[0].insertAdjacentHTML( 'beforeend', _.template(tpl, {item: data}) );
-      $textarea.value = '';
-      $textarea.focus();
+      $('.chat-content')[0].insertAdjacentHTML( 'beforeend',
+        _.template($('#chat-detail-tpl')[0].innerHTML, {item: data}) );
+      $input.value = '';
+      $input.focus();
+    });
+
+  });
+}
+
+function privateMsgForm(){
+  var $modal = $('#privateMsg');
+  if( !$modal.length ) return;
+  var $form = $modal[0].querySelectorAll('form');
+  var $input = $form[0].querySelector('textarea');
+  $form[0].on('submit', function(event){
+    event.preventDefault();
+    var data = {
+      FromId: 1,
+      ToId: 7,
+      CommentText: $input.value
+    };
+    post(ENV.host + '/api/chat', data, function(fb){
+      // if( !_.isNumber(fb) ) return;
+      $modal[0].style.display = 'none';
+    });
+
+  });
+}
+
+function commentForm(){
+  var $form = $('#comment-form');
+  var $input = $form[0].querySelector('input');
+  $form[0].on('submit', function(event){
+    event.preventDefault();
+    var data = {
+      MemberId: 1,
+      ClassId: 7,
+      CommentText: $input.value
+    };
+    post(ENV.host + '/api/comment', data, function(fb){
+      if( !_.isNumber(fb) ) return;
+      $('.comment-text')[0].insertAdjacentHTML( 'beforeend',
+        _.template($('#comment-tpl')[0].innerHTML, {item: data}) );
+      $input.value = '';
+      $input.focus();
     });
 
   });

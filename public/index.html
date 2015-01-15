@@ -118,7 +118,7 @@
 
       <script type="text/template" id="course-tpl">
         <% _.forEach(courses, function(course) { %>
-          <div class="course card">
+          <div class="course card" data-Member_Id="<%- course.Member_Id %>" data-ClassId="<%- course.ClassId %>">
             <div class="title-bar u-full-width">
               <p class="pull-left"><%- course.Title %></p>
               <div class="pull-right">

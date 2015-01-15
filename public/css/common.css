@@ -613,24 +613,24 @@ nav.bar.bar-tab .tab-item.active .icon {
           right: 0px;
           top: -3px;
           font-size: 12px; }
-  #comment .comment-content .control-content .liuyan-form {
+  #comment .comment-content .control-content #comment-form {
     margin-bottom: 0;
     padding: 10px;
     overflow: hidden;
     background-color: #f2f2f2; }
-    #comment .comment-content .control-content .liuyan-form input {
+    #comment .comment-content .control-content #comment-form input {
       margin-bottom: 0;
       width: 82%;
       border-radius: 6px;
       height: 32px; }
-    #comment .comment-content .control-content .liuyan-form .icon-heart {
+    #comment .comment-content .control-content #comment-form .icon-heart {
       border: 1px solid #a6afb2;
       border-radius: 23px;
       padding: 7px;
       background-color: #fff;
       font-size: 16px;
       margin-top: -2px; }
-      #comment .comment-content .control-content .liuyan-form .icon-heart:before {
+      #comment .comment-content .control-content #comment-form .icon-heart:before {
         color: #a6afb2;
         position: relative;
         top: 1px; }
