@@ -95,8 +95,13 @@ function switchCourseCat(){
   // search cat
   $('#search-cat a').on('click', function(){
     var self = this;
+    var geo_opts = {
+        enableHighAccuracy: true, 
+        maximumAge        : 30000, 
+        timeout           : 27000
+      };
 
-    // 附近技能
+    // nearby skill
     if(this.dataset.by == 0){
       navigator.geolocation.getCurrentPosition(function (position) {
         var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type +
@@ -104,11 +109,7 @@ function switchCourseCat(){
         getCourses(url, self);
       }, function(){
         console.log("Sorry, no position available.")
-      }, {
-        enableHighAccuracy: true, 
-        maximumAge        : 30000, 
-        timeout           : 27000
-      });
+      }, geo_opts);
     } else{
       var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type;
       getCourses(url, self);
