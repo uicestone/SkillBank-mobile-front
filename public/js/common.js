@@ -134,7 +134,7 @@ function getCourses(url, el){
 
 function toggleLike(){
   if( !$('.toggle-like').length ) return;
-  document.body.addEventListener('touchend', function(e){
+  document.body.addEventListener('click', function(e){
     if( e.target.matches('.toggle-like, .toggle-like *') ) {
       // e.stopPropagation();
       var $heart = e.target;
@@ -144,7 +144,7 @@ function toggleLike(){
 
       // get card
       var $card =  e.target;
-      while( !$card.matches('[data-member_id]') ){
+      while( !$card.matches('[data-Member_Id]') ){
         $card = $card.parentNode;
       }
 
