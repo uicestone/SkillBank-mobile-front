@@ -120,11 +120,25 @@ var checkPage = function(){
     });
 
     var $verifyBtn = $('.btn-grey');
+    var seconds;
     $verifyBtn.on('click', function(){
+      if(seconds>0 || !$form.phone.value) return;
       var url = ENV.host + '/api/Validation?mobile=' + $form.phone.value;
+      seconds = 60;
       post(url, function(fb){
-        console.log(fb);
-      })
+        // timer
+        var t = setInterval(function(){
+          if(seconds <= 0){
+            $verifyBtn[0].innerText = '获得验证码';
+            clearInterval(t);
+          } else {
+            $verifyBtn[0].innerText = seconds;
+          }
+          seconds--;
+        }, 1000);
+      });
+
+
     })
   }
 
