@@ -134,19 +134,47 @@ function getCourses(){
   var $list = $('#search-cat a');
   $list.on('click', function(){
     var self = this;
-    var url = ENV.host + '/api/ClassList?' + 'by=' + this.dataset.by + '&type=' + this.dataset.type;
-    get(url, function(fb){
-      if( !_.isArray(fb) ) return;
 
-      // insert html
-      $container[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
+    // 附近技能
+    if(this.dataset.by == 0){
+      navigator.geolocation.getCurrentPosition(function (position) {
+        var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type +
+                  '&latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude;
+        get(url, function(fb){
+          if( !_.isArray(fb) ) return;
 
-      // active tab
-      [].forEach.call($list, function (el) {
-        el.classList.remove('active');
+          // insert html
+          $container[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
+
+          // active tab
+          [].forEach.call($list, function (el) {
+            el.classList.remove('active');
+          });
+          self.classList.add('active');
+        });
+      }, function(){
+        console.log("Sorry, no position available.")
+      }, {
+        enableHighAccuracy: true, 
+        maximumAge        : 30000, 
+        timeout           : 27000
       });
-      self.classList.add('active');
-    });
+    } else{
+      var url = ENV.host + '/api/ClassList?' + 'by=' + this.dataset.by + '&type=' + this.dataset.type;
+      get(url, function(fb){
+        if( !_.isArray(fb) ) return;
+
+        // insert html
+        $container[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
+
+        // active tab
+        [].forEach.call($list, function (el) {
+          el.classList.remove('active');
+        });
+        self.classList.add('active');
+      });
+    }
+
   });
 }
 
@@ -358,3 +386,7 @@ function commentForm(){
 
   });
 }
+
+
+
+

@@ -23,6 +23,7 @@ var AUTOPREFIXER_BROWSERS = [
 
 var paths = {
     coffees: ['./scripts/**/*.coffee'],
+    js: ['./public/js/**/*.js'],
     css: ['./public/css/**/*.css'],
     scss: ['./scss/**/*.scss']
 };
@@ -85,5 +86,6 @@ gulp.task('serve', ['createServe', 'watch']);
 
 gulp.task('watch', function() {
     gulp.watch(['./public/*.html'], reload);
+    gulp.watch(paths.js, reload);
     gulp.watch(paths.scss, ['scss', reload]);
 });
