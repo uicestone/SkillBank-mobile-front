@@ -32,7 +32,7 @@ var checkPage = function(){
 
   // course search
   if( document.getElementById('course-search') ){
-    getCourses();
+    switchCourseCat();
     affix();
 
 
@@ -91,48 +91,9 @@ var checkPage = function(){
 checkPage();
 window.addEventListener('push', checkPage);
 
-function getCourses(){
-  var $container = $('.course-list');
-
-  var courses = [
-    {
-      "ClassId": 736,
-      "IsLike": false,
-      "Member_Id": 1192,
-      "Cover": "/0/class/c_736_141024060947.jpg",
-      "Name": "Aki",
-      "CityId": 1,
-      "PosX": 121.480153,
-      "PosY": 31.207886,
-      "Title": "想脱单？首先认识你自己！",
-      "LikeNum": 5,
-      "Level": 2,
-      "Avatar": "/0/profile/m_1192.jpg",
-      "ReviewNum": 2,
-      "ClassNum": 0
-    },
-    {
-      "ClassId": 25,
-      "IsLike": false,
-      "Member_Id": 16,
-      "Cover": "/0/class/c_25_141224062320.jpg",
-      "Name": "邵杰",
-      "CityId": 1,
-      "PosX": 121.51369,
-      "PosY": 31.306264,
-      "Title": "零起点德语",
-      "LikeNum": 3,
-      "Level": 1,
-      "Avatar": "/0/profile/m_16.jpg",
-      "ReviewNum": 1,
-      "ClassNum": 0
-    }
-  ];
-
-  var tpl = $('#course-tpl')[0].innerHTML;
+function switchCourseCat(){
   // search cat
-  var $list = $('#search-cat a');
-  $list.on('click', function(){
+  $('#search-cat a').on('click', function(){
     var self = this;
 
     // 附近技能
@@ -140,18 +101,7 @@ function getCourses(){
       navigator.geolocation.getCurrentPosition(function (position) {
         var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type +
                   '&latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude;
-        get(url, function(fb){
-          if( !_.isArray(fb) ) return;
-
-          // insert html
-          $container[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
-
-          // active tab
-          [].forEach.call($list, function (el) {
-            el.classList.remove('active');
-          });
-          self.classList.add('active');
-        });
+        getCourses(url, self);
       }, function(){
         console.log("Sorry, no position available.")
       }, {
@@ -160,21 +110,24 @@ function getCourses(){
         timeout           : 27000
       });
     } else{
-      var url = ENV.host + '/api/ClassList?' + 'by=' + this.dataset.by + '&type=' + this.dataset.type;
-      get(url, function(fb){
-        if( !_.isArray(fb) ) return;
-
-        // insert html
-        $container[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
-
-        // active tab
-        [].forEach.call($list, function (el) {
-          el.classList.remove('active');
-        });
-        self.classList.add('active');
-      });
+      var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type;
+      getCourses(url, self);
     }
 
+  });
+}
+
+function getCourses(url, el){
+  get(url, function(fb){
+    if( !_.isArray(fb) ) return;
+    // insert html
+    var tpl = $('#course-tpl')[0].innerHTML;
+    $('.course-list')[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
+    // active tab
+    [].forEach.call($('#search-cat a'), function (el) {
+      el.classList.remove('active');
+    });
+    el.classList.add('active');
   });
 }
 
@@ -387,6 +340,39 @@ function commentForm(){
   });
 }
 
-
+// var courses = [
+//   {
+//     "ClassId": 736,
+//     "IsLike": false,
+//     "Member_Id": 1192,
+//     "Cover": "/0/class/c_736_141024060947.jpg",
+//     "Name": "Aki",
+//     "CityId": 1,
+//     "PosX": 121.480153,
+//     "PosY": 31.207886,
+//     "Title": "想脱单？首先认识你自己！",
+//     "LikeNum": 5,
+//     "Level": 2,
+//     "Avatar": "/0/profile/m_1192.jpg",
+//     "ReviewNum": 2,
+//     "ClassNum": 0
+//   },
+//   {
+//     "ClassId": 25,
+//     "IsLike": false,
+//     "Member_Id": 16,
+//     "Cover": "/0/class/c_25_141224062320.jpg",
+//     "Name": "邵杰",
+//     "CityId": 1,
+//     "PosX": 121.51369,
+//     "PosY": 31.306264,
+//     "Title": "零起点德语",
+//     "LikeNum": 3,
+//     "Level": 1,
+//     "Avatar": "/0/profile/m_16.jpg",
+//     "ReviewNum": 1,
+//     "ClassNum": 0
+//   }
+// ];
 
 
