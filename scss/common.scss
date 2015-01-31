@@ -176,7 +176,11 @@
     .title-bar {
       position: absolute;
       height: 100px;
-      background: rgba(16,46,62,.8);
+      background-image: -o-linear-gradient(-89deg, #102F3F 0%, rgba(16,47,63,0.00) 100%);
+      background-image: -moz-linear-gradient(-89deg, #102F3F 0%, rgba(16,47,63,0.00) 100%);
+      background-image: -ms-linear-gradient(-89deg, #102F3F 0%, rgba(16,47,63,0.00) 100%);
+      background-image: linear-gradient(-179deg, #102F3F 0%, rgba(16,47,63,0.00) 100%);
+
       padding: 1em 1em 0;
       left: 0;
       top: 0;

@@ -140,7 +140,7 @@ ol, ul {
     right: -22px; }
 
 body > .bar-nav {
-  background: rgba(0, 0, 0, 0); }
+  background: transparent; }
   body > .bar-nav ~ .content {
     padding-top: 0; }
 
@@ -253,7 +253,7 @@ body > .bar-nav {
   font-family: 'icomoon'; }
 
 .modal {
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: transparent; }
   .modal header {
     background: #eaeaea; }
     .modal header h1 {
@@ -362,7 +362,7 @@ body > .bar-nav {
       position: relative;
       display: table-cell;
       color: #13404c;
-      padding: 1.2em 0.7em 0.1em;
+      padding: 1.2em 0.7em .1em;
       height: 100%;
       margin: 0 1em;
       border: none; }
@@ -385,7 +385,7 @@ body > .bar-nav {
     .course-list .course .title-bar {
       position: absolute;
       height: 100px;
-      background: rgba(16, 46, 62, 0.8);
+      background-image: linear-gradient(-179deg, #102F3F 0%, rgba(16, 47, 63, 0) 100%);
       padding: 1em 1em 0;
       left: 0;
       top: 0; }
@@ -399,10 +399,10 @@ body > .bar-nav {
         position: relative;
         display: inline-block;
         color: #fff;
-        margin-left: 0.5em; }
+        margin-left: .5em; }
         .course-list .course .title-bar .pull-right a .num {
           position: absolute;
-          top: 0.6em;
+          top: .6em;
           left: 0;
           width: 100%;
           text-align: center;
@@ -416,7 +416,7 @@ body > .bar-nav {
 
 nav.bar.bar-tab .tab-item .icon {
   display: inline;
-  opacity: 0.6;
+  opacity: .6;
   font-size: 19px; }
   nav.bar.bar-tab .tab-item .icon img {
     width: 22px; }
@@ -428,8 +428,7 @@ nav.bar.bar-tab .tab-item.active .icon {
 
 @media (min-width: 400px) {
   #search-cat.segmented-control {
-    font-size: 18px; }
- }
+    font-size: 18px; } }
 
 .padded-text {
   font-size: 12px;
@@ -502,13 +501,13 @@ nav.bar.bar-tab .tab-item.active .icon {
 #personal-page.content .info {
   background-color: #FFD048;
   text-align: center;
-  padding-top: 0.5em; }
+  padding-top: .5em; }
   #personal-page.content .info .btn-set .btn {
     width: 125px;
     margin: 0 3px; }
   #personal-page.content .info .nums {
     background: #fff;
-    padding: 0.5em 0;
+    padding: .5em 0;
     border-bottom: 1px solid #999; }
     #personal-page.content .info .nums table {
       margin: 0; }
@@ -704,7 +703,7 @@ nav.bar.bar-tab .tab-item.active .icon {
         border-left-width: 0; }
 
 .chat-page.content {
-  padding-top: 0.5em; }
+  padding-top: .5em; }
   .chat-page.content .popover {
     position: relative;
     display: block;
@@ -840,7 +839,7 @@ nav.bar.bar-tab .tab-item.active .icon {
     .course-page.content .cover-box .title-list a {
       display: inline-block;
       background-color: #fff;
-      opacity: 0.8;
+      opacity: .8;
       border-radius: 15px;
       font-size: 12px;
       width: 28%;
