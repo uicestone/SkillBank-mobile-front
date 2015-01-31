@@ -105,7 +105,7 @@ function switchCourseCat(){
     if(this.dataset.by == 0){
       navigator.geolocation.getCurrentPosition(function (position) {
         var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type +
-                  '&latitude=' + position.coords.latitude + '&longitude=' + position.coords.longitude;
+                  '&PosY=' + position.coords.latitude + '&PosX=' + position.coords.longitude;
         getCourses(url, self);
       }, function(){
         console.log("Sorry, no position available.")
