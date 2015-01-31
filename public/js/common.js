@@ -314,8 +314,8 @@ function privateMsgForm(){
     };
     post(ENV.host + '/api/chat', data, function(fb){
       // if( !_.isNumber(fb) ) return;
-      $modal[0].style.display = 'none';
     });
+    $modal[0].style.display = 'none';
 
   });
 }
@@ -336,8 +336,8 @@ function reservationForm(){
     };
     post(ENV.host + '/api/Order', data, function(fb){
       if( !fb ) return;
-      $modal[0].style.display = 'none';
     });
+    $modal[0].style.display = 'none';
 
   });
 }
