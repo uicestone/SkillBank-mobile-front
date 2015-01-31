@@ -16,6 +16,48 @@ NodeList.prototype.on = function (event, fn) {
   });
   return this;
 };
+
+// ajax
+function request(type, url, opts, callback) {
+  var xhr = new XMLHttpRequest();
+  if (typeof opts === 'function') {
+    callback = opts;
+    opts = null;
+  }
+  xhr.open(type, url);
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4){
+      if( (xhr.status >= 200 && xhr.status <300) || xhr.status == 304 ){
+        // console.log(xhr.responseText)
+      } else {
+        console.log(xhr.status);
+      }
+
+      resError(xhr.status);
+    }
+  }
+  var fd = [];
+  if (type === 'POST' && opts) {
+    for (var key in opts) {
+      fd.push( key + '=' + opts[key] );
+    }
+    fd = fd.join('&');
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  }
+  xhr.onload = function () {
+    callback(JSON.parse(xhr.response));
+  };
+  xhr.send(opts ? fd : null);
+}
+function resError(status){
+  if(status == 401){
+    if (window.confirm("你还没有登陆或注册，现在登录或注册吗？")) { 
+      location.href = '/register.html';
+    }
+  } else if(status == 400){
+    alert('400');
+  }
+}
 var get = request.bind(this, 'GET');
 var post = request.bind(this, 'POST');
 
@@ -49,6 +91,7 @@ var checkPage = function(){
     });
 
     commentForm();
+    followMember();
 
   }
 
@@ -224,27 +267,6 @@ function hackForModals(){
   }
 }
 
-function request(type, url, opts, callback) {
-  var xhr = new XMLHttpRequest();
-  if (typeof opts === 'function') {
-    callback = opts;
-    opts = null;
-  }
-  xhr.open(type, url);
-  var fd = [];
-  if (type === 'POST' && opts) {
-    for (var key in opts) {
-      fd.push( key + '=' + opts[key] );
-    }
-    fd = fd.join('&');
-    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  }
-  xhr.onload = function () {
-    callback(JSON.parse(xhr.response));
-  };
-  xhr.send(opts ? fd : null);
-}
-
 function getChatDetail(uid, fid){
   var url = ENV.host + '/api/chat/' + uid + '?contact=' + fid;
   var $container = $('.chat-content');
@@ -339,6 +361,21 @@ function commentForm(){
     });
 
   });
+}
+
+function followMember(){
+  $('.follow')[0].on('click', function(event){
+    event.preventDefault();
+    var data = {
+      MemberId: 1,
+      FollowingId: 7,
+      IsFollow: true
+    };
+    post(ENV.host + '/api/followmember', data, function(fb){
+      console.log(fb);
+    });
+
+  })
 }
 
 // var courses = [
