@@ -76,7 +76,7 @@
 
         <div class="course card">
           <div class="title-bar u-full-width">
-            <p class="pull-left">魔方进阶教程</p>
+            <a class="pull-left">魔方进阶教程</a>
             <div class="pull-right">
               <a href="#" class="icon icomoon icon-comment">
                 <span class="num">14</span>
@@ -86,9 +86,13 @@
               </a>
             </div>
           </div>
-          <img src="images/e.jpeg" alt="" class="cover">
+          <a href="#">
+            <img src="images/e.jpeg" alt="" class="cover">
+          </a>
           <div class="info">
-            <img src="images/avatar.png" alt="" class="avatar">
+            <a href="#">
+              <img src="images/avatar.png" alt="" class="avatar">
+            </a>
             <h4>Jason Wu</h4>
             <p>64km 上海</p>
           </div>
@@ -96,7 +100,7 @@
 
         <div class="course card">
           <div class="title-bar u-full-width">
-            <p class="pull-left">魔方进阶教程</p>
+            <a class="pull-left">魔方进阶教程</a>
             <div class="pull-right">
               <a href="#" class="icon icomoon icon-comment">
                 <span class="num">14</span>
@@ -106,9 +110,13 @@
               </a>
             </div>
           </div>
-          <img src="images/e.jpeg" alt="" class="cover">
+          <a href="#">
+            <img src="images/e.jpeg" alt="" class="cover">
+          </a>
           <div class="info">
-            <img src="images/avatar.png" alt="" class="avatar">
+            <a href="#">
+              <img src="images/avatar.png" alt="" class="avatar">
+            </a>
             <h4>Jason Wu</h4>
             <p>64km 上海</p>
           </div>
@@ -120,7 +128,7 @@
         <% _.forEach(courses, function(course) { %>
           <div class="course card" data-Member_Id="<%- course.Member_Id %>" data-ClassId="<%- course.ClassId %>">
             <div class="title-bar u-full-width">
-              <p class="pull-left"><%- course.Title %></p>
+              <a href="#" class="pull-left"><%- course.Title %></a>
               <div class="pull-right">
                 <a href="#" class="icon icomoon icon-comment">
                   <span class="num"><%- course.ReviewNum %></span>
@@ -130,9 +138,9 @@
                 </a>
               </div>
             </div>
-            <img src="<%- checkImgHost(imgHost, course.Cover) %>" alt="" class="cover">
+            <a href="#"><img src="<%- checkImgHost(imgHost, course.Cover) %>" alt="" class="cover"></a>
             <div class="info">
-              <img src="<%- checkImgHost(imgHost, course.Avatar) %>" alt="" class="avatar">
+              <a href="#"><img src="<%- checkImgHost(imgHost, course.Avatar) %>" alt="" class="avatar"></a>
               <h4><%- course.name %></h4>
               <p>64km <%- course.CityName %></p>
             </div>

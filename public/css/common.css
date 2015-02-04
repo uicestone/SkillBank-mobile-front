@@ -138,6 +138,8 @@ ol, ul {
     position: absolute;
     top: -10px;
     right: -22px; }
+  .flag-num a {
+    color: #116f8f; }
 
 body > .bar-nav {
   background: transparent; }
@@ -385,11 +387,11 @@ body > .bar-nav {
     .course-list .course .title-bar {
       position: absolute;
       height: 100px;
-      background-image: linear-gradient(-179deg, #102F3F 0%, rgba(16, 47, 63, 0) 100%);
+      background-image: linear-gradient(-179deg, rgba(16, 47, 63, 0.99) 0%, rgba(16, 47, 63, 0) 100%);
       padding: 1em 1em 0;
       left: 0;
       top: 0; }
-      .course-list .course .title-bar p.pull-left {
+      .course-list .course .title-bar .pull-left {
         color: #fff;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
         font-size: 18px;
