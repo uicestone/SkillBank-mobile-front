@@ -149,6 +149,7 @@
 /* global _gaq: true */
 
 !(function () {
+  return;
   'use strict';
 
   var noop = function () {};
