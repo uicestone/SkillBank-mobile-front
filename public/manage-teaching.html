@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Class</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="icomoon/style.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    
+
+  </head>
+  <body>
+
+    <!-- bug hack -->
+    <header class="bar-nav"></header>
+
+    <nav class="bar bar-tab">
+      <a class="tab-item active"  href="#" data-transition="slide-in">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">发现</span>
+      </a>
+      <a class="tab-item " href="message.html" data-transition="slide-in">
+        <span class="icon icomoon icon-comment2"></span>
+        <span class="tab-label">消息</span>
+      </a>
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="pushY">
+        <span class="icon icomoon icon-text"></span>
+        <span class="tab-label">课程</span>
+      </a>
+      <a class="tab-item" href="personal.html" data-transition="slide-in">
+        <span class="icon icomoon icon-user"></span>
+        <span class="tab-label">个人</span>
+      </a>
+    </nav>
+
+    <div class="courses-manage-page content">
+      <nav>
+        <div class="segmented-control-no-js card">
+          <a href="manage-courses.html" class="control-item">课程管理</a>
+          <a href="manage-teaching.html" class="control-item active">教课记录</a>
+          <a href="manage-studying.html" class="control-item">学习记录</a>
+        </div>
+      </nav>
+      <div class="teaching-list">
+        <div class="teaching card">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
+              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="approval">
+                <span class="btn-tag orange">订课请求</span><br><small>一天前</small>
+              </div>
+            </div>
+            <div class="popover-chat bottom mb-1">
+              <div class="arrow"></div>
+              <div class="main">老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？</div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：英语口语练习课 <br>
+              订课日期：2015.3.12
+            </div>
+            <div class="btn-set mb-1">
+              <button class="btn">拒绝订课</button>
+              <button class="btn">私信对方</button>
+            </div>
+          </div>
+          <a class="foot-bar">接受预定 </a>
+        </div>
+        <div class="teaching card">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
+              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="approval">
+                <span class="btn-tag green">接受订课</span><br><small>一天前</small>
+              </div>
+            </div>
+            <div class="popover-chat bottom mb-1">
+              <div class="arrow"></div>
+              <div class="main">老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？</div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：英语口语练习课 <br>
+              订课日期：2015.3.12 <br>
+              <span class="olive">联系信息：Jason 13923982234</span>
+            </div>
+            <div class="btn-set mb-1">
+              <button class="btn">电话对方</button>
+              <button class="btn">私信对方</button>
+            </div>
+          </div>
+        </div>
+        <div class="teaching card">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
+              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="approval">
+                <span class="btn-tag yellow">授完待评</span><br><small>一天前</small>
+              </div>
+            </div>
+            <div class="popover-chat bottom mb-1">
+              <div class="arrow"></div>
+              <div class="main">老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？</div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：英语口语练习课 <br>
+              订课日期：2015.3.12 <br>
+              <span class="">联系信息：Jason 13923982234</span>
+            </div>
+            <div class="btn-set mb-1">
+              <button class="btn">电话对方</button>
+              <button class="btn">私信对方</button>
+            </div>
+          </div>
+          <a class="foot-bar">评价一下你的学生 </a>
+        </div>
+        <div class="teaching card">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
+              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="approval">
+                <span class="btn-tag orange">接受订课</span><br><small>一天前</small>
+              </div>
+            </div>
+            <div class="popover-chat bottom mb-1">
+              <div class="arrow"></div>
+              <div class="main">老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？</div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：英语口语练习课 <br>
+              订课日期：2015.3.12 <br>
+              联系信息：Jason 13923982234
+            </div>
+            <div class="btn-set mb-1">
+              <button class="btn">拒绝退币</button>
+              <button class="btn">私信对方</button>
+            </div>
+          </div>
+          <a class="foot-bar">接受退币</a>
+        </div>
+        <div class="teaching card disabled">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
+              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="approval">
+                <span class="btn-tag grey">授课结束</span><br><small>一天前</small>
+              </div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：英语口语练习课 <br>
+              订课日期：2015.3.12 <br>
+              联系信息：Jason 13923982234
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

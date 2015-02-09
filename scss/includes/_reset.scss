@@ -13,9 +13,14 @@ body {
   font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'STHeitiSC-Light', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666;
   background: #eee;
-  -webkit-font-smoothing: antialiased !important;
+  /*-webkit-font-smoothing: antialiased !important;*/
 }
 
+
+
+.vertical-middle {
+  @include  vertical-middle;
+}
 
 .mb-1 {margin-bottom: 1em;}
 .mb-2 {margin-bottom: 2em;}
@@ -50,6 +55,10 @@ input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 5px;
+}
+
+:focus {
+  outline: none;
 }
 
 input[type="search"]:focus{

@@ -73,7 +73,8 @@ gulp.task('scss', function () {
     .pipe($.sass({
       style: 'expanded',
       precision: 10,
-      loadPath: ['./scss/']
+      loadPath: ['./scss/'],
+      errLogToConsole: true
     }))
     .on('error', console.error.bind(console))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))

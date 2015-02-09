@@ -1,16 +1,26 @@
 $dark : #13404c;
+$darkOlive : #102F3F;
 $olive : #116f8f;
 $lightOlive : #4f8da5;
-$grey : #999;
+$lighterOlive : #A6AFB2;
 $black : #333;
 $darkGrey : #666;
+$grey : #999;
 $lightGrey : #ccc;
 $greyBg : #DBDBDB;
 $lighterGrey : #eaeaea;
+$lightestGrey : #F7F7F7;
 $yellow : #FFD048;
 $white : #fff;
 $alarm : #F76033;
 $golden : #FCD157;
 $orange : #F76033;
+$green : #B2DE02;
 
 $searchCatH : 55px;
+
+@mixin vertical-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
