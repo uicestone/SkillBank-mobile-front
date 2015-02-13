@@ -341,7 +341,7 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
 
 .ico-coin {
   position: absolute;
-  top: 1em;
+  top: 5px;
   right: 10px;
   width: 55px;
   height: 55px;
@@ -896,7 +896,8 @@ nav.bar.bar-tab .tab-item.active .icon {
         font-size: 16px; }
 .course-page.content .cover-box {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 204px; }
   .course-page.content .cover-box .cover-filter {
     position: absolute;
     background-image: linear-gradient(-180deg, #102F3F 0%, rgba(16, 47, 63, 0) 100%); }
@@ -904,12 +905,12 @@ nav.bar.bar-tab .tab-item.active .icon {
     text-align: center;
     position: absolute;
     width: 100%;
-    top: 25%; }
+    top: 35%; }
   .course-page.content .cover-box .title-list {
     position: absolute;
     margin-bottom: 0;
     text-align: center;
-    top: 58%;
+    bottom: 10%;
     width: 100%; }
     .course-page.content .cover-box .title-list a {
       display: inline-block;
