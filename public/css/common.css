@@ -464,7 +464,7 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
             background: #fff; }
         .course-list .course .title-bar .pull-right a .num {
           position: absolute;
-          top: .6em;
+          top: .7em;
           left: 0;
           width: 100%;
           text-align: center;
@@ -479,8 +479,16 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
     .course-list .course .info {
       position: relative;
       text-align: center;
-      margin: -4em 0 0.5em;
+      margin: -4em 0 0;
       min-height: 120px; }
+      .course-list .course .info h4 {
+        font-size: 15px;
+        margin-bottom: 0;
+        color: #333; }
+      .course-list .course .info p {
+        font-size: 11px;
+        margin-bottom: 0;
+        color: #A6AFB2; }
       .course-list .course .info .icon-pencil {
         position: absolute;
         left: 50%;
@@ -1154,6 +1162,10 @@ body > .content > header {
   background: #102F3F; }
   .steps .main .icon-arrow-left {
     width: 58px; }
+  .steps .main > * {
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
 .steps .process-bar {
   display: -webkit-flex;
   display: -ms-flexbox;

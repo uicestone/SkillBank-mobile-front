@@ -1,0 +1,75 @@
+.table-view-cell {
+  font-size: 14px;
+  color: $black;
+  .tail{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: $grey;
+  }
+}
+
+.setting-page {
+  .info {
+    background: $yellow;
+    padding: 10px;
+    .avatar {
+      margin: 0 1em 0 0;
+    }
+  }
+  h5 {
+    margin: 0 10px;
+    font-size: 15px;
+    color: $lighterOlive;
+    font-weight: normal;
+  }
+  .logout {
+    text-align: center;
+    margin: 1em;
+    a {
+
+      font-size: 15px;
+      color: $lighterOlive;
+      line-height: 16px;
+    }
+  }
+  .coins {
+    display: table;
+    td {
+      padding: 10px 1em;
+      h1, h6, p {
+        margin: 0;
+      }
+      &:first-child {
+        text-align: center;
+        border-right: 1px solid #ddd;
+        color: $olive;
+        h1 {
+          font-size: 60px;
+        }
+        span {
+          white-space: nowrap;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+      &:last-child {
+        h6 {
+          font-size: 13px;
+          line-height: 16px;
+          margin-bottom: 1em;
+        }
+        p {
+          font-size: 11px;
+          color: #A6AFB2;
+          line-height: 13px;
+        }
+      }
+    }
+  }
+  .table-view-cell {
+    padding: 9px 65px 11px 13px;
+  }
+}

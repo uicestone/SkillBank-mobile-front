@@ -229,7 +229,7 @@ nav {
           }
           .num {
             position: absolute;
-            top: .6em;
+            top: .7em;
             left: 0;
             width: 100%;
             text-align: center;
@@ -250,8 +250,18 @@ nav {
     .info {
       position: relative;
       text-align: center;
-      margin: -4em 0 0.5em;
+      margin: -4em 0 0;
       min-height: 120px;
+      h4 {
+        font-size: 15px;
+        margin-bottom: 0;
+        color: $black;
+      }
+      p {
+        font-size: 11px;
+        margin-bottom: 0;
+        color: $lighterOlive;
+      }
       .icon-pencil {
         position: absolute;
         left: 50%;
