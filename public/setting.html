@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Person</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="icomoon/style.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    
+
+  </head>
+  <body>
+    <nav class="bar bar-tab">
+      <a class="tab-item active"  href="#" data-transition="slide-in">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">发现</span>
+      </a>
+      <a class="tab-item " href="message.html" data-transition="slide-in">
+        <span class="icon icomoon icon-comment2"></span>
+        <span class="tab-label">消息</span>
+      </a>
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="pushY">
+        <span class="icon icomoon icon-text"></span>
+        <span class="tab-label">课程</span>
+      </a>
+      <a class="tab-item" href="personal.html" data-transition="slide-in">
+        <span class="icon icomoon icon-user"></span>
+        <span class="tab-label">个人</span>
+      </a>
+    </nav>
+
+    <div class="setting-page content">
+      <a class="icon icomoon icon-redo pull-right nav-inner nav-right"></a>
+      <div class="info clearfix">
+        <a href="#"><img src="images/avatar.png" alt="" class="avatar pull-left"></a>
+
+        <h3>Jason Wu</h3>
+        <p><small>6km&nbsp;.&nbsp;上海</small></p>
+        <a href="setting-private.html" class="btn btn-olive">编辑个人信息</a>
+      </div>
+      <div class="statistic">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>2</th>
+              <th>2</th>
+              <th>15</th>
+              <th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>认证</td>
+              <td>分享</td>
+              <td>关注</td>
+              <td>粉丝</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <table class="card coins mb-2">
+        <tr>
+          <td>
+            <h1>1</h1>
+            <span>可使用课币</span>
+          </td>
+          <td>
+            <h6>0 枚课币被锁定</h6>
+            <p>当你的订课申请被老师确认后，相应的课币就会被锁定住。此数字为已确定订课但还未支付的课币数量。</p>
+          </td>
+        </tr>
+      </table>
+
+      <h5>认证信息 </h5>
+
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">社交认证 <span class="tail">新浪微博</span></li>
+          <li class="table-view-cell">手机认证 <span class="tail">139＊＊＊＊＊553</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <ul class="table-view">
+        <li class="table-view-cell media">
+            <a class="navigate-right">
+              <div class="media-body">
+                给技能菌反馈
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <a href="#">退出登录</a>
+      </div>
+
+    </div>
+    <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Class</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="icomoon/style.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    
+
+  </head>
+  <body>
+
+    
+    <nav class="bar bar-tab">
+      <a class="tab-item active"  href="#" data-transition="slide-in">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">发现</span>
+      </a>
+      <a class="tab-item " href="message.html" data-transition="slide-in">
+        <span class="icon icomoon icon-comment2"></span>
+        <span class="tab-label">消息</span>
+      </a>
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="pushY">
+        <span class="icon icomoon icon-text"></span>
+        <span class="tab-label">课程</span>
+      </a>
+      <a class="tab-item" href="personal.html" data-transition="slide-in">
+        <span class="icon icomoon icon-user"></span>
+        <span class="tab-label">个人</span>
+      </a>
+    </nav>
+
+    <div class="add-course-page content">
+      <div class="steps mb-2">
+        <div class="main">
+          <a href="index.html" class="icon icomoon icon-arrow-left grey"></a>
+          <span class="">第1/3步</span>
+          <a class="btn "> 下一步 </a>
+        </div>
+        <ul class="process-bar">
+          <li class="yellow"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <form>
+        <div class="inner">
+          <h3 align="center" class="olive mb-1">基本描述</h3>
+          <input type="text" placeholder="你所在的城市" class="mb-2">
+          <input type="text" placeholder="选择一项技能">
+          <input type="text" placeholder="选择细分类别">
+          <h5 class="mb-2">你的技能水平</h5>
+          <div class="select-lever">
+            <ul class="lever-bar mb-1">
+              <li><span></span><i>10</i></li>
+              <li><span></span><i>30</i></li>
+              <li><span></span><i>50</i></li>
+              <li><span></span><i>75</i></li>
+              <li><span></span><i>100</i></li>
+            </ul>
+            <ul>
+              <li>初学</li>
+              <li>略懂</li>
+              <li>良好</li>
+              <li>熟练</li>
+              <li>精通</li>
+            </ul>
+          </div>
+          <h5 class="mb-2">你的教学水平</h5>
+          <div class="select-lever">
+            <ul class="lever-bar mb-1">
+              <li><span></span><i>10</i></li>
+              <li><span></span><i>30</i></li>
+              <li><span></span><i>50</i></li>
+              <li><span></span><i>75</i></li>
+              <li><span></span><i>100</i></li>
+            </ul>
+            <ul>
+              <li>初学</li>
+              <li>略懂</li>
+              <li>良好</li>
+              <li>熟练</li>
+              <li>精通</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+    <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

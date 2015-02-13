@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Class</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="icomoon/style.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    
+
+  </head>
+  <body>
+
+    
+    <nav class="bar bar-tab">
+      <a class="tab-item active"  href="#" data-transition="slide-in">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">发现</span>
+      </a>
+      <a class="tab-item " href="message.html" data-transition="slide-in">
+        <span class="icon icomoon icon-comment2"></span>
+        <span class="tab-label">消息</span>
+      </a>
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="pushY">
+        <span class="icon icomoon icon-text"></span>
+        <span class="tab-label">课程</span>
+      </a>
+      <a class="tab-item" href="personal.html" data-transition="slide-in">
+        <span class="icon icomoon icon-user"></span>
+        <span class="tab-label">个人</span>
+      </a>
+    </nav>
+
+    <div class="add-course-page content">
+      <header class="bar-nav mb-3">
+        <a href="index.html" class="icon icomoon icon-arrow-left pull-left grey"></a>
+        <h4>课程发布申请成功</h4>
+        <span></span>
+      </header>
+      <h4 align="center" class="olive mb-1">我们会在2天内告知你审核结果 <br>你可以在这里修改个人信息</h4>
+      <div class="course-list">
+        <div class="course card">
+          <div class="title-bar u-full-width">
+            <a class="pull-left">魔方进阶教程</a>
+            <div class="pull-right">
+              <a href="#" class="icon icomoon icon-comment">
+              </a>
+              <a href="#" class="icon icomoon icon-heart toggle-like" data-Member_Id="332">
+              </a>
+            </div>
+          </div>
+          <a href="#">
+            <img src="images/e.jpeg" alt="" class="cover">
+          </a>
+          <div class="info">
+            <a href="#">
+              <img src="images/avatar.png" alt="" class="avatar">
+              <a href="#" class="icon icomoon icon-pencil round yellow"> </a> 
+            </a>
+            <h4>Jason Wu</h4>
+            <p>64km 上海</p>
+          </div>
+        </div>       
+      </div>
+
+    </div>
+    <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

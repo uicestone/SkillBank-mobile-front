@@ -1,0 +1,96 @@
+.add-course-page {
+  form {
+    .inner {
+      margin: 10px;
+      .select-lever {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          &.lever-bar {
+            background-image: linear-gradient(-90deg, #A6AFB2 0%, #D9DCDD 99%);
+            border-radius: 10px;
+          }
+          li {
+            flex-grow: 1;
+            position: relative;
+            text-align: center;
+            font-size: 13px;
+            color: $lighterOlive;
+            span {
+              display: block;
+              height: 7px;
+              border-left: 1px solid #fff;
+            }
+            i {
+              position: absolute;
+              left: 50%;
+              margin:-19px 0 0 -15px;
+              width: 30px;
+              height: 30px;
+              line-height: 30px;
+              border-radius: 50%;
+              background: $olive;
+              text-align: center;
+              color: #fff;
+              font-style: normal;
+              font-size: 12px;
+            }
+            &:first-child {
+              span {
+                border-left: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .extra {
+      background: $lighterOlive;
+    }
+  }
+}
+
+body > .content > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  h4 {
+    margin: 0;
+    color: $black;
+  }
+}
+
+.steps {
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    background: $darkOlive;
+    .icon-arrow-left {
+      width: 58px;
+    }
+    > * {
+      flex-grow: 1;
+    }
+
+  }
+  .process-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      flex-grow: 1;
+      background: $lighterOlive;
+      height: 7px;
+      &:nth-child(100n + 2) {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+      }
+      &.yellow {
+        background: $yellow;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Class</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="icomoon/style.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    
+
+  </head>
+  <body>
+
+    
+    <nav class="bar bar-tab">
+      <a class="tab-item active"  href="#" data-transition="slide-in">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">发现</span>
+      </a>
+      <a class="tab-item " href="message.html" data-transition="slide-in">
+        <span class="icon icomoon icon-comment2"></span>
+        <span class="tab-label">消息</span>
+      </a>
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="pushY">
+        <span class="icon icomoon icon-text"></span>
+        <span class="tab-label">课程</span>
+      </a>
+      <a class="tab-item" href="personal.html" data-transition="slide-in">
+        <span class="icon icomoon icon-user"></span>
+        <span class="tab-label">个人</span>
+      </a>
+    </nav>
+
+    <div class="add-course-page content">
+      <div class="steps mb-2">
+        <div class="main">
+          <a href="index.html" class="btn">上一步</a>
+          <span class="">第2/3步</span>
+          <a class="btn "> 下一步 </a>
+        </div>
+        <ul class="process-bar">
+          <li class="yellow"></li>
+          <li class="yellow"></li>
+          <li></li>
+        </ul>
+      </div>
+      <form>
+        <div class="inner">
+          <h3 align="center" class="olive mb-1">课程介绍</h3>
+          <h5 class="mb-2">课程水平要求</h5>
+          <ul>
+            <li>基本</li>
+            <li>中等</li>
+            <li>高阶</li>
+          </ul>
+          <input type="text" placeholder="课程名称" class="mb-2">
+          <h5 class="mb-2">课程介绍</h5>
+          <textarea placeholder="具体课程内容有什么？需要上几节课？需要学生有一定基础吗？不少于100字"></textarea>
+          <h5 class="mb-2">你的闪光点</h5>
+          <textarea placeholder="你的优势和吸引别人的理由是什么？"></textarea>
+        </div>
+        <div class="extra">
+          <div class="inner">
+            <span class="pull-right">非必填</span>
+            <h5 class="mb-2">补充信息</h5>
+            <input type="text" placeholder="一节课用时">
+            <textarea placeholder="上课地点"></textarea>
+            <textarea placeholder="能上课的时间"></textarea>
+            <textarea placeholder="课前须知"></textarea>
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+    <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

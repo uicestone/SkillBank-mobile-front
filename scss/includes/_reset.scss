@@ -10,7 +10,7 @@
 .golden {color: $golden;}
 
 body {
-  font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'STHeitiSC-Light', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: 'STHeitiSC-Light', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666;
   background: #eee;
   /*-webkit-font-smoothing: antialiased !important;*/
@@ -87,6 +87,12 @@ a, a:active, a:hover {
   font-size: 14px;
   padding: 8px;
 }
+.icon-camera {
+  &:before {
+    position: relative;
+    top: -0.1em;
+  }
+}
 .btn-default {
   color: $lightOlive;
 }
@@ -94,6 +100,7 @@ a, a:active, a:hover {
   width: 100%;
 }
 ol, ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -276,3 +283,24 @@ body > .bar-nav {
 .icomoon {
   font-family: 'icomoon';
 }
+
+.statistic {
+  background: #fff;
+  padding: .5em 0;
+  border-bottom: 1px solid $grey;
+  table {
+    margin: 0;
+    td, th {
+      text-align: center;
+      border: none;
+    }
+    th {
+      font-size: 15px;
+    }
+    td {
+      font-size: 12px;
+      color: $grey;
+    }
+  }
+}
+
