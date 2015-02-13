@@ -61,11 +61,22 @@ nav {
   border-bottom: none;
 }
 
-.liked {
-  color: $orange!important;
-  .num {
-    color: $white!important;
+.icon.white {
+  color: #fff;
+  span {
+    color: $grey;
   }
+}
+
+.icon.liked {
+  color: $orange;
+  span {
+    color: $white;
+  }
+}
+
+.liked, .toggle-like.liked {
+  color: $orange;
 }
 
 .ico-coin {
@@ -212,7 +223,6 @@ nav {
         a {
           position: relative;
           display: inline-block;
-          color: #fff;
           margin-left: .5em;
           &.round {
             width: 35px;
@@ -234,7 +244,6 @@ nav {
             width: 100%;
             text-align: center;
             font-size: 9px;
-            color: $grey;
           }
         }
       }
@@ -786,8 +795,12 @@ nav.bar.bar-tab {
   }
 
   .cover-box{
-    background: $dark;
+    position: relative;
     overflow: hidden;
+    .cover-filter {
+      position: absolute;
+      background-image: linear-gradient(-180deg, #102F3F 0%, rgba(16,47,63,0.00) 100%);
+    }
     h3 {
       text-align:center;
       position:absolute;
@@ -824,7 +837,6 @@ nav.bar.bar-tab {
     }
     img {
       width: 100%;
-      opacity: 0.7;
     }
   }
 
