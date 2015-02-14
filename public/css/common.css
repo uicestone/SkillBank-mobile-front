@@ -1,3 +1,25 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.spin {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite; }
+
 .white {
   color: #fff; }
 
@@ -394,6 +416,25 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
 .slide img {
   max-width: 100%;
   display: block; }
+
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff; }
 
 #search-cat {
   height: 55px; }

@@ -14,6 +14,7 @@
     <!-- Include the compiled Ratchet CSS -->
     <link href="icomoon/style.css" rel="stylesheet">
     <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="bower_components/animate.css/animate.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
 
     
@@ -42,6 +43,9 @@
         <span class="tab-label">个人</span>
       </a>
     </nav>
+    <div class="loading" style="display: none;">
+      <span class="icon icon-refresh spin"></span>
+    </div>
 
     <div class="content" id="course-search">
       <div class="search-bar">
@@ -147,6 +151,7 @@
         <% }); %>
       </script>
 
+      
     </div>
     <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

@@ -176,6 +176,8 @@ function switchCourseCat(){
 }
 
 function getCourses(url, el){
+  var $loading = $('.loading');
+  $loading[0].style.display = 'flex';
   get(url, function(fb){
     if( !_.isArray(fb) ) return;
     // insert html
@@ -186,6 +188,7 @@ function getCourses(url, el){
       el.classList.remove('active');
     });
     el.classList.add('active');
+    $loading[0].style.display = 'none';
   });
 }
 
