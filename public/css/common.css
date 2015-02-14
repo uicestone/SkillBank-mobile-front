@@ -26,7 +26,8 @@ body {
   font-family: 'STHeitiSC-Light', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
   color: #666;
   background: #eee;
-  /*-webkit-font-smoothing: antialiased !important;*/ }
+  /*-webkit-font-smoothing: antialiased !important;*/
+  position: static; }
 
 .vertical-middle {
   display: -webkit-flex;
@@ -552,9 +553,7 @@ nav.bar.bar-tab .tab-item.active .icon {
 
 /*register.html*/
 #register-page.content .register_form {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 25px; }
+  margin: 25px 5% 0; }
   #register-page.content .register_form .input-group {
     position: relative;
     background: none;
