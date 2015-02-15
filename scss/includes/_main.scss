@@ -367,7 +367,7 @@ nav.bar.bar-tab {
       position: relative;
       background: none;
       margin-bottom: 10px;
-      input[type=number],input[type=text] {
+      input[type=number],input[type=text],input[type=tel] {
         background-color: $white;
         height: 40px;
         &#verifyCode {

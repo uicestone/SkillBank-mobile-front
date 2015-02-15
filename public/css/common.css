@@ -599,10 +599,10 @@ nav.bar.bar-tab .tab-item.active .icon {
     position: relative;
     background: none;
     margin-bottom: 10px; }
-    #register-page.content .register_form .input-group input[type=number], #register-page.content .register_form .input-group input[type=text] {
+    #register-page.content .register_form .input-group input[type=number], #register-page.content .register_form .input-group input[type=text], #register-page.content .register_form .input-group input[type=tel] {
       background-color: #fff;
       height: 40px; }
-      #register-page.content .register_form .input-group input[type=number]#verifyCode, #register-page.content .register_form .input-group input[type=text]#verifyCode {
+      #register-page.content .register_form .input-group input[type=number]#verifyCode, #register-page.content .register_form .input-group input[type=text]#verifyCode, #register-page.content .register_form .input-group input[type=tel]#verifyCode {
         padding-right: 110px; }
     #register-page.content .register_form .input-group .btn-grey {
       position: absolute;
