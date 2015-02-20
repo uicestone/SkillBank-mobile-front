@@ -134,7 +134,6 @@ a, a:active, a:hover {
 .btn {
   border-radius: 5px;
   height: auto;
-  border: none;
   font-size: 14px;
   padding: 8px; }
 
@@ -726,8 +725,7 @@ nav.bar.bar-tab .tab-item.active .icon {
       border-radius: 23px;
       padding: 7px;
       background-color: #fff;
-      font-size: 16px;
-      margin-top: -2px; }
+      font-size: 16px; }
       #comment .comment-content .control-content #comment-form .icon-heart:before {
         color: #a6afb2;
         position: relative;
@@ -894,21 +892,27 @@ nav.bar.bar-tab .tab-item.active .icon {
   clear: both;
   padding-top: 30px;
   background-color: #f7f7f8; }
+  .course-page.content .info small {
+    color: #A6AFB2; }
+  .course-page.content .info .follow {
+    width: 40%; }
   .course-page.content .info .evaluation {
     position: relative; }
     .course-page.content .info .evaluation h5 {
       position: relative;
-      top: 2em;
+      top: 2.5em;
       z-index: 999;
       background: #f7f7f8;
       padding: 1em;
       display: inline-block;
-      color: #909090; }
+      font-weight: normal;
+      font-size: 12px;
+      color: #7E7E7E; }
   .course-page.content .info .table {
     position: relative;
     box-shadow: none;
-    border-top: 1px solid #a6afb1;
-    border-bottom: 1px solid #a6afb1;
+    border-top: 1px solid #A6AFB2;
+    border-bottom: 1px solid #A6AFB2;
     padding: 5px 0;
     display: table;
     width: 100%;
@@ -916,7 +920,7 @@ nav.bar.bar-tab .tab-item.active .icon {
     padding: 0;
     table-layout: fixed; }
     .course-page.content .info .table .border-right {
-      border-right: 1px solid #a6afb1; }
+      border-right: 1px solid #A6AFB2; }
     .course-page.content .info .table .table-item {
       display: table-cell;
       width: 1%;
@@ -926,11 +930,11 @@ nav.bar.bar-tab .tab-item.active .icon {
       vertical-align: middle;
       font-size: 0;
       padding: 20px 0; }
-      .course-page.content .info .table .table-item .h3 {
-        color: #b5bdbf;
-        opacity: 1;
-        font-size: 30px;
-        width: auto; }
+      .course-page.content .info .table .table-item h3 {
+        font-weight: normal;
+        font-size: 24px;
+        color: #A6AFB2;
+        line-height: 24px; }
       .course-page.content .info .table .table-item .tab-label {
         color: #b5bdbf;
         font-size: 16px; }
@@ -968,18 +972,19 @@ nav.bar.bar-tab .tab-item.active .icon {
       .course-page.content .cover-box .title-list a .icon {
         position: relative;
         top: 3px;
-        font-size: 20px; }
+        font-size: 16px; }
   .course-page.content .cover-box img {
     width: 100%; }
-.course-page.content .btn-olive {
-  width: 40%; }
 .course-page.content .course-detail {
-  text-align: left; }
+  text-align: left;
+  background: #fff; }
   .course-page.content .course-detail h3 {
     text-align: center;
-    padding: 20px 0;
-    margin-bottom: 0;
-    color: #909090; }
+    padding: 1.5em 0;
+    margin: 0;
+    color: #666;
+    font-size: 17px;
+    font-weight: normal; }
   .course-page.content .course-detail p {
     width: 90%;
     margin: 0 auto;

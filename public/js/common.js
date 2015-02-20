@@ -383,13 +383,17 @@ function commentForm(){
 function followMember(){
   $('.follow')[0].on('click', function(event){
     event.preventDefault();
+    var self = this;
+    var toggleName = 'btn-olive'
+    var isFollow = !self.classList.contains(toggleName);
     var data = {
       MemberId: 1,
       FollowingId: 7,
-      IsFollow: true
+      IsFollow: isFollow
     };
     post(ENV.host + '/api/followmember', data, function(fb){
       console.log(fb);
+      self.classList[isFollow ? 'addClass' : 'removeClass'](toggleName);
     });
 
   })
