@@ -189,25 +189,34 @@ body > .bar-nav {
     border-bottom: 1px solid #fff;
     margin: 0;
     border-radius: 0;
-    .pull-left {
-      margin-right: 1em;
-      img {
-        width: 3em;
-        height: 3em;
-        border: 1px solid #fff;
+    display: flex;
+    .comment-avatar {
+      margin-right: 26px;
+      a {
+        img {
+          width: 32px;
+          height: 32px;
+          border: 1px solid #fff;
+        }
       }
       .badge {
         top: 0px;
         right: 0px;
       }
     }
-    p {
-      margin: 0;
-    }
-    .msg-title {
-      .time {
-        color: #fff;
-        font-size: 12px;
+    .comment-content {
+      font-size: 14px;
+      p {
+        margin: 0;
+      }
+      .msg-title {
+        .time {
+          color: #fff;
+          font-size: 10px;
+        }
+      }
+      .flag-num {
+        font-size: 14px;
       }
     }
   }

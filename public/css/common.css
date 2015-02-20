@@ -223,21 +223,28 @@ body > .bar-nav {
     border: none;
     border-bottom: 1px solid #fff;
     margin: 0;
-    border-radius: 0; }
-    .comment-text li.card .pull-left {
-      margin-right: 1em; }
-      .comment-text li.card .pull-left img {
-        width: 3em;
-        height: 3em;
+    border-radius: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .comment-text li.card .comment-avatar {
+      margin-right: 26px; }
+      .comment-text li.card .comment-avatar a img {
+        width: 32px;
+        height: 32px;
         border: 1px solid #fff; }
-      .comment-text li.card .pull-left .badge {
+      .comment-text li.card .comment-avatar .badge {
         top: 0px;
         right: 0px; }
-    .comment-text li.card p {
-      margin: 0; }
-    .comment-text li.card .msg-title .time {
-      color: #fff;
-      font-size: 12px; }
+    .comment-text li.card .comment-content {
+      font-size: 14px; }
+      .comment-text li.card .comment-content p {
+        margin: 0; }
+      .comment-text li.card .comment-content .msg-title .time {
+        color: #fff;
+        font-size: 10px; }
+      .comment-text li.card .comment-content .flag-num {
+        font-size: 14px; }
 
 #bullets ul {
   text-align: center; }
@@ -698,7 +705,8 @@ nav.bar.bar-tab .tab-item.active .icon {
   border-radius: 0; }
   #comment .comment-content .control-content .verified li {
     position: relative;
-    padding: 2em 1em; }
+    padding: 2em 1em;
+    display: block; }
     #comment .comment-content .control-content .verified li h5 {
       display: inline; }
     #comment .comment-content .control-content .verified li img {
