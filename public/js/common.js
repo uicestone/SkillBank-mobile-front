@@ -70,6 +70,7 @@ var checkPage = function(){
   hackForModals();
   privateMsgForm();
   reservationForm();
+  followMember();
 
   bindCloseEventToModal();
 
@@ -93,7 +94,7 @@ var checkPage = function(){
     });
 
     commentForm();
-    followMember();
+    
 
   }
 

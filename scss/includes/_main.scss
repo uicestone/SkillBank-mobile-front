@@ -406,6 +406,7 @@ nav.bar.bar-tab {
 /*//Per*/
 
 #personal-page.content{
+  background: #f7f7f8;
   .bar-tab {
     border-bottom: 1px solid #999;
   }
@@ -418,6 +419,13 @@ nav.bar.bar-tab {
     background-color: $yellow;
     text-align: center;
     padding-top: .5em;
+    h3 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+    small {
+    }
     .btn-set {
       .btn {
         width: 125px;
@@ -426,6 +434,7 @@ nav.bar.bar-tab {
     }
   }
   #slider {
+    background: #f7f7f8;
     margin: 0 1.5em;
     .slide {
       position: relative;

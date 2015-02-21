@@ -631,41 +631,48 @@ nav.bar.bar-tab .tab-item.active .icon {
     margin-top: 10px; }
 
 /*//Per*/
-#personal-page.content .bar-tab {
-  border-bottom: 1px solid #999; }
-#personal-page.content .bag-color {
-  background-color: #FFD048;
-  height: auto;
-  position: relative; }
-#personal-page.content .info {
-  background-color: #FFD048;
-  text-align: center;
-  padding-top: .5em; }
-  #personal-page.content .info .btn-set .btn {
-    width: 125px;
-    margin: 0 3px; }
-#personal-page.content #slider {
-  margin: 0 1.5em; }
-  #personal-page.content #slider .slide {
+#personal-page.content {
+  background: #f7f7f8; }
+  #personal-page.content .bar-tab {
+    border-bottom: 1px solid #999; }
+  #personal-page.content .bag-color {
+    background-color: #FFD048;
+    height: auto;
     position: relative; }
-#personal-page.content .bar-tab {
-  padding-bottom: 5px;
-  background-color: #fff; }
-  #personal-page.content .bar-tab .icon {
-    color: #333;
-    font-size: 20px; }
-  #personal-page.content .bar-tab .tab-item span {
-    line-height: 1.7; }
-  #personal-page.content .bar-tab .tab-label {
-    color: #b5bdbf; }
-  #personal-page.content .bar-tab .content-padded {
-    background-color: #f7f7f8; }
-#personal-page.content .content-padded .padded-tex {
-  margin: 35px 5px;
-  text-align: left;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #909090; }
+  #personal-page.content .info {
+    background-color: #FFD048;
+    text-align: center;
+    padding-top: .5em; }
+    #personal-page.content .info h3 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 0; }
+    #personal-page.content .info .btn-set .btn {
+      width: 125px;
+      margin: 0 3px; }
+  #personal-page.content #slider {
+    background: #f7f7f8;
+    margin: 0 1.5em; }
+    #personal-page.content #slider .slide {
+      position: relative; }
+  #personal-page.content .bar-tab {
+    padding-bottom: 5px;
+    background-color: #fff; }
+    #personal-page.content .bar-tab .icon {
+      color: #333;
+      font-size: 20px; }
+    #personal-page.content .bar-tab .tab-item span {
+      line-height: 1.7; }
+    #personal-page.content .bar-tab .tab-label {
+      color: #b5bdbf; }
+    #personal-page.content .bar-tab .content-padded {
+      background-color: #f7f7f8; }
+  #personal-page.content .content-padded .padded-tex {
+    margin: 35px 5px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #909090; }
 
 #comment .segmented-control {
   border-bottom: 0;
