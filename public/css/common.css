@@ -161,8 +161,8 @@ ol, ul {
   color: #fff; }
 
 .badge {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   line-height: 20px;
   color: #fff;
   background: red;
@@ -177,8 +177,8 @@ ol, ul {
   color: #116f8f; }
   .flag-num .badge {
     position: absolute;
-    top: -10px;
-    right: -22px; }
+    top: -8px;
+    right: -18px; }
   .flag-num a {
     color: #116f8f; }
 
@@ -200,19 +200,32 @@ body > .bar-nav {
 .avatar-text {
   list-style: none; }
   .avatar-text li.card {
-    padding: 1em; }
+    padding: 15px;
+    margin: 7px; }
     .avatar-text li.card .pull-left {
-      margin-right: 1em; }
+      margin: 5px 1em 0 0; }
       .avatar-text li.card .pull-left img {
-        width: 4em;
-        height: 4em; }
+        width: 50px;
+        height: 50px; }
       .avatar-text li.card .pull-left .badge {
         top: 0px;
         right: 0px; }
+    .avatar-text li.card .msg-title h4 {
+      font-size: 15px;
+      margin-bottom: 5px; }
     .avatar-text li.card .msg-title time {
       color: #ccc; }
     .avatar-text li.card p {
-      margin: 0; }
+      margin: 0;
+      font-size: 13px;
+      line-height: 16px;
+      color: #7E7E7E; }
+  .avatar-text.private-msg li.card {
+    height: 70px;
+    padding: 5px; }
+    .avatar-text.private-msg li.card p {
+      height: 32px;
+      overflow: hidden; }
 
 .comment-text {
   list-style: none;
@@ -345,7 +358,7 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
   padding: 10px 0;
   font-size: 14px;
   background: #eaeaea;
-  color: #999; }
+  color: #A6AFB2; }
   nav .segmented-control .control-item.active, nav .segmented-control-no-js .control-item.active {
     color: #fff;
     background: #666; }

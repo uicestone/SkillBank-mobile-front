@@ -394,6 +394,7 @@ function commentForm(){
 }
 
 function followMember(){
+  if( !$('.follow').length ) return;
   $('.follow')[0].on('click', function(event){
     event.preventDefault();
     var self = this;

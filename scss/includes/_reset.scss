@@ -113,8 +113,8 @@ ol, ul {
   color: #fff;
 }
 .badge {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   line-height: 20px;
   color: #fff;
   background: red;
@@ -130,8 +130,8 @@ ol, ul {
   color: $olive;
   .badge {
     position: absolute;
-    top: -10px;
-    right: -22px;
+    top: -8px;
+    right: -18px;
   }
   a {
     color: $olive;
@@ -157,12 +157,13 @@ body > .bar-nav {
 .avatar-text {
   list-style: none;
   li.card {
-    padding: 1em;
+    padding: 15px;
+    margin: 7px;
     .pull-left {
-      margin-right: 1em;
+      margin: 5px 1em 0 0;
       img {
-        width: 4em;
-        height: 4em;
+        width: 50px;
+        height: 50px;
       }
       .badge {
         top: 0px;
@@ -170,12 +171,29 @@ body > .bar-nav {
       }
     }
     .msg-title {
+      h4 {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
       time {
         color: $lightGrey;
       }
     }
     p {
       margin: 0;
+      font-size: 13px;
+      line-height: 16px;
+      color: #7E7E7E;
+    } 
+  }
+  &.private-msg {
+    li.card {
+      height: 70px;
+      padding: 5px;
+      p {
+        height: 32px;
+        overflow: hidden;
+      }
     }
   }
 }
