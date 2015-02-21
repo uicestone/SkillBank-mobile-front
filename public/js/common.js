@@ -71,6 +71,8 @@ var checkPage = function(){
   privateMsgForm();
   reservationForm();
 
+  bindCloseEventToModal();
+
 
   // course search
   if( document.getElementById('course-search') ){
@@ -192,10 +194,20 @@ function getCourses(url, el){
   });
 }
 
+function bindCloseEventToModal(){
+  if( !$('.modal').length ) return;
+  document.body.addEventListener('click', function(e){
+    if( e.target.classList.contains('content') ) {
+      var $modal = e.target.parentNode;
+      $modal.classList.remove('active');
+    }
+  })
+}
+
 function toggleLike(){
   if( !$('.toggle-like').length ) return;
   document.body.addEventListener('click', function(e){
-    if( e.target.matches('.toggle-like, .toggle-like *') ) {
+    if( e.target.classList.contains('toggle-like') ) {
       // e.stopPropagation();
       var $heart = e.target;
       while( !$heart.matches('.toggle-like') ){

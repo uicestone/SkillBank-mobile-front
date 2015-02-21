@@ -330,7 +330,7 @@ body > .bar-nav {
       background: #eaeaea;
       overflow: hidden; }
       .modal .content .content-inner .content-padded {
-        margin: 0 15px; }
+        margin: 15px; }
         .modal .content .content-inner .content-padded p {
           font-size: 13px; }
         .modal .content .content-inner .content-padded .slider .circle {
