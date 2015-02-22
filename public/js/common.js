@@ -334,6 +334,9 @@ function chatForm(){
         _.template($('#chat-detail-tpl')[0].innerHTML, {item: data}) );
       $input.value = '';
       $input.focus();
+
+      // scroll to newest msg
+      $('.content')[0].scrollTop = 1000000;
     });
 
   });
