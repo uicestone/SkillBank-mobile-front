@@ -331,3 +331,10 @@ body > .bar-nav {
   }
 }
 
+input, textarea {
+  &.input-alarm {
+    border: 1px solid $alarm;
+  }
+}
+
+
