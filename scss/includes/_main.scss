@@ -366,13 +366,17 @@ nav.bar.bar-tab {
     .input-group {
       position: relative;
       background: none;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       input[type=number],input[type=text],input[type=tel] {
         background-color: $white;
         height: 40px;
+        border: 1px solid $lighterOlive;
         &#verifyCode {
           padding-right: 110px;
         }
+      }
+      button[type=submit] {
+        margin: 15px 0;
       }
       .btn-grey {
         position: absolute;
@@ -399,6 +403,10 @@ nav.bar.bar-tab {
     }
     h4{
       margin-top:10px;
+    }
+    p {
+      font-size: 15px;
+      color: #4D4D4D;
     }
   }
 }
@@ -580,7 +588,10 @@ nav.bar.bar-tab {
     button{
       height: 28px;
       line-height: 28px;
-      color: $grey;
+      color: #126F8F;
+      &:disabled {
+        color: $lightGrey;
+      }
     }
   }
 }
@@ -591,14 +602,14 @@ nav.bar.bar-tab {
   padding:10px;
   border-radius:7px;
   font-size:14px;
-  color:#909090;
+  color: #7E7E7E;
   border: 1px solid $lightGrey;
   .arrow {
     position: absolute;
     top: 13px;
     height:0px;
     width:0px;
-    border-width: 11px;
+    border-width: 5px;
     border-style:solid;
     border-color:transparent transparent transparent transparent;
     &:after {
@@ -614,9 +625,9 @@ nav.bar.bar-tab {
     border-style: solid;
   }
   &.left{
-    margin-right: 6em;
+    margin-right: 60px;
     .arrow{
-      right: -11px;
+      right: -6px;
       border-right-width: 0;
       border-left-color: #999;
       border-left-color: rgba(0,0,0,.25);
@@ -630,9 +641,9 @@ nav.bar.bar-tab {
     }
   }
   &.right{
-    margin-left: 6em;
+    margin-left: 60px;
     .arrow{
-      left: -22px;
+      left: -11px;
       border-right-color: #999;
       border-right-color: rgba(0,0,0,.25);
       &:after {
@@ -718,8 +729,8 @@ nav.bar.bar-tab {
   .time{
     text-align:center;
     color:#b5bdbf;
-    font-size:14px;
-    margin-bottom:10px;
+    font-size: 12px;
+    margin-bottom: 2px;
   }
   .bar{
     box-shadow:none;
@@ -735,11 +746,12 @@ nav.bar.bar-tab {
     margin-top: 10px;
     .box {
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       padding-bottom: 2px;
       .avatar {
-        width: 4em;
-        height: 4em;
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
       }
       &.sender{
         .avatar {

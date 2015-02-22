@@ -617,12 +617,15 @@ nav.bar.bar-tab .tab-item.active .icon {
   #register-page.content .register_form .input-group {
     position: relative;
     background: none;
-    margin-bottom: 10px; }
+    margin-bottom: 5px; }
     #register-page.content .register_form .input-group input[type=number], #register-page.content .register_form .input-group input[type=text], #register-page.content .register_form .input-group input[type=tel] {
       background-color: #fff;
-      height: 40px; }
+      height: 40px;
+      border: 1px solid #A6AFB2; }
       #register-page.content .register_form .input-group input[type=number]#verifyCode, #register-page.content .register_form .input-group input[type=text]#verifyCode, #register-page.content .register_form .input-group input[type=tel]#verifyCode {
         padding-right: 110px; }
+    #register-page.content .register_form .input-group button[type=submit] {
+      margin: 15px 0; }
     #register-page.content .register_form .input-group .btn-grey {
       position: absolute;
       right: 7px;
@@ -642,6 +645,9 @@ nav.bar.bar-tab .tab-item.active .icon {
     height: 5em; }
   #register-page.content .info h4 {
     margin-top: 10px; }
+  #register-page.content .info p {
+    font-size: 15px;
+    color: #4D4D4D; }
 
 /*//Per*/
 #personal-page.content {
@@ -774,7 +780,9 @@ nav.bar.bar-tab .tab-item.active .icon {
     .chat-page.bar-footer .pull-right button {
       height: 28px;
       line-height: 28px;
-      color: #999; }
+      color: #126F8F; }
+      .chat-page.bar-footer .pull-right button:disabled {
+        color: #ccc; }
 
 .popover-chat {
   position: relative;
@@ -782,14 +790,14 @@ nav.bar.bar-tab .tab-item.active .icon {
   padding: 10px;
   border-radius: 7px;
   font-size: 14px;
-  color: #909090;
+  color: #7E7E7E;
   border: 1px solid #ccc; }
   .popover-chat .arrow {
     position: absolute;
     top: 13px;
     height: 0px;
     width: 0px;
-    border-width: 11px;
+    border-width: 5px;
     border-style: solid;
     border-color: transparent transparent transparent transparent; }
     .popover-chat .arrow:after {
@@ -802,9 +810,9 @@ nav.bar.bar-tab .tab-item.active .icon {
     border-color: transparent;
     border-style: solid; }
   .popover-chat.left {
-    margin-right: 6em; }
+    margin-right: 60px; }
     .popover-chat.left .arrow {
-      right: -11px;
+      right: -6px;
       border-right-width: 0;
       border-left-color: #999;
       border-left-color: rgba(0, 0, 0, 0.25); }
@@ -815,9 +823,9 @@ nav.bar.bar-tab .tab-item.active .icon {
         border-right-width: 0;
         border-left-color: #fff; }
   .popover-chat.right {
-    margin-left: 6em; }
+    margin-left: 60px; }
     .popover-chat.right .arrow {
-      left: -22px;
+      left: -11px;
       border-right-color: #999;
       border-right-color: rgba(0, 0, 0, 0.25); }
       .popover-chat.right .arrow:after {
@@ -890,8 +898,8 @@ nav.bar.bar-tab .tab-item.active .icon {
   .chat-page.content .time {
     text-align: center;
     color: #b5bdbf;
-    font-size: 14px;
-    margin-bottom: 10px; }
+    font-size: 12px;
+    margin-bottom: 2px; }
   .chat-page.content .bar {
     box-shadow: none;
     position: relative; }
@@ -904,11 +912,12 @@ nav.bar.bar-tab .tab-item.active .icon {
     margin-top: 10px; }
     .chat-page.content .chat-content .box {
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       padding-bottom: 2px; }
       .chat-page.content .chat-content .box .avatar {
-        width: 4em;
-        height: 4em; }
+        width: 50px;
+        height: 50px;
+        border-width: 2px; }
       .chat-page.content .chat-content .box.sender .avatar {
         float: right; }
       .chat-page.content .chat-content .box.receiver .avatar {

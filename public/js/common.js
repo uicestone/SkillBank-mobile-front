@@ -109,6 +109,15 @@ var checkPage = function(){
     // init textrea auto size
     jQuery('#write-box').textareaAutoSize();
 
+    $('#write-box')[0].on('keyup', function(event){
+      var $submit = $('#form-write button')[0];
+      if ( _.trim(this.value).length ){
+        $submit.removeAttribute('disabled');
+      } else{
+        $submit.setAttribute('disabled', '');
+      }
+    })
+
     // bind add msg
     chatForm();
 
