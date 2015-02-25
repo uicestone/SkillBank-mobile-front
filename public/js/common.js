@@ -196,7 +196,7 @@ function getCourses(url, el){
     var tpl = $('#course-tpl')[0].innerHTML;
     $('.course-list')[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
     // active tab
-    [].forEach.call($('#search-cat a'), function (el) {
+    [].forEach.call($('.search-cat-wrap a'), function (el) {
       el.classList.remove('active');
     });
     el.classList.add('active');
@@ -272,15 +272,25 @@ function addBulletsWeget(){
 
 function affix(){
   var $searchCat = document.getElementById('search-cat');
-  var $wrap = $('#search-cat .search-cat-wrap')[0]
-  var offTop = $searchCat.offsetTop
+  var $wrap = jQuery('.search-cat-wrap');
+  var offTop = $searchCat.offsetTop;
+  var toLeft;
+
   $('.content')[0].onscroll = function (event) {
     if( this.scrollTop >= offTop ){
-      $wrap.classList.add('affix');
-      document.body.appendChild( $wrap )
+      $wrap.addClass('affix');
+
+      // to left as the same after append
+      toLeft = jQuery('.search-cat-wrap .inner')[0].scrollLeft;
+      if( !jQuery('body > .search-cat-wrap').length ) $wrap.detach().appendTo( 'body' );
+      jQuery('.search-cat-wrap .inner')[0].scrollLeft = toLeft;
     } else{
-      $wrap.classList.remove('affix')
-      $searchCat.appendChild( $wrap )
+      $wrap.removeClass('affix')
+
+      // to left as the same after append
+      toLeft = jQuery('.search-cat-wrap .inner')[0].scrollLeft;
+      if( jQuery('body > .search-cat-wrap').length ) $wrap.detach().appendTo( $searchCat );
+      jQuery('.search-cat-wrap .inner')[0].scrollLeft = toLeft;
     }
   }
 }
