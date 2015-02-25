@@ -1117,4 +1117,27 @@ nav.bar.bar-tab {
   }
 }
 
+.icon-female, .icon-male {
+  position: relative;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  vertical-align: super;
+  margin-left: 5px;
+  &:before {
+    position: relative;
+    top: 2px;
+  }
+}
+.icon-female {
+  background: #f69fa5;
+}
+.icon-male {
+  background: #46c7ef;
+}
+
 

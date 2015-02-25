@@ -1196,6 +1196,27 @@ nav.bar.bar-tab .tab-item.active .icon {
     .teaching-list .teaching .foot-bar.dark-olive {
       background: #102F3F; }
 
+.icon-female, .icon-male {
+  position: relative;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  vertical-align: super;
+  margin-left: 5px; }
+  .icon-female:before, .icon-male:before {
+    position: relative;
+    top: 2px; }
+
+.icon-female {
+  background: #f69fa5; }
+
+.icon-male {
+  background: #46c7ef; }
+
 .add-course-page form .inner {
   margin: 10px; }
   .add-course-page form .inner .select-lever ul {
