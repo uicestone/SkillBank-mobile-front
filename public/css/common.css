@@ -333,6 +333,9 @@ body > .bar-nav {
 input.input-alarm, textarea.input-alarm {
   border: 1px solid #F76033; }
 
+.border-none {
+  border: none; }
+
 .modal {
   background-color: transparent; }
   .modal header {
