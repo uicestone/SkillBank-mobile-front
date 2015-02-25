@@ -375,6 +375,10 @@ nav.bar.bar-tab {
           padding-right: 110px;
         }
       }
+      input[type=checkbox] {
+        background: #333;
+        border-radius: 5px;
+      }
       button[type=submit] {
         margin: 15px 0;
       }

@@ -886,8 +886,8 @@ select {
   background-color: #fff;
 }
 
-.input-group input,
-.input-group textarea {
+/*.input-group input,
+*/.input-group textarea {
   margin-bottom: 0;
   background-color: transparent;
   border-top: 0;
