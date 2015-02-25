@@ -478,7 +478,7 @@ nav.bar.bar-tab {
     border-radius:0;
     border-bottom: 1px solid #ccc;
     width: 100%;
-    .control-item{
+    .control-item, .control-item-no-js {
       padding: 14px 0;
       width: 33.33%;
       color: $grey;
@@ -914,7 +914,7 @@ nav.bar.bar-tab {
   }
   #comment {
     .segmented-control {
-      .control-item {
+      .control-item, .control-item-no-js {
         background: $greyBg;
       }
     }
@@ -981,7 +981,7 @@ nav.bar.bar-tab {
 // Segmented controllers
 // --------------------------------------------------
 
-.segmented-control-no-js {
+.segmented-control, .segmented-control-no-js {
   position: relative;
   display: table;
   overflow: hidden;
@@ -990,7 +990,7 @@ nav.bar.bar-tab {
   border-radius: 3px;
 
   // Section within controller
-  .control-item {
+  .control-item, .control-item-no-js {
     display: table-cell;
     width: 1%;
     padding-top: 6px;

@@ -700,15 +700,15 @@ nav.bar.bar-tab .tab-item.active .icon {
   border-radius: 0;
   border-bottom: 1px solid #ccc;
   width: 100%; }
-  #comment .segmented-control .control-item {
+  #comment .segmented-control .control-item, #comment .segmented-control .control-item-no-js {
     padding: 14px 0;
     width: 33.33%;
     color: #999; }
-    #comment .segmented-control .control-item.active {
+    #comment .segmented-control .control-item.active, #comment .segmented-control .control-item-no-js.active {
       color: #333;
       background-color: #DBDBDB;
       border-top: 3px solid #116e8e; }
-    #comment .segmented-control .control-item h6 {
+    #comment .segmented-control .control-item h6, #comment .segmented-control .control-item-no-js h6 {
       margin: 0; }
   #comment .segmented-control .side-item {
     display: table-cell;
@@ -1042,7 +1042,7 @@ nav.bar.bar-tab .tab-item.active .icon {
       left: 5px;
       top: 5px;
       font-size: 12px; }
-.course-page.content #comment .segmented-control .control-item {
+.course-page.content #comment .segmented-control .control-item, .course-page.content #comment .segmented-control .control-item-no-js {
   background: #DBDBDB; }
 
 .course-page.bar-footer {
@@ -1087,14 +1087,14 @@ nav.bar.bar-tab .tab-item.active .icon {
     background: #FFD048;
     color: #fff; }
 
-.segmented-control-no-js {
+.segmented-control, .segmented-control-no-js {
   position: relative;
   display: table;
   overflow: hidden;
   font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 3px; }
-  .segmented-control-no-js .control-item {
+  .segmented-control .control-item, .segmented-control .control-item-no-js, .segmented-control-no-js .control-item, .segmented-control-no-js .control-item-no-js {
     display: table-cell;
     width: 1%;
     padding-top: 6px;
@@ -1106,11 +1106,11 @@ nav.bar.bar-tab .tab-item.active .icon {
     text-overflow: ellipsis;
     white-space: nowrap;
     border-left: 1px solid #ccc; }
-    .segmented-control-no-js .control-item:first-child {
+    .segmented-control .control-item:first-child, .segmented-control .control-item-no-js:first-child, .segmented-control-no-js .control-item:first-child, .segmented-control-no-js .control-item-no-js:first-child {
       border-left-width: 0; }
-    .segmented-control-no-js .control-item:active {
+    .segmented-control .control-item:active, .segmented-control .control-item-no-js:active, .segmented-control-no-js .control-item:active, .segmented-control-no-js .control-item-no-js:active {
       background-color: #eee; }
-    .segmented-control-no-js .control-item.active {
+    .segmented-control .control-item.active, .segmented-control .control-item-no-js.active, .segmented-control-no-js .control-item.active, .segmented-control-no-js .control-item-no-js.active {
       background-color: #ccc; }
 
 .teaching-list .teaching {
