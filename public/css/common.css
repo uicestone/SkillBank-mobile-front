@@ -92,6 +92,9 @@ body {
 .mb-10 {
   margin-bottom: 10em; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
 header a {
   color: #fff; }
 
@@ -318,7 +321,7 @@ body > .bar-nav {
 .statistic {
   background: #fff;
   padding: .5em 0;
-  border-bottom: 1px solid #999; }
+  border-bottom: 1px solid #ddd; }
   .statistic table {
     margin: 0; }
     .statistic table td, .statistic table th {
@@ -622,7 +625,7 @@ nav.bar.bar-tab .tab-item.active .icon {
     #register-page.content .register_form .input-group input[type=number], #register-page.content .register_form .input-group input[type=text], #register-page.content .register_form .input-group input[type=tel] {
       background-color: #fff;
       height: 40px;
-      border: 1px solid #A6AFB2; }
+      border: 1px solid #ddd; }
       #register-page.content .register_form .input-group input[type=number]#verifyCode, #register-page.content .register_form .input-group input[type=text]#verifyCode, #register-page.content .register_form .input-group input[type=tel]#verifyCode {
         padding-right: 110px; }
     #register-page.content .register_form .input-group input[type=checkbox] {
@@ -936,8 +939,11 @@ nav.bar.bar-tab .tab-item.active .icon {
     color: #A6AFB2; }
   .course-page.content .info .follow {
     width: 40%; }
+  .course-page.content .info > h5 {
+    margin: 0; }
   .course-page.content .info .evaluation {
-    position: relative; }
+    position: relative;
+    margin-top: -15px; }
     .course-page.content .info .evaluation h5 {
       position: relative;
       top: 2.5em;
@@ -947,12 +953,13 @@ nav.bar.bar-tab .tab-item.active .icon {
       display: inline-block;
       font-weight: normal;
       font-size: 12px;
-      color: #7E7E7E; }
+      color: #7E7E7E;
+      margin-top: 0; }
   .course-page.content .info .table {
     position: relative;
     box-shadow: none;
-    border-top: 1px solid #A6AFB2;
-    border-bottom: 1px solid #A6AFB2;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     padding: 5px 0;
     display: table;
     width: 100%;
@@ -960,7 +967,7 @@ nav.bar.bar-tab .tab-item.active .icon {
     padding: 0;
     table-layout: fixed; }
     .course-page.content .info .table .border-right {
-      border-right: 1px solid #A6AFB2; }
+      border-right: 1px solid #ddd; }
     .course-page.content .info .table .table-item {
       display: table-cell;
       width: 1%;
@@ -969,7 +976,7 @@ nav.bar.bar-tab .tab-item.active .icon {
       text-align: center;
       vertical-align: middle;
       font-size: 0;
-      padding: 20px 0; }
+      padding: 13px 0; }
       .course-page.content .info .table .table-item h3 {
         font-weight: normal;
         font-size: 24px;
@@ -977,13 +984,17 @@ nav.bar.bar-tab .tab-item.active .icon {
         line-height: 24px; }
       .course-page.content .info .table .table-item .tab-label {
         color: #b5bdbf;
-        font-size: 16px; }
+        font-size: 12px; }
 .course-page.content .cover-box {
   position: relative;
   overflow: hidden;
   height: 204px; }
   .course-page.content .cover-box .cover-filter {
     position: absolute;
+    height: 204px;
+    width: 100%;
+    left: 0;
+    top: 0;
     background-image: linear-gradient(-180deg, #102F3F 0%, rgba(16, 47, 63, 0) 100%); }
   .course-page.content .cover-box h3 {
     text-align: center;
@@ -1052,7 +1063,8 @@ nav.bar.bar-tab .tab-item.active .icon {
   text-align: center;
   height: 46px;
   padding: 0 2px;
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(255, 255, 255, 0.8);
+  border: none; }
   .course-page.bar-footer a {
     font-size: 0; }
     .course-page.bar-footer a .btn-yellow {

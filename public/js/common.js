@@ -205,7 +205,8 @@ function getCourses(url, el){
 
 function bindCloseEventToModal(){
   if( !$('.modal').length ) return;
-  document.body.addEventListener('click', function(e){
+  // jQuery(document).on('touchend click', function(e){
+  document.body.addEventListener('touchend', function(e){
     if( e.target.classList.contains('content') ) {
       var $modal = e.target.parentNode;
       $modal.classList.remove('active');

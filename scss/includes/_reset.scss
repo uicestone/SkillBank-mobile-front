@@ -34,6 +34,7 @@ body {
 .mb-9 {margin-bottom: 9em;}
 .mb-10 {margin-bottom: 10em;}
 
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
 
 header {
   a {
@@ -314,7 +315,7 @@ body > .bar-nav {
 .statistic {
   background: #fff;
   padding: .5em 0;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid #ddd;
   table {
     margin: 0;
     td, th {
