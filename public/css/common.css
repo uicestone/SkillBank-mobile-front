@@ -451,8 +451,12 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
   z-index: 10;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
-  text-align: center;
-  padding-top: 150px; }
+  text-align: center; }
+  .loading span {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin: 0 0 0 -15px; }
 
 #search-cat {
   height: 55px; }

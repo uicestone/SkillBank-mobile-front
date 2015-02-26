@@ -157,7 +157,12 @@ nav {
   background: rgba(0,0,0, 0.5);
   color: #fff;
   text-align: center;
-  padding-top: 150px;
+  span {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin: 0 0 0 -15px;
+  }
 }
 
 #search-cat {
