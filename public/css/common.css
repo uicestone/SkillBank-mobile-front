@@ -693,7 +693,6 @@ nav.bar.bar-tab .tab-item.active .icon {
 
 #comment .segmented-control {
   border-bottom: 0;
-  margin-top: 40px;
   border-radius: 0;
   border-bottom: 1px solid #ccc;
   width: 100%; }
@@ -1012,7 +1011,8 @@ nav.bar.bar-tab .tab-item.active .icon {
     width: 100%; }
 .course-page.content .course-detail {
   text-align: left;
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
   .course-page.content .course-detail h3 {
     text-align: center;
     padding: 1.5em 0;
