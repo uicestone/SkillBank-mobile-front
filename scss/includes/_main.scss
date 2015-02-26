@@ -1,5 +1,12 @@
 .modal {
   background-color: rgba(0,0,0,0);
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none;
+  &.active {
+    display: block;
+  }
   header {
     background: $lighterGrey;
     h1 {

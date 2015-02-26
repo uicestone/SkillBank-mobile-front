@@ -337,7 +337,13 @@ input.input-alarm, textarea.input-alarm {
   border: none; }
 
 .modal {
-  background-color: transparent; }
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: none; }
+  .modal.active {
+    display: block; }
   .modal header {
     background: #eaeaea; }
     .modal header h1 {
