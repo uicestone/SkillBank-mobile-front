@@ -81,7 +81,6 @@ var checkPage = function(){
     affix();
 
 
-
   }
 
   // course page
@@ -189,7 +188,7 @@ function switchCourseCat(){
 
 function getCourses(url, el){
   var $loading = $('.loading');
-  $loading[0].style.display = 'flex';
+  $loading[0].style.display = 'block';
   get(url, function(fb){
     if( !_.isArray(fb) ) return;
     // insert html

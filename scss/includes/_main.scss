@@ -154,9 +154,10 @@ nav {
   bottom: 0;
   left: 0;
   z-index: 10;
-  @include vertical-middle;
   background: rgba(0,0,0, 0.5);
   color: #fff;
+  text-align: center;
+  padding-top: 150px;
 }
 
 #search-cat {

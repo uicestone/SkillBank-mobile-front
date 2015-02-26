@@ -449,17 +449,10 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
   bottom: 0;
   left: 0;
   z-index: 10;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: rgba(0, 0, 0, 0.5);
-  color: #fff; }
+  color: #fff;
+  text-align: center;
+  padding-top: 150px; }
 
 #search-cat {
   height: 55px; }
