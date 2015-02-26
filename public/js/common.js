@@ -110,7 +110,7 @@ var checkPage = function(){
 
     $('#write-box')[0].on('keyup', function(event){
       var $submit = $('#form-write button')[0];
-      if ( _.trim(this.value).length ){
+      if ( this.value.length ){
         $submit.removeAttribute('disabled');
       } else{
         $submit.setAttribute('disabled', '');
