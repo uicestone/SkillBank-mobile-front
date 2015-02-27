@@ -348,7 +348,8 @@ input.input-alarm, textarea.input-alarm {
   .modal.active {
     display: block; }
   .modal header {
-    background: #eaeaea; }
+    background: #eaeaea;
+    position: absolute; }
     .modal header h1 {
       font-size: 20px;
       color: #666; }
