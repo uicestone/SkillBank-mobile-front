@@ -426,17 +426,16 @@ function followMember(){
   $('.follow')[0].on('click', function(event){
     event.preventDefault();
     var self = this;
-    var toggleName = 'btn-olive'
-    var isFollow = !self.classList.contains(toggleName);
+    var isFollow = self.classList.contains( 'btn-olive' );
     var data = {
       MemberId: 1,
       FollowingId: 7,
       IsFollow: isFollow
     };
-    post(ENV.host + '/api/followmember', data, function(fb){
-      console.log(fb);
-      self.classList[isFollow ? 'addClass' : 'removeClass'](toggleName);
-    });
+      self.classList[ isFollow ? 'add' : 'remove' ]('btn-grey');
+      self.classList[ !isFollow ? 'add' : 'remove' ]('btn-olive');
+    // post(ENV.host + '/api/followmember', data, function(fb){
+    // });
 
   })
 }

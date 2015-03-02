@@ -125,7 +125,7 @@ input[type="search"]:focus {
   width: 5em;
   height: 5em; }
 
-a, a:active, a:hover {
+a {
   color: #999; }
 
 .has-header {
@@ -158,10 +158,14 @@ ol, ul {
 .btn-olive {
   background: #4f8da5;
   color: #fff; }
+  .btn-olive:active {
+    color: #fff; }
 
 .btn-grey {
   background: #999;
   color: #fff; }
+  .btn-grey:active {
+    color: #fff; }
 
 .badge {
   width: 18px;
