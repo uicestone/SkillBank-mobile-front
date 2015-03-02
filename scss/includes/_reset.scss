@@ -210,7 +210,7 @@ body > .bar-nav {
     border-radius: 0;
     display: flex;
     .comment-avatar {
-      margin-right: 26px;
+      margin-right: 20px;
       a {
         img {
           width: 32px;
@@ -225,6 +225,7 @@ body > .bar-nav {
     }
     .comment-content {
       font-size: 14px;
+      width: 100%;
       p {
         margin: 0;
       }

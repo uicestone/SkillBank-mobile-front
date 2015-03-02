@@ -244,7 +244,7 @@ body > .bar-nav {
     display: -ms-flexbox;
     display: flex; }
     .comment-text li.card .comment-avatar {
-      margin-right: 26px; }
+      margin-right: 20px; }
       .comment-text li.card .comment-avatar a img {
         width: 32px;
         height: 32px;
@@ -253,7 +253,8 @@ body > .bar-nav {
         top: 0px;
         right: 0px; }
     .comment-text li.card .comment-content {
-      font-size: 14px; }
+      font-size: 14px;
+      width: 100%; }
       .comment-text li.card .comment-content p {
         margin: 0; }
       .comment-text li.card .comment-content .msg-title .time {
