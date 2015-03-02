@@ -62,14 +62,11 @@
           <input type="text" placeholder="选择细分类别">
           <h5 class="mb-2">你的技能水平</h5>
           <div class="select-lever">
-            <ul class="lever-bar mb-1">
-              <li><span></span><i>10</i></li>
-              <li><span></span><i>30</i></li>
-              <li><span></span><i>50</i></li>
-              <li><span></span><i>75</i></li>
-              <li><span></span><i>100</i></li>
-            </ul>
-            <ul>
+            <div class="wrapper">
+              <input type="range" min="0" max="100" step="1" onchange="showRangeVal(this)">
+              <span class="num" style="left: 50%; margin-left: -15px;">50</span>
+            </div>
+            <ul class="levers">
               <li>初学</li>
               <li>略懂</li>
               <li>良好</li>
@@ -79,14 +76,11 @@
           </div>
           <h5 class="mb-2">你的教学水平</h5>
           <div class="select-lever">
-            <ul class="lever-bar mb-1">
-              <li><span></span><i>10</i></li>
-              <li><span></span><i>30</i></li>
-              <li><span></span><i>50</i></li>
-              <li><span></span><i>75</i></li>
-              <li><span></span><i>100</i></li>
-            </ul>
-            <ul>
+            <div class="wrapper">
+              <input type="range" min="0" max="100" step="1" onchange="showRangeVal(this)">
+              <span class="num" style="left: 50%; margin-left: -15px;">50</span>
+            </div>
+            <ul class="levers">
               <li>初学</li>
               <li>略懂</li>
               <li>良好</li>

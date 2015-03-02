@@ -3,7 +3,21 @@
     .inner {
       margin: 10px;
       .select-lever {
-        ul {
+        .wrapper {
+          position: relative;
+          .num {
+            position: absolute;
+            pointer-events: none;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            font-size: 13px;
+          }
+        }
+        ul.levers {
           display: flex;
           justify-content: space-between;
           &.lever-bar {
@@ -16,30 +30,6 @@
             text-align: center;
             font-size: 13px;
             color: $lighterOlive;
-            span {
-              display: block;
-              height: 7px;
-              border-left: 1px solid #fff;
-            }
-            i {
-              position: absolute;
-              left: 50%;
-              margin:-19px 0 0 -15px;
-              width: 30px;
-              height: 30px;
-              line-height: 30px;
-              border-radius: 50%;
-              background: $olive;
-              text-align: center;
-              color: #fff;
-              font-style: normal;
-              font-size: 12px;
-            }
-            &:first-child {
-              span {
-                border-left: none;
-              }
-            }
           }
         }
       }

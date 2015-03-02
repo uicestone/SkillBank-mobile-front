@@ -153,6 +153,12 @@ var checkPage = function(){
     })
   }
 
+  // add course page
+  if( $('.add-course-page').length ) {
+
+  }
+
+
 };
 
 // start here
@@ -434,6 +440,17 @@ function followMember(){
 
   })
 }
+
+function showRangeVal( el ){
+  var val = el.value;
+  jQuery(el).siblings('.num')
+    .text(val)
+    .css({
+      left: val + '%',
+      marginLeft: -val*30*0.01 + 'px'
+    })
+}
+
 
 // var courses = [
 //   {

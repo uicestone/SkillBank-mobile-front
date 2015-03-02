@@ -339,6 +339,37 @@ input.input-alarm, textarea.input-alarm {
 .border-none {
   border: none; }
 
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%; }
+
+input[type=range]:focus {
+  outline: none; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  animate: 0.2s;
+  box-shadow: none;
+  border: none;
+  background-image: linear-gradient(-90deg, #A6AFB2 0%, #D9DCDD 100%);
+  border-radius: 10px; }
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #116f8f;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px; }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  /*background: #367ebd;*/ }
+
 .modal {
   background-color: transparent;
   position: absolute;
@@ -1227,17 +1258,29 @@ nav.bar.bar-tab .tab-item.active .icon {
 
 .add-course-page form .inner {
   margin: 10px; }
-  .add-course-page form .inner .select-lever ul {
+  .add-course-page form .inner .select-lever .wrapper {
+    position: relative; }
+    .add-course-page form .inner .select-lever .wrapper .num {
+      position: absolute;
+      pointer-events: none;
+      top: 5px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: #fff;
+      font-size: 13px; }
+  .add-course-page form .inner .select-lever ul.levers {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    .add-course-page form .inner .select-lever ul.lever-bar {
+    .add-course-page form .inner .select-lever ul.levers.lever-bar {
       background-image: linear-gradient(-90deg, #A6AFB2 0%, #D9DCDD 99%);
       border-radius: 10px; }
-    .add-course-page form .inner .select-lever ul li {
+    .add-course-page form .inner .select-lever ul.levers li {
       -webkit-flex-grow: 1;
           -ms-flex-positive: 1;
               flex-grow: 1;
@@ -1245,25 +1288,6 @@ nav.bar.bar-tab .tab-item.active .icon {
       text-align: center;
       font-size: 13px;
       color: #A6AFB2; }
-      .add-course-page form .inner .select-lever ul li span {
-        display: block;
-        height: 7px;
-        border-left: 1px solid #fff; }
-      .add-course-page form .inner .select-lever ul li i {
-        position: absolute;
-        left: 50%;
-        margin: -19px 0 0 -15px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        border-radius: 50%;
-        background: #116f8f;
-        text-align: center;
-        color: #fff;
-        font-style: normal;
-        font-size: 12px; }
-      .add-course-page form .inner .select-lever ul li:first-child span {
-        border-left: none; }
 .add-course-page form .extra {
   background: #A6AFB2; }
 
