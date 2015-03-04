@@ -430,7 +430,8 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
     width: 7px;
     height: 7px;
     background: red;
-    border-radius: 50%; }
+    border-radius: 50%;
+    z-index: 20; }
 
 .icon.white {
   color: #fff; }
