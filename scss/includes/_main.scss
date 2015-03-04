@@ -312,6 +312,7 @@ nav {
 
 nav.bar.bar-tab {
   .tab-item {
+    position: relative;
     .icon {
       display: inline;
       opacity: .6;
@@ -324,6 +325,16 @@ nav.bar.bar-tab {
       .icon {
         opacity: 1;
       }
+    }
+    .red-dot {
+      position: absolute;
+      left: 50%;
+      top: 7px;
+      margin-left: 6px;
+      width: 7px;
+      height: 7px;
+      background: red;
+      border-radius: 50%;
     }
   }
 }

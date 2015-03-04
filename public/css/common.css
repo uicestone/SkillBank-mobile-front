@@ -613,14 +613,25 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
       font-size: 15px;
       margin: 0 0 0 -15px; }
 
-nav.bar.bar-tab .tab-item .icon {
-  display: inline;
-  opacity: .6;
-  font-size: 19px; }
-  nav.bar.bar-tab .tab-item .icon img {
-    width: 22px; }
-nav.bar.bar-tab .tab-item.active .icon {
-  opacity: 1; }
+nav.bar.bar-tab .tab-item {
+  position: relative; }
+  nav.bar.bar-tab .tab-item .icon {
+    display: inline;
+    opacity: .6;
+    font-size: 19px; }
+    nav.bar.bar-tab .tab-item .icon img {
+      width: 22px; }
+  nav.bar.bar-tab .tab-item.active .icon {
+    opacity: 1; }
+  nav.bar.bar-tab .tab-item .red-dot {
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    margin-left: 6px;
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 50%; }
 
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #13404c; }
