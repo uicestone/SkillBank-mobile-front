@@ -69,6 +69,20 @@ nav {
   border-bottom: none;
 }
 
+.red-dot-wrapper {
+  position: relative;
+  .red-dot {
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    margin-left: 6px;
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 50%;
+  }
+}
+
 .icon.white {
   color: #fff;
   span {
@@ -325,16 +339,6 @@ nav.bar.bar-tab {
       .icon {
         opacity: 1;
       }
-    }
-    .red-dot {
-      position: absolute;
-      left: 50%;
-      top: 7px;
-      margin-left: 6px;
-      width: 7px;
-      height: 7px;
-      background: red;
-      border-radius: 50%;
     }
   }
 }
@@ -1166,4 +1170,8 @@ nav.bar.bar-tab {
   background: #46c7ef;
 }
 
-
+#message-page.content {
+  .red-dot {
+    margin-left: 16px;
+  }
+}

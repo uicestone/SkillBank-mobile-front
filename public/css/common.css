@@ -420,6 +420,18 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
   background: #fff;
   border-bottom: none; }
 
+.red-dot-wrapper {
+  position: relative; }
+  .red-dot-wrapper .red-dot {
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    margin-left: 6px;
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 50%; }
+
 .icon.white {
   color: #fff; }
   .icon.white span {
@@ -623,15 +635,6 @@ nav.bar.bar-tab .tab-item {
       width: 22px; }
   nav.bar.bar-tab .tab-item.active .icon {
     opacity: 1; }
-  nav.bar.bar-tab .tab-item .red-dot {
-    position: absolute;
-    left: 50%;
-    top: 7px;
-    margin-left: 6px;
-    width: 7px;
-    height: 7px;
-    background: red;
-    border-radius: 50%; }
 
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #13404c; }
@@ -1271,6 +1274,9 @@ nav.bar.bar-tab .tab-item {
 
 .icon-male {
   background: #46c7ef; }
+
+#message-page.content .red-dot {
+  margin-left: 16px; }
 
 .add-course-page form .inner {
   margin: 10px; }
