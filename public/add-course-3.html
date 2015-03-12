@@ -41,12 +41,16 @@
       </a>
     </nav>
 
-    <div class="add-course-page content">
+    <div class="add-course-page step-3 content">
       <div class="steps mb-2">
         <div class="main">
-          <a href="index.html" class="btn">上一步</a>
-          <span class="">第3/3步</span>
-          <a class="btn "> 下一步 </a>
+          <span><a href="index.html" class="btn btn-transparent">上一步</a></span>
+          <span class="right">
+            <span class="step-name">第3/3步</span>
+          
+            <a href="#" class="btn btn-transparent disabled"> 预览 </a>
+            <a href="#" class="btn disabled"> 发布 </a>
+          </span>
         </div>
         <ul class="process-bar">
           <li class="yellow"></li>
@@ -54,25 +58,30 @@
           <li class="yellow"></li>
         </ul>
       </div>
-      <h3 align="center" class="olive mb-1">添加封面</h3>
-      <div class="course-list">
-        <div class="course card">
-          <div class="title-bar u-full-width">
-            <a class="pull-left">魔方进阶教程</a>
-            <div class="pull-right">
-              <a href="#" class="icon icomoon icon-comment">
+
+      <form>
+        <div class="inner">
+          <h3 align="center" class="olive mb-1">添加封面</h3>
+          <div class="course-list">
+            <div class="course card">
+              <div class="title-bar u-full-width">
+                <a class="pull-left">魔方进阶教程</a>
+                <div class="pull-right">
+                  <a href="#" class="icon icomoon icon-comment">
+                  </a>
+                  <a href="#" class="icon icomoon icon-heart toggle-like" data-Member_Id="332">
+                  </a>
+                </div>
+              </div>
+              <a href="#" class="cover-holder">
               </a>
-              <a href="#" class="icon icomoon icon-heart toggle-like" data-Member_Id="332">
-              </a>
-            </div>
+              <div class="info">
+              </div>
+              <a href="#" class="icon icomoon icon-camera round"></a>
+            </div>        
           </div>
-          <a href="#" class="cover-holder">
-          </a>
-          <div class="info">
-          </div>
-          <a href="#" class="icon icomoon icon-camera round"></a>
-        </div>        
-      </div>
+        </div>
+      </form>
 
     </div>
     <script src="bower_components/ratchet/dist/js/ratchet.js"></script>

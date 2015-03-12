@@ -2,6 +2,9 @@
   form {
     .inner {
       margin: 10px;
+      h3 {
+        font-size: 19px;
+      }
       .select-lever {
         .wrapper {
           position: relative;
@@ -11,10 +14,28 @@
             top: 5px;
             width: 30px;
             height: 30px;
+            background: $olive;
+            border-radius: 50%;
             line-height: 30px;
             text-align: center;
             color: #fff;
             font-size: 13px;
+          }
+          ul.vertical-lines {
+            display: flex;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 18px;
+            pointer-events: none;
+            li {
+              flex-grow: 1;
+              border-right: 1px solid #fff;
+              height: 8px;
+              &:nth-child(100n + 5) {
+                border: none;
+              }
+            }
           }
         }
         ul.levers {
@@ -34,8 +55,85 @@
         }
       }
     }
-    .extra {
-      background: $lighterOlive;
+  }
+  &.step-2 {
+    form {
+      .inner {
+        
+      }
+      #extra {
+        background: $lighterOlive;
+        .inner {
+          .tl {
+            @include vertical-middle;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 15px;
+            padding: 1em 0;
+            h5 {
+              margin: 0;
+            }
+            small {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.step-3 {
+    form {
+      .inner {
+        margin: 0;
+      }
+    }
+  }
+  &.step-saved {
+    form {
+      .inner {
+        margin: 0;
+      }
+    }
+  }
+  &.step-success {
+    header {
+      h4 {
+        font-size: 20px;
+        color: $darkGrey
+      }
+    }
+    form {
+      .inner {
+        margin: 0;
+        h4 {
+          font-size: 15px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  &.step-private {
+    .edit-avatar {
+      position: relative;
+      text-align: center;
+      .avatar {
+        width: 75px;
+        height: 75px;
+      }
+      .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -15px 0 0 -15px;
+        font-size: 15px;
+      }
+    }
+    .group-input {
+      display: flex;
+      justify-content: space-between;
+      input {
+        width: 48%;
+      }
     }
   }
 }
@@ -61,8 +159,35 @@ body > .content > header {
     .icon-arrow-left {
       width: 58px;
     }
+    color: #fff;
+    a {
+    }
     > * {
       flex-grow: 1;
+      width: 33%
+    }
+    .step-name {
+      text-align: center;
+      font-size: 15px;
+    }
+    .btn {
+      padding: 8px 12px;
+      width: auto;
+      &.disabled {
+        opacity: 0.3;
+      }
+      &.btn-olive {
+
+      }
+    }
+    .right {
+      width: 60%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .btn {
+        margin-left: 5px;
+      }
     }
 
   }
@@ -84,3 +209,39 @@ body > .content > header {
     }
   }
 }
+
+.custom-radio {
+  display: flex;
+  li {
+    flex-grow: 1;
+    width: 33%;
+    font-size: 13px;
+    label {
+      @include vertical-middle;
+      justify-content: flex-start;
+      .icon {
+        font-size: 10px;
+        margin-right: 10px;
+        &.round {
+          background: #fff;
+          border-color: $lighterOlive;
+          color: $lighterGrey;
+          &.selected {
+            background: $olive;
+            color: #fff;
+          }
+        }
+      }
+      input {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+
+
+

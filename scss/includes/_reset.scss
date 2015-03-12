@@ -76,6 +76,11 @@ input[type="search"]:focus{
 a {
   color: #999;
 }
+
+.disabled {
+  pointer-events: none;
+}
+
 .has-header {
   padding-top: 44px!important;
 }
@@ -115,6 +120,14 @@ ol, ul {
 .btn-grey {
   background: $grey;
   color: #fff;
+  &:active {
+    color: #fff;
+  }
+}
+.btn-transparent {
+  background: none;
+  color: $lighterOlive;
+  border: 1px solid $lighterOlive;
   &:active {
     color: #fff;
   }
@@ -347,5 +360,12 @@ input, textarea {
 
 .border-none {
   border: none;
+}
+
+input, textarea {
+  &::-webkit-input-placeholder {
+    color: $lighterOlive;
+    font-size: 13px;
+  }
 }
 

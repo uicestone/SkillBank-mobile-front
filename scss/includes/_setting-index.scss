@@ -1,3 +1,4 @@
+
 .table-view-cell {
   font-size: 14px;
   color: $black;
@@ -12,6 +13,24 @@
 }
 
 .setting-page {
+  header {
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 10px;
+      > * {
+        width: 33%;
+        flex-grow: 1;
+      }
+      .avatar {
+        width: 35px;
+        height: 35px;
+        border-width: 2px;
+      }
+    }
+  }
   .info {
     background: $yellow;
     padding: 10px;
@@ -73,3 +92,7 @@
     padding: 9px 65px 11px 13px;
   }
 }
+
+
+
+

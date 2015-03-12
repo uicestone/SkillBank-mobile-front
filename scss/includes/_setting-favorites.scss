@@ -1,0 +1,35 @@
+.setting-favorites-page {
+  
+  .list {
+    margin: 10px; 
+    li {
+      border-radius: 5px;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 10px;
+      border: 1px solid $lightGrey;
+      a {
+        .left {
+          img {
+            float: left;
+            width: 100px;
+          }
+        }
+        .right {
+          padding: 10px 8px 0;
+          margin-left: 100px;
+          .course-name {
+            font-size: 15px;
+            line-height: 1.2em;
+            color: $olive;
+            margin: 0;
+          }
+          span {
+            font-size: 12px;
+            color: $lighterOlive;
+          }
+        }
+      }
+    }
+  }
+}

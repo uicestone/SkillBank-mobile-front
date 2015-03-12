@@ -41,14 +41,14 @@
       </a>
     </nav>
 
-    <div class="add-course-page content">
+    <div class="add-course-page step-private content">
       <div class="steps mb-2">
         <div class="main">
-          <a href="index.html" align="left" class="icon icomoon icon-arrow-left grey"></a>
-          <span class="" align="center">个人信息</span>
-          <span align="right">
-            <a class="btn "> 查看 </a>
-            <a class="btn "> 保存 </a>
+          <span><a href="index.html" align="left" class="icon icomoon icon-arrow-left grey"></a></span>
+          <span class="right">
+            <span class="step-name">个人信息</span>
+            <a class="btn btn-transparent disabled"> 查看 </a>
+            <a class="btn disabled"> 保存 </a>
           </span>
         </div>
         <ul class="process-bar">
@@ -59,44 +59,30 @@
       </div>
       <form>
         <div class="inner">
-          <h3 align="center" class="olive mb-1">基本描述</h3>
-          <input type="text" placeholder="你所在的城市" class="mb-2">
-          <input type="text" placeholder="选择一项技能">
-          <input type="text" placeholder="选择细分类别">
-          <h5 class="mb-2">你的技能水平</h5>
-          <div class="select-lever">
-            <ul class="lever-bar mb-1">
-              <li><span></span><i>10</i></li>
-              <li><span></span><i>30</i></li>
-              <li><span></span><i>50</i></li>
-              <li><span></span><i>75</i></li>
-              <li><span></span><i>100</i></li>
-            </ul>
-            <ul>
-              <li>初学</li>
-              <li>略懂</li>
-              <li>良好</li>
-              <li>熟练</li>
-              <li>精通</li>
-            </ul>
+
+          <div class="edit-avatar mb-1">
+            <a href="#"><img class="avatar" src="images/avatar.png"><span class="icon icomoon round icon-camera"></span></a>
           </div>
-          <h5 class="mb-2">你的教学水平</h5>
-          <div class="select-lever">
-            <ul class="lever-bar mb-1">
-              <li><span></span><i>10</i></li>
-              <li><span></span><i>30</i></li>
-              <li><span></span><i>50</i></li>
-              <li><span></span><i>75</i></li>
-              <li><span></span><i>100</i></li>
-            </ul>
-            <ul>
-              <li>初学</li>
-              <li>略懂</li>
-              <li>良好</li>
-              <li>熟练</li>
-              <li>精通</li>
-            </ul>
+          <ul class="custom-radio mb-1">
+            <li> 
+              <label> 
+                <span class="icon icomoon icon-checkmark round yellow"></span> 
+                <input type="radio" name="level" value="low"> 男生
+              </label>  
+            </li>
+            <li> 
+              <label> 
+                <span class="icon icomoon icon-checkmark round yellow"></span> 
+                <input type="radio" name="level" value="middle"> 女生
+              </label>  
+            </li>
+          </ul>
+          <div class="group-input">
+            <input type="text" placeholder="姓名">
+            <input type="text" placeholder="城市">
           </div>
+          <h5 class="mb-05">自我介绍</h5>
+          <textarea placeholder="技能银行的基础是真实的人际关系和互相的信任，你的自我介绍能帮助别人更好地了解你。" rows="5"></textarea>
         </div>
       </form>
 

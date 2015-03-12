@@ -1,0 +1,48 @@
+.setting-fans-page {
+  .list {
+    margin: 10px; 
+    li {
+      border-radius: 5px;
+      overflow: hidden;
+      background: #fff;
+      margin-bottom: 10px;
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left {
+
+        a {
+          display: flex;
+          align-items: center;
+          color: $darkGrey;
+          font-size: 15px;
+          img {
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+      .right {
+        float: right;
+        .btn {
+          padding: 8px 1em;
+          &.btn-grey {
+            background: #fff;
+            &:before {
+              content: '取关';
+              color: $lighterOlive;
+            }
+          }
+          &.btn-olive {
+            border: none;
+            &:before{
+              content: '关注';
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

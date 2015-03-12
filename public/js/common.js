@@ -71,6 +71,7 @@ var checkPage = function(){
   privateMsgForm();
   reservationForm();
   followMember();
+  customRadio();
 
   bindCloseEventToModal();
 
@@ -157,6 +158,13 @@ var checkPage = function(){
   if( $('.add-course-page').length ) {
 
   }
+  
+  // add course page
+  if( $('.add-course-page.step-2').length ) {
+    
+  } 
+
+  
 
 
 };
@@ -423,20 +431,22 @@ function commentForm(){
 
 function followMember(){
   if( !$('.follow').length ) return;
-  $('.follow')[0].on('click', function(event){
-    event.preventDefault();
-    var self = this;
-    var isFollow = self.classList.contains( 'btn-olive' );
-    var data = {
-      MemberId: 1,
-      FollowingId: 7,
-      IsFollow: isFollow
-    };
-      self.classList[ isFollow ? 'add' : 'remove' ]('btn-grey');
-      self.classList[ !isFollow ? 'add' : 'remove' ]('btn-olive');
-    // post(ENV.host + '/api/followmember', data, function(fb){
-    // });
+  [].forEach.call($('.follow'), function(el) {
+    el.on('click', function(event){
+      event.preventDefault();
+      var self = this;
+      var isFollow = self.classList.contains( 'btn-olive' );
+      var data = {
+        MemberId: 1,
+        FollowingId: 7,
+        IsFollow: isFollow
+      };
+        self.classList[ isFollow ? 'add' : 'remove' ]('btn-grey');
+        self.classList[ !isFollow ? 'add' : 'remove' ]('btn-olive');
+      // post(ENV.host + '/api/followmember', data, function(fb){
+      // });
 
+    })
   })
 }
 
@@ -448,6 +458,16 @@ function showRangeVal( el ){
       left: val + '%',
       marginLeft: -val*30*0.01 + 'px'
     })
+}
+
+function customRadio(){
+  $('.custom-radio input[type=radio][name=level]').on('change', function(){
+    var $icon = this.parentNode.querySelector('.icon');
+    [].forEach.call($('.custom-radio .icon'), function(el) {
+      el.classList.remove('selected');
+    })
+    $icon.classList.add('selected');
+  })
 }
 
 
