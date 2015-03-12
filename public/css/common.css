@@ -335,7 +335,7 @@ body > .bar-nav {
 
 .statistic {
   background: #fff;
-  padding: .5em 0;
+  padding: .9em 0 0.2em;
   border-bottom: 1px solid #ddd; }
   .statistic table {
     margin: 0; }
@@ -345,8 +345,14 @@ body > .bar-nav {
     .statistic table th {
       font-size: 15px; }
     .statistic table td {
-      font-size: 12px;
-      color: #999; }
+      font-size: 12px; }
+      .statistic table td h6 {
+        font-weight: bold;
+        margin: 0;
+        font-size: 15px;
+        color: #666; }
+      .statistic table td a {
+        color: #A6AFB2; }
 
 input.input-alarm, textarea.input-alarm {
   border: 1px solid #F76033; }

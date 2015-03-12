@@ -75,6 +75,10 @@ var checkPage = function(){
 
   bindCloseEventToModal();
 
+  jQuery('body').on('click', function(e){
+    console.log(e)
+  })
+
 
   // course search
   if( document.getElementById('course-search') ){
