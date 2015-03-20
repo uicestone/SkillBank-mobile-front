@@ -72,13 +72,7 @@ var checkPage = function(){
   reservationForm();
   followMember();
   customRadio();
-
   bindCloseEventToModal();
-
-  jQuery('body').on('click', function(e){
-    console.log(e)
-  })
-
 
   // course search
   if( document.getElementById('course-search') ){
@@ -165,7 +159,8 @@ var checkPage = function(){
   
   // add course page
   if( $('.add-course-page.step-2').length ) {
-    
+    limitedText();
+    checkAllFillIn();
   } 
 
   
@@ -472,6 +467,39 @@ function customRadio(){
     })
     $icon.classList.add('selected');
   })
+}
+
+function limitedText(){
+  var $textarea = $('.limitedText textarea')[0];
+  var $num = $('.limitedText .warning span')[0];
+  var $nextBtn = $('.main .next')[0];
+  var changeNum = function(){
+    var len = this.value.length
+    if(len < 100){
+      $num.innerHTML = 100 - len;
+    } else{
+      $num.innerHTML = 0;
+    }
+  }
+  $textarea.on('change', changeNum);
+  $textarea.on('keyup', changeNum);
+}
+
+function checkAllFillIn(){
+  var $form = $('form')[0];
+  var $nextBtn = $('.main .next')[0];
+  var $LimitedTextarea = $('.limitedText textarea')[0];
+  var checkInputs = function(){
+    var ifAllFillIn = $form.level.value && 
+                      $form.courseName.value && 
+                      $form.highlight.value &&
+                      $form.intro.value.length >= 100 ? true : false;
+    $nextBtn.classList[ifAllFillIn ? 'remove' : 'add']('disabled');
+  }
+  $('.custom-radio input[name=level]').on('change', checkInputs);
+  $('input[name=courseName]').on('change', checkInputs);
+  $('textarea[name=highlight]').on('change', checkInputs);
+  $('textarea[name=intro]').on('change', checkInputs);
 }
 
 

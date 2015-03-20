@@ -45,8 +45,8 @@
       <div class="steps mb-2">
         <div class="main">
           <span><a href="index.html" class="btn btn-transparent">上一步</a></span>
-          <span class="step-name">第2/3步</span>
-          <span align="right"><a class="btn btn-transparent disabled"> 下一步 </a></span>
+          <span class="step-name center-title">第2/3步</span>
+          <span align="right"><a class="btn btn-transparent disabled next"> 下一步 </a></span>
         </div>
         <ul class="process-bar">
           <li class="yellow"></li>
@@ -55,7 +55,7 @@
         </ul>
       </div>
       <form>
-        <div class="inner">
+        <div class="inner must-fill-in">
           <h3 align="center" class="olive mb-1">课程介绍</h3>
           <h5 class="mb-05">课程水平要求</h5>
           <ul class="custom-radio mb-1">
@@ -78,11 +78,14 @@
               </label>  
             </li>
           </ul>
-          <input type="text" placeholder="课程名称" class="mb-2">
+          <input type="text" placeholder="课程名称" name="courseName" class="">
           <h5 class="mb-05">课程介绍</h5>
-          <textarea placeholder="具体课程内容有什么？需要上几节课？需要学生有一定基础吗？不少于100字" rows="5"></textarea>
+          <div class="limitedText">
+            <textarea placeholder="具体课程内容有什么？需要上几节课？需要学生有一定基础吗？不少于100字" rows="5" name="intro"></textarea>
+            <p class="warning" align="right"><small>还差<span>100</span>字</small></p>
+          </div>
           <h5 class="mb-05">你的闪光点</h5>
-          <textarea placeholder="你的优势和吸引别人的理由是什么？"></textarea>
+          <textarea placeholder="你的优势和吸引别人的理由是什么？" name="highlight"></textarea>
         </div>
         <div id="extra">
           <div class="inner">
