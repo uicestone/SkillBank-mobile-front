@@ -113,8 +113,9 @@ ol, ul {
   padding: 0;
 }
 .btn-olive {
-  background: $lightOlive;
+  background: $olive;
   color: #fff;
+  border: none;
   &:active {
     color: #fff;
   }

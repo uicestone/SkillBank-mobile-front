@@ -13,6 +13,10 @@
 }
 
 .setting-page {
+  .page-title {
+    font-size: 20px;
+    color: #4d4d4d;
+  }
   header {
     .main {
       display: flex;
@@ -33,9 +37,18 @@
   }
   .info {
     background: $yellow;
-    padding: 10px;
+    height: 110px;
+    padding: 12px;
     .avatar {
       margin: 0 1em 0 0;
+    }
+    h3 {
+      font-size: 20px;
+      margin: 7px 0 0;
+      color: #4d4d4d;
+    }
+    p {
+      margin: 0;
     }
   }
   h5 {
@@ -55,9 +68,10 @@
     }
   }
   .coins {
-    display: table;
+    margin-top: 25px;
+    margin-bottom: 20px;
     td {
-      padding: 10px 1em;
+      padding: 11px 14px 8px;
       h1, h6, p {
         margin: 0;
       }
@@ -67,6 +81,7 @@
         color: $olive;
         h1 {
           font-size: 60px;
+          line-height: 50px;
         }
         span {
           white-space: nowrap;
@@ -78,7 +93,7 @@
         h6 {
           font-size: 13px;
           line-height: 16px;
-          margin-bottom: 1em;
+          margin-bottom: 0.7em;
         }
         p {
           font-size: 11px;

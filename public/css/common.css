@@ -24,7 +24,7 @@
   color: #fff; }
 
 .olive {
-  color: #116f8f; }
+  color: #126f8f; }
 
 .lightOlive {
   color: #4f8da5; }
@@ -165,8 +165,9 @@ ol, ul {
   padding: 0; }
 
 .btn-olive {
-  background: #4f8da5;
-  color: #fff; }
+  background: #126f8f;
+  color: #fff;
+  border: none; }
   .btn-olive:active {
     color: #fff; }
 
@@ -197,13 +198,13 @@ ol, ul {
 .flag-num {
   position: relative;
   display: inline-block;
-  color: #116f8f; }
+  color: #126f8f; }
   .flag-num .badge {
     position: absolute;
     top: -8px;
     right: -18px; }
   .flag-num a {
-    color: #116f8f; }
+    color: #126f8f; }
 
 body > .bar-nav {
   background: transparent; }
@@ -294,7 +295,7 @@ body > .bar-nav {
     border-radius: 50%; }
     #bullets ul li.active {
       border: none;
-      background: #116f8f; }
+      background: #126f8f; }
 
 .search-bar {
   background: #0f2e3e;
@@ -393,7 +394,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background: #116f8f;
+  background: #126f8f;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -14px;
@@ -432,6 +433,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   .modal#getCoins .slider {
     background: none;
     text-align: center; }
+  .modal#phone .content-inner {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
 
 nav .segmented-control .control-item, nav .segmented-control-no-js .control-item {
   padding: 10px 0;
@@ -508,7 +513,7 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
   width: 2em;
   height: 2em;
   padding: 0.5em;
-  background: #116f8f;
+  background: #126f8f;
   color: #fff;
   border-radius: 50%; }
 
@@ -752,7 +757,8 @@ nav.bar.bar-tab .tab-item {
     #personal-page.content .info h3 {
       font-size: 20px;
       font-weight: normal;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      color: #4d4d4d; }
     #personal-page.content .info .btn-set .btn {
       width: 125px;
       margin: 0 3px; }
@@ -1236,11 +1242,13 @@ nav.bar.bar-tab .tab-item {
           width: 3em;
           height: 3em; }
       .teaching-list .teaching .inner .profile .name {
-        width: 45%;
-        color: #116f8f;
+        width: 47%;
+        color: #126f8f;
         font-size: 15px; }
+        .teaching-list .teaching .inner .profile .name a {
+          color: #126f8f; }
       .teaching-list .teaching .inner .profile .approval {
-        width: 35%;
+        width: 33%;
         text-align: right; }
       .teaching-list .teaching .inner .profile small {
         font-size: 11px;
@@ -1260,7 +1268,7 @@ nav.bar.bar-tab .tab-item {
       font-size: 15px;
       color: #666; }
       .teaching-list .teaching .inner .course-info .olive {
-        color: #116f8f; }
+        color: #126f8f; }
     .teaching-list .teaching .inner .btn-set {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1277,7 +1285,7 @@ nav.bar.bar-tab .tab-item {
         padding: 5px 2.5em; }
   .teaching-list .teaching .foot-bar {
     display: block;
-    background: #116f8f;
+    background: #126f8f;
     text-align: center;
     color: #fff;
     line-height: 2.5em;
@@ -1309,6 +1317,8 @@ nav.bar.bar-tab .tab-item {
 #message-page.content .red-dot {
   margin-left: 16px; }
 
+.add-course-page .btn-olive {
+  background: #126f8f; }
 .add-course-page form .inner {
   margin: 10px 20px; }
   .add-course-page form .inner h3 {
@@ -1324,7 +1334,7 @@ nav.bar.bar-tab .tab-item {
       top: 5px;
       width: 30px;
       height: 30px;
-      background: #116f8f;
+      background: #126f8f;
       border-radius: 50%;
       line-height: 30px;
       text-align: center;
@@ -1428,6 +1438,8 @@ nav.bar.bar-tab .tab-item {
           justify-content: space-between; }
   .add-course-page.step-private .group-input input {
     width: 48%; }
+.add-course-page.step-private h5 {
+  margin-top: 5px; }
 
 body > .content > header {
   display: -webkit-flex;
@@ -1544,7 +1556,7 @@ body > .content > header {
           border-color: #A6AFB2;
           color: #eaeaea; }
           .custom-radio li label .icon.round.selected {
-            background: #116f8f;
+            background: #126f8f;
             color: #fff; }
       .custom-radio li label input {
         width: 0;
@@ -1565,6 +1577,9 @@ body > .content > header {
     font-size: 12px;
     color: #999; }
 
+.setting-page .page-title {
+  font-size: 20px;
+  color: #4d4d4d; }
 .setting-page header .main {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1588,9 +1603,16 @@ body > .content > header {
     border-width: 2px; }
 .setting-page .info {
   background: #FFD048;
-  padding: 10px; }
+  height: 110px;
+  padding: 12px; }
   .setting-page .info .avatar {
     margin: 0 1em 0 0; }
+  .setting-page .info h3 {
+    font-size: 20px;
+    margin: 7px 0 0;
+    color: #4d4d4d; }
+  .setting-page .info p {
+    margin: 0; }
 .setting-page h5 {
   margin: 0 10px;
   font-size: 15px;
@@ -1604,17 +1626,19 @@ body > .content > header {
     color: #A6AFB2;
     line-height: 16px; }
 .setting-page .coins {
-  display: table; }
+  margin-top: 25px;
+  margin-bottom: 20px; }
   .setting-page .coins td {
-    padding: 10px 1em; }
+    padding: 11px 14px 8px; }
     .setting-page .coins td h1, .setting-page .coins td h6, .setting-page .coins td p {
       margin: 0; }
     .setting-page .coins td:first-child {
       text-align: center;
       border-right: 1px solid #ddd;
-      color: #116f8f; }
+      color: #126f8f; }
       .setting-page .coins td:first-child h1 {
-        font-size: 60px; }
+        font-size: 60px;
+        line-height: 50px; }
       .setting-page .coins td:first-child span {
         white-space: nowrap;
         font-size: 12px;
@@ -1622,7 +1646,7 @@ body > .content > header {
     .setting-page .coins td:last-child h6 {
       font-size: 13px;
       line-height: 16px;
-      margin-bottom: 1em; }
+      margin-bottom: 0.7em; }
     .setting-page .coins td:last-child p {
       font-size: 11px;
       color: #A6AFB2;
@@ -1647,7 +1671,7 @@ body > .content > header {
       .setting-favorites-page .list li a .right .course-name {
         font-size: 15px;
         line-height: 1.2em;
-        color: #116f8f;
+        color: #126f8f;
         margin: 0; }
       .setting-favorites-page .list li a .right span {
         font-size: 12px;
@@ -1657,6 +1681,7 @@ body > .content > header {
   margin: 10px; }
   .setting-fans-page .list li {
     border-radius: 5px;
+    border: 1px solid #ccc;
     overflow: hidden;
     background: #fff;
     margin-bottom: 10px;
@@ -1681,16 +1706,17 @@ body > .content > header {
       font-size: 15px; }
       .setting-fans-page .list li .left a img {
         width: 35px;
-        height: 35px; }
+        height: 35px;
+        margin-right: 5px; }
     .setting-fans-page .list li .right {
       float: right; }
       .setting-fans-page .list li .right .btn {
         padding: 8px 1em; }
         .setting-fans-page .list li .right .btn.btn-grey {
-          background: #fff; }
+          background: #ccc; }
           .setting-fans-page .list li .right .btn.btn-grey:before {
             content: '取关';
-            color: #A6AFB2; }
+            color: #fff; }
         .setting-fans-page .list li .right .btn.btn-olive {
           border: none; }
           .setting-fans-page .list li .right .btn.btn-olive:before {

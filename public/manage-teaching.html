@@ -6,6 +6,7 @@
 
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
 
     <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,11 +53,21 @@
         </div>
       </nav>
       <div class="teaching-list">
-        <div class="teaching card">
+        <input type="file" name="file" />
+        <div class="teaching card" 
+          data-name="Jason WuHAHA"
+          data-nickname="Jason"
+          data-avatar="images/avatar.png"
+          data-location="6km . 上海"
+          data-date="2015.3.12"
+          data-date-oral="一天前"
+          data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
+          data-course="英语口语练习课"
+          data-phone="13923982234">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
-              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="name"><a href="#">学生：Jason Wu </a><br> <small>6km . 上海</small></div>
               <div class="approval">
                 <span class="btn-tag orange">订课请求</span><br><small>一天前</small>
               </div>
@@ -70,17 +81,17 @@
               订课日期：2015.3.12
             </div>
             <div class="btn-set mb-1">
-              <a class="btn">拒绝订课</a>
+              <a class="btn confirm confirm-refuse-reserve">拒绝订课</a>
               <a class="btn">私信对方</a>
             </div>
           </div>
-          <a class="foot-bar">接受预定 </a>
+          <a href="#contact" class="foot-bar">接受预定 </a>
         </div>
         <div class="teaching card">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
-              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="name"><a href="#">学生：Jason Wu </a> <br> <small>6km . 上海</small></div>
               <div class="approval">
                 <span class="btn-tag green">接受订课</span><br><small>一天前</small>
               </div>
@@ -95,7 +106,7 @@
               <span class="olive">联系信息：Jason 13923982234</span>
             </div>
             <div class="btn-set mb-1">
-              <a class="btn">电话对方</a>
+              <a href="#phone" class="btn">电话对方</a>
               <a class="btn">私信对方</a>
             </div>
           </div>
@@ -104,7 +115,7 @@
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
-              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="name"><a href="#">学生：Jason Wu </a> <br> <small>6km . 上海</small></div>
               <div class="approval">
                 <span class="btn-tag yellow">授完待评</span><br><small>一天前</small>
               </div>
@@ -119,7 +130,7 @@
               <span class="">联系信息：Jason 13923982234</span>
             </div>
             <div class="btn-set mb-1">
-              <a class="btn">电话对方</a>
+              <a href="#phone" class="btn">电话对方</a>
               <a class="btn">私信对方</a>
             </div>
           </div>
@@ -129,7 +140,7 @@
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
-              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="name"><a href="#">学生：Jason Wu </a> <br> <small>6km . 上海</small></div>
               <div class="approval">
                 <span class="btn-tag orange">接受订课</span><br><small>一天前</small>
               </div>
@@ -154,7 +165,7 @@
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
-              <div class="name">学生：Jason Wu <br> <small>6km . 上海</small></div>
+              <div class="name"><a href="#">学生：Jason Wu </a> <br> <small>6km . 上海</small></div>
               <div class="approval">
                 <span class="btn-tag grey">授课结束</span><br><small>一天前</small>
               </div>
@@ -168,6 +179,100 @@
         </div>
       </div>
 
+      <div id="phone" class="modal">
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <form>
+                <a href="tel:18692806388" class="btn btn-primary btn-block">打电话给对方</a>
+                <a href="sms:18692806388" class="btn btn-primary btn-block">发短消息</a>
+                <a href="#phone" class="btn btn-block">取消</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="modal">
+        <header class="bar bar-nav">
+          <a class="icon icon-close pull-right grey" href="#contact"></a>
+          <h1 class="title">确认联系信息</h1>
+        </header>
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <form>
+                <input type="text" placeholder="姓名">
+                <input type="tel" placeholder="手机">
+                <a href="#" class="btn btn-primary btn-block accept-reserve">接受预定</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/template" id="teaching-disabled-tpl">
+        <div class="teaching card disabled">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="<%- person.avatar %>" alt="" class="avatar"> </a>
+              <div class="name"><a href="#">学生：<%- person.name %> </a> <br> <small><%- person.location %></small></div>
+              <div class="approval">
+                <span class="btn-tag grey">授课结束</span><br><small><%- person.dateOral %></small>
+              </div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：<%- person.course %> <br>
+              订课日期：<%- person.date %> <br>
+              联系信息：<%- person.nickname %> <%- person.phone %>
+            </div>
+          </div>
+        </div>
+      </script>
+
+      <script type="text/template" id="teaching-accepted-tpl">
+        <div class="teaching card disabled">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="<%- person.avatar %>" alt="" class="avatar"> </a>
+              <div class="name"><a href="#">学生：<%- person.name %> </a> <br> <small><%- person.location %></small></div>
+              <div class="approval">
+                <span class="btn-tag grey">授课结束</span><br><small><%- person.dateOral %></small>
+              </div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：<%- person.course %> <br>
+              订课日期：<%- person.date %> <br>
+              联系信息：<%- person.nickname %> <%- person.phone %>
+            </div>
+          </div>
+        </div>
+
+        <div class="teaching card">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="<%- person.avatar %>" alt="" class="avatar"> </a>
+              <div class="name"><a href="#">学生：<%- person.name %> </a> <br> <small><%- person.location %></small></div>
+              <div class="approval">
+                <span class="btn-tag green">接受订课</span><br><small><%- person.dateOral %></small>
+              </div>
+            </div>
+            <div class="popover-chat bottom mb-1">
+              <div class="arrow"></div>
+              <div class="main"><%- person.message %></div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：<%- person.course %> <br>
+              订课日期：<%- person.date %> <br>
+              <span class="olive">联系信息：<%- person.nickname %> <%- person.phone %></span>
+            </div>
+            <div class="btn-set mb-1">
+              <a href="#phone" class="btn">电话对方</a>
+              <a class="btn">私信对方</a>
+            </div>
+          </div>
+        </div>
+      </script>
 
     </div>
     <script src="bower_components/ratchet/dist/js/ratchet.js"></script>

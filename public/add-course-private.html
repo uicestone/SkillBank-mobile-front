@@ -53,8 +53,6 @@
         </div>
         <ul class="process-bar">
           <li class="yellow"></li>
-          <li class="yellow"></li>
-          <li class="yellow"></li>
         </ul>
       </div>
       <form>
@@ -67,22 +65,23 @@
             <li> 
               <label> 
                 <span class="icon icomoon icon-checkmark round yellow"></span> 
-                <input type="radio" name="level" value="low"> 男生
+                <input type="radio" name="sex" value="female"> 女生
               </label>  
             </li>
             <li> 
               <label> 
                 <span class="icon icomoon icon-checkmark round yellow"></span> 
-                <input type="radio" name="level" value="middle"> 女生
+                <input type="radio" name="sex" value="male"> 男生
               </label>  
             </li>
+            <li></li>
           </ul>
           <div class="group-input">
-            <input type="text" placeholder="姓名">
-            <input type="text" placeholder="城市">
+            <input type="text" placeholder="姓名" name="realname">
+            <input type="text" placeholder="城市" name="city">
           </div>
           <h5 class="mb-05">自我介绍</h5>
-          <textarea placeholder="技能银行的基础是真实的人际关系和互相的信任，你的自我介绍能帮助别人更好地了解你。" rows="5"></textarea>
+          <textarea placeholder="技能银行的基础是真实的人际关系和互相的信任，你的自我介绍能帮助别人更好地了解你。" rows="5" name="introSelf"></textarea>
         </div>
       </form>
 

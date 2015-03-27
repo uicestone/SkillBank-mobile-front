@@ -1,4 +1,9 @@
 .add-course-page {
+  .btn-olive {
+    background: $olive;
+  }
+
+
   form {
     .inner {
       margin: 10px 20px;
@@ -147,6 +152,9 @@
       input {
         width: 48%;
       }
+    }
+    h5 {
+      margin-top: 5px;
     }
   }
 }

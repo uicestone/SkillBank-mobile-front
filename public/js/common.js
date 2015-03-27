@@ -17,6 +17,20 @@ NodeList.prototype.on = function (event, fn) {
   return this;
 };
 
+function closestParent( el, selector ){
+  if(el.matches){
+    while( !el.matches(selector) ){
+      el = el.parentNode;
+    }
+  } else{
+    var className = selector.slice(1);
+    while( !el.classList.contains(className) ){
+      el = el.parentNode;
+    }
+  }
+  return el
+}
+
 // ajax
 function request(type, url, opts, callback) {
   var xhr = new XMLHttpRequest();
@@ -157,10 +171,30 @@ var checkPage = function(){
 
   }
   
-  // add course page
+  // add course page 2
   if( $('.add-course-page.step-2').length ) {
     limitedText();
     checkAllFillIn();
+  } 
+  
+  // add course page 3
+  if( $('.add-course-page.step-3').length ) {
+    chooseImage();
+  } 
+  
+  // add course page private
+  if( $('.add-course-page.step-private').length ) {
+    checkAllFillInPrivate();
+  } 
+
+  // course manage 
+  if( $('.courses-manage-page').length ) {
+    confirmManage();
+
+    $('#contact.modal .accept-reserve').on('click', function(){
+      $('#contact')[0].classList.remove('active');
+      toAcceptedState(this);
+    })
   } 
 
   
@@ -460,7 +494,7 @@ function showRangeVal( el ){
 }
 
 function customRadio(){
-  $('.custom-radio input[type=radio][name=level]').on('change', function(){
+  $('.custom-radio input[type=radio]').on('change', function(){
     var $icon = this.parentNode.querySelector('.icon');
     [].forEach.call($('.custom-radio .icon'), function(el) {
       el.classList.remove('selected');
@@ -488,7 +522,6 @@ function limitedText(){
 function checkAllFillIn(){
   var $form = $('form')[0];
   var $nextBtn = $('.main .next')[0];
-  var $LimitedTextarea = $('.limitedText textarea')[0];
   var checkInputs = function(){
     var ifAllFillIn = $form.level.value && 
                       $form.courseName.value && 
@@ -500,6 +533,94 @@ function checkAllFillIn(){
   $('input[name=courseName]').on('change', checkInputs);
   $('textarea[name=highlight]').on('change', checkInputs);
   $('textarea[name=intro]').on('change', checkInputs);
+}
+
+function chooseImage(){
+  wx.config({
+      debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+      appId: '23123123123', // 必填，公众号的唯一标识
+      timestamp: new Date(), // 必填，生成签名的时间戳
+      nonceStr: 'f23r23rf23r23r2r332r2', // 必填，生成签名的随机串
+      signature: '123123123123123',// 必填，签名，见附录1
+      jsApiList: ['checkJsApi','onMenuShareTimeline', 'onMenuShareAppMessage', 'chooseImage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+  });
+
+  wx.ready(function(){
+    var $box = $('.course')[0];
+
+    wx.chooseImage({
+      success: function (res) {
+        alert('success')
+        var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+      }
+    });
+
+    $box.on('click', function(){
+      $('.step-name')[0].style.display = 'none';
+      [].forEach.call($('.right .btn'), function(el) {
+        el.classList.remove('disabled');
+      });
+      $('.right .btn')[1].classList.add('border-none');
+      $('.right .btn')[1].classList.add('btn-olive');
+      $('h3')[0].innerHTML = '内容已填完并被保存';
+      $('.cover-holder')[0].innerHTML = '<img src="images/e.jpeg" class="cover">';
+    })
+
+    
+
+
+  })
+}
+
+function checkAllFillInPrivate(){
+  var $form = $('form')[0];
+  var $btn1 = $('.main .right .btn')[0];
+  var $btn2 = $('.main .right .btn')[1];
+  var checkInputs = function(){
+    var ifAllFillIn = $form.sex.value && 
+                      $form.realname.value && 
+                      $form.city.value &&
+                      $form.introSelf.value ? true : false;
+    $btn1.classList[ifAllFillIn ? 'remove' : 'add']('disabled');
+    $btn2.classList[ifAllFillIn ? 'remove' : 'add']('disabled');
+    $btn2.classList[ifAllFillIn ? 'add' : 'remove']('border-none');
+    $btn2.classList[ifAllFillIn ? 'add' : 'remove']('btn-olive');
+  };
+  [].forEach.call( $('.custom-radio input[type=radio], input[name=realname],' + 
+    'input[name=city], textarea[name=introSelf]'), 
+    function (el) {
+      el.on('change', checkInputs);
+      el.on('keyup', checkInputs);
+    }
+  );
+}
+
+function confirmManage(){
+  [].forEach.call( $('.confirm'), function (el) {
+    el.on('click', function(){
+      if( el.classList.contains('confirm-refuse-reserve') ){
+        if (window.confirm("拒绝订课?")) { 
+          toDidabledState(el);
+        }
+      } else if(el.classList.contains('content')){
+
+      }
+    })
+  });
+}
+
+function toDidabledState(el){
+  var $card = closestParent(el, '.card');
+  var  $disabled= $('#teaching-disabled-tpl')[0].innerHTML;
+  $disabled = _.template($disabled, {person: $card.dataset});
+  $card.outerHTML = $disabled;
+}
+
+function toAcceptedState(el){
+  var $card = closestParent(el, '.card');
+  var  $disabled= $('#teaching-disabled-tpl')[0].innerHTML;
+  $disabled = _.template($disabled, {person: $card.dataset});
+  $card.outerHTML = $disabled;
 }
 
 

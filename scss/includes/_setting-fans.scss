@@ -3,6 +3,7 @@
     margin: 10px; 
     li {
       border-radius: 5px;
+      border: 1px solid $lightGrey;
       overflow: hidden;
       background: #fff;
       margin-bottom: 10px;
@@ -20,6 +21,7 @@
           img {
             width: 35px;
             height: 35px;
+            margin-right: 5px;
           }
         }
       }
@@ -28,10 +30,10 @@
         .btn {
           padding: 8px 1em;
           &.btn-grey {
-            background: #fff;
+            background: $lightGrey;
             &:before {
               content: '取关';
-              color: $lighterOlive;
+              color: #fff;
             }
           }
           &.btn-olive {

@@ -45,6 +45,13 @@
       text-align: center;
     }
   }
+  &#phone {
+    .content-inner {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
 }
 
 
@@ -457,6 +464,7 @@ nav.bar.bar-tab {
       font-size: 20px;
       font-weight: normal;
       margin-bottom: 0;
+      color: #4d4d4d;
     }
     small {
     }
@@ -1089,12 +1097,15 @@ nav.bar.bar-tab {
           }
         }
         .name {
-          width: 45%;
+          width: 47%;
           color: $olive;
           font-size: 15px;
+          a {
+            color: $olive;
+          }
         }
         .approval {
-          width: 35%;
+          width: 33%;
           text-align: right;
         }
         small {
