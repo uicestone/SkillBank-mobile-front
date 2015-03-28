@@ -576,7 +576,7 @@ function checkAllFillIn(){
   var $form = $('.step-2 form')[0];
   var $nextBtn = $('.step-2 .main .next')[0];
   var checkInputs = function(){
-    var ifAllFillIn = $form.level.value && 
+    var ifAllFillIn = $('input[type="radio"]:checked').length && 
                       $form.courseName.value && 
                       $form.highlight.value &&
                       $form.intro.value.length >= 100 ? true : false;
