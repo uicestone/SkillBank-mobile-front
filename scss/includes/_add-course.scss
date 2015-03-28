@@ -1,6 +1,10 @@
 .add-course-page {
+  display: none;
   .btn-olive {
     background: $olive;
+  }
+  &.active {
+    display: block;
   }
 
 

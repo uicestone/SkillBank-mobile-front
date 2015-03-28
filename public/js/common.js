@@ -168,7 +168,7 @@ var checkPage = function(){
 
   // add course page
   if( $('.add-course-page').length ) {
-
+    addCourse();
   }
   
   // add course page 2
@@ -224,7 +224,24 @@ var checkPage = function(){
 // start here
 checkPage();
 window.addEventListener('push', checkPage);
-
+function addCourse(){
+  page.base('/add-course');
+  page('/:stepName', load)
+  page('*', check)
+  page();
+  function check(ctx){
+    if(ctx.state.path == '/add-course.html') {
+      ctx.params.stepName = 1; 
+      load(ctx);
+    }
+  }
+  function load(ctx){
+    console.log('load')
+    if(ctx.state.path == '/add-course.html') {ctx.params.stepName = 1; }
+    $('.content.active')[0].classList.remove('active');
+    $('.content.step-' + ctx.params.stepName)[0].classList.add('active');
+  }
+}
 function switchCourseCat(){
   // page('*', parse)
   page('/by:by/type:type', load)
@@ -263,14 +280,6 @@ function switchCourseCat(){
       getCourses(url, ctx);
     }
   }
-
-  
-
-  // search cat
-  $('#search-cat a').on('click', function(){
-    
-
-  });
 }
 
 function getCourses(url, ctx){
@@ -564,8 +573,8 @@ function limitedText(){
 }
 
 function checkAllFillIn(){
-  var $form = $('form')[0];
-  var $nextBtn = $('.main .next')[0];
+  var $form = $('.step-2 form')[0];
+  var $nextBtn = $('.step-2 .main .next')[0];
   var checkInputs = function(){
     var ifAllFillIn = $form.level.value && 
                       $form.courseName.value && 

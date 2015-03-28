@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Class</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="icomoon/style.css" rel="stylesheet">
+    <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+    <link href="css/common.css?v=1" rel="stylesheet">
+
+    
+
+  </head>
+  <body>
+
+    
+    <nav class="bar bar-tab">
+      <a class="tab-item active"  href="#" data-transition="slide-in">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">发现</span>
+      </a>
+      <a class="tab-item " href="message.html" data-transition="slide-in">
+        <span class="icon icomoon icon-comment2"></span>
+        <span class="tab-label">消息</span>
+      </a>
+      <a class="tab-item" href="course.html" data-transition="slide-in" data-ignore="pushY">
+        <span class="icon icomoon icon-text"></span>
+        <span class="tab-label">课程</span>
+      </a>
+      <a class="tab-item" href="personal.html" data-transition="slide-in">
+        <span class="icon icomoon icon-user"></span>
+        <span class="tab-label">个人</span>
+      </a>
+    </nav>
+
+    <div class="add-course-page step-1 content active">
+      <div class="steps mb-2">
+        <div class="main">
+          <a href="index.html" class="icon icomoon icon-arrow-left grey"></a>
+          <span class="step-name center-title">第1/3步</span>
+          <span align="right">
+            <a href="/add-course/2" class="btn btn-transparent" >下一步</a>
+          </span>
+        </div>
+        <ul class="process-bar">
+          <li class="yellow"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <form>
+        <div class="inner">
+          <h3 align="center" class="olive mb-1">基本描述</h3>
+          <input type="text" placeholder="你所在的城市" style="margin-bottom: 25px;">
+          <input type="text" placeholder="选择一项技能" style="margin-bottom: 5px;">
+          <input type="text" placeholder="选择细分类别">
+          <h5 class="mb-0">你的技能水平</h5>
+          <div class="select-lever">
+            <div class="wrapper">
+              <ul class="vertical-lines">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <input type="range" min="0" max="100" step="1" onchange="showRangeVal(this)">
+              <span class="num" style="left: 50%; margin-left: -15px;">50</span>
+            </div>
+            <ul class="levers">
+              <li>初学</li>
+              <li>略懂</li>
+              <li>良好</li>
+              <li>熟练</li>
+              <li>精通</li>
+            </ul>
+          </div>
+          <h5 class="mb-0">你的教学水平</h5>
+          <div class="select-lever">
+            <div class="wrapper">
+              <ul class="vertical-lines">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <input type="range" min="0" max="100" step="1" onchange="showRangeVal(this)">
+              <span class="num" style="left: 50%; margin-left: -15px;">50</span>
+            </div>
+            <ul class="levers">
+              <li>初学</li>
+              <li>略懂</li>
+              <li>良好</li>
+              <li>熟练</li>
+              <li>精通</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="add-course-page step-2 content">
+      <div class="steps mb-2">
+        <div class="main">
+          <span class="step-name center-title">第2/3步</span>
+          <span><a href="/add-course/1" class="btn btn-transparent">上一步</a></span>
+          <span align="right"><a href="/add-course/3" class="btn btn-transparent disabled next"> 下一步 </a></span>
+        </div>
+        <ul class="process-bar">
+          <li class="yellow"></li>
+          <li class="yellow"></li>
+          <li></li>
+        </ul>
+      </div>
+      <form>
+        <div class="inner must-fill-in">
+          <h3 align="center" class="olive mb-1">课程介绍</h3>
+          <h5 class="mb-05">课程水平要求</h5>
+          <ul class="custom-radio mb-1">
+            <li> 
+              <label> 
+                <span class="icon icomoon icon-checkmark round yellow"></span> 
+                <input type="radio" name="level" value="low"> 基本
+              </label>  
+            </li>
+            <li> 
+              <label> 
+                <span class="icon icomoon icon-checkmark round yellow"></span> 
+                <input type="radio" name="level" value="middle"> 中等
+              </label>  
+            </li>
+            <li> 
+              <label> 
+                <span class="icon icomoon icon-checkmark round yellow"></span> 
+                <input type="radio" name="level" value="hight"> 高阶
+              </label>  
+            </li>
+          </ul>
+          <input type="text" placeholder="课程名称" name="courseName" class="">
+          <h5 class="mb-05">课程介绍</h5>
+          <div class="limitedText">
+            <textarea placeholder="具体课程内容有什么？需要上几节课？需要学生有一定基础吗？不少于100字" rows="5" name="intro"></textarea>
+            <p class="warning" align="right"><small>还差<span>100</span>字</small></p>
+          </div>
+          <h5 class="mb-05">你的闪光点</h5>
+          <textarea placeholder="你的优势和吸引别人的理由是什么？" name="highlight"></textarea>
+        </div>
+        <div id="extra">
+          <div class="inner">
+            <div class="tl">
+              <h5 class="mb-1">补充信息</h5>
+              <small class="">非必填</small>
+            </div>
+            <input type="text" placeholder="一节课用时">
+            <textarea placeholder="上课地点"></textarea>
+            <textarea placeholder="能上课的时间"></textarea>
+            <textarea placeholder="课前须知"></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="add-course-page step-3 content">
+      <div class="steps mb-2">
+        <div class="main">
+          <span><a href="/add-course/2" class="btn btn-transparent">上一步</a></span>
+          <span class="step-name center-title">第3/3步</span>
+          <span class="right">
+          
+            <a href="#" class="btn btn-transparent disabled"> 预览 </a>
+            <a href="/add-course/success" class="btn disabled"> 发布 </a>
+          </span>
+        </div>
+        <ul class="process-bar">
+          <li class="yellow"></li>
+          <li class="yellow"></li>
+          <li class="yellow"></li>
+        </ul>
+      </div>
+
+      <form>
+        <div class="inner">
+          <h3 align="center" class="olive mb-1">添加封面</h3>
+          <div class="course-list">
+            <div class="course card">
+              <div class="title-bar u-full-width">
+                <a class="pull-left">魔方进阶教程</a>
+                <div class="pull-right">
+                  <a href="#" class="icon icomoon icon-comment">
+                  </a>
+                  <a href="#" class="icon icomoon icon-heart toggle-like" data-Member_Id="332">
+                  </a>
+                </div>
+              </div>
+              <a href="#" class="cover-holder"> </a>
+              <div class="info"> </div>
+              <a href="#" class="icon icomoon icon-camera round"></a>
+              <input type="file">
+            </div>        
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="add-course-page step-success content">
+      <header class="bar-nav mb-1">
+        <a href="index.html" class="icon icomoon icon-arrow-left pull-left grey"></a>
+        <h4>课程发布申请成功</h4>
+        <span></span>
+      </header>
+      <form>
+        <div class="inner">
+          <h4 align="center" class="olive mb-1">我们会在2天内告知你审核结果 <br>你可以在这里修改个人信息</h4>
+          <div class="course-list">
+            <div class="course card">
+              <div class="title-bar u-full-width">
+                <a class="pull-left">魔方进阶教程</a>
+                <div class="pull-right">
+                  <a href="#" class="icon icomoon icon-comment">
+                  </a>
+                  <a href="#" class="icon icomoon icon-heart toggle-like" data-Member_Id="332">
+                  </a>
+                </div>
+              </div>
+              <a href="#">
+                <img src="images/e.jpeg" alt="" class="cover">
+              </a>
+              <div class="info">
+                <a href="#">
+                  <img src="images/avatar.png" alt="" class="avatar">
+                  <a href="#" class="icon icomoon icon-pencil round yellow"> </a> 
+                </a>
+                <h4>Jason Wu</h4>
+                <p>64km 上海</p>
+              </div>
+            </div>       
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+
+    <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/page/page.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
