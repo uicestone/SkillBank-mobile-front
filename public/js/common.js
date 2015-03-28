@@ -226,11 +226,22 @@ checkPage();
 window.addEventListener('push', checkPage);
 
 function switchCourseCat(){
-  page('*', parse)
+  // page('*', parse)
+  page('/by:by/type:type', load)
   page();
+
+  function parse(ctx, next) {
+    ctx.query = qs.parse(location.search.slice(1));
+    load(ctx);
+  }
 
   function load(ctx){
     console.log(arguments);
+
+    // fix bug
+    if(location.href.slice(-1) == '#')return;
+    
+    ctx.query = ctx.params;
     var self = this;
     var geo_opts = {
         enableHighAccuracy: true, 
@@ -243,20 +254,17 @@ function switchCourseCat(){
       navigator.geolocation.getCurrentPosition(function (position) {
         var url = ENV.host + '/api/ClassList?' + 'by=' + ctx.query.by + '&type=' + ctx.query.type +
                   '&PosY=' + position.coords.latitude + '&PosX=' + position.coords.longitude;
-        getCourses(url);
+        getCourses(url, ctx);
       }, function(){
         console.log("Sorry, no position available.")
       }, geo_opts);
     } else if(ctx.query.by){
       var url = ENV.host + '/api/ClassList?' + 'by=' + ctx.query.by + '&type=' + ctx.query.type;
-      getCourses(url);
+      getCourses(url, ctx);
     }
   }
 
-  function parse(ctx, next) {
-    ctx.query = qs.parse(location.search.slice(1));
-    load(ctx);
-  }
+  
 
   // search cat
   $('#search-cat a').on('click', function(){
@@ -265,7 +273,7 @@ function switchCourseCat(){
   });
 }
 
-function getCourses(url){
+function getCourses(url, ctx){
   var $loading = $('.loading');
   var $cats = $('.search-cat-wrap a');
   $loading[0].style.display = 'block';
@@ -279,7 +287,7 @@ function getCourses(url){
       el.classList.remove('active');
     });
     var $active = _.find($cats, function($cat){
-      return location.search == $cat.getAttribute('href');
+      return ctx.state.path == $cat.getAttribute('href');
     });
     $active.classList.add('active');
     $loading[0].style.display = 'none';
