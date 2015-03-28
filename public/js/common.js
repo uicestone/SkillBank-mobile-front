@@ -612,7 +612,7 @@ function checkAllFillInPrivate(){
   var $btn1 = $('.main .right .btn')[0];
   var $btn2 = $('.main .right .btn')[1];
   var checkInputs = function(){
-    var ifAllFillIn = $form.sex.value && 
+    var ifAllFillIn = $('input[type="radio"]:checked').length && 
                       $form.realname.value && 
                       $form.city.value &&
                       $form.introSelf.value ? true : false;
