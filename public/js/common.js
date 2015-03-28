@@ -226,8 +226,11 @@ checkPage();
 window.addEventListener('push', checkPage);
 
 function switchCourseCat(){
-  // search cat
-  $('#search-cat a').on('click', function(){
+  page('*', parse)
+  page();
+
+  function load(ctx){
+    console.log(arguments);
     var self = this;
     var geo_opts = {
         enableHighAccuracy: true, 
@@ -236,24 +239,35 @@ function switchCourseCat(){
       };
 
     // nearby skill
-    if(this.dataset.by == 0){
+    if(ctx.query.by == 0){
       navigator.geolocation.getCurrentPosition(function (position) {
-        var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type +
+        var url = ENV.host + '/api/ClassList?' + 'by=' + ctx.query.by + '&type=' + ctx.query.type +
                   '&PosY=' + position.coords.latitude + '&PosX=' + position.coords.longitude;
-        getCourses(url, self);
+        getCourses(url);
       }, function(){
         console.log("Sorry, no position available.")
       }, geo_opts);
-    } else{
-      var url = ENV.host + '/api/ClassList?' + 'by=' + self.dataset.by + '&type=' + self.dataset.type;
-      getCourses(url, self);
+    } else if(ctx.query.by){
+      var url = ENV.host + '/api/ClassList?' + 'by=' + ctx.query.by + '&type=' + ctx.query.type;
+      getCourses(url);
     }
+  }
+
+  function parse(ctx, next) {
+    ctx.query = qs.parse(location.search.slice(1));
+    load(ctx);
+  }
+
+  // search cat
+  $('#search-cat a').on('click', function(){
+    
 
   });
 }
 
-function getCourses(url, el){
+function getCourses(url){
   var $loading = $('.loading');
+  var $cats = $('.search-cat-wrap a');
   $loading[0].style.display = 'block';
   get(url, function(fb){
     if( !_.isArray(fb) ) return;
@@ -261,10 +275,13 @@ function getCourses(url, el){
     var tpl = $('#course-tpl')[0].innerHTML;
     $('.course-list')[0].innerHTML = _.template(tpl, {courses: fb, imgHost: ENV.imgHost});
     // active tab
-    [].forEach.call($('.search-cat-wrap a'), function (el) {
+    [].forEach.call($cats, function (el) {
       el.classList.remove('active');
     });
-    el.classList.add('active');
+    var $active = _.find($cats, function($cat){
+      return location.search == $cat.getAttribute('href');
+    });
+    $active.classList.add('active');
     $loading[0].style.display = 'none';
   });
 }
