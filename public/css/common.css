@@ -371,6 +371,15 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #A6AFB2;
   font-size: 13px; }
 
+select {
+  height: 35px;
+  line-height: 35px;
+  box-shadow: none;
+  padding: 0 10px;
+  font-size: 13px;
+  background: #fff;
+  color: #A6AFB2; }
+
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;

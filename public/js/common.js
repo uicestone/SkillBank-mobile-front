@@ -169,6 +169,7 @@ var checkPage = function(){
   // add course page
   if( $('.add-course-page').length ) {
     addCourse();
+    selectSkill();
   }
   
   // add course page 2
@@ -663,7 +664,30 @@ function PreviewImage() {
   oFReader.onload = function (oFREvent) {
     document.getElementById("uploadPreview").src = oFREvent.target.result;
   };
-};
+}
+
+function selectSkill(){
+  var allSkills = {
+    语言类: ['英语', '法语', '德语', '日语'],
+    设计类: ['油画', '平面', '建筑']
+  };
+  var options_tpl = '<% _.forEach(list, function(name) { %><option value=<%- name %> > <%- name %> </option><% }); %>';;
+  var $skillCat = $('#skill-cat')[0];
+  var $skillSubCat = $('#skill-sub-cat')[0];
+  function renderSubCat(subCats){
+    var citiesOptions = _.template(options_tpl, {list: subCats});
+    $skillSubCat.innerHTML = citiesOptions;
+  }
+  var provinceOptions = _.template(options_tpl, {list: _.keys(allSkills)});
+  $skillCat.insertAdjacentHTML('beforeend', provinceOptions);
+  // var idx = arrProvinces.indexOf(provinceVal);
+  // renderCity(idx);
+  $skillCat.on('change', function(){
+    renderSubCat(allSkills[this.value]);
+    $skillSubCat.style.display = 'block';
+  });
+}
+
 
 // var courses = [
 //   {
