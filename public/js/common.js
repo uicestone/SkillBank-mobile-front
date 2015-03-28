@@ -191,10 +191,29 @@ var checkPage = function(){
   if( $('.courses-manage-page').length ) {
     confirmManage();
 
+    // reservation modal
     $('#contact.modal .accept-reserve').on('click', function(){
       $('#contact')[0].classList.remove('active');
-      toAcceptedState(this);
-    })
+      toAcceptedState($('.teaching.active')[0]);
+    });
+
+    // evaluate modal
+    $('#evaluate.modal .btn-evaluate').on('click', function(){
+      $('#evaluate')[0].classList.remove('active');
+      toDidabledState($('.teaching.active')[0]);
+    });
+
+    // set active card
+    $('.teaching.card').on('click', function(){
+      [].forEach.call($('.teaching.card'), function (el) {
+        el.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+
+    // show modal.  for conflict's sake
+    $('[data-modal]').on('click', function(){$('#' + this.dataset.modal)[0].classList.add('active'); });
+
   } 
 
   
@@ -253,7 +272,7 @@ function getCourses(url, el){
 function bindCloseEventToModal(){
   if( !$('.modal').length ) return;
   // jQuery(document).on('touchend click', function(e){
-  document.body.addEventListener('touchend', function(e){
+  document.body.addEventListener('click', function(e){
     if( e.target.classList.contains('content') ) {
       var $modal = e.target.parentNode;
       $modal.classList.remove('active');
@@ -536,26 +555,12 @@ function checkAllFillIn(){
 }
 
 function chooseImage(){
-  wx.config({
-      debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-      appId: '23123123123', // 必填，公众号的唯一标识
-      timestamp: new Date(), // 必填，生成签名的时间戳
-      nonceStr: 'f23r23rf23r23r2r332r2', // 必填，生成签名的随机串
-      signature: '123123123123123',// 必填，签名，见附录1
-      jsApiList: ['checkJsApi','onMenuShareTimeline', 'onMenuShareAppMessage', 'chooseImage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-  });
-
-  wx.ready(function(){
-    var $box = $('.course')[0];
-
-    wx.chooseImage({
-      success: function (res) {
-        alert('success')
-        var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-      }
-    });
-
-    $box.on('click', function(){
+  var $uploader = $('.course input[type=file]')[0];
+  $uploader.on('change', function(){
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(this.files[0]);
+    oFReader.onload = function (oFREvent) {
+      $('.cover-holder')[0].innerHTML = '<img src="' + oFREvent.target.result + '" />'
       $('.step-name')[0].style.display = 'none';
       [].forEach.call($('.right .btn'), function(el) {
         el.classList.remove('disabled');
@@ -563,13 +568,8 @@ function chooseImage(){
       $('.right .btn')[1].classList.add('border-none');
       $('.right .btn')[1].classList.add('btn-olive');
       $('h3')[0].innerHTML = '内容已填完并被保存';
-      $('.cover-holder')[0].innerHTML = '<img src="images/e.jpeg" class="cover">';
-    })
-
-    
-
-
-  })
+    };
+  });
 }
 
 function checkAllFillInPrivate(){
@@ -599,11 +599,11 @@ function confirmManage(){
   [].forEach.call( $('.confirm'), function (el) {
     el.on('click', function(){
       if( el.classList.contains('confirm-refuse-reserve') ){
-        if (window.confirm("拒绝订课?")) { 
-          toDidabledState(el);
-        }
       } else if(el.classList.contains('content')){
 
+      }
+      if (window.confirm("拒绝订课?")) { 
+        toDidabledState(el);
       }
     })
   });
@@ -611,18 +611,25 @@ function confirmManage(){
 
 function toDidabledState(el){
   var $card = closestParent(el, '.card');
-  var  $disabled= $('#teaching-disabled-tpl')[0].innerHTML;
-  $disabled = _.template($disabled, {person: $card.dataset});
-  $card.outerHTML = $disabled;
+  var  $tpl= $('#teaching-disabled-tpl')[0].innerHTML;
+  $tpl = _.template($tpl, {person: $card.dataset});
+  $card.outerHTML = $tpl;
 }
 
-function toAcceptedState(el){
-  var $card = closestParent(el, '.card');
-  var  $disabled= $('#teaching-disabled-tpl')[0].innerHTML;
-  $disabled = _.template($disabled, {person: $card.dataset});
-  $card.outerHTML = $disabled;
+function toAcceptedState($card){
+  var  $tpl= $('#teaching-accepted-tpl')[0].innerHTML;
+  $tpl = _.template($tpl, {person: $card.dataset});
+  $card.outerHTML = $tpl;
 }
 
+function PreviewImage() {
+  var oFReader = new FileReader();
+  oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+  oFReader.onload = function (oFREvent) {
+    document.getElementById("uploadPreview").src = oFREvent.target.result;
+  };
+};
 
 // var courses = [
 //   {

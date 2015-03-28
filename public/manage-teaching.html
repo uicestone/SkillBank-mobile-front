@@ -55,12 +55,12 @@
       <div class="teaching-list">
         <input type="file" name="file" />
         <div class="teaching card" 
-          data-name="Jason WuHAHA"
+          data-name="WuHAHA"
           data-nickname="Jason"
           data-avatar="images/avatar.png"
           data-location="6km . 上海"
           data-date="2015.3.12"
-          data-date-oral="一天前"
+          data-date-oral="一天前"4r
           data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
           data-course="英语口语练习课"
           data-phone="13923982234">
@@ -85,7 +85,7 @@
               <a class="btn">私信对方</a>
             </div>
           </div>
-          <a href="#contact" class="foot-bar">接受预定 </a>
+          <a href="#" class="foot-bar" data-modal="contact">接受预定 </a>
         </div>
         <div class="teaching card">
           <div class="inner">
@@ -111,7 +111,16 @@
             </div>
           </div>
         </div>
-        <div class="teaching card">
+        <div class="teaching card"
+          data-name="WuHAHA"
+          data-nickname="Jason"
+          data-avatar="images/avatar.png"
+          data-location="6km . 上海"
+          data-date="2015.3.12"
+          data-date-oral="一天前"4r
+          data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
+          data-course="英语口语练习课"
+          data-phone="13923982234">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
@@ -134,7 +143,7 @@
               <a class="btn">私信对方</a>
             </div>
           </div>
-          <a class="foot-bar">评价一下你的学生 </a>
+          <a class="foot-bar" data-modal="evaluate">评价一下你的学生 </a>
         </div>
         <div class="teaching card">
           <div class="inner">
@@ -211,6 +220,43 @@
         </div>
       </div>
 
+      <div id="evaluate" class="modal">
+        <header class="bar bar-nav">
+          <a class="icon icon-close pull-right grey" href="#contact"></a>
+          <h1 class="title">评价老师</h1>
+        </header>
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <form>
+                <ul class="custom-radio mb-1">
+                  <li> 
+                    <label> 
+                      <span class="icon icomoon icon-checkmark round yellow"></span> 
+                      <input type="radio" name="level" value="low"> 好评
+                    </label>  
+                  </li>
+                  <li> 
+                    <label> 
+                      <span class="icon icomoon icon-checkmark round yellow"></span> 
+                      <input type="radio" name="level" value="middle"> 中评
+                    </label>  
+                  </li>
+                  <li> 
+                    <label> 
+                      <span class="icon icomoon icon-checkmark round yellow"></span> 
+                      <input type="radio" name="level" value="hight"> 差评
+                    </label>  
+                  </li>
+                </ul>
+                <textarea placeholder="请评价一下对方"></textarea>
+                <a href="#" class="btn btn-primary btn-block btn-evaluate">发送评价</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <script type="text/template" id="teaching-disabled-tpl">
         <div class="teaching card disabled">
           <div class="inner">
@@ -231,23 +277,6 @@
       </script>
 
       <script type="text/template" id="teaching-accepted-tpl">
-        <div class="teaching card disabled">
-          <div class="inner">
-            <div class="profile">
-              <a href="#" class="img"> <img src="<%- person.avatar %>" alt="" class="avatar"> </a>
-              <div class="name"><a href="#">学生：<%- person.name %> </a> <br> <small><%- person.location %></small></div>
-              <div class="approval">
-                <span class="btn-tag grey">授课结束</span><br><small><%- person.dateOral %></small>
-              </div>
-            </div>
-            <div class="course-info mb-1">
-              预定课程：<%- person.course %> <br>
-              订课日期：<%- person.date %> <br>
-              联系信息：<%- person.nickname %> <%- person.phone %>
-            </div>
-          </div>
-        </div>
-
         <div class="teaching card">
           <div class="inner">
             <div class="profile">

@@ -52,7 +52,16 @@
         </div>
       </nav>
       <div class="teaching-list">
-        <div class="teaching card">
+        <div class="teaching card"
+          data-name="WuHAHA"
+          data-nickname="Jason"
+          data-avatar="images/avatar.png"
+          data-location="6km . 上海"
+          data-date="2015.3.12"
+          data-date-oral="一天前"4r
+          data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
+          data-course="英语口语练习课"
+          data-phone="13923982234">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
@@ -70,12 +79,21 @@
               订课日期：2015.3.12
             </div>
             <div class="btn-set mb-1">
-              <a class="btn">取消订课</a>
+              <a class="btn confirm">取消订课</a>
               <a class="btn">私信对方</a>
             </div>
           </div>
         </div>
-        <div class="teaching card">
+        <div class="teaching card"
+          data-name="WuHAHA"
+          data-nickname="Jason"
+          data-avatar="images/avatar.png"
+          data-location="6km . 上海"
+          data-date="2015.3.12"
+          data-date-oral="一天前"4r
+          data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
+          data-course="英语口语练习课"
+          data-phone="13923982234">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
@@ -100,7 +118,16 @@
             </div>
           </div>
         </div>
-        <div class="teaching card">
+        <div class="teaching card"
+          data-name="WuHAHA"
+          data-nickname="Jason"
+          data-avatar="images/avatar.png"
+          data-location="6km . 上海"
+          data-date="2015.3.12"
+          data-date-oral="一天前"4r
+          data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
+          data-course="英语口语练习课"
+          data-phone="13923982234">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
@@ -120,13 +147,22 @@
               联系信息：Jason 13923982234
             </div>
             <div class="btn-set mb-1">
-              <a class="btn">申请退币</a>
+              <a class="btn confirm">申请退币</a>
               <a href="#phone" class="btn">电话对方</a>
             </div>
           </div>
-          <a class="foot-bar dark-olive">支付课币 </a>
+          <a class="foot-bar dark-olive" data-modal="evaluate">支付课币 </a>
         </div>
-        <div class="teaching card">
+        <div class="teaching card"
+          data-name="WuHAHA"
+          data-nickname="Jason"
+          data-avatar="images/avatar.png"
+          data-location="6km . 上海"
+          data-date="2015.3.12"
+          data-date-oral="一天前"4r
+          data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
+          data-course="英语口语练习课"
+          data-phone="13923982234">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
@@ -146,7 +182,7 @@
               联系信息：Jason 13923982234
             </div>
           </div>
-          <a class="foot-bar">评价一下你的老师</a>
+          <a class="foot-bar btn-evaluate" data-modal="evaluate">评价一下你的老师</a>
         </div>
       </div>
 
@@ -163,6 +199,62 @@
           </div>
         </div>
       </div>
+
+      <div id="evaluate" class="modal">
+        <header class="bar bar-nav">
+          <a class="icon icon-close pull-right grey" href="#contact"></a>
+          <h1 class="title">评价老师</h1>
+        </header>
+        <div class="content">
+          <div class="content-inner">
+            <div class="content-padded">
+              <form>
+                <ul class="custom-radio mb-1">
+                  <li> 
+                    <label> 
+                      <span class="icon icomoon icon-checkmark round yellow"></span> 
+                      <input type="radio" name="level" value="low"> 好评
+                    </label>  
+                  </li>
+                  <li> 
+                    <label> 
+                      <span class="icon icomoon icon-checkmark round yellow"></span> 
+                      <input type="radio" name="level" value="middle"> 中评
+                    </label>  
+                  </li>
+                  <li> 
+                    <label> 
+                      <span class="icon icomoon icon-checkmark round yellow"></span> 
+                      <input type="radio" name="level" value="hight"> 差评
+                    </label>  
+                  </li>
+                </ul>
+                <textarea placeholder="请评价一下对方"></textarea>
+                <a href="#" class="btn btn-primary btn-block btn-evaluate">发送评价</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/template" id="teaching-disabled-tpl">
+        <div class="teaching card disabled">
+          <div class="inner">
+            <div class="profile">
+              <a href="#" class="img"> <img src="<%- person.avatar %>" alt="" class="avatar"> </a>
+              <div class="name"><a href="#">学生：<%- person.name %> </a> <br> <small><%- person.location %></small></div>
+              <div class="approval">
+                <span class="btn-tag grey">授课结束</span><br><small><%- person.dateOral %></small>
+              </div>
+            </div>
+            <div class="course-info mb-1">
+              预定课程：<%- person.course %> <br>
+              订课日期：<%- person.date %> <br>
+              联系信息：<%- person.nickname %> <%- person.phone %>
+            </div>
+          </div>
+        </div>
+      </script>
 
     </div>
     <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
