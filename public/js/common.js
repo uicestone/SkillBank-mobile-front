@@ -167,7 +167,7 @@ var checkPage = function(){
   }
 
   // add course page
-  if( $('.add-course-page').length ) {
+  if( $('.add-course-page.step-1').length ) {
     addCourse();
     selectSkill();
   }
