@@ -582,11 +582,15 @@ function checkAllFillIn(){
                       $form.highlight.value &&
                       $form.intro.value.length >= 100 ? true : false;
     $nextBtn.classList[ifAllFillIn ? 'remove' : 'add']('disabled');
-  }
-  $('.custom-radio input[name=level]').on('change', checkInputs);
-  $('input[name=courseName]').on('change', checkInputs);
-  $('textarea[name=highlight]').on('change', checkInputs);
-  $('textarea[name=intro]').on('change', checkInputs);
+  };
+  [].forEach.call( $('.custom-radio input[type=radio], input[name=courseName],' + 
+    'textarea[name=highlight], textarea[name=intro]'), 
+    function (el) {
+      el.on('change', checkInputs);
+      el.on('keyup', checkInputs);
+    }
+  );
+
 }
 
 function chooseImage(){
