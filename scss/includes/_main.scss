@@ -247,7 +247,7 @@ nav {
     .title-bar {
       position: absolute;
       height: 100px;
-      background-image: linear-gradient(-180deg, #102F3F 0%, rgba(16,47,63,0.00) 100%);
+      background-image: linear-gradient(-180deg, rgba(16, 47, 63, 0.5) 0%, rgba(16, 47, 63, 0) 100%);
       padding: 1em 0.5em 0;
       left: 0;
       top: 0;
@@ -333,6 +333,9 @@ nav {
         &.yellow {
           background: $yellow;
         }
+      }
+      .btn-tag {
+        margin-bottom: 10px;
       }
     }
     .icon-camera {

@@ -9,6 +9,7 @@
 
 
   form {
+    margin-top: 100px;
     .inner {
       margin: 10px 20px;
       h3 {
@@ -119,12 +120,14 @@
   }
   &.step-success {
     header {
+      background: none;
       h4 {
         font-size: 20px;
         color: $darkGrey
       }
     }
     form {
+      margin-top: 70px;
       .inner {
         margin: 0;
         h4 {
@@ -175,6 +178,7 @@ body > .content > header {
 }
 
 .steps {
+  padding: 0;
   .main {
     display: flex;
     align-items: center;
@@ -205,12 +209,16 @@ body > .content > header {
     .btn {
       padding: 8px 12px;
       width: auto;
+      top: 0;
       &.disabled {
         opacity: 0.3;
       }
       &.btn-olive {
 
       }
+    }
+    .icon {
+      padding: 0;
     }
     .right {
       display: flex;
