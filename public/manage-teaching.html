@@ -53,7 +53,6 @@
         </div>
       </nav>
       <div class="teaching-list">
-        <input type="file" name="file" />
         <div class="teaching card" 
           data-name="WuHAHA"
           data-nickname="Jason"
@@ -145,7 +144,16 @@
           </div>
           <a class="foot-bar" data-modal="evaluate">评价一下你的学生 </a>
         </div>
-        <div class="teaching card">
+        <div class="teaching card"
+          data-name="WuHAHA"
+          data-nickname="Jason"
+          data-avatar="images/avatar.png"
+          data-location="6km . 上海"
+          data-date="2015.3.12"
+          data-date-oral="一天前"4r
+          data-message="老师， 下周开始，周一至周四任意一天的中午12:00-13:00，行不行？"
+          data-course="英语口语练习课"
+          data-phone="13923982234">
           <div class="inner">
             <div class="profile">
               <a href="#" class="img"> <img src="images/avatar.png" alt="" class="avatar"> </a>
@@ -164,11 +172,11 @@
               联系信息：Jason 13923982234
             </div>
             <div class="btn-set mb-1">
-              <a class="btn">拒绝退币</a>
+              <a class="confirm refuse-draw-back btn">拒绝退币</a>
               <a class="btn">私信对方</a>
             </div>
           </div>
-          <a class="foot-bar">接受退币</a>
+          <a class="confirm accept-draw-back foot-bar">接受退币</a>
         </div>
         <div class="teaching card disabled">
           <div class="inner">
@@ -222,7 +230,7 @@
 
       <div id="evaluate" class="modal">
         <header class="bar bar-nav">
-          <a class="icon icon-close pull-right grey" href="#contact"></a>
+          <a class="icon icon-close pull-right grey" href="#evaluate"></a>
           <h1 class="title">评价老师</h1>
         </header>
         <div class="content">
@@ -249,7 +257,7 @@
                     </label>  
                   </li>
                 </ul>
-                <textarea placeholder="请评价一下对方"></textarea>
+                <textarea name="message" placeholder="请评价一下对方"></textarea>
                 <a href="#" class="btn btn-primary btn-block btn-evaluate">发送评价</a>
               </form>
             </div>

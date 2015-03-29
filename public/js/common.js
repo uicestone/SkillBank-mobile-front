@@ -170,6 +170,7 @@ var checkPage = function(){
   if( $('.add-course-page.step-1').length ) {
     addCourse();
     selectSkill();
+    checkAllFillInStep1();
   }
   
   // add course page 2
@@ -180,17 +181,19 @@ var checkPage = function(){
   
   // add course page 3
   if( $('.add-course-page.step-3').length ) {
-    chooseImage();
+    chooseCover();
   } 
   
   // add course page private
   if( $('.add-course-page.step-private').length ) {
     checkAllFillInPrivate();
+    chooseAvatar();
   } 
 
   // course manage 
   if( $('.courses-manage-page').length ) {
     confirmManage();
+    checkAllEvaluateModal();
 
     // reservation modal
     $('#contact.modal .accept-reserve').on('click', function(){
@@ -198,11 +201,6 @@ var checkPage = function(){
       toAcceptedState($('.teaching.active')[0]);
     });
 
-    // evaluate modal
-    $('#evaluate.modal .btn-evaluate').on('click', function(){
-      $('#evaluate')[0].classList.remove('active');
-      toDidabledState($('.teaching.active')[0]);
-    });
 
     // set active card
     $('.teaching.card').on('click', function(){
@@ -573,6 +571,24 @@ function limitedText(){
   $textarea.on('keyup', changeNum);
 }
 
+function checkAllFillInStep1(){
+  var $form = $('.step-1 form')[0];
+  var $nextBtn = $('.step-1 .main .next')[0];
+  var checkInputs = function(){
+    var ifAllFillIn = $form.city.value && 
+                      $form['skill-cat'].value &&
+                      $form['skill-sub-cat'].value;
+    $nextBtn.classList[ifAllFillIn ? 'remove' : 'add']('disabled');
+  };
+  [].forEach.call( $('.step-1 input[name=city], .step-1 select[name=skill-cat], .step-1 select[name=skill-sub-cat]'), 
+    function (el) {
+      el.on('change', checkInputs);
+      el.on('keyup', checkInputs);
+    }
+  );
+
+}
+
 function checkAllFillIn(){
   var $form = $('.step-2 form')[0];
   var $nextBtn = $('.step-2 .main .next')[0];
@@ -593,9 +609,20 @@ function checkAllFillIn(){
 
 }
 
-function chooseImage(){
+function checkAllEvaluateModal(){
+  var $form = $('#evaluate form')[0];
+  $('#evaluate .btn-evaluate')[0].on('click', function(){
+    if( $('#evaluate input[type="radio"]:checked').length && $form.message.value){
+      $('#evaluate')[0].classList.remove('active');
+      toDidabledState($('.teaching.active')[0]);
+    }             
+  });
+}
+
+function chooseCover(){
   var $uploader = $('.course input[type=file]')[0];
   $uploader.on('change', function(){
+    if(!this.files[0]) return;
     var oFReader = new FileReader();
     oFReader.readAsDataURL(this.files[0]);
     oFReader.onload = function (oFREvent) {
@@ -607,6 +634,23 @@ function chooseImage(){
       $('.right .btn')[1].classList.add('border-none');
       $('.right .btn')[1].classList.add('btn-olive');
       $('h3')[0].innerHTML = '内容已填完并被保存';
+    };
+  });
+}
+
+function chooseAvatar(){
+  var $uploader = $('.edit-avatar input[type=file]')[0];
+  $uploader.on('change', function(){
+    if(!this.files[0]) return;
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(this.files[0]);
+    oFReader.onload = function (oFREvent) {
+      $('.edit-avatar img')[0].outerHTML = '<img class="avatar" src="' + oFREvent.target.result + '" />';
+      [].forEach.call($('.right .btn'), function(el) {
+        el.classList.remove('disabled');
+      });
+      $('.right .btn')[1].classList.add('border-none');
+      $('.right .btn')[1].classList.add('btn-olive');
     };
   });
 }
@@ -638,11 +682,14 @@ function confirmManage(){
   [].forEach.call( $('.confirm'), function (el) {
     el.on('click', function(){
       if( el.classList.contains('confirm-refuse-reserve') ){
-      } else if(el.classList.contains('content')){
-
-      }
-      if (window.confirm("拒绝订课?")) { 
-        toDidabledState(el);
+        if (window.confirm("拒绝订课?")) toDidabledState(el);
+      } else if( el.classList.contains('content') ){
+      } else if( el.classList.contains('refuse-draw-back') ){
+        if (window.confirm("拒绝退币?")) toDidabledState(el);
+      } else if( el.classList.contains('accept-draw-back') ){
+        if (window.confirm("接受退币?")) toDidabledState(el);
+      } else {
+        if (window.confirm("拒绝订课?")) toDidabledState(el);
       }
     })
   });

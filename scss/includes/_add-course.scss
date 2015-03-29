@@ -44,6 +44,8 @@
             pointer-events: none;
             li {
               flex-grow: 1;
+              width: 20%;
+              float: left;
               border-right: 1px solid #fff;
               height: 8px;
               &:nth-child(100n + 5) {
@@ -61,6 +63,8 @@
           }
           li {
             flex-grow: 1;
+            width: 20%;
+            float: left;
             position: relative;
             text-align: center;
             font-size: 13px;
@@ -82,6 +86,7 @@
         margin-top: 2em;
         .inner {
           margin-bottom: 0;
+          padding-bottom: 10px;
           .tl {
             @include vertical-middle;
             justify-content: space-between;
@@ -96,7 +101,10 @@
               font-size: 12px;
             }
           }
-          input, textarea {
+          input {
+            margin-bottom: 18px;
+          }
+          textarea {
             margin-bottom: 15px;
           }
 
@@ -141,16 +149,28 @@
     .edit-avatar {
       position: relative;
       text-align: center;
-      .avatar {
-        width: 75px;
-        height: 75px;
-      }
-      .icon {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin: -15px 0 0 -15px;
-        font-size: 15px;
+      a {
+        position: relative;
+        display: inline-block;
+        .avatar {
+          width: 75px;
+          height: 75px;
+        }
+        .icon {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin: -15px 0 0 -15px;
+          font-size: 15px;
+        }
+        input[type=file] {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+        }
       }
     }
     .group-input {

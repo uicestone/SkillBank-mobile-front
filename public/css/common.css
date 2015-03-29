@@ -1380,6 +1380,8 @@ nav.bar.bar-tab .tab-item {
             -webkit-flex-grow: 1;
                 -ms-flex-positive: 1;
                     flex-grow: 1;
+            width: 20%;
+            float: left;
             border-right: 1px solid #fff;
             height: 8px; }
             .add-course-page form .inner .select-lever .wrapper ul.vertical-lines li:nth-child(100n+5) {
@@ -1398,6 +1400,8 @@ nav.bar.bar-tab .tab-item {
           -webkit-flex-grow: 1;
               -ms-flex-positive: 1;
                   flex-grow: 1;
+          width: 20%;
+          float: left;
           position: relative;
           text-align: center;
           font-size: 13px;
@@ -1408,7 +1412,8 @@ nav.bar.bar-tab .tab-item {
     background: #A6AFB2;
     margin-top: 2em; }
     .add-course-page.step-2 form #extra .inner {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding-bottom: 10px; }
       .add-course-page.step-2 form #extra .inner .tl {
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -1430,7 +1435,9 @@ nav.bar.bar-tab .tab-item {
           color: #fff; }
         .add-course-page.step-2 form #extra .inner .tl small {
           font-size: 12px; }
-      .add-course-page.step-2 form #extra .inner input, .add-course-page.step-2 form #extra .inner textarea {
+      .add-course-page.step-2 form #extra .inner input {
+        margin-bottom: 18px; }
+      .add-course-page.step-2 form #extra .inner textarea {
         margin-bottom: 15px; }
   .add-course-page.step-3 form .inner {
     margin: 0; }
@@ -1451,15 +1458,25 @@ nav.bar.bar-tab .tab-item {
   .add-course-page.step-private .edit-avatar {
     position: relative;
     text-align: center; }
-    .add-course-page.step-private .edit-avatar .avatar {
-      width: 75px;
-      height: 75px; }
-    .add-course-page.step-private .edit-avatar .icon {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin: -15px 0 0 -15px;
-      font-size: 15px; }
+    .add-course-page.step-private .edit-avatar a {
+      position: relative;
+      display: inline-block; }
+      .add-course-page.step-private .edit-avatar a .avatar {
+        width: 75px;
+        height: 75px; }
+      .add-course-page.step-private .edit-avatar a .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -15px 0 0 -15px;
+        font-size: 15px; }
+      .add-course-page.step-private .edit-avatar a input[type=file] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; }
   .add-course-page.step-private .group-input {
     display: -webkit-flex;
     display: -ms-flexbox;
