@@ -132,7 +132,8 @@ ol, ul {
   color: $lighterOlive;
   border: 1px solid $lighterOlive;
   &:active {
-    color: #fff;
+    background: none;
+    color: $lighterOlive;
   }
 }
 .badge {
