@@ -41,21 +41,57 @@
       </a>
     </nav>
 
-    <div class="add-course-page step-1 content active">
-      <div class="bar bar-nav steps mb-2">
-        <div class="main">
-          <a href="index.html" class="icon icomoon icon-arrow-left grey"></a>
-          <span class="step-name center-title">第1/3步</span>
-          <span align="right">
-            <a href="/add-course/2" class="btn disabled next btn-transparent" >下一步</a>
-          </span>
-        </div>
-        <ul class="process-bar">
-          <li class="yellow"></li>
-          <li></li>
-          <li></li>
-        </ul>
+    <div class="bar bar-nav steps step-1 active">
+      <div class="main">
+        <a href="index.html" class="icon icomoon icon-arrow-left grey"></a>
+        <span class="step-name center-title">第1/3步</span>
+        <span align="right">
+          <a href="/add-course/2" class="btn disabled next btn-transparent" >下一步</a>
+        </span>
       </div>
+      <ul class="process-bar">
+        <li class="yellow"></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="bar bar-nav steps step-2">
+      <div class="main">
+        <span class="step-name center-title">第2/3步</span>
+        <span><a href="/add-course/1" class="btn btn-transparent">上一步</a></span>
+        <span align="right"><a href="/add-course/3" class="btn btn-transparent disabled next"> 下一步 </a></span>
+      </div>
+      <ul class="process-bar">
+        <li class="yellow"></li>
+        <li class="yellow"></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="bar bar-nav steps step-3">
+      <div class="main">
+        <span class="step-name center-title">第3/3步</span>
+        <span><a href="/add-course/2" class="btn btn-transparent">上一步</a></span>
+        <span class="right">
+        
+          <a href="#" class="btn btn-transparent disabled"> 预览 </a>
+          <a href="/add-course/success" class="btn disabled"> 发布 </a>
+        </span>
+      </div>
+      <ul class="process-bar">
+        <li class="yellow"></li>
+        <li class="yellow"></li>
+        <li class="yellow"></li>
+      </ul>
+    </div>
+    <div class="bar bar-nav steps step-success">
+      <div class="main">
+        <a href="/add-course/3" class="icon icomoon icon-arrow-left pull-left grey"></a>
+        <span class="step-name center-title">课程发布申请成功</span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="add-course-page step-1 content active">
       <form>
         <div class="inner">
           <h3 align="center" class="olive mb-1">基本描述</h3>
@@ -113,18 +149,6 @@
     </div>
 
     <div class="add-course-page step-2 content">
-      <div class="bar bar-nav steps mb-2">
-        <div class="main">
-          <span class="step-name center-title">第2/3步</span>
-          <span><a href="/add-course/1" class="btn btn-transparent">上一步</a></span>
-          <span align="right"><a href="/add-course/3" class="btn btn-transparent disabled next"> 下一步 </a></span>
-        </div>
-        <ul class="process-bar">
-          <li class="yellow"></li>
-          <li class="yellow"></li>
-          <li></li>
-        </ul>
-      </div>
       <form>
         <div class="inner must-fill-in">
           <h3 align="center" class="olive mb-1">课程介绍</h3>
@@ -174,23 +198,6 @@
     </div>
 
     <div class="add-course-page step-3 content">
-      <div class="bar bar-nav steps mb-2">
-        <div class="main">
-          <span class="step-name center-title">第3/3步</span>
-          <span><a href="/add-course/2" class="btn btn-transparent">上一步</a></span>
-          <span class="right">
-          
-            <a href="#" class="btn btn-transparent disabled"> 预览 </a>
-            <a href="/add-course/success" class="btn disabled"> 发布 </a>
-          </span>
-        </div>
-        <ul class="process-bar">
-          <li class="yellow"></li>
-          <li class="yellow"></li>
-          <li class="yellow"></li>
-        </ul>
-      </div>
-
       <form>
         <div class="inner">
           <h3 align="center" class="olive mb-1">添加封面</h3>
@@ -214,13 +221,8 @@
         </div>
       </form>
     </div>
-
+    
     <div class="add-course-page step-success content">
-      <header class="bar bar-nav mb-1">
-        <a href="/add-course/3" class="icon icomoon icon-arrow-left pull-left grey"></a>
-        <h4>课程发布申请成功</h4>
-        <span></span>
-      </header>
       <form>
         <div class="inner">
           <h4 align="center" class="olive">我们会在2天内告知你审核结果 <br>你可以在这里修改个人信息</h4>
@@ -251,8 +253,6 @@
         </div>
       </form>
     </div>
-
-
 
     <script src="bower_components/ratchet/dist/js/ratchet.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

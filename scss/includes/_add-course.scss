@@ -9,7 +9,7 @@
 
 
   form {
-    margin-top: 100px;
+    margin-top: 85px;
     .inner {
       margin: 10px 20px;
       h3 {
@@ -127,13 +127,6 @@
     }
   }
   &.step-success {
-    header {
-      background: none;
-      h4 {
-        font-size: 20px;
-        color: $darkGrey
-      }
-    }
     form {
       margin-top: 70px;
       .inner {
@@ -182,6 +175,25 @@
     }
     h5 {
       margin-top: 5px;
+    }
+  }
+}
+
+.bar {
+  &.step-1, &.step-2, &.step-3, &.step-success {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &.step-success {
+    .main {
+      background: none;
+      height: 44px;
+      .step-name {
+        font-size: 20px;
+        color: $darkGrey;
+      }
     }
   }
 }

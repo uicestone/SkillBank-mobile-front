@@ -4,6 +4,27 @@ window.ENV = {
   imgHost : 'http://skillbank.b0.upaiyun.com'
 };
 
+var browser={
+    versions:function(){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return {
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+            weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+        };
+    }(),
+    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
 // fns
 window.checkImgHost = function(host, url){
   return url.indexOf('http') === -1 ? host + url : url
@@ -87,6 +108,7 @@ var checkPage = function(){
   followMember();
   customRadio();
   bindCloseEventToModal();
+  fixedPositionBug();
 
   // course search
   if( document.getElementById('course-search') ){
@@ -237,7 +259,9 @@ function addCourse(){
   function load(ctx){
     console.log('load')
     if(ctx.state.path == '/add-course.html') {ctx.params.stepName = 1; }
+    $('.steps.active')[0].classList.remove('active');
     $('.content.active')[0].classList.remove('active');
+    $('.steps.step-' + ctx.params.stepName)[0].classList.add('active');
     $('.content.step-' + ctx.params.stepName)[0].classList.add('active');
   }
 }
@@ -737,6 +761,23 @@ function selectSkill(){
     renderSubCat(allSkills[this.value]);
     $skillSubCat.style.display = 'block';
   });
+}
+
+function fixedPositionBug(){
+  if(browser.versions.iPhone || browser.versions.iPad){
+    [].forEach.call($('textarea,input,select'), function (el) {
+      el.on('focus', function(){
+        [].forEach.call($('.bar'), function(el){
+          el.style.position = 'absolute';
+        });
+      });
+      el.on('blur', function(){
+        [].forEach.call($('.bar'), function(el){
+          el.style.position = '';
+        });
+      });
+    });
+  }
 }
 
 
