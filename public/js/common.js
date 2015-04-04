@@ -25,6 +25,30 @@ var browser={
     language:(navigator.browserLanguage || navigator.language).toLowerCase()
 };
 
+function parseURL(url) {
+  var parser = document.createElement('a'),
+    searchObject = {},
+    queries, split, i;
+  // Let the browser do the work
+  parser.href = url;
+  // Convert query string to object
+  queries = parser.search.replace(/^\?/, '').split('&');
+  for( i = 0; i < queries.length; i++ ) {
+    split = queries[i].split('=');
+    searchObject[split[0]] = split[1];
+  }
+  return {
+    protocol: parser.protocol,
+    host: parser.host,
+    hostname: parser.hostname,
+    port: parser.port,
+    pathname: parser.pathname,
+    search: parser.search,
+    searchObject: searchObject,
+    hash: parser.hash
+  };
+}
+
 // fns
 window.checkImgHost = function(host, url){
   return url.indexOf('http') === -1 ? host + url : url
@@ -262,47 +286,38 @@ function bindHashChangeToSteps(){
   changeContent();
   window.onhashchange = changeContent;
 }
+
 function switchCourseCat(){
-  // page('*', parse)
-  page('/by:by/type:type', load)
-  page();
-
-  function parse(ctx, next) {
-    ctx.query = qs.parse(location.search.slice(1));
-    load(ctx);
-  }
-
-  function load(ctx){
-    console.log(arguments);
-
-    // fix bug
-    if(location.href.slice(-1) == '#')return;
-    
-    ctx.query = ctx.params;
+  var load = function(){
+    console.log(location.hash);
+    if(!location.hash.slice(1)) return;
+    var query = parseURL(location.hash.slice(1)).searchObject;
     var self = this;
     var geo_opts = {
-        enableHighAccuracy: true, 
-        maximumAge        : 30000, 
-        timeout           : 27000
-      };
+      enableHighAccuracy: true, 
+      maximumAge        : 30000, 
+      timeout           : 27000
+    };
 
     // nearby skill
-    if(ctx.query.by == 0){
+    if(query.by == 0){
       navigator.geolocation.getCurrentPosition(function (position) {
-        var url = ENV.host + '/api/ClassList?' + 'by=' + ctx.query.by + '&type=' + ctx.query.type +
+        var url = ENV.host + '/api/ClassList?' + 'by=' + query.by + '&type=' + query.type +
                   '&PosY=' + position.coords.latitude + '&PosX=' + position.coords.longitude;
-        getCourses(url, ctx);
+        getCourses(url);
       }, function(){
         console.log("Sorry, no position available.")
       }, geo_opts);
-    } else if(ctx.query.by){
-      var url = ENV.host + '/api/ClassList?' + 'by=' + ctx.query.by + '&type=' + ctx.query.type;
-      getCourses(url, ctx);
+    } else if(query.by){
+      var url = ENV.host + '/api/ClassList?' + 'by=' + query.by + '&type=' + query.type;
+      getCourses(url);
     }
   }
+  load();
+  window.onhashchange = load;
 }
 
-function getCourses(url, ctx){
+function getCourses(url){
   var $loading = $('.loading');
   var $cats = $('.search-cat-wrap a');
   $loading[0].style.display = 'block';
@@ -316,7 +331,7 @@ function getCourses(url, ctx){
       el.classList.remove('active');
     });
     var $active = _.find($cats, function($cat){
-      return ctx.state.path == $cat.getAttribute('href');
+      return location.hash == $cat.getAttribute('href');
     });
     $active.classList.add('active');
     $loading[0].style.display = 'none';
