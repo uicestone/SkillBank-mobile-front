@@ -1342,6 +1342,19 @@ nav.bar.bar-tab .tab-item {
 .fixfixed .bar {
   position: absolute; }
 
+.my-alert {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+  .my-alert .inner {
+    background: #999;
+    padding: 0.8em 1.5em;
+    color: #fff;
+    border-radius: 5px; }
+
 .add-course-page {
   display: none; }
   .add-course-page .btn-olive {

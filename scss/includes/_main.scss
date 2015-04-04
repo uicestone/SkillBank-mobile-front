@@ -1210,3 +1210,20 @@ nav.bar.bar-tab {
 .fixfixed .bar { 
   position: absolute; 
 }
+
+.my-alert {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  .inner {
+    background: $grey;
+    padding: 0.8em 1.5em;
+    color: #fff;
+    border-radius: 5px;
+  }
+}
+

@@ -190,9 +190,12 @@ var checkPage = function(){
 
   // add course page
   if( $('.add-course-page.step-1').length ) {
-    addCourse();
+    bindHashChangeToSteps();
     selectSkill();
     checkAllFillInStep1();
+    $('.step-1 .btn.next').on('click', function(){
+      myAlert('哈哈', 2);
+    });
   }
   
   // add course page 2
@@ -245,25 +248,19 @@ var checkPage = function(){
 // start here
 checkPage();
 window.addEventListener('push', checkPage);
-function addCourse(){
-  page.base('/add-course');
-  page('/:stepName', load)
-  page('*', check)
-  page();
-  function check(ctx){
-    if(ctx.state.path == '/add-course.html') {
-      ctx.params.stepName = 1; 
-      load(ctx);
-    }
-  }
-  function load(ctx){
-    console.log('load')
-    if(ctx.state.path == '/add-course.html') {ctx.params.stepName = 1; }
+
+function bindHashChangeToSteps(){
+  var changeContent = function(){
+    console.log(location.hash);
+    var stepName = location.hash.slice(1);
+    if(!stepName) return;
     $('.steps.active')[0].classList.remove('active');
     $('.content.active')[0].classList.remove('active');
-    $('.steps.step-' + ctx.params.stepName)[0].classList.add('active');
-    $('.content.step-' + ctx.params.stepName)[0].classList.add('active');
+    $('.steps.step-' + stepName)[0].classList.add('active');
+    $('.content.step-' + stepName)[0].classList.add('active');
   }
+  changeContent();
+  window.onhashchange = changeContent;
 }
 function switchCourseCat(){
   // page('*', parse)
@@ -778,6 +775,17 @@ function fixedPositionBug(){
       });
     });
   }
+}
+
+function myAlert(msg, seconds){
+  var $warning = $('.my-alert')[0];
+  var $inner = $('.my-alert .inner')[0];
+  seconds = seconds ? seconds : 2; 
+  $inner.innerHTML = msg;
+  $warning.style.display = 'flex';
+  var t = setTimeout(function(){
+    $warning.style.display = '';
+  }, seconds * 1000)
 }
 
 
