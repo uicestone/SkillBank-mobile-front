@@ -33,7 +33,7 @@
 
   var getModal = function (event) {
     var modalToggle = findModals(event.target);
-    if (modalToggle && modalToggle.hash) {
+    if (modalToggle && modalToggle.hash && !modalToggle.dataset.ignore) {
       return document.querySelector(modalToggle.hash);
     }
   };
