@@ -139,6 +139,9 @@ var checkPage = function(){
     switchCourseCat();
     affix();
 
+    
+
+
 
   }
 
@@ -237,6 +240,7 @@ var checkPage = function(){
   if( $('.add-course-page.step-private').length ) {
     checkAllFillInPrivate();
     chooseAvatar();
+    uploadAvatar();
   } 
 
   // course manage 
@@ -288,7 +292,7 @@ function bindHashChangeToSteps(){
 }
 
 function switchCourseCat(){
-  var load = function(){
+  var load = function( isInit ){
     console.log(location.hash);
     if(!location.hash.slice(1)) return;
     var query = parseURL(location.hash.slice(1)).searchObject;
@@ -298,6 +302,28 @@ function switchCourseCat(){
       maximumAge        : 30000, 
       timeout           : 27000
     };
+
+    // if is init, go to previous position
+    if(isInit){
+      window.onunload = function(){
+        console.log(arguments);
+        var offset = $('.content')[0].scrollTop;
+        window.history.pushState({top: offset}, 'toTop');
+
+        window.onpopstate = function(){
+          console.log('Back button was pressed.');
+        };
+      };
+
+      if(window.history.state && window.history.state.top){
+        var offset = window.history.state.top;
+        console.log(offset);
+        setTimeout(function(){
+          $('.content')[0].scrollTop = offset;
+          window.history.replaceState(null);
+        }, 1000);
+      }
+    }
 
     // nearby skill
     if(query.by == 0){
@@ -312,8 +338,9 @@ function switchCourseCat(){
       var url = ENV.host + '/api/ClassList?' + 'by=' + query.by + '&type=' + query.type;
       getCourses(url);
     }
-  }
-  load();
+  };
+
+  load(true);
   window.onhashchange = load;
 }
 
@@ -801,6 +828,19 @@ function myAlert(msg, seconds){
   var t = setTimeout(function(){
     $warning.style.display = '';
   }, seconds * 1000)
+}
+
+function uploadAvatar(){
+  $('.btn-uploader')[0].on('click', function(){
+    var $file = $('.edit-avatar input[type=file]')[0];
+    if(!$file.files.length) return;
+    var file = $file.files[0],
+        xhr = new XMLHttpRequest();
+
+    xhr.open('POST', 'http://skillbank.cn/API/UploadAvatar');
+    xhr.setRequestHeader('Content-Type', file.type);
+    xhr.send(file);
+  });
 }
 
 

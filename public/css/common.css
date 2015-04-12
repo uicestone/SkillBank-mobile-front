@@ -1355,6 +1355,9 @@ nav.bar.bar-tab .tab-item {
     color: #fff;
     border-radius: 5px; }
 
+#course-search .course-list img.cover {
+  min-height: 70vw; }
+
 .add-course-page {
   display: none; }
   .add-course-page .btn-olive {
