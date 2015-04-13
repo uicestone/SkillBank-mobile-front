@@ -139,7 +139,16 @@ var checkPage = function(){
     switchCourseCat();
     affix();
 
-    
+    // record scrollTop when go to other url
+    window.onunload = function(){
+      console.log(arguments);
+      var offsetTop = $('.content')[0].scrollTop;
+      window.history.pushState({top: offsetTop}, 'toTop');
+
+      window.onpopstate = function(){
+        console.log('Back button was pressed.');
+      };
+    };
 
 
 
@@ -292,8 +301,7 @@ function bindHashChangeToSteps(){
 }
 
 function switchCourseCat(){
-  var load = function( isInit ){
-    console.log(location.hash);
+  var load = function(){
     if(!location.hash.slice(1)) return;
     var query = parseURL(location.hash.slice(1)).searchObject;
     var self = this;
@@ -303,27 +311,7 @@ function switchCourseCat(){
       timeout           : 27000
     };
 
-    // if is init, go to previous position
-    if(isInit){
-      window.onunload = function(){
-        console.log(arguments);
-        var offset = $('.content')[0].scrollTop;
-        window.history.pushState({top: offset}, 'toTop');
-
-        window.onpopstate = function(){
-          console.log('Back button was pressed.');
-        };
-      };
-
-      if(window.history.state && window.history.state.top){
-        var offset = window.history.state.top;
-        console.log(offset);
-        setTimeout(function(){
-          $('.content')[0].scrollTop = offset;
-          window.history.replaceState(null);
-        }, 1000);
-      }
-    }
+    
 
     // nearby skill
     if(query.by == 0){
@@ -340,7 +328,7 @@ function switchCourseCat(){
     }
   };
 
-  load(true);
+  load();
   window.onhashchange = load;
 }
 
@@ -362,6 +350,14 @@ function getCourses(url){
     });
     $active.classList.add('active');
     $loading[0].style.display = 'none';
+
+    // go to previous position when click back button
+    if(window.history.state && window.history.state.top){
+      var offsetTop = window.history.state.top;
+      $('.content')[0].scrollTop = offsetTop;
+      window.history.replaceState(null);
+    }
+
   });
 }
 
