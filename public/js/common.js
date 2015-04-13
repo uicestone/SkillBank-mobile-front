@@ -136,22 +136,12 @@ var checkPage = function(){
 
   // course search
   if( document.getElementById('course-search') ){
+    
+    // record scrollTop when go to other url
+    window.onunload = function(){window.history.pushState({top: $('.content')[0].scrollTop}, 'toTop');};
+
     switchCourseCat();
     affix();
-
-    // record scrollTop when go to other url
-    window.onunload = function(){
-      console.log(arguments);
-      var offsetTop = $('.content')[0].scrollTop;
-      window.history.pushState({top: offsetTop}, 'toTop');
-
-      window.onpopstate = function(){
-        console.log('Back button was pressed.');
-      };
-    };
-
-
-
   }
 
   // course page
@@ -350,15 +340,16 @@ function getCourses(url){
     });
     $active.classList.add('active');
     $loading[0].style.display = 'none';
-
-    // go to previous position when click back button
-    if(window.history.state && window.history.state.top){
-      var offsetTop = window.history.state.top;
-      $('.content')[0].scrollTop = offsetTop;
-      window.history.replaceState(null);
-    }
-
+    scrollToPrevPos();
   });
+}
+
+function scrollToPrevPos(){
+  if(window.history.state && window.history.state.top){
+    var offsetTop = window.history.state.top;
+    $('.content')[0].scrollTop = offsetTop;
+    if( location.hash.slice(1) ) window.history.replaceState(null);
+  }
 }
 
 function bindCloseEventToModal(){
