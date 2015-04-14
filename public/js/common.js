@@ -136,7 +136,7 @@ var checkPage = function(){
 
   // course search
   if( document.getElementById('course-search') ){
-    
+
     // record scrollTop when go to other url
     window.onunload = function(){window.history.pushState({top: $('.content')[0].scrollTop}, 'toTop');};
 
@@ -819,15 +819,24 @@ function myAlert(msg, seconds){
 
 function uploadAvatar(){
   $('.btn-uploader')[0].on('click', function(){
-    var $file = $('.edit-avatar input[type=file]')[0];
-    if(!$file.files.length) return;
-    var file = $file.files[0],
-        xhr = new XMLHttpRequest();
-
-    xhr.open('POST', 'http://skillbank.cn/API/UploadAvatar');
-    xhr.setRequestHeader('Content-Type', file.type);
-    xhr.send(file);
+    $input = $('.edit-avatar input[type=file]')[0];
+    if(!$input.files.length) return;
+    uploadFile($input, '/upload', function(){
+      console.log(arguments);
+    });
   });
+}
+
+function uploadFile(input, url, callback){
+  var xhr = new XMLHttpRequest();
+  var formData = new FormData();
+  var file = input.files[0];
+  formData.append('file', file);
+  xhr.open('POST', url);
+  xhr.onload = function () {
+    callback(JSON.parse(xhr.response));
+  };
+  xhr.send(formData);
 }
 
 
