@@ -817,12 +817,14 @@ function myAlert(msg, seconds){
   }, seconds * 1000)
 }
 
+
+// 示例
 function uploadAvatar(){
   $('.btn-uploader')[0].on('click', function(){
     $input = $('.edit-avatar input[type=file]')[0];
     if(!$input.files.length) return;
-    uploadFile($input, '/upload', function(){
-      console.log(arguments);
+    uploadFile($input, '/API/UploadAvatar', function(data){
+      console.log(data);
     });
   });
 }
