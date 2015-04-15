@@ -74,6 +74,8 @@ input[type="search"]:focus{
   border: 3px solid #fff;
   width: 90px;
   height: 90px;
+  vertical-align: bottom;
+  display: inline;
 }
 a {
   color: #999;
