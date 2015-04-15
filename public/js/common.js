@@ -120,6 +120,15 @@ function resError(status){
 var get = request.bind(this, 'GET');
 var post = request.bind(this, 'POST');
 
+var scrollToPrevPos = _.once(function(){
+  if(window.history.state && window.history.state.top){
+    var offsetTop = window.history.state.top;
+    $('.content')[0].scrollTop = offsetTop;
+    if( location.hash.slice(1) ) window.history.replaceState(null);
+  }
+});
+
+
 
 var checkPage = function(){
 
@@ -139,6 +148,7 @@ var checkPage = function(){
 
     // record scrollTop when go to other url
     window.onunload = function(){window.history.pushState({top: $('.content')[0].scrollTop}, 'toTop');};
+    if(!location.hash.slice(1)) scrollToPrevPos();
 
     switchCourseCat();
     affix();
@@ -342,14 +352,6 @@ function getCourses(url){
     $loading[0].style.display = 'none';
     scrollToPrevPos();
   });
-}
-
-function scrollToPrevPos(){
-  if(window.history.state && window.history.state.top){
-    var offsetTop = window.history.state.top;
-    $('.content')[0].scrollTop = offsetTop;
-    if( location.hash.slice(1) ) window.history.replaceState(null);
-  }
 }
 
 function bindCloseEventToModal(){
