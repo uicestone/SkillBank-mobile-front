@@ -578,11 +578,12 @@ function followMember(){
         FollowingId: 7,
         IsFollow: isFollow
       };
-        self.classList[ isFollow ? 'add' : 'remove' ]('btn-grey');
-        self.classList[ !isFollow ? 'add' : 'remove' ]('btn-olive');
-      // post(ENV.host + '/api/followmember', data, function(fb){
-      // });
-
+      self.classList[ isFollow ? 'add' : 'remove' ]('btn-grey');
+      self.classList[ !isFollow ? 'add' : 'remove' ]('btn-olive');
+      if($('.setting-fans-page').length){
+        var text = isFollow ? '取关' : '关注';
+        self.innerHTML = text;
+      }
     })
   })
 }

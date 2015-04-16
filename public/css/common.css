@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -7,6 +6,7 @@
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -1799,11 +1799,5 @@ body > .content > header {
         padding: 8px 1em; }
         .setting-fans-page .list li .right .btn.btn-grey {
           background: #ccc; }
-          .setting-fans-page .list li .right .btn.btn-grey:before {
-            content: '取关';
-            color: #fff; }
         .setting-fans-page .list li .right .btn.btn-olive {
           border: none; }
-          .setting-fans-page .list li .right .btn.btn-olive:before {
-            content: '关注';
-            color: #fff; }

@@ -31,17 +31,9 @@
           padding: 8px 1em;
           &.btn-grey {
             background: $lightGrey;
-            &:before {
-              content: '取关';
-              color: #fff;
-            }
           }
           &.btn-olive {
             border: none;
-            &:before{
-              content: '关注';
-              color: #fff;
-            }
           }
         }
       }
