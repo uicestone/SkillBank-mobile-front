@@ -383,6 +383,53 @@ select {
   background: #fff;
   color: #A6AFB2; }
 
+.custom-range {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  outline: none; }
+  .custom-range:hover {
+    outline: none; }
+  .custom-range .bg {
+    position: absolute;
+    top: 11px;
+    background: #A6AFB2;
+    background-image: linear-gradient(-90deg, #A6AFB2 0%, #D9DCDD 99%);
+    border-radius: 10px;
+    height: 8px;
+    width: 100%; }
+    .custom-range .bg ul.vertical-lines {
+      width: 100%; }
+      .custom-range .bg ul.vertical-lines li {
+        width: 20%;
+        float: left;
+        border-right: 1px solid #fff;
+        height: 8px; }
+        .custom-range .bg ul.vertical-lines li:nth-child(100n+5) {
+          border: none; }
+  .custom-range .handle {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #126f8f;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px; }
+
+ul.levers.lever-bar {
+  background-image: linear-gradient(-90deg, #A6AFB2 0%, #D9DCDD 99%);
+  border-radius: 10px; }
+ul.levers li {
+  width: 20%;
+  float: left;
+  position: relative;
+  text-align: center;
+  font-size: 13px;
+  color: #A6AFB2; }
+
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;

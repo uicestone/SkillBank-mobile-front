@@ -229,6 +229,8 @@ var checkPage = function(){
     bindHashChangeToSteps();
     selectSkill();
     checkAllFillInStep1();
+    customRange();
+
     $('.step-1 .btn.next').on('click', function(){
       myAlert('哈哈', 2);
     });
@@ -588,16 +590,6 @@ function followMember(){
   })
 }
 
-function showRangeVal( el ){
-  var val = el.value;
-  jQuery(el).siblings('.num')
-    .text(val)
-    .css({
-      left: val + '%',
-      marginLeft: -val*30*0.01 + 'px'
-    })
-}
-
 function customRadio(){
   $('.custom-radio input[type=radio]').on('change', function(){
     var $icon = this.parentNode.querySelector('.icon');
@@ -843,6 +835,41 @@ function uploadFile(input, url, callback){
   };
   xhr.send(formData);
 }
+
+function customRange(){
+  var $range = $('.custom-range');
+  if( !$range.length ) return;
+
+  var bodyW = $('body')[0].clientWidth;
+  
+  [].forEach.call($range, function (elRange) {
+    // init value
+    updateHandlePos( elRange );
+
+    var calRangeHandle = calRangeVal(elRange, bodyW);
+    elRange.on('touchend', calRangeHandle);
+    elRange.on('touchmove', calRangeHandle);
+  });
+}
+
+function updateHandlePos( elRange ){
+  var $handle = elRange.querySelector('.handle');
+  var value = $handle.innerHTML;
+  $handle.style.left = value + '%';
+  $handle.style.marginLeft = -value*30*0.01 + 'px';
+}
+
+function calRangeVal (elRange, bodyW){
+  return function(e){
+    var x = e.changedTouches[0].pageX;
+    if(x<35) x = 35;
+    if(x>(bodyW-35)) x = bodyW - 35;
+    var val = ((x-35)*100/(bodyW - 35*2)).toFixed();
+    elRange.querySelector('.handle').innerHTML = val;
+    updateHandlePos( elRange );
+  }
+}
+
 
 
 // var courses = [
