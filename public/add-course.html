@@ -103,6 +103,7 @@
             <option value='' disabled selected style='display:none;'>选择细分类别</option>
           </select>
           <h5 class="mb-0">你的技能水平</h5>
+          <input type="range" min="0" max="100" step="1" onchange="showRangeVal(this)">
           <div class="select-lever">
             <div class="wrapper">
               <ul class="vertical-lines">
@@ -113,7 +114,6 @@
                 <li></li>
               </ul>
               <input type="range" min="0" max="100" step="1" onchange="showRangeVal(this)">
-              <span class="num" style="left: 50%; margin-left: -15px;">50</span>
             </div>
             <ul class="levers">
               <li>初学</li>

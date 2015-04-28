@@ -1552,12 +1552,15 @@ body > .content > header {
             justify-content: space-between;
     padding: 6px;
     background: #102F3F;
+    overflow: hidden;
     color: #fff; }
     .steps .main > * {
       -webkit-flex-grow: 1;
           -ms-flex-positive: 1;
               flex-grow: 1;
-      width: 33%; }
+      width: 49%;
+      display: inline-block;
+      float: left; }
     .steps .main .step-name {
       text-align: center;
       font-size: 15px; }
@@ -1603,7 +1606,9 @@ body > .content > header {
           -ms-flex-positive: 1;
               flex-grow: 1;
       background: #A6AFB2;
-      height: 7px; }
+      height: 7px;
+      width: 33%;
+      float: left; }
       .steps .process-bar li:nth-child(100n+2) {
         border-left: 1px solid #fff;
         border-right: 1px solid #fff; }
@@ -1613,13 +1618,15 @@ body > .content > header {
 .custom-radio {
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
   .custom-radio li {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     width: 33%;
-    font-size: 13px; }
+    font-size: 13px;
+    float: left; }
     .custom-radio li label {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1649,7 +1656,8 @@ body > .content > header {
         width: 0;
         height: 0;
         overflow: hidden;
-        visibility: hidden; }
+        visibility: hidden;
+        position: absolute; }
 
 .table-view-cell {
   font-size: 14px;
