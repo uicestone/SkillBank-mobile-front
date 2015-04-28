@@ -698,7 +698,7 @@ function chooseAvatar(){
     var oFReader = new FileReader();
     oFReader.readAsDataURL(this.files[0]);
     oFReader.onload = function (oFREvent) {
-      $('.edit-avatar img')[0].outerHTML = '<img class="avatar" src="' + oFREvent.target.result + '" />';
+      $('.avatar-upload-group')[0].style['background-image'] = 'url(' + oFREvent.target.result + ')';
       [].forEach.call($('.right .btn'), function(el) {
         el.classList.remove('disabled');
       });
