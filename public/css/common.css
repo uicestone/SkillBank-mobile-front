@@ -1635,7 +1635,8 @@ body > .content > header {
               justify-content: flex-end;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      text-align: right; }
       .steps .main .right .btn {
         margin-left: 5px; }
   .steps .process-bar {
