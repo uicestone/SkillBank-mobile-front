@@ -2,7 +2,6 @@
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
-
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
@@ -11,7 +10,6 @@
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
-
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
@@ -111,7 +109,10 @@ time {
 [v-cloak] {
   display: none; }
 
-input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+input[type=color], input[type=date], input[type=datetime-local],
+input[type=datetime], input[type=email], input[type=month], input[type=number],
+input[type=password], input[type=search], input[type=tel], input[type=text],
+input[type=time], input[type=url], input[type=week], select, textarea {
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 5px; }
@@ -345,7 +346,7 @@ body > .bar-nav {
 
 .statistic {
   background: #fff;
-  padding: .9em 0 0.2em;
+  padding: 0.9em 0 0.2em;
   border-bottom: 1px solid #ddd; }
   .statistic table {
     margin: 0; }
@@ -422,6 +423,7 @@ select {
 ul.levers.lever-bar {
   background-image: linear-gradient(-90deg, #A6AFB2 0%, #D9DCDD 99%);
   border-radius: 10px; }
+
 ul.levers li {
   width: 20%;
   float: left;
@@ -629,7 +631,7 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
       position: relative;
       display: table-cell;
       color: #13404c;
-      padding: 1.2em 0.7em .1em;
+      padding: 1.2em 0.7em 0.1em;
       height: 55px;
       margin: 0 1em;
       border: none; }
@@ -800,6 +802,7 @@ nav.bar.bar-tab .tab-item {
     font-size: 14px; }
   #register-page.content .register_form a {
     text-decoration: underline; }
+
 #register-page.content .info {
   text-align: center;
   clear: both; }
@@ -888,6 +891,7 @@ nav.bar.bar-tab .tab-item {
         #comment .segmented-control .side-item table tr td {
           border: none;
           text-align: center; }
+
 #comment .comment-content {
   position: relative;
   margin: 0;
@@ -1142,6 +1146,7 @@ nav.bar.bar-tab .tab-item {
       .course-page.content .info .table .table-item .tab-label {
         color: #b5bdbf;
         font-size: 12px; }
+
 .course-page.content .cover-box {
   position: relative;
   overflow: hidden;
@@ -1183,6 +1188,7 @@ nav.bar.bar-tab .tab-item {
         font-size: 16px; }
   .course-page.content .cover-box img {
     width: 100%; }
+
 .course-page.content .course-detail {
   text-align: left;
   background: #fff;
@@ -1213,6 +1219,7 @@ nav.bar.bar-tab .tab-item {
       left: 5px;
       top: 5px;
       font-size: 12px; }
+
 .course-page.content #comment .segmented-control .control-item, .course-page.content #comment .segmented-control .control-item-no-js {
   background: #DBDBDB; }
 
@@ -1397,8 +1404,14 @@ nav.bar.bar-tab .tab-item {
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  text-align: center; }
   .my-alert .inner {
+    position: relative;
+    top: 50vh;
+    display: inline-block;
+    max-width: 80%;
+    margin: -0.9em 0 0 0;
     background: #999;
     padding: 0.8em 1.5em;
     color: #fff;
@@ -1563,6 +1576,7 @@ nav.bar.bar-tab .tab-item {
   display: none; }
   .bar.step-1.active, .bar.step-2.active, .bar.step-3.active, .bar.step-success.active {
     display: block; }
+
 .bar.step-success .main {
   background: none;
   height: 44px; }
@@ -1723,6 +1737,7 @@ body > .content > header {
 .setting-page .page-title {
   font-size: 20px;
   color: #4d4d4d; }
+
 .setting-page header .main {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1744,6 +1759,7 @@ body > .content > header {
     width: 35px;
     height: 35px;
     border-width: 2px; }
+
 .setting-page .info {
   background: #FFD048;
   height: 110px;
@@ -1756,11 +1772,13 @@ body > .content > header {
     color: #4d4d4d; }
   .setting-page .info p {
     margin: 0; }
+
 .setting-page h5 {
   margin: 0 10px;
   font-size: 15px;
   color: #A6AFB2;
   font-weight: normal; }
+
 .setting-page .logout {
   text-align: center;
   margin: 1em; }
@@ -1768,6 +1786,7 @@ body > .content > header {
     font-size: 15px;
     color: #A6AFB2;
     line-height: 16px; }
+
 .setting-page .coins {
   margin-top: 25px;
   margin-bottom: 20px; }
@@ -1798,6 +1817,7 @@ body > .content > header {
       font-size: 11px;
       color: #A6AFB2;
       line-height: 15px; }
+
 .setting-page .table-view-cell {
   padding: 9px 65px 11px 13px; }
 

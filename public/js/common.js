@@ -806,7 +806,7 @@ function myAlert(msg, seconds){
   var $inner = $('.my-alert .inner')[0];
   seconds = seconds ? seconds : 2; 
   $inner.innerHTML = msg;
-  $warning.style.display = 'flex';
+  $warning.style.display = 'block';
   var t = setTimeout(function(){
     $warning.style.display = '';
   }, seconds * 1000)
