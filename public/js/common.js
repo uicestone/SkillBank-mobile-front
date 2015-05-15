@@ -763,23 +763,33 @@ function PreviewImage() {
 }
 
 function selectSkill(){
-  var allSkills = {
-    语言类: ['英语', '法语', '德语', '日语'],
-    设计类: ['油画', '平面', '建筑']
-  };
-  var options_tpl = '<% _.forEach(list, function(name) { %><option value=<%- name %> > <%- name %> </option><% }); %>';;
+  var allSkills = [
+    {
+      name: '语言类',
+      list: ['英语', '法语', '德语', '日语']
+    },
+    {
+      name: '设计类',
+      list: ['油画', '平面', '建筑']
+    }
+  ];
+  var options_tpl = 
+    '<% _.forEach(list, function(name, i) { %>' +
+      '<option value="<%- i %>" > <%- name %> </option>' +
+    '<% }); %>';
   var $skillCat = $('#skill-cat')[0];
   var $skillSubCat = $('#skill-sub-cat')[0];
   function renderSubCat(subCats){
     var citiesOptions = _.template(options_tpl, {list: subCats});
     $skillSubCat.innerHTML = citiesOptions;
   }
-  var provinceOptions = _.template(options_tpl, {list: _.keys(allSkills)});
+  var allSkillsNameArr = _.map(allSkills, function(obj){
+    return obj.name;
+  });
+  var provinceOptions = _.template(options_tpl, {list: allSkillsNameArr});
   $skillCat.insertAdjacentHTML('beforeend', provinceOptions);
-  // var idx = arrProvinces.indexOf(provinceVal);
-  // renderCity(idx);
   $skillCat.on('change', function(){
-    renderSubCat(allSkills[this.value]);
+    renderSubCat(allSkills[this.value]['list']);
     $skillSubCat.style.display = 'block';
   });
 }
@@ -867,6 +877,10 @@ function calRangeVal (elRange, bodyW){
     var val = ((x-35)*100/(bodyW - 35*2)).toFixed();
     elRange.querySelector('.handle').innerHTML = val;
     updateHandlePos( elRange );
+    alert(!touch)
+    if (touch.x2 && Math.abs(touch.x1 - touch.x2) > 10){
+      e.preventDefault()
+    }
   }
 }
 
