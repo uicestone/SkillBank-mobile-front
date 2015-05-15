@@ -781,13 +781,15 @@ function selectSkill(){
   var $skillSubCat = $('#skill-sub-cat')[0];
   function renderSubCat(subCats){
     var citiesOptions = _.template(options_tpl, {list: subCats});
-    $skillSubCat.innerHTML = citiesOptions;
+    // $skillSubCat.innerHTML = citiesOptions;
+    jQuery('#skill-sub-cat').html(citiesOptions);
   }
   var allSkillsNameArr = _.map(allSkills, function(obj){
     return obj.name;
   });
   var provinceOptions = _.template(options_tpl, {list: allSkillsNameArr});
-  $skillCat.insertAdjacentHTML('beforeend', provinceOptions);
+  // $skillCat.insertAdjacentHTML('beforeend', provinceOptions);
+  jQuery('#skill-cat').append(provinceOptions);
   $skillCat.on('change', function(){
     renderSubCat(allSkills[this.value]['list']);
     $skillSubCat.style.display = 'block';
