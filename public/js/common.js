@@ -795,8 +795,9 @@ function selectSkill(){
   // $skillCat.insertAdjacentHTML('beforeend', provinceOptions);
   jQuery('#skill-cat').append(provinceOptions);
   $skillCat.on('change', function(){
+    alert(this.value);
     renderSubCat(allSkills[this.value]['list']);
-    $skillSubCat.style.display = 'block';
+    // $skillSubCat.style.display = 'block';
   });
 }
 
