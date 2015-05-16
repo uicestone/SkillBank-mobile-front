@@ -784,16 +784,13 @@ function selectSkill(){
     // $skillSubCat.innerHTML = citiesOptions;
     jQuery('#skill-sub-cat').html(citiesOptions);
   }
-
-  renderSubCat(allSkills[1]['list']);
-  $skillSubCat.style.display = 'block';
-
   var allSkillsNameArr = _.map(allSkills, function(obj){
     return obj.name;
   });
   var provinceOptions = _.template(options_tpl, {list: allSkillsNameArr});
   // $skillCat.insertAdjacentHTML('beforeend', provinceOptions);
   jQuery('#skill-cat').append(provinceOptions);
+  renderSubCat(allSkills[1]['list']);
   $skillCat.on('change', function(){
     alert(this.value);
     renderSubCat(allSkills[this.value]['list']);
