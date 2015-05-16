@@ -381,7 +381,7 @@ input, textarea {
 input, textarea {
   &::-webkit-input-placeholder {
     color: $lighterOlive;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -390,7 +390,6 @@ select {
   line-height: 35px;
   box-shadow: none;
   padding: 0 10px;
-  font-size: 13px;
   background: #fff;
 }
 

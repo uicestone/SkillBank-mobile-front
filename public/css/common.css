@@ -376,14 +376,13 @@ input.input-alarm, textarea.input-alarm {
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #A6AFB2;
-  font-size: 13px; }
+  font-size: 14px; }
 
 select {
   height: 35px;
   line-height: 35px;
   box-shadow: none;
   padding: 0 10px;
-  font-size: 13px;
   background: #fff; }
 
 .custom-range {
