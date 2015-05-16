@@ -27,6 +27,9 @@
 .lightOlive {
   color: #4f8da5; }
 
+.lighterOlive {
+  color: #A6AFB2; }
+
 .grey {
   color: #999; }
 
@@ -381,8 +384,7 @@ select {
   box-shadow: none;
   padding: 0 10px;
   font-size: 13px;
-  background: #fff;
-  color: #A6AFB2; }
+  background: #fff; }
 
 .custom-range {
   position: relative;

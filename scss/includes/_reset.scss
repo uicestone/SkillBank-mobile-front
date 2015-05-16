@@ -3,6 +3,7 @@
 .white {color: #fff;}
 .olive {color: $olive;}
 .lightOlive {color: $lightOlive;}
+.lighterOlive {color: $lighterOlive;}
 .grey {color: $grey;}
 .lightGrey {color: $lightGrey;}
 .red {color: red;}
@@ -391,7 +392,6 @@ select {
   padding: 0 10px;
   font-size: 13px;
   background: #fff;
-  color: $lighterOlive;
 }
 
 .custom-range {
