@@ -225,7 +225,7 @@ var checkPage = function(){
   }
 
   // add course page
-  if( $('.add-course-page.step-1').length ) {
+  if( $('.post-course-page.step-1').length ) {
     bindHashChangeToSteps();
     selectSkill();
     checkAllFillInStep1();
@@ -237,18 +237,18 @@ var checkPage = function(){
   }
   
   // add course page 2
-  if( $('.add-course-page.step-2').length ) {
+  if( $('.post-course-page.step-2').length ) {
     limitedText();
     checkAllFillIn();
   } 
   
   // add course page 3
-  if( $('.add-course-page.step-3').length ) {
+  if( $('.post-course-page.step-3').length ) {
     chooseCover();
   } 
   
   // add course page private
-  if( $('.add-course-page.step-private').length ) {
+  if( $('.post-course-page.step-private').length ) {
     checkAllFillInPrivate();
     chooseAvatar();
     uploadAvatar();
