@@ -432,6 +432,11 @@ ul.levers li {
   font-size: 13px;
   color: #A6AFB2; }
 
+.hide {
+  width: 0;
+  height: 0;
+  overflow: hidden; }
+
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;

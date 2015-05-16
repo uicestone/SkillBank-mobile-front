@@ -451,3 +451,9 @@ ul.levers {
     color: $lighterOlive;
   }
 }
+
+.hide {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

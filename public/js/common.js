@@ -792,7 +792,7 @@ function selectSkill(){
   $skillCat.on('change', function(){
     renderSubCat(allSkills[this.value]['list']);
     // $skillSubCat.style.display = 'block';
-    jQuery('#skill-sub-cat-wrapper').show();
+    jQuery('#skill-sub-cat-wrapper').removeClass('hide');
   });
 }
 
