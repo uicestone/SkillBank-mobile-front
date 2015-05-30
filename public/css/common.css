@@ -213,6 +213,10 @@ ol, ul {
   .flag-num a {
     color: #126f8f; }
 
+.modal .bar-nav ~ .content {
+  padding-top: 0;
+  margin-top: 44px; }
+
 body > .bar-nav {
   background: transparent; }
   body > .bar-nav ~ .content {
@@ -596,9 +600,14 @@ nav .segmented-control .control-item, nav .segmented-control-no-js .control-item
   .nav-inner.grey {
     color: #999; }
 
+.slide .title-bar {
+  border-radius: 6px;
+  overflow: hidden; }
+
 .slide img {
-  max-width: 100%;
-  display: block; }
+  width: 100%;
+  display: block;
+  border-radius: 6px; }
 
 .loading {
   position: absolute;
@@ -1306,6 +1315,8 @@ nav.bar.bar-tab .tab-item {
     background: none; }
     .teaching-list .teaching.disabled .course-info {
       opacity: 0.5; }
+    .teaching-list .teaching.disabled .profile a.img {
+      pointer-events: auto; }
   .teaching-list .teaching .inner {
     padding: 8px; }
     .teaching-list .teaching .inner .profile {

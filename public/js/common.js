@@ -186,6 +186,15 @@ var checkPage = function(){
       } else{
         $submit.setAttribute('disabled', '');
       }
+    });
+
+    $('#write-box')[0].on('change', function(event){
+      var $submit = $('#form-write button')[0];
+      if ( this.value.length ){
+        $submit.removeAttribute('disabled');
+      } else{
+        $submit.setAttribute('disabled', '');
+      }
     })
 
     // bind add msg
@@ -491,6 +500,11 @@ function chatForm(){
       ToId: 7,
       MessageText: $input.value
     };
+
+    // textarea style to origin
+    $input.value = '';
+    $input.style.height = 'auto';
+
     post(ENV.host + '/api/chat', data, function(fb){
       if( !_.isNumber(fb) ) return;
       $('.chat-content')[0].insertAdjacentHTML( 'beforeend',
@@ -501,6 +515,7 @@ function chatForm(){
       // scroll to newest msg
       $('.content')[0].scrollTop = 1000000;
     });
+
 
   });
 }
