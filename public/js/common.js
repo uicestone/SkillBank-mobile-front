@@ -179,23 +179,17 @@ var checkPage = function(){
     // init textrea auto size
     jQuery('#write-box').textareaAutoSize();
 
-    $('#write-box')[0].on('keyup', function(event){
+    var toggleButton = function(event){
       var $submit = $('#form-write button')[0];
       if ( this.value.length ){
         $submit.removeAttribute('disabled');
       } else{
         $submit.setAttribute('disabled', '');
       }
-    });
+    }
 
-    $('#write-box')[0].on('change', function(event){
-      var $submit = $('#form-write button')[0];
-      if ( this.value.length ){
-        $submit.removeAttribute('disabled');
-      } else{
-        $submit.setAttribute('disabled', '');
-      }
-    })
+    $('#write-box')[0].on('keyup', toggleButton);
+    $('#write-box')[0].on('change', toggleButton);
 
     // bind add msg
     chatForm();
